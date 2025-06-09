@@ -1609,4 +1609,33 @@ export const gridPatterns: Pattern[] = [
      {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "diagonal-glow-stripes",
+    name: "Diagonal Glow Stripes",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      repeating-linear-gradient(45deg, #eaeaea, #eaeaea 2px, transparent 2px, transparent 20px),
+      linear-gradient(to bottom, rgba(153, 102, 255, 0.1), rgba(255, 255, 255, 0.4)),
+      radial-gradient(circle 600px at 50% 100px, rgba(204, 153, 255, 0.3), transparent)
+    `,
+      backgroundSize: "64px 64px, 100% 100%, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Diagonal Glow Stripes Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        repeating-linear-gradient(45deg, #eaeaea, #eaeaea 2px, transparent 2px, transparent 20px),
+        linear-gradient(to bottom, rgba(153, 102, 255, 0.1), rgba(255, 255, 255, 0.4)),
+        radial-gradient(circle 600px at 50% 100px, rgba(204, 153, 255, 0.3), transparent)
+      \`,
+      backgroundSize: "64px 64px, 100% 100%, 100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
 ];
