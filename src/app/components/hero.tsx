@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "../../components/ui/button";
+import { Badge } from "../../components/ui/badge";
 import { ArrowRight, Github, Copy, Eye, Code2, Zap } from "lucide-react";
 
 interface HeroProps {
