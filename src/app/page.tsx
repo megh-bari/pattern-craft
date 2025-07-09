@@ -9,6 +9,7 @@ import { ThemeProvider } from "./components/theme-provider";
 import { gridPatterns } from "./utils/patterns";
 import { Toaster } from "sonner";
 import SupportDropdown from "./components/SupportDropdownProps ";
+import ReturnToPreview from "./components/ReturnToPreview";
 
 export default function Home() {
   const [activePattern, setActivePattern] = useState<string | null>(null);
@@ -61,6 +62,7 @@ export default function Home() {
             />
             <Footer theme={theme} />
           </div>
+          <ReturnToPreview theme={theme}  />
         </div>
         <Toaster />
       </ThemeProvider>

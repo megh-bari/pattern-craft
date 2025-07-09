@@ -208,7 +208,7 @@ export default function Hero({ theme }: HeroProps) {
                 isPatternDark ? "text-white" : ""
               }`}
             >
-              50+
+              100+
             </div>
             <div
               className={`text-xs sm:text-sm transition-colors duration-300 ${

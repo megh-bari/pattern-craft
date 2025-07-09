@@ -240,6 +240,7 @@ export default function PatternShowcase({
                         onClick={(e) => {
                           e.stopPropagation();
                           previewPattern(pattern.id);
+                          document.getElementById('trigger-preview-scroll')?.click()
                         }}
                         className="flex-1 bg-white/95 hover:bg-white text-black border-0 text-xs h-8"
                       >
@@ -285,6 +286,7 @@ export default function PatternShowcase({
                             onClick={(e) => {
                               e.stopPropagation();
                               previewPattern(pattern.id);
+                              document.getElementById('trigger-preview-scroll')?.click()
                             }}
                             className="cursor-pointer shadow-xl backdrop-blur-md bg-white/95 hover:bg-white text-black border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto"
                           >
