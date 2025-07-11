@@ -47,7 +47,7 @@ export default function Home() {
           {activePatternObj && (
             <div className="fixed inset-0 z-0" style={activePatternObj.style} />
           )}
-          <div className="relative z-10">
+          <div className="relative z-10 pt-8 sm:pt-12">
             <Navbar theme={theme} />
             <SupportDropdown theme={theme}/>
             <Hero
