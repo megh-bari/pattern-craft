@@ -12,20 +12,13 @@ export default function Navbar({ theme }: NavbarProps) {
   return (
     <nav className="w-full py-6">
       <div className="container flex items-center justify-between sm:justify-around mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-2">
-          <img
-            src="/favicon.svg"
-            alt="Logo"
-            className="h-6 w-6 sm:h-7 sm:w-7"
-          />
-          <span
-            className={`text-lg sm:text-xl font-bold tracking-tight transition-colors duration-300 ${
-              isPatternDark ? "text-white" : "text-neutral-800 dark:text-neutral-200"
-            }`}
-          >
-            PatternCraft
-          </span>
-        </div>
+        <span
+          className={`text-lg sm:text-xl font-bold tracking-tight transition-colors duration-300 ${
+            isPatternDark ? "text-white" : "text-neutral-800 dark:text-neutral-200"
+          }`}
+        >
+          PatternCraft
+        </span>
         <div className="flex items-center gap-3">
           <div className="flex gap-2 sm:gap-4">
             <a

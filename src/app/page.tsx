@@ -1,65 +1,72 @@
-"use client"
 
-import { Github, Twitter } from "lucide-react"
+"use client";
 
-interface NavbarProps {
-  theme: "light" | "dark"
-}
+import Hero from "./components/hero";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
+import PatternShowcase from "./components/pattern-showcase";
+import { useState, useEffect } from "react";
+import { ThemeProvider } from "./components/theme-provider";
+import { gridPatterns } from "./utils/patterns";
+import { Toaster } from "sonner";
+import SupportDropdown from "./components/SupportDropdownProps ";
+import ReturnToPreview from "./components/ReturnToPreview";
 
-export default function Navbar({ theme }: NavbarProps) {
-  const isPatternDark = theme === "dark"
+export default function Home() {
+  const [activePattern, setActivePattern] = useState<string | null>(null);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  // Find the active pattern object
+  const activePatternObj = activePattern
+    ? gridPatterns.find((p) => p.id === activePattern)
+    : null;
+
+  // Update theme based on pattern background color
+  useEffect(() => {
+    if (activePatternObj) {
+      // Check if pattern ID starts with "dark-" or contains specific dark colors
+      const background = activePatternObj.style.background || "";
+      const isDark =
+        activePatternObj.id.startsWith("dark-") ||
+        (typeof background === "string" &&
+          (background.includes("#0") ||
+            background.includes("#1") ||
+            background.includes("rgba(0,") ||
+            background.includes("rgba(1,")));
+
+      setTheme(isDark ? "dark" : "light");
+    } else {
+      setTheme("light");
+    }
+  }, [activePattern, activePatternObj]);
 
   return (
-    <nav className="w-full py-6">
-      <div className="container flex items-center justify-between sm:justify-around mx-auto px-4 sm:px-6 lg:px-8">
-        <span
-          className={`text-lg sm:text-xl font-bold tracking-tight transition-colors duration-300 ${
-            isPatternDark ? "text-white" : "text-neutral-800 dark:text-neutral-200"
-          }`}
-        >
-          PatternCraft
-        </span>
-        <div className="flex items-center gap-3">
-          <div className="flex gap-2 sm:gap-4">
-            <a
-              href="https://twitter.com/meghtrix"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`rounded-full p-1.5 sm:p-2 transition-all duration-300 ${
-                isPatternDark ? "hover:bg-white/10" : "hover:bg-neutral-100 dark:hover:bg-neutral-800"
-              }`}
-              aria-label="Twitter"
-            >
-              <Twitter
-                className={`h-5 w-5 sm:h-6 sm:w-6 transition-colors duration-300 ${
-                  isPatternDark
-                    ? "text-white hover:text-neutral-300"
-                    : "text-neutral-800 hover:text-neutral-600 dark:text-neutral-200 dark:hover:text-neutral-400"
-                }`}
-                strokeWidth={1.5}
-              />
-            </a>
-            <a
-              href="https://github.com/megh-bari"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`rounded-full p-1.5 sm:p-2 transition-all duration-300 ${
-                isPatternDark ? "hover:bg-white/10" : "hover:bg-neutral-100 dark:hover:bg-neutral-800"
-              }`}
-              aria-label="GitHub"
-            >
-              <Github
-                className={`h-5 w-5 sm:h-6 sm:w-6 transition-colors duration-300 ${
-                  isPatternDark
-                    ? "text-white hover:text-neutral-300"
-                    : "text-neutral-800 hover:text-neutral-600 dark:text-neutral-200 dark:hover:text-neutral-400"
-                }`}
-                strokeWidth={1.5}
-              />
-            </a>
+    <>
+      <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <div className="min-h-screen relative">
+          {/* Apply the active pattern as background */}
+          {activePatternObj && (
+            <div className="fixed inset-0 z-0" style={activePatternObj.style} />
+          )}
+          <div className="relative z-10">
+            <Navbar theme={theme} />
+            <SupportDropdown theme={theme}/>
+            <Hero
+              activePattern={activePattern}
+              setActivePattern={setActivePattern}
+              theme={theme}
+            />
+            <PatternShowcase
+              activePattern={activePattern}
+              setActivePattern={setActivePattern}
+              theme={theme}
+            />
+            <Footer theme={theme} />
           </div>
+          <ReturnToPreview theme={theme}  />
         </div>
-      </div>
-    </nav>
-  )
+        <Toaster />
+      </ThemeProvider>
+    </>
+  );
 }
