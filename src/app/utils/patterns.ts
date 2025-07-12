@@ -3152,4 +3152,113 @@ export const gridPatterns: Pattern[] = [
     {/* Your Content/Components */}
   </div>`,
   },
+  {
+    id: "hexagonal-mesh",
+    name: "Hexagonal Mesh",
+    category: "geometric",
+    badge: "New",
+    description: "Modern hexagonal grid pattern with subtle depth",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+        linear-gradient(30deg, #f1f5f9 12%, transparent 12.5%, transparent 87%, #f1f5f9 87.5%, #f1f5f9),
+        linear-gradient(150deg, #f1f5f9 12%, transparent 12.5%, transparent 87%, #f1f5f9 87.5%, #f1f5f9),
+        linear-gradient(30deg, #f1f5f9 12%, transparent 12.5%, transparent 87%, #f1f5f9 87.5%, #f1f5f9),
+        linear-gradient(150deg, #f1f5f9 12%, transparent 12.5%, transparent 87%, #f1f5f9 87.5%, #f1f5f9),
+        linear-gradient(60deg, #e2e8f0 25%, transparent 25.5%, transparent 75%, #e2e8f0 75%, #e2e8f0),
+        linear-gradient(60deg, #e2e8f0 25%, transparent 25.5%, transparent 75%, #e2e8f0 75%, #e2e8f0)
+      `,
+      backgroundSize: "40px 70px, 40px 70px, 40px 70px, 40px 70px, 20px 35px, 20px 35px",
+      backgroundPosition: "0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Hexagonal Mesh Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(30deg, #f1f5f9 12%, transparent 12.5%, transparent 87%, #f1f5f9 87.5%, #f1f5f9),
+        linear-gradient(150deg, #f1f5f9 12%, transparent 12.5%, transparent 87%, #f1f5f9 87.5%, #f1f5f9),
+        linear-gradient(30deg, #f1f5f9 12%, transparent 12.5%, transparent 87%, #f1f5f9 87.5%, #f1f5f9),
+        linear-gradient(150deg, #f1f5f9 12%, transparent 12.5%, transparent 87%, #f1f5f9 87.5%, #f1f5f9),
+        linear-gradient(60deg, #e2e8f0 25%, transparent 25.5%, transparent 75%, #e2e8f0 75%, #e2e8f0),
+        linear-gradient(60deg, #e2e8f0 25%, transparent 25.5%, transparent 75%, #e2e8f0 75%, #e2e8f0)
+      \`,
+      backgroundSize: "40px 70px, 40px 70px, 40px 70px, 40px 70px, 20px 35px, 20px 35px",
+      backgroundPosition: "0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "floating-dots",
+    name: "Floating Dots",
+    category: "geometric",
+    badge: "New",
+    description: "Elegant floating dots pattern with depth and movement",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+        radial-gradient(circle at 25% 25%, #e2e8f0 2px, transparent 2px),
+        radial-gradient(circle at 75% 75%, #cbd5e1 1.5px, transparent 1.5px),
+        radial-gradient(circle at 50% 10%, #f1f5f9 1px, transparent 1px),
+        radial-gradient(circle at 10% 90%, #e2e8f0 1.5px, transparent 1.5px),
+        radial-gradient(circle at 90% 50%, #cbd5e1 1px, transparent 1px)
+      `,
+      backgroundSize: "100px 100px, 150px 150px, 200px 200px, 120px 120px, 180px 180px",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Floating Dots Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 25% 25%, #e2e8f0 2px, transparent 2px),
+        radial-gradient(circle at 75% 75%, #cbd5e1 1.5px, transparent 1.5px),
+        radial-gradient(circle at 50% 10%, #f1f5f9 1px, transparent 1px),
+        radial-gradient(circle at 10% 90%, #e2e8f0 1.5px, transparent 1.5px),
+        radial-gradient(circle at 90% 50%, #cbd5e1 1px, transparent 1px)
+      \`,
+      backgroundSize: "100px 100px, 150px 150px, 200px 200px, 120px 120px, 180px 180px",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "wave-texture",
+    name: "Wave Texture",
+    category: "effects",
+    badge: "New",
+    description: "Subtle wave texture with organic flow",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+        radial-gradient(ellipse 100% 50% at 50% 0%, #f8fafc 0%, transparent 50%),
+        radial-gradient(ellipse 100% 50% at 50% 100%, #f1f5f9 0%, transparent 50%),
+        linear-gradient(90deg, transparent 0%, rgba(241, 245, 249, 0.3) 50%, transparent 100%)
+      `,
+      backgroundSize: "100% 100%, 100% 100%, 200px 100%",
+      backgroundPosition: "0 0, 0 0, 0 0",
+      backgroundRepeat: "no-repeat, no-repeat, repeat-x",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Wave Texture Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(ellipse 100% 50% at 50% 0%, #f8fafc 0%, transparent 50%),
+        radial-gradient(ellipse 100% 50% at 50% 100%, #f1f5f9 0%, transparent 50%),
+        linear-gradient(90deg, transparent 0%, rgba(241, 245, 249, 0.3) 50%, transparent 100%)
+      \`,
+      backgroundSize: "100% 100%, 100% 100%, 200px 100%",
+      backgroundPosition: "0 0, 0 0, 0 0",
+      backgroundRepeat: "no-repeat, no-repeat, repeat-x",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
 ];
