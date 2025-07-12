@@ -913,6 +913,62 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   {
+  id: "soft-blue-glow",
+  name: "Soft Blue Glow",
+  category: "effects",
+  badge: "New",
+  style: {
+    backgroundImage: `
+      radial-gradient(circle at center, #93c5fd 0%, transparent 70%)
+    `,
+    opacity: 0.6,
+    mixBlendMode: "multiply",
+  },
+  code: `<div className="min-h-screen w-full relative bg-white">
+  {/* Soft Blue Glow */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at center, #93c5fd 0%, transparent 70%)\`,
+      opacity: 0.6,
+      mixBlendMode: "multiply",
+    }}
+  />
+     {/* Your Content/Components */}
+  </div>`,
+  },
+
+  //Multi radial gradients pattern
+
+  {
+  id: "plasma-pulse-bloom",
+  name: "Plasma Pulse Bloom",
+  category: "effects",
+  badge: "New",
+  "style": {
+    "backgroundImage": "radial-gradient(circle at 30% 40%, #8b5cf6 0%, transparent 40%), radial-gradient(circle at 70% 60%, #06b6d4 0%, transparent 45%), radial-gradient(circle at center, #ec4899 0%, transparent 50%)",
+    "opacity": 0.7,
+    "mixBlendMode": "multiply"
+  },
+  code: `<div className="min-h-screen w-full relative bg-[#0f172a]">
+  {/* Plasma Pulse Bloom */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 30% 40%, #8b5cf6 0%, transparent 40%),
+        radial-gradient(circle at 70% 60%, #06b6d4 0%, transparent 45%),
+        radial-gradient(circle at center, #ec4899 0%, transparent 50%)\`,
+      opacity: 0.7,
+      mixBlendMode: "screen",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+
+  {
     id: "soft-warm-pastel-texture",
     name: "Soft Warm Pastel",
     category: "effects",
