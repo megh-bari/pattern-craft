@@ -1,5 +1,4 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
@@ -14,6 +13,12 @@ interface PatternShowcaseProps {
   theme: "light" | "dark";
 }
 
+interface Category {
+  id: string;
+  label: string;
+  icon?: React.ElementType;
+}
+
 export default function PatternShowcase({
   activePattern,
   setActivePattern,
@@ -24,10 +29,8 @@ export default function PatternShowcase({
   const [activeTab, setActiveTab] = useState<string>("all");
   const [pinnedPatterns, setPinnedPatterns] = useState<string[]>([]);
   const [hoveredPattern, setHoveredPattern] = useState<string | null>(null);
-  const [isMounted, setIsMounted] = useState(false);
   const isPatternDark = theme === "dark";
 
-  // Initialize pinned patterns from localStorage
   useEffect(() => {
     const storedPins = localStorage.getItem("pinnedPatterns");
     if (storedPins) {
@@ -39,7 +42,6 @@ export default function PatternShowcase({
     }
   }, []);
 
-  // Save pinned patterns to localStorage whenever they change
   useEffect(() => {
     localStorage.setItem("pinnedPatterns", JSON.stringify(pinnedPatterns));
   }, [pinnedPatterns]);
@@ -47,7 +49,7 @@ export default function PatternShowcase({
   const togglePin = (patternId: string, e?: React.MouseEvent) => {
     if (e) {
       e.stopPropagation();
-      e.preventDefault(); // Add preventDefault to ensure single call
+      e.preventDefault();
     }
 
     const pattern = gridPatterns.find((p) => p.id === patternId);
@@ -59,17 +61,15 @@ export default function PatternShowcase({
         ? prev.filter((id) => id !== patternId)
         : [...prev, patternId];
 
-      // Show toast AFTER state calculation
       toast.success(`"${patternName}" ${isPinned ? "unpinned" : "pinned"}`, {
-        id: `pin-${patternId}`, // Deduplication key
+        id: `pin-${patternId}`,
       });
 
       return newPins;
     });
   };
 
-  // Patterns Categories
-  const categories = [
+  const categories: Category[] = [
     { id: "all", label: "All Patterns" },
     { id: "pinned", label: "Pinned", icon: Pin },
     { id: "gradients", label: "Gradients" },
@@ -78,7 +78,6 @@ export default function PatternShowcase({
     { id: "effects", label: "Effects" },
   ];
 
-  // Filter patterns based on categories
   const filteredPatterns =
     activeTab === "all"
       ? gridPatterns
@@ -107,12 +106,6 @@ export default function PatternShowcase({
   const handleCardInteraction = (patternId: string) => {
     setActiveMobileCard(activeMobileCard === patternId ? null : patternId);
   };
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null;
 
   return (
     <section
