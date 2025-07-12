@@ -24,6 +24,7 @@ export default function PatternShowcase({
   const [activeTab, setActiveTab] = useState<string>("all");
   const [pinnedPatterns, setPinnedPatterns] = useState<string[]>([]);
   const [hoveredPattern, setHoveredPattern] = useState<string | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
   const isPatternDark = theme === "dark";
 
   // Initialize pinned patterns from localStorage
@@ -106,6 +107,12 @@ export default function PatternShowcase({
   const handleCardInteraction = (patternId: string) => {
     setActiveMobileCard(activeMobileCard === patternId ? null : patternId);
   };
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
 
   return (
     <section
