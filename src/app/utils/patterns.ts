@@ -2,6 +2,66 @@ import { Pattern } from "../types/pattern";
 
 export const gridPatterns: Pattern[] = [
   {
+    id: "gold-gradient-radial",
+    name: "Gold Gradient Radial",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(125% 125% at 50% 10%, #fff 40%, #f1d463 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Radial Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #f1d463 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "pink-gradient-radial",
+    name: "Pink Gradient Radial",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(125% 125% at 50% 10%, #fff 40%, #f163ac 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Radial Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #f163ac 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "red-gradient-radial",
+    name: "Red Gradient Radial",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(125% 125% at 50% 10%, #fff 40%, #f16363 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Radial Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #f16363 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
     id: "top-gradient-radial",
     name: "Top Gradient Radial",
     category: "decorative",
@@ -438,6 +498,38 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
+  },
+
+  // Geometric 
+   {
+    id: "visible-purple-grid-right",
+    name: "Visible Purple Grid Right",
+    badge: "New",
+    category: "geometric",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+        linear-gradient(to right, #d4d4d8 1px, transparent 1px),
+        linear-gradient(to bottom, #d4d4d8 1px, transparent 1px),
+        radial-gradient(circle 500px at 90% 200px, rgba(168, 85, 247, 0.3), transparent)
+      `,
+      backgroundSize: "64px 64px, 64px 64px, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+    {/* Visible Purple Grid Right */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        backgroundImage: \`
+          linear-gradient(to right, #d4d4d8 1px, transparent 1px),
+          linear-gradient(to bottom, #d4d4d8 1px, transparent 1px),
+          radial-gradient(circle 500px at 90% 200px, rgba(168, 85, 247, 0.3), transparent)
+        \`,
+        backgroundSize: "64px 64px, 64px 64px, 100% 100%",
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
   },
   {
     id: "purple-gradient-grid-right",
@@ -1984,6 +2076,36 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   // Dark versions of the patterns
+  {
+    id: "charcoal-grid-purple-glow",
+    name: "Charcoal Grid + Purple Glow",
+    badge: "New",
+    category: "geometric",
+    style: {
+      background: "#0f172a", 
+      backgroundImage: `
+        linear-gradient(to right, rgba(100,116,139,0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(100,116,139,0.2) 1px, transparent 1px),
+        radial-gradient(circle 600px at 80% 200px, rgba(139,92,246,0.3), transparent)
+      `,
+      backgroundSize: "64px 64px, 64px 64px, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-[#0f172a] relative">
+    {/* Charcoal Grid + Purple Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        backgroundImage: \`
+          linear-gradient(to right, rgba(100,116,139,0.2) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(100,116,139,0.2) 1px, transparent 1px),
+          radial-gradient(circle 600px at 80% 200px, rgba(139,92,246,0.3), transparent)
+        \`,
+        backgroundSize: "64px 64px, 64px 64px, 100% 100%",
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+  },
   {
     id: "dark-sphere-grid",
     name: "Dark Sphere Grid",
