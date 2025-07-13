@@ -2,6 +2,66 @@ import { Pattern } from "../types/pattern";
 
 export const gridPatterns: Pattern[] = [
   {
+    id: "gold-gradient-radial",
+    name: "Gold Gradient Radial",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(125% 125% at 50% 10%, #fff 40%, #f1d463 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Radial Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #f1d463 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "pink-gradient-radial",
+    name: "Pink Gradient Radial",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(125% 125% at 50% 10%, #fff 40%, #f163ac 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Radial Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #f163ac 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "red-gradient-radial",
+    name: "Red Gradient Radial",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(125% 125% at 50% 10%, #fff 40%, #f16363 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Radial Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #f16363 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
     id: "top-gradient-radial",
     name: "Top Gradient Radial",
     category: "decorative",
