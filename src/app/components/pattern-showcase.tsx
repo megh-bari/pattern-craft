@@ -174,7 +174,7 @@ export default function PatternShowcase({
                   }
         `}
               />
-              <span className="font-medium z-10 text-center leading-tight">
+              <span className="font-medium z-10 text-center text-nowrap leading-tight">
                 {category.label}
               </span>
               <div
