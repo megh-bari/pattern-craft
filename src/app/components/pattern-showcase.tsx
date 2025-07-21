@@ -7,6 +7,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
 import { Check, Copy, Eye, Palette, Sparkles, Star } from "lucide-react";
 import { gridPatterns } from "../utils/patterns";
 import { useEffect, useState } from "react";
+import { Pattern } from "../types/pattern";
+import { isDarkPattern, isLightPattern, makePatternFilterByCategory } from "@/lib/utils";
+
+type Category = {
+  id: string;
+  label: string;
+  filter: (pattern: Pattern) => boolean;
+}
 
 interface PatternShowcaseProps {
   activePattern: string | null;
@@ -22,7 +30,7 @@ export default function PatternShowcase({
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [favourite, setFavourite] = useState<string[]>([]);
   const [activeMobileCard, setActiveMobileCard] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<string>("all");
+  const [activeCategory, setActiveCategory] = useState<string>("all");
   const isPatternDark = theme === "dark";
 
 
@@ -32,8 +40,7 @@ export default function PatternShowcase({
     if (stored) setFavourite(JSON.parse(stored));
   }, [])
 
-  // save favourite to localstorage
-
+  // Save favourite to localstorage
   useEffect(() => {
     localStorage.setItem("favourite", JSON.stringify(favourite));
   }, [favourite])
@@ -45,27 +52,23 @@ export default function PatternShowcase({
     );
   };
 
-
-
   // Patterns Categories
-
   const categories = [
-    { id: "all", label: "All Patterns" },
-    { id: "gradients", label: "Gradients" },
-    { id: "geometric", label: "Geometric" },
-    { id: "decorative", label: "Decorative" },
-    { id: "effects", label: "Effects" },
-    { id: "favourites", label: "Favourites" }
-  ];
+    { id: "all", label: "All Patterns", filter: () => true },
+    { id: "gradients", label: "Gradients", filter: makePatternFilterByCategory("gradients") },
+    { id: "geometric", label: "Geometric", filter: makePatternFilterByCategory("geometric") },
+    { id: "decorative", label: "Decorative", filter: makePatternFilterByCategory("decorative") },
+    { id: "effects", label: "Effects", filter: makePatternFilterByCategory("effects") },
+    { id: "favourites", label: "Favourites", filter: (pattern) => favourite.includes(pattern.id) },
+    { id: "theme-light", label: "Light Patterns", filter: isLightPattern },
+    { id: "theme-dark", label: "Dark Patterns", filter: isDarkPattern },
+  ] satisfies Category[];
 
-  // filter patterns based on categories
+  const currentCategory = categories.find(cat => cat.id === activeCategory);
+  const currentFilter = currentCategory?.filter || (() => true);
 
-  const filteredPatterns =
-    activeTab === "all"
-      ? gridPatterns
-      : activeTab === "favourites"
-        ? gridPatterns.filter((pattern) => favourite.includes(pattern.id))
-        : gridPatterns.filter((pattern) => pattern.category === activeTab);
+  // filter patterns based on selected category
+  const filteredPatterns = gridPatterns.filter(currentFilter);
 
   const copyToClipboard = async (code: string, id: string) => {
     try {
@@ -114,8 +117,8 @@ export default function PatternShowcase({
 
       {/* Tabs */}
       <Tabs
-        value={activeTab}
-        onValueChange={setActiveTab}
+        value={activeCategory}
+        onValueChange={setActiveCategory}
         className="w-full mb-8"
       >
         {/* Desktop & Tablet Tabs (show on sm and up) */}
@@ -192,13 +195,13 @@ export default function PatternShowcase({
             {categories.map((category) => (
               <button
                 key={`mobile-${category.id}`}
-                onClick={() => setActiveTab(category.id)}
+                onClick={() => setActiveCategory(category.id)}
                 className={`
           flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap
           text-sm font-medium transition-all duration-300 ease-in-out
           backdrop-blur-md shadow-lg border
           hover:scale-[1.02] hover:shadow-xl
-          ${activeTab === category.id
+          ${activeCategory === category.id
                     ? isPatternDark
                       ? "bg-white/15 text-white border-white/20 shadow-lg"
                       : "bg-white/90 text-gray-900 border-gray-200/40 shadow-lg"
@@ -378,7 +381,7 @@ export default function PatternShowcase({
             {/* Empty state */}
             {filteredPatterns.length === 0 && (
               <div className="text-center py-12">
-                {activeTab === "favourites" ? (
+                {activeCategory === "favourites" ? (
                   <>
                     <div className="text-6xl mb-4 text-yellow-400 flex justify-center">
                       <Star className="h-12 w-12" />

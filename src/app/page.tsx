@@ -10,6 +10,7 @@ import { gridPatterns } from "./utils/patterns";
 import { Toaster } from "sonner";
 import SupportDropdown from "./components/SupportDropdownProps ";
 import ReturnToPreview from "./components/ReturnToPreview";
+import { getPatternTheme } from "./types/pattern";
 
 export default function Home() {
   const [activePattern, setActivePattern] = useState<string | null>(null);
@@ -23,17 +24,7 @@ export default function Home() {
   // Update theme based on pattern background color
   useEffect(() => {
     if (activePatternObj) {
-      // Check if pattern ID starts with "dark-" or contains specific dark colors
-      const background = activePatternObj.style.background || "";
-      const isDark =
-        activePatternObj.id.startsWith("dark-") ||
-        (typeof background === "string" &&
-          (background.includes("#0") ||
-            background.includes("#1") ||
-            background.includes("rgba(0,") ||
-            background.includes("rgba(1,")));
-
-      setTheme(isDark ? "dark" : "light");
+      setTheme(getPatternTheme(activePatternObj));
     } else {
       setTheme("light");
     }
