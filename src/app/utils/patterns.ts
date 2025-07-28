@@ -3176,4 +3176,50 @@ export const gridPatterns: Pattern[] = [
     {/* Your Content/Components */}
   </div>`,
   },
+  {
+    id: "cosmic",
+    name: "Cosmic",
+    category: "gradients",
+    badge: "New",
+    style: {
+      background: "#0f0f23",
+      backgroundImage: `
+        linear-gradient(135deg, #0f0f23 0%, #1e1b4b 20%, #312e81 35%, #1e40af 50%, #0891b2 65%, #164e63 80%, #0f172a 100%),
+        radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(147, 51, 234, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.2) 0%, transparent 60%)
+      `,
+      backgroundSize: "100% 100%, 100% 100%, 100% 100%, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Cosmic Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(135deg, #0f0f23 0%, #1e1b4b 20%, #312e81 35%, #1e40af 50%, #0891b2 65%, #164e63 80%, #0f172a 100%)
+      \`,
+    }}
+  />
+  
+  {/* Animated Overlay */}
+  <div
+    className="absolute inset-0 z-10"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(147, 51, 234, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.2) 0%, transparent 60%)
+      \`,
+    }}
+  />
+
+  {/* Your Content/Components */}
+  <div className="relative z-20 flex h-full items-center justify-center">
+    <h1 className="text-4xl font-light text-white opacity-80">
+      Cosmic Gradient
+    </h1>
+  </div>
+</div>`,
+  },
 ];
