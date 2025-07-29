@@ -3260,4 +3260,58 @@ export const gridPatterns: Pattern[] = [
   
 </div>`,
   },
+  {
+    id: "lux-pattern",
+    name: "Lux Pattern",
+    badge: "New",
+    category: "gradients",
+    style: {
+      background: "#000000",
+      backgroundImage: `
+        linear-gradient(135deg, #000000 0%, #1a1a1a 15%, #2d2d2d 30%, #1a1a1a 45%, #0d0d0d 60%, #262626 75%, #000000 100%),
+        radial-gradient(circle at 25px 25px, rgba(255,255,255,0.02) 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, rgba(255,255,255,0.01) 1%, transparent 0%),
+        radial-gradient(ellipse 80% 50% at 50% 40%, rgba(255,255,255,0.03) 0%, transparent 60%)
+      `,
+      backgroundSize: "100% 100%, 100px 100px, 150px 150px, 100% 100%",
+      backgroundPosition: "0 0, 0 0, 50px 50px, 0 0",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Lux Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(135deg, #000000 0%, #1a1a1a 15%, #2d2d2d 30%, #1a1a1a 45%, #0d0d0d 60%, #262626 75%, #000000 100%)
+      \`,
+    }}
+  />
+  
+  {/* Grain Texture */}
+  <div
+    className="absolute inset-0 z-10 opacity-60"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 25px 25px, rgba(255,255,255,0.02) 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, rgba(255,255,255,0.01) 1%, transparent 0%)
+      \`,
+      backgroundSize: "100px 100px, 150px 150px",
+      backgroundPosition: "0 0, 50px 50px",
+    }}
+  />
+
+  {/* Spotlight Effect */}
+  <div
+    className="absolute inset-0 z-10"
+    style={{
+      backgroundImage: \`
+        radial-gradient(ellipse 80% 50% at 50% 40%, rgba(255,255,255,0.03) 0%, transparent 60%)
+      \`,
+    }}
+  />
+
+  {/* Your Content/Components */}
+  
+</div>`,
+  },
 ];
