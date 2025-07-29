@@ -3215,11 +3215,49 @@ export const gridPatterns: Pattern[] = [
   />
 
   {/* Your Content/Components */}
-  <div className="relative z-20 flex h-full items-center justify-center">
-    <h1 className="text-4xl font-light text-white opacity-80">
-      Cosmic Gradient
-    </h1>
-  </div>
+  
+</div>`,
+  },
+  {
+    id: "warm-pattern",
+    name: "Warm Pattern",
+    badge: "New",
+    category: "gradients",
+    style: {
+      background: "#fef7cd",
+      backgroundImage: `
+        linear-gradient(135deg, #fef7cd 0%, #fef3c7 15%, #fde68a 25%, #fcd34d 40%, #f59e0b 55%, #ec4899 70%, #be185d 85%, #ffffff 100%),
+        radial-gradient(circle at 30% 70%, rgba(253, 224, 71, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(251, 191, 36, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(244, 114, 182, 0.2) 0%, transparent 60%)
+      `,
+      backgroundSize: "100% 100%, 100% 100%, 100% 100%, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Warm Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(135deg, #fef7cd 0%, #fef3c7 15%, #fde68a 25%, #fcd34d 40%, #f59e0b 55%, #ec4899 70%, #be185d 85%, #ffffff 100%)
+      \`,
+    }}
+  />
+  
+  {/* Animated Overlay */}
+  <div
+    className="absolute inset-0 z-10"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 30% 70%, rgba(253, 224, 71, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(251, 191, 36, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(244, 114, 182, 0.2) 0%, transparent 60%)
+      \`,
+    }}
+  />
+
+  {/* Your Content/Components */}
+  
 </div>`,
   },
 ];
