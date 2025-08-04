@@ -1,5 +1,15 @@
 "use client";
 
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
@@ -23,8 +33,12 @@ export default function PatternShowcase({
   const [favourite, setFavourite] = useState<string[]>([]);
   const [activeMobileCard, setActiveMobileCard] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<string>("all");
-  const isPatternDark = theme === "dark";
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [selectedPatternId, setSelectedPatternId] = useState<string | null>(
+    null
+  );
 
+  const isPatternDark = theme === "dark";
 
   // Load favourite on mount
   useEffect(() => {
@@ -45,8 +59,12 @@ export default function PatternShowcase({
     );
   };
 
+  const showModalForPattern = (patternId: string) => {
+    setSelectedPatternId(patternId);
+    setOpenModal(true);
+  };
 
-
+  const selectedPattern = gridPatterns.find((p) => p.id === selectedPatternId);
   // Patterns Categories
 
   const categories = [
@@ -367,6 +385,19 @@ export default function PatternShowcase({
                               </>
                             )}
                           </Button>
+                          <Button
+                            size="sm"
+                            variant="secondary"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              console.log(`Asking code for ${pattern.id}`);
+                              showModalForPattern(pattern.id);
+                            }}
+                            className="cursor-pointer shadow-xl backdrop-blur-md bg-white/95 hover:bg-white text-black border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto"
+                          >
+                            <CodeXml className="h-3 w-3 mr-1" />
+                            View code
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -410,6 +441,34 @@ export default function PatternShowcase({
           </TabsContent>
         ))}
       </Tabs>
+      {/* Modal to show the code that would be copied */}
+      <AlertDialog open={openModal} onOpenChange={setOpenModal}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle className="text-left">Code Preview</AlertDialogTitle>
+            <AlertDialogDescription asChild>
+              <div className="bg-zinc-900 text-zinc-100 font-mono text-sm rounded-md p-4 overflow-auto max-h-64 border border-zinc-700 shadow-inner text-left">
+                <pre className="whitespace-pre-wrap">
+                  <code>{selectedPattern?.code || "No code available."}</code>
+                </pre>
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={() => {
+                if (selectedPattern) {
+                  copyToClipboard(selectedPattern.code, selectedPattern.id);
+                  setOpenModal(false);
+                }
+              }}
+            >
+              Copy
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </section>
   );
 }
