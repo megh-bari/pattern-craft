@@ -430,16 +430,6 @@ For questions, issues, or suggestions:
   - Twitter: [@meghtrix](https://x.com/meghtrix)
   - GitHub: [@megh-bari](https://github.com/megh-bari)
 
-### Major Contributors
-- **[@shrwnsan](https://github.com/shrwnsan)** - Performance & Testing Infrastructure
-  - Comprehensive Playwright testing suite with visual regression and performance benchmarks
-  - Bundle optimization and analysis implementation with Next.js webpack analyzer
-  - GitHub Actions CI/CD pipeline for automated deployment to GitHub Pages
-  - Documentation organization and comprehensive technical guides
-  - Next.js static export configuration optimization
-  - Pattern data architecture improvements with code splitting and dynamic loading
-  - Performance enhancements and build process optimization
-
 ### Community
 Thanks to all contributors who have helped improve Pattern Craft through:
 - Pattern submissions and enhancements
