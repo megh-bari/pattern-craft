@@ -431,7 +431,7 @@ For questions, issues, or suggestions:
   - GitHub: [@megh-bari](https://github.com/megh-bari)
 
 ### Major Contributors
-- **[@shrwnsan](https://github.com/shrwnsan)  Warp.dev Terminal  Claude 4 Sonnet (Anthropic)** - Performance  Testing Infrastructure
+- **[@shrwnsan](https://github.com/shrwnsan)** - Performance & Testing Infrastructure
   - Comprehensive Playwright testing suite with visual regression and performance benchmarks
   - Bundle optimization and analysis implementation with Next.js webpack analyzer
   - GitHub Actions CI/CD pipeline for automated deployment to GitHub Pages
