@@ -8,10 +8,13 @@ import { useFavorites } from "@/context/favourites-context";
 import PatternGrid from "./pattern-grid";
 import PatternEmptyState from "./pattern-empty-state";
 
+import { Pattern } from "@/types/pattern";
+
 interface PatternShowcaseProps {
   activePattern: string | null;
   setActivePattern: (pattern: string | null) => void;
   theme: "light" | "dark";
+  patterns: Pattern[];
 }
 
 export default function PatternShowcase({
