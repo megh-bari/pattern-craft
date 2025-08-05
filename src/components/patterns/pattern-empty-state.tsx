@@ -1,6 +1,7 @@
 "use client";
 
 import { Palette, Star } from "lucide-react";
+import { useFavorites } from "@/context/favourites-context";
 
 interface PatternEmptyStateProps {
   activeTab: string;
@@ -11,9 +12,10 @@ export default function PatternEmptyState({
   activeTab,
   theme,
 }: PatternEmptyStateProps) {
+  const { favourites } = useFavorites();
   const isPatternDark = theme === "dark";
 
-  if (activeTab === "favourites") {
+  if (activeTab === "favourites" && favourites.length === 0) {
     return (
       <div className="text-center py-12">
         <div className="text-6xl mb-4 text-yellow-400 flex justify-center">

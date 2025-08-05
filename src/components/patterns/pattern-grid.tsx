@@ -2,6 +2,7 @@
 
 import { Pattern } from "@/types/pattern";
 import PatternCard from "./pattern-card";
+import { useFavorites } from "@/context/favourites-context";
 
 interface PatternGridProps {
   patterns: Pattern[];
@@ -20,11 +21,13 @@ export default function PatternGrid({
   activeMobileCard,
   setActiveMobileCard,
 }: PatternGridProps) {
+  const { favourites } = useFavorites();
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
       {patterns.map((pattern) => (
         <PatternCard
-          key={pattern.id}
+          key={`${pattern.id}-${favourites.includes(pattern.id)}`}
           pattern={pattern}
           activePattern={activePattern}
           setActivePattern={setActivePattern}

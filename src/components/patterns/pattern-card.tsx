@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Check, Copy, Eye, Sparkles, Star } from "lucide-react";
 import { Pattern } from "@/types/pattern";
 import { useCopy } from "@/hooks/useCopy";
-import { useFavorites } from "@/hooks/useFavourites";
+import { useFavorites } from "@/context/favourites-context";
 
 interface PatternCardProps {
   pattern: Pattern;

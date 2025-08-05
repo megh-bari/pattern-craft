@@ -1,10 +1,10 @@
 "use client";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { gridPatterns } from "@/data/patterns";
 import { categories } from "@/data/categories";
-import { useFavorites } from "@/hooks/useFavourites";
+import { useFavorites } from "@/context/favourites-context";
 import PatternGrid from "./pattern-grid";
 import PatternEmptyState from "./pattern-empty-state";
 
@@ -23,6 +23,8 @@ export default function PatternShowcase({
   const [activeTab, setActiveTab] = useState<string>("all");
   const { favourites } = useFavorites();
   const isPatternDark = theme === "dark";
+
+  useEffect(() => {}, [favourites]);
 
   // Filter patterns based on categories
   const filteredPatterns =

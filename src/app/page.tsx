@@ -11,6 +11,7 @@ import Hero from "@/components/home/hero";
 import PatternShowcase from "@/components/patterns/pattern-showcase";
 import SupportDropdown from "@/components/home/support-dropdown";
 import ReturnToPreview from "@/components/home/return-to-preview";
+import { FavoritesProvider } from "@/context/favourites-context";
 
 export default function Home() {
   const [activePattern, setActivePattern] = useState<string | null>(null);
@@ -29,28 +30,33 @@ export default function Home() {
   return (
     <>
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-        <div className="min-h-screen relative">
-          {/* Apply the active pattern as background */}
-          {activePatternObj && (
-            <div className="fixed inset-0 z-0" style={activePatternObj.style} />
-          )}
-          <div className="relative z-10">
-            <Navbar theme={theme} />
-            <SupportDropdown theme={theme} />
-            <Hero
-              activePattern={activePattern}
-              setActivePattern={setActivePattern}
-              theme={theme}
-            />
-            <PatternShowcase
-              activePattern={activePattern}
-              setActivePattern={setActivePattern}
-              theme={theme}
-            />
-            <Footer theme={theme} />
+        <FavoritesProvider>
+          <div className="min-h-screen relative">
+            {/* Apply the active pattern as background */}
+            {activePatternObj && (
+              <div
+                className="fixed inset-0 z-0"
+                style={activePatternObj.style}
+              />
+            )}
+            <div className="relative z-10">
+              <Navbar theme={theme} />
+              <SupportDropdown theme={theme} />
+              <Hero
+                activePattern={activePattern}
+                setActivePattern={setActivePattern}
+                theme={theme}
+              />
+              <PatternShowcase
+                activePattern={activePattern}
+                setActivePattern={setActivePattern}
+                theme={theme}
+              />
+              <Footer theme={theme} />
+            </div>
+            <ReturnToPreview theme={theme} />
           </div>
-          <ReturnToPreview theme={theme} />
-        </div>
+        </FavoritesProvider>
         <Toaster />
       </ThemeProvider>
     </>
