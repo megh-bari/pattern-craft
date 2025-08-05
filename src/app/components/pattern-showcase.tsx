@@ -4,9 +4,18 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
-import { Check, Copy, Eye, Palette, Sparkles, Star } from "lucide-react";
+import {
+  Check,
+  Copy,
+  Eye,
+  Palette,
+  Search,
+  Sparkles,
+  Star,
+} from "lucide-react";
 import { gridPatterns } from "../utils/patterns";
 import { useEffect, useState } from "react";
+import { searchPatterns } from "@/lib/utils";
 
 interface PatternShowcaseProps {
   activePattern: string | null;
@@ -23,29 +32,28 @@ export default function PatternShowcase({
   const [favourite, setFavourite] = useState<string[]>([]);
   const [activeMobileCard, setActiveMobileCard] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<string>("all");
-  const isPatternDark = theme === "dark";
 
+  const [searchInput, setSearchInput] = useState<string>("");
+
+  const isPatternDark = theme === "dark";
 
   // Load favourite on mount
   useEffect(() => {
     const stored = localStorage.getItem("favourite");
     if (stored) setFavourite(JSON.parse(stored));
-  }, [])
+  }, []);
 
   // save favourite to localstorage
 
   useEffect(() => {
     localStorage.setItem("favourite", JSON.stringify(favourite));
-  }, [favourite])
-
+  }, [favourite]);
 
   const toggleFavourite = (id: string) => {
     setFavourite((prev) =>
       prev.includes(id) ? prev.filter((fav) => fav !== id) : [...prev, id]
     );
   };
-
-
 
   // Patterns Categories
 
@@ -55,17 +63,19 @@ export default function PatternShowcase({
     { id: "geometric", label: "Geometric" },
     { id: "decorative", label: "Decorative" },
     { id: "effects", label: "Effects" },
-    { id: "favourites", label: "Favourites" }
+    { id: "favourites", label: "Favourites" },
   ];
 
-  // filter patterns based on categories
+  // filter patterns based on categories and search
 
   const filteredPatterns =
-    activeTab === "all"
-      ? gridPatterns
-      : activeTab === "favourites"
+    searchInput === ""
+      ? activeTab === "all"
+        ? gridPatterns
+        : activeTab === "favourites"
         ? gridPatterns.filter((pattern) => favourite.includes(pattern.id))
-        : gridPatterns.filter((pattern) => pattern.category === activeTab);
+        : gridPatterns.filter((pattern) => pattern.category === activeTab)
+      : searchPatterns(gridPatterns, searchInput);
 
   const copyToClipboard = async (code: string, id: string) => {
     try {
@@ -89,6 +99,10 @@ export default function PatternShowcase({
     setActiveMobileCard(activeMobileCard === patternId ? null : patternId);
   };
 
+  const handleSearch = (searchValue: string) => {
+    setSearchInput(searchValue);
+  };
+
   return (
     <section
       id="pattern-showcase"
@@ -98,14 +112,16 @@ export default function PatternShowcase({
       <div className="mb-8 sm:mb-10 lg:mb-12">
         <div className="text-center sm:text-left">
           <h2
-            className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 transition-colors duration-300 ${isPatternDark ? "text-white" : "text-gray-900 dark:text-gray-50"
-              }`}
+            className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 transition-colors duration-300 ${
+              isPatternDark ? "text-white" : "text-gray-900 dark:text-gray-50"
+            }`}
           >
             Pattern Library
           </h2>
           <p
-            className={`text-sm sm:text-base transition-colors duration-300 ${isPatternDark ? "text-gray-300" : "text-muted-foreground"
-              }`}
+            className={`text-sm sm:text-base transition-colors duration-300 ${
+              isPatternDark ? "text-gray-300" : "text-muted-foreground"
+            }`}
           >
             Tap on mobile or hover on desktop to see options
           </p>
@@ -125,11 +141,12 @@ export default function PatternShowcase({
     grid-cols-2 sm:grid-cols-3 md:grid-cols-6
     w-full h-auto p-1.5
     backdrop-blur-md shadow-lg border
-    rounded-xl mb-8 transition-all duration-300
-    ${isPatternDark
-              ? "bg-black/20 border-white/10 hover:bg-black/30"
-              : "bg-white/70 border-gray-200/30 hover:bg-white/80"
-            }
+    rounded-xl mb-4 transition-all duration-300
+    ${
+      isPatternDark
+        ? "bg-black/20 border-white/10 hover:bg-black/30"
+        : "bg-white/70 border-gray-200/30 hover:bg-white/80"
+    }
   `}
         >
           {categories.map((category) => (
@@ -145,30 +162,32 @@ export default function PatternShowcase({
         min-h-[44px] sm:min-h-[40px]
         relative overflow-hidden
         group
-        ${isPatternDark
-                  ? `data-[state=active]:bg-white/10 data-[state=active]:text-white 
+        ${
+          isPatternDark
+            ? `data-[state=active]:bg-white/10 data-[state=active]:text-white 
                data-[state=active]:shadow-lg data-[state=active]:border 
                data-[state=active]:border-white/20 data-[state=active]:backdrop-blur-sm
                data-[state=inactive]:text-gray-300 
                data-[state=inactive]:hover:text-white
                data-[state=inactive]:hover:bg-white/5`
-                  : `data-[state=active]:bg-white/90 data-[state=active]:text-gray-900 
+            : `data-[state=active]:bg-white/90 data-[state=active]:text-gray-900 
                data-[state=active]:shadow-lg data-[state=active]:border 
                data-[state=active]:border-gray-200/40 data-[state=active]:backdrop-blur-sm
                data-[state=inactive]:text-gray-600 
                data-[state=inactive]:hover:text-gray-900
                data-[state=inactive]:hover:bg-white/40`
-                }
+        }
       `}
             >
               <div
                 className={`
           absolute inset-0 rounded-lg opacity-0 
           data-[state=active]:opacity-100 transition-all duration-300
-          ${isPatternDark
-                    ? "bg-gradient-to-br from-white/15 to-white/5"
-                    : "bg-gradient-to-br from-white/95 to-white/80"
-                  }
+          ${
+            isPatternDark
+              ? "bg-gradient-to-br from-white/15 to-white/5"
+              : "bg-gradient-to-br from-white/95 to-white/80"
+          }
         `}
               />
               <span className="font-medium z-10 text-center leading-tight">
@@ -185,7 +204,6 @@ export default function PatternShowcase({
             </TabsTrigger>
           ))}
         </TabsList>
-
         {/* Mobile Tabs (show on xs only) */}
         <div className="block sm:hidden mb-6">
           <div className="flex flex-wrap gap-2 px-1 pb-2 justify-center">
@@ -198,14 +216,15 @@ export default function PatternShowcase({
           text-sm font-medium transition-all duration-300 ease-in-out
           backdrop-blur-md shadow-lg border
           hover:scale-[1.02] hover:shadow-xl
-          ${activeTab === category.id
-                    ? isPatternDark
-                      ? "bg-white/15 text-white border-white/20 shadow-lg"
-                      : "bg-white/90 text-gray-900 border-gray-200/40 shadow-lg"
-                    : isPatternDark
-                      ? "bg-black/20 text-gray-300 border-white/10 hover:bg-black/30 hover:text-white hover:border-white/20"
-                      : "bg-white/60 text-gray-600 border-gray-200/30 hover:bg-white/80 hover:text-gray-900 hover:border-gray-300/40"
-                  }
+          ${
+            activeTab === category.id
+              ? isPatternDark
+                ? "bg-white/15 text-white border-white/20 shadow-lg"
+                : "bg-white/90 text-gray-900 border-gray-200/40 shadow-lg"
+              : isPatternDark
+              ? "bg-black/20 text-gray-300 border-white/10 hover:bg-black/30 hover:text-white hover:border-white/20"
+              : "bg-white/60 text-gray-600 border-gray-200/30 hover:bg-white/80 hover:text-gray-900 hover:border-gray-300/40"
+          }
         `}
               >
                 <span>{category.label}</span>
@@ -214,13 +233,38 @@ export default function PatternShowcase({
           </div>
         </div>
 
+        {/*Search Bar , this is only on the basis of name since categories are handled above*/}
+        <div
+          className={`w-full
+    backdrop-blur-md shadow-sm border  rounded-xl mb-8 flex items-center px-2 ${
+      isPatternDark
+        ? "bg-black/20 border-white/10 hover:bg-black/30"
+        : "bg-white/70 border-gray-200/30 hover:bg-white/80"
+    }`}
+        >
+          <Search className="text-[4px] font-extralight text-gray-600"></Search>
+          <input
+            type="text"
+            className={`w-full h-auto py-2 px-2 text-sm text-gray-600 font-medium grow
+  outline-none rounded-xl ${isPatternDark ? "bg-black/20 " : "bg-white/70"}`}
+            placeholder="Search..."
+            value={searchInput}
+            onChange={(e) => handleSearch(e.target.value)}
+          />
+        </div>
+
         {categories.map((category) => (
-          <TabsContent key={category.id} value={category.id} className="mt-0">
+          <TabsContent
+            key={category.id}
+            value={category.id}
+            className="mt-0"
+          >
             {/* Pattern count */}
             <div className="mb-6">
               <p
-                className={`text-sm transition-colors duration-300 ${isPatternDark ? "text-gray-300" : "text-muted-foreground"
-                  }`}
+                className={`text-sm transition-colors duration-300 ${
+                  isPatternDark ? "text-gray-300" : "text-muted-foreground"
+                }`}
               >
                 {filteredPatterns.length} pattern
                 {filteredPatterns.length !== 1 ? "s" : ""}
@@ -231,15 +275,20 @@ export default function PatternShowcase({
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
               {filteredPatterns.map((pattern) => (
-                <div key={pattern.id} className="group relative">
+                <div
+                  key={pattern.id}
+                  className="group relative"
+                >
                   <div
-                    className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-background shadow-sm transition-all duration-300 ${activePattern === pattern.id
-                      ? "ring-2 ring-primary ring-offset-2"
-                      : ""
-                      } ${activeMobileCard === pattern.id
+                    className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-background shadow-sm transition-all duration-300 ${
+                      activePattern === pattern.id
+                        ? "ring-2 ring-primary ring-offset-2"
+                        : ""
+                    } ${
+                      activeMobileCard === pattern.id
                         ? "scale-[1.02] shadow-lg sm:scale-100"
                         : "hover:shadow-lg hover:scale-[1.02]"
-                      }`}
+                    }`}
                     onClick={() => handleCardInteraction(pattern.id)}
                   >
                     {/* Favorite Button with Star Icon */}
@@ -248,26 +297,35 @@ export default function PatternShowcase({
                         e.stopPropagation();
                         toggleFavourite(pattern.id);
                       }}
-                      className={`absolute top-2 left-2 z-10 p-2 rounded-full backdrop-blur-md shadow-lg border transition-all cursor-pointer duration-200 hover:scale-110 group/star ${favourite.includes(pattern.id)
-                        ? isPatternDark
-                          ? "bg-yellow-500/20 border-yellow-400/30 text-yellow-400"
-                          : "bg-yellow-500/20 border-yellow-500/30 text-yellow-600"
-                        : isPatternDark
+                      className={`absolute top-2 left-2 z-10 p-2 rounded-full backdrop-blur-md shadow-lg border transition-all cursor-pointer duration-200 hover:scale-110 group/star ${
+                        favourite.includes(pattern.id)
+                          ? isPatternDark
+                            ? "bg-yellow-500/20 border-yellow-400/30 text-yellow-400"
+                            : "bg-yellow-500/20 border-yellow-500/30 text-yellow-600"
+                          : isPatternDark
                           ? "bg-black/20 border-white/20 text-white hover:bg-black/30 hover:border-white/30"
                           : "bg-black/20 border-white/30 text-white hover:bg-black/30 hover:border-white/40"
-                        }`}
-                      title={favourite.includes(pattern.id) ? "Remove from favorites" : "Add to favorites"}
+                      }`}
+                      title={
+                        favourite.includes(pattern.id)
+                          ? "Remove from favorites"
+                          : "Add to favorites"
+                      }
                     >
                       <Star
-                        className={`h-4 w-4 transition-all duration-200 ${favourite.includes(pattern.id)
-                          ? "fill-current scale-110"
-                          : "group-hover/star:scale-110"
-                          }`}
+                        className={`h-4 w-4 transition-all duration-200 ${
+                          favourite.includes(pattern.id)
+                            ? "fill-current scale-110"
+                            : "group-hover/star:scale-110"
+                        }`}
                       />
                     </button>
 
                     {/* Pattern style */}
-                    <div className="absolute inset-0" style={pattern.style} />
+                    <div
+                      className="absolute inset-0"
+                      style={pattern.style}
+                    />
 
                     {/* Badge */}
                     {pattern.badge && (
@@ -290,7 +348,9 @@ export default function PatternShowcase({
                         onClick={(e) => {
                           e.stopPropagation();
                           previewPattern(pattern.id);
-                          document.getElementById('trigger-preview-scroll')?.click()
+                          document
+                            .getElementById("trigger-preview-scroll")
+                            ?.click();
                         }}
                         className="flex-1 bg-white/95 hover:bg-white text-black border-0 text-xs h-8"
                       >
@@ -303,10 +363,11 @@ export default function PatternShowcase({
                           e.stopPropagation();
                           copyToClipboard(pattern.code, pattern.id);
                         }}
-                        className={`flex-1 border-0 text-xs h-8 ${copiedId === pattern.id
-                          ? "bg-gray-700 hover:bg-gray-800 text-white"
-                          : "bg-gray-900/90 hover:bg-gray-900 text-white"
-                          }`}
+                        className={`flex-1 border-0 text-xs h-8 ${
+                          copiedId === pattern.id
+                            ? "bg-gray-700 hover:bg-gray-800 text-white"
+                            : "bg-gray-900/90 hover:bg-gray-900 text-white"
+                        }`}
                         disabled={copiedId === pattern.id}
                       >
                         {copiedId === pattern.id ? (
@@ -336,7 +397,9 @@ export default function PatternShowcase({
                             onClick={(e) => {
                               e.stopPropagation();
                               previewPattern(pattern.id);
-                              document.getElementById('trigger-preview-scroll')?.click()
+                              document
+                                .getElementById("trigger-preview-scroll")
+                                ?.click();
                             }}
                             className="cursor-pointer shadow-xl backdrop-blur-md bg-white/95 hover:bg-white text-black border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto"
                           >
@@ -349,10 +412,11 @@ export default function PatternShowcase({
                               e.stopPropagation();
                               copyToClipboard(pattern.code, pattern.id);
                             }}
-                            className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${copiedId === pattern.id
-                              ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"
-                              : "bg-gray-900/90 hover:bg-gray-900 text-white"
-                              }`}
+                            className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${
+                              copiedId === pattern.id
+                                ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"
+                                : "bg-gray-900/90 hover:bg-gray-900 text-white"
+                            }`}
                             disabled={copiedId === pattern.id}
                           >
                             {copiedId === pattern.id ? (
@@ -383,11 +447,25 @@ export default function PatternShowcase({
                     <div className="text-6xl mb-4 text-yellow-400 flex justify-center">
                       <Star className="h-12 w-12" />
                     </div>
-                    <h3 className={`text-lg font-semibold mb-2 ${isPatternDark ? "text-gray-200" : "text-black dark:text-gray-200"}`}>
+                    <h3
+                      className={`text-lg font-semibold mb-2 ${
+                        isPatternDark
+                          ? "text-gray-200"
+                          : "text-black dark:text-gray-200"
+                      }`}
+                    >
                       No favourites yet
                     </h3>
-                    <p className={`${isPatternDark ? "text-gray-200" : "text-gray-600 dark:text-gray-200"}`}>
-                      You haven&apos;t saved any favorites yet. Tap the <Star className="inline -mt-1 h-4 w-4 text-yellow-400" /> icon on a pattern to add it to your favorites!
+                    <p
+                      className={`${
+                        isPatternDark
+                          ? "text-gray-200"
+                          : "text-gray-600 dark:text-gray-200"
+                      }`}
+                    >
+                      You haven&apos;t saved any favorites yet. Tap the{" "}
+                      <Star className="inline -mt-1 h-4 w-4 text-yellow-400" />{" "}
+                      icon on a pattern to add it to your favorites!
                     </p>
                   </>
                 ) : (
@@ -396,17 +474,28 @@ export default function PatternShowcase({
                     <div className="text-6xl mb-4 text-purple-400 flex justify-center">
                       <Palette className="h-12 w-12" />
                     </div>
-                    <h3 className={`text-lg font-semibold mb-2 ${isPatternDark ? "text-gray-200" : "text-gray-600 dark:text-gray-200"}`}>
+                    <h3
+                      className={`text-lg font-semibold mb-2 ${
+                        isPatternDark
+                          ? "text-gray-200"
+                          : "text-gray-600 dark:text-gray-200"
+                      }`}
+                    >
                       No patterns found
                     </h3>
-                    <p className={`${isPatternDark ? "text-gray-200" : "text-gray-600 dark:text-gray-200"}`}>
+                    <p
+                      className={`${
+                        isPatternDark
+                          ? "text-gray-200"
+                          : "text-gray-600 dark:text-gray-200"
+                      }`}
+                    >
                       No patterns available in this category yet.
                     </p>
                   </>
                 )}
               </div>
             )}
-
           </TabsContent>
         ))}
       </Tabs>
