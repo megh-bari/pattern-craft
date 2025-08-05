@@ -5,6 +5,7 @@ export const gridPatterns: Pattern[] = [
     id: "top-gradient-radial",
     name: "Top Gradient Radial",
     category: "decorative",
+    theme: "light",
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #fff 40%, #6366f1 100%)",
@@ -24,6 +25,7 @@ export const gridPatterns: Pattern[] = [
     id: "bottom-gradient-radial",
     name: "Bottom Gradient Radial",
     category: "decorative",
+    theme: "light",
     badge: "New",
     description: "Radial gradient from white to purple starting from bottom",
     style: {
@@ -45,6 +47,7 @@ export const gridPatterns: Pattern[] = [
     id: "bottom-violet-radial",
     name: "Bottom Violet Radial",
     category: "decorative",
+    theme: "light",
     badge: "New",
     description: "Rich violet from bottom - luxury feel for premium brands",
     style: {
@@ -66,6 +69,7 @@ export const gridPatterns: Pattern[] = [
     id: "bottom-slate-radial",
     name: "Bottom Slate Radial",
     category: "decorative",
+    theme: "light",
     badge: "New",
     description: "Sophisticated slate from bottom - clean and professional",
     style: {
@@ -88,6 +92,7 @@ export const gridPatterns: Pattern[] = [
     name: "Teal Glow",
     badge: "New",
     category: "decorative",
+    theme: "light",
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -114,6 +119,7 @@ export const gridPatterns: Pattern[] = [
     name: "Pink Glow",
     badge: "New",
     category: "decorative",
+    theme: "light",
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -140,6 +146,7 @@ export const gridPatterns: Pattern[] = [
     name: "Amber Glow",
     badge: "New",
     category: "decorative",
+    theme: "light",
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -166,6 +173,7 @@ export const gridPatterns: Pattern[] = [
     name: "Emerald Glow",
     badge: "New",
     category: "decorative",
+    theme: "light",
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -193,6 +201,7 @@ export const gridPatterns: Pattern[] = [
     name: "Dark Horizon Glow",
     badge: "New",
     category: "decorative",
+    theme: "dark",
     style: {
       background: "#000000",
       backgroundImage: `
@@ -217,6 +226,7 @@ export const gridPatterns: Pattern[] = [
     name: "Crimson Depth",
     badge: "New",
     category: "decorative",
+    theme: "dark",
     style: {
       background: "#000000",
       backgroundImage: `radial-gradient(125% 125% at 50% 100%, #000000 40%, #2b0707 100%)`,
@@ -238,6 +248,7 @@ export const gridPatterns: Pattern[] = [
     name: "Emerald Void",
     badge: "New",
     category: "decorative",
+    theme: "dark",
     style: {
       background: "#000000",
       backgroundImage: `radial-gradient(125% 125% at 50% 90%, #000000 40%, #072607 100%)`,
@@ -259,6 +270,7 @@ export const gridPatterns: Pattern[] = [
     name: "Violet Abyss",
     badge: "New",
     category: "decorative",
+    theme: "dark",
     style: {
       background: "#000000",
       backgroundImage: `radial-gradient(125% 125% at 50% 90%, #000000 40%, #2b092b 100%)`,
@@ -280,6 +292,7 @@ export const gridPatterns: Pattern[] = [
     name: "Azure Depths",
     badge: "New",
     category: "decorative",
+    theme: "dark",
     style: {
       background: "#000000",
       backgroundImage: `radial-gradient(125% 125% at 50% 100%, #000000 40%, #010133 100%)`,
@@ -301,6 +314,7 @@ export const gridPatterns: Pattern[] = [
     name: "Orchid  Depths",
     badge: "New",
     category: "decorative",
+    theme: "dark",
     style: {
       background: "#000000",
       backgroundImage: `radial-gradient(125% 125% at 50% 100%, #000000 40%, #350136 100%)`,
@@ -322,6 +336,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dark-horizon-glow-top",
     name: "Dark Horizon Glow Top",
+    theme: "dark",
     badge: "New",
     category: "decorative",
     style: {
@@ -342,6 +357,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "crimson-depth-top",
     name: "Crimson Depth Top",
+    theme: "dark",
     badge: "New",
     category: "decorative",
     style: {
@@ -362,6 +378,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "emerald-void-top",
     name: "Emerald Void Top",
+    theme: "dark",
     badge: "New",
     category: "decorative",
     style: {
@@ -382,6 +399,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "violet-abyss-top",
     name: "Violet Abyss Top",
+    theme: "dark",
     badge: "New",
     category: "decorative",
     style: {
@@ -402,6 +420,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "azure-depths-top",
     name: "Azure Depths Top",
+    theme: "dark",
     badge: "New",
     category: "decorative",
     style: {
@@ -422,6 +441,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "orchid-depths-top",
     name: "Orchid Depths Top",
+    theme: "dark",
     badge: "New",
     category: "decorative",
     style: {
@@ -442,6 +462,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "purple-gradient-grid-right",
     name: "Purple Gradient Grid Right",
+    theme: "light",
     badge: "New",
     category: "geometric",
     style: {
@@ -473,6 +494,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "purple-gradient-grid-left",
     name: "Purple Gradient Grid Left",
+    theme: "light",
     badge: "New",
     category: "geometric",
     style: {
@@ -504,6 +526,7 @@ export const gridPatterns: Pattern[] = [
     id: "dual-gradient-overlay-strong",
     badge: "New",
     category: "geometric",
+    theme: "light",
     name: "Dual Gradient Overlay",
     style: {
       background: "#ffffff",
@@ -535,6 +558,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dual-gradient-overlay-strong-swapped",
     name: "Dual Gradient Overlay Swapped",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -567,6 +591,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dual-gradient-overlay-top",
     name: "Dual Gradient Overlay (Top)",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -599,6 +624,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dual-gradient-overlay-bottom",
     name: "Dual Gradient Overlay (Bottom)",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -631,6 +657,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "top-fade-grid",
     name: "Top Fade Grid",
+    theme: "light",
     category: "geometric",
     style: {
       background: "#f8fafc",
@@ -666,6 +693,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "bottom-fade-grid",
     name: "Bottom Fade Grid",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -702,6 +730,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "diagonal-fade-grid-left",
     name: "Diagonal Fade Grid Left",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -738,6 +767,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "diagonal-fade-grid-right",
     name: "Diagonal Fade Grid Right",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -776,6 +806,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dark-radial-glow",
     name: "Dark Radial Glow",
+    theme: "dark",
     category: "gradients",
     style: {
       background: "#020617",
@@ -797,6 +828,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "blue-radial-glow",
     name: "Blue Radial Glow",
+    theme: "light",
     category: "gradients",
     style: {
       background: "#0f172a",
@@ -818,6 +850,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "purple-radial-glow",
     name: "Purple Radial Glow",
+    theme: "light",
     category: "gradients",
     badge: "New",
     style: {
@@ -840,6 +873,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "emerald-radial-glow",
     name: "Emerald Radial Glow",
+    theme: "light",
     category: "gradients",
     badge: "New",
     style: {
@@ -863,6 +897,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dreamy-sky-pink-glow",
     name: "Dreamy Sky Pink Glow",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -888,6 +923,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "beige-texture",
     name: "Warm Beige",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -915,6 +951,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "soft-warm-pastel-texture",
     name: "Soft Warm Pastel",
+    theme: "light",
     category: "effects",
     style: {
       background: "#fff8f0",
@@ -942,6 +979,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "warm-light-apricot-coral",
     name: "Warm Light Apricot & Coral",
+    theme: "light",
     category: "effects",
     style: {
       background: "#fff9f5",
@@ -968,6 +1006,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "warm-pastel-coral-cream",
     name: "Warm Soft Coral & Cream",
+    theme: "light",
     category: "effects",
     style: {
       background: "#fef9f7",
@@ -996,6 +1035,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "soft-yellow-glow",
     name: "Soft Yellow Glow",
+    theme: "light",
     category: "effects",
     style: {
       backgroundImage: `
@@ -1022,6 +1062,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "soft-dark-yellow-glow",
     name: "Soft Dark Yellow Glow",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1049,6 +1090,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "orange-soft-glow",
     name: "Orange Soft Glow",
+    theme: "light",
     category: "effects",
     style: {
       backgroundImage: `
@@ -1075,6 +1117,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "soft-green-glow",
     name: "Soft Green Glow",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1101,6 +1144,7 @@ export const gridPatterns: Pattern[] = [
     badge: "New",
     name: "Purple Glow Right",
     category: "effects",
+    theme: "light",
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -1137,6 +1181,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "teal-glow-bg",
     name: "Teal Glow Right",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1174,6 +1219,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "warm-orange-glow-bg",
     name: "Warm Orange Glow Right",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1211,6 +1257,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "cool-blue-glow-bg",
     name: "Cool Blue Glow Right",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1249,6 +1296,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "purple-glow-bg-left",
     name: "Purple Glow Left",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1286,6 +1334,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "teal-glow-bg-left",
     name: "Teal Glow Left",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1323,6 +1372,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "warm-orange-glow-bg-left",
     name: "Warm Orange Glow Left",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1360,6 +1410,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "cool-blue-glow-bg-left",
     name: "Cool Blue Glow Left",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1399,6 +1450,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "purple-glow-bg-top",
     name: "Purple Glow Top",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1436,6 +1488,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "teal-glow-bg-top",
     name: "Teal Glow Top",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1473,6 +1526,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "warm-orange-glow-bg-top",
     name: "Warm Orange Glow Top",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1510,6 +1564,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "cool-blue-glow-bg-top",
     name: "Cool Blue Glow Top",
+    theme: "light",
     category: "effects",
     badge: "New",
     style: {
@@ -1550,6 +1605,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "paper-texture",
     name: "Paper Texture",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1580,6 +1636,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "diagonal-lines",
     name: "Diagonal Stripes",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1600,6 +1657,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "diagonal-light",
     name: "Diagonal Grid - Light",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1628,6 +1686,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "diagonal-light-green",
     name: "Diagonal Grid - Electric",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1656,6 +1715,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "zigzag-lightning-light",
     name: "Zigzag Lightning - Light",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1686,6 +1746,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "circuit-board-light",
     name: "Circuit Board - Light",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1718,6 +1779,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "concentric-squares-light",
     name: "Concentric Squares - Light",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1748,6 +1810,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "woven-fabric-light",
     name: "Woven Fabric - Light",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1778,6 +1841,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "crosshatch-art-light",
     name: "Crosshatch Art - Light",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1808,6 +1872,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "white-grid-with-dots",
     name: "White Grid with Dots",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1841,6 +1906,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "noise-texture-darker-dots",
     name: "Noise Texture (Darker Dots)",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1866,6 +1932,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "circuit-board",
     name: "Circuit Board",
+    theme: "light",
     category: "geometric",
     style: {
       background: "#f8fafc",
@@ -1898,6 +1965,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "basic-grid",
     name: "Basic Grid",
+    theme: "light",
     category: "geometric",
     style: {
       backgroundImage: `
@@ -1924,6 +1992,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "white-sphere-grid",
     name: "White Sphere Grid",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1955,6 +2024,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "magenta-orb-grid-light",
     name: "Magenta Orb Grid Light",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -1987,6 +2057,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dark-sphere-grid",
     name: "Dark Sphere Grid",
+    theme: "dark",
     category: "geometric",
     badge: "New",
     style: {
@@ -2019,6 +2090,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "magenta-orb-grid",
     name: "Magenta Orb Grid",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -2050,6 +2122,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dark-basic-grid-slate",
     name: "Dark Basic Grid",
+    theme: "dark",
     category: "geometric",
     style: {
       background: "#020617",
@@ -2078,6 +2151,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dark-basic-grid-faded",
     name: "Dark Basic Grid (Faded)",
+    theme: "dark",
     category: "geometric",
     style: {
       background: "#0f172a",
@@ -2106,6 +2180,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "black-basic-grid",
     name: "Black Basic Grid",
+    theme: "dark",
     category: "geometric",
     badge: "New",
     style: {
@@ -2135,6 +2210,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "small-grid",
     name: "Small Grid",
+    theme: "light",
     category: "geometric",
     badge: "New",
     style: {
@@ -2163,6 +2239,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "black-grid-white-dots",
     name: "Black Grid with White Dots",
+    theme: "dark",
     category: "geometric",
     badge: "New",
     style: {
@@ -2196,6 +2273,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dark-grid-white-dots",
     name: "Dark Grid with White Dots",
+    theme: "dark",
     category: "geometric",
     badge: "New",
     style: {
@@ -2230,6 +2308,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dark-dotted-grid",
     name: "Dark Dotted Grid",
+    theme: "dark",
     category: "geometric",
     style: {
       background: "#0f172a",
@@ -2262,6 +2341,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dark-white-dotted-grid",
     name: "Dark White Dotted Grid",
+    theme: "dark",
     category: "geometric",
     style: {
       background: "#000000",
@@ -2291,6 +2371,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "dark-noise-colored-high",
     name: "Dark Noise Colored",
+    theme: "dark",
     category: "geometric",
     badge: "New",
     style: {
@@ -2324,6 +2405,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "matrix-green",
     name: "Matrix Green",
+    theme: "dark",
     category: "geometric",
     badge: "New",
     style: {
@@ -2355,6 +2437,7 @@ export const gridPatterns: Pattern[] = [
     id: "diagonal-green-glow",
     name: "Diagonal Grid - Green Glow",
     category: "geometric",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#0f0f0f",
@@ -2383,6 +2466,7 @@ export const gridPatterns: Pattern[] = [
     id: "diagonal-red/blue-glow",
     name: "Diagonal Grid - Red/Blue Glow",
     category: "geometric",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#0f0f0f",
@@ -2411,6 +2495,7 @@ export const gridPatterns: Pattern[] = [
     id: "diagonal-electric erange",
     name: "Diagonal Grid - Electric Orange",
     category: "geometric",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#0f0f0f",
@@ -2439,6 +2524,7 @@ export const gridPatterns: Pattern[] = [
     id: "complex-multiplier",
     name: "Complex Multiplier",
     category: "geometric",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#101014",
@@ -2475,6 +2561,7 @@ export const gridPatterns: Pattern[] = [
     id: "hexagonal-lines",
     name: "Hexagonal Lines",
     category: "geometric",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#0f0f0f",
@@ -2505,6 +2592,7 @@ export const gridPatterns: Pattern[] = [
     id: "diagonal-synthwave",
     name: "Diagonal Grid - Synthwave",
     category: "geometric",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#0a0a0a",
@@ -2534,6 +2622,7 @@ export const gridPatterns: Pattern[] = [
     id: "gradient-left-diagonal-lines",
     name: "Gradient Left Diagonal Lines",
     category: "geometric",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#0f0f0f",
@@ -2568,6 +2657,7 @@ export const gridPatterns: Pattern[] = [
     id: "gradient-right-diagonal-lines",
     name: "Gradient Right Diagonal Lines",
     category: "geometric",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#0f0f0f",
@@ -2602,6 +2692,7 @@ export const gridPatterns: Pattern[] = [
     id: "cross-diagonal-lines",
     name: "Cross Diagonal Lines",
     category: "geometric",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#0f0f0f",
@@ -2628,6 +2719,7 @@ export const gridPatterns: Pattern[] = [
     id: "multi-cross-diagonal-lines",
     name: "Multi Cross Diagonal Lines",
     category: "geometric",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#0f0f0f",
@@ -2655,6 +2747,7 @@ export const gridPatterns: Pattern[] = [
     id: "variable-spacing",
     name: "Variable Spacing",
     category: "geometric",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#0f0f0f",
@@ -2698,6 +2791,7 @@ export const gridPatterns: Pattern[] = [
     id: "circuit-board-vibes",
     name: "Circuit Board Vibes",
     category: "geometric",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#0f0f0f",
@@ -2745,6 +2839,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "zigzag-lightning-dark",
     name: "Zigzag Lightning - Dark",
+    theme: "dark",
     category: "geometric",
     badge: "New",
     style: {
@@ -2775,6 +2870,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "circuit-board-dark",
     name: "Circuit Board - Dark",
+    theme: "dark",
     category: "geometric",
     badge: "New",
     style: {
@@ -2807,6 +2903,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "concentric-squares-dark",
     name: "Concentric Squares - Dark",
+    theme: "dark",
     category: "geometric",
     badge: "New",
     style: {
@@ -2837,6 +2934,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "crosshatch-art-dark",
     name: "Crosshatch Art - Dark",
+    theme: "dark",
     category: "geometric",
     badge: "New",
     style: {
@@ -2870,6 +2968,7 @@ export const gridPatterns: Pattern[] = [
     id: "aurora-midnight-glow",
     name: "Aurora Midnight Glow",
     category: "gradients",
+    theme: "dark",
     badge: "New",
     style: {
       background:
@@ -2891,6 +2990,7 @@ export const gridPatterns: Pattern[] = [
     id: "crimson-shadow-glow",
     name: "Crimson Shadow Glow",
     category: "gradients",
+    theme: "dark",
     badge: "New",
     style: {
       background:
@@ -2912,6 +3012,7 @@ export const gridPatterns: Pattern[] = [
     id: "emerald-depths-glow",
     name: "Emerald Depths Glow",
     category: "gradients",
+    theme: "dark",
     badge: "New",
     style: {
       background:
@@ -2933,6 +3034,7 @@ export const gridPatterns: Pattern[] = [
     id: "violet-storm-glow",
     name: "Violet Storm Glow",
     category: "gradients",
+    theme: "dark",
     badge: "New",
     style: {
       background:
@@ -2954,6 +3056,7 @@ export const gridPatterns: Pattern[] = [
     id: "golden-horizon-glow",
     name: "Golden Horizon Glow",
     category: "gradients",
+    theme: "dark",
     badge: "New",
     style: {
       background:
@@ -2975,6 +3078,7 @@ export const gridPatterns: Pattern[] = [
     id: "ocean-abyss-glow",
     name: "Ocean Abyss Glow",
     category: "gradients",
+    theme: "dark",
     badge: "New",
     style: {
       background:
@@ -2996,6 +3100,7 @@ export const gridPatterns: Pattern[] = [
     id: "rose-twilight-glow",
     name: "Rose Twilight Glow",
     category: "gradients",
+    theme: "dark",
     badge: "New",
     style: {
       background:
@@ -3017,6 +3122,7 @@ export const gridPatterns: Pattern[] = [
     id: "copper-forge-glow",
     name: "Copper Forge Glow",
     category: "gradients",
+    theme: "dark",
     badge: "New",
     style: {
       background:
@@ -3038,6 +3144,7 @@ export const gridPatterns: Pattern[] = [
     id: "arctic-lights-glow",
     name: "Arctic Lights Glow",
     category: "gradients",
+    theme: "dark",
     badge: "New",
     style: {
       background:
@@ -3059,6 +3166,7 @@ export const gridPatterns: Pattern[] = [
     id: "indigo-cosmos-glow",
     name: "Indigo Cosmos Glow",
     category: "gradients",
+    theme: "dark",
     badge: "New",
     style: {
       background:
@@ -3080,6 +3188,7 @@ export const gridPatterns: Pattern[] = [
     id: "pearl-mist-glow",
     name: "Pearl Mist Glow",
     category: "gradients",
+    theme: "dark",
     badge: "New",
     style: {
       background:
@@ -3101,6 +3210,7 @@ export const gridPatterns: Pattern[] = [
     id: "magenta-nebula-glow",
     name: "Magenta Nebula Glow",
     category: "gradients",
+    theme: "dark",
     badge: "New",
     style: {
       background:
@@ -3209,6 +3319,7 @@ export const gridPatterns: Pattern[] = [
     id: "cosmic-aurora",
     name: "Cosmic Aurora",
     category: "effects",
+    theme: "dark",
     badge: "New",
     style: {
       background: "#0a0a0a",
@@ -3236,14 +3347,15 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   {
-  id: "pastel-wave",
-  name: "Pastel Wave",
-  category: "effects",
-  badge: "New",
-  style: {
-    background: "linear-gradient(120deg, #d5c5ff 0%, #a7f3d0 50%, #f0f0f0 100%)",
-  },
-  code: `<div className="min-h-screen w-full bg-white relative">
+    id: "pastel-wave",
+    name: "Pastel Wave",
+    category: "effects",
+    theme: "light",
+    badge: "New",
+    style: {
+      background: "linear-gradient(120deg, #d5c5ff 0%, #a7f3d0 50%, #f0f0f0 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
   {/* Pastel Wave */}
   <div
     className="absolute inset-0 z-0"
@@ -3253,5 +3365,5 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
+  },
 ];

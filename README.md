@@ -26,7 +26,7 @@
 
 ---
 
->**This project is proudly sponsored by [Vercel](https://vercel.com?utm_source=patterncraft&utm_campaign=oss). Thank you for supporting open source!**
+> **This project is proudly sponsored by [Vercel](https://vercel.com?utm_source=patterncraft&utm_campaign=oss). Thank you for supporting open source!**
 
   <p align="center">
 <a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">
@@ -69,18 +69,17 @@ Check out this growing list of shoutouts, showcases, and love from the community
 - **Tailwind CSS** - Utility-first CSS framework
 - **Vercel** - Deployment and hosting
 
-
 ## Sponsored by <a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">Vercel⚡</a>
 
 **This project is proudly powered by <b>Vercel</b> — the platform behind PatternCraft’s blazing-fast deployment and seamless scalability.**<br>
 
 <i>Big thanks to Vercel for supporting open source and keeping this project running smoothly!</i>
-  <br><br>
-  <a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">
-    <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="40">
-  </a>
-</p>
+<br><br>
+<a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">
+<img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="40">
+</a>
 
+</p>
 
 ## Getting Started
 
@@ -157,6 +156,7 @@ You can easily customize any background pattern by modifying the pattern object 
   id: "unique-pattern-id",
   name: "Pattern Display Name",
   badge: "New",
+  theme: "light", // Optional: "light" | "dark"
   style: {
     background: "#ffffff",
     backgroundImage: `
@@ -197,7 +197,7 @@ backgroundImage: `linear-gradient(to right, #f0f0f0 1px, transparent 1px)`;
 
 // Customized version
 backgroundImage: `linear-gradient(to right, #3b82f6 1px, transparent 1px)`; // Blue lines
-backgroundSize: "48px 32px"; // Smaller grid
+backgroundSize: '48px 32px'; // Smaller grid
 ```
 
 ## Usage
@@ -217,7 +217,7 @@ Each pattern includes:
 
 ## Contributing
 
->**This project is sponsored by Vercel, which helps us maintain a stable development environment.**
+> **This project is sponsored by Vercel, which helps us maintain a stable development environment.**
 
 We welcome contributions to expand the pattern collection. To add new patterns:
 
@@ -238,6 +238,7 @@ git checkout -b feature/new-pattern-name
   id: "unique-pattern-id",
   name: "Pattern Display Name",
   badge: "New", // Optional: "New", "Popular"
+  theme: "light", // Optional: "light" | "dark"
   style: {
     background: "#ffffff",
     backgroundImage: `
@@ -271,6 +272,7 @@ git checkout -b feature/new-pattern-name
 - **Performance**: Optimize for rendering performance
 - **Responsiveness**: Test patterns across different screen sizes
 - **Uniqueness**: Avoid duplicating existing patterns
+- **Theme Classification**: Specify whether the pattern is designed for light or dark themes
 
 ### Pattern Categories
 
@@ -280,6 +282,45 @@ Consider these categories when adding patterns:
 - **Geometric** - Grids, dots, lines, shapes
 - **Decorative** - Subtle background textures
 - **Effects** - Clean and simple designs
+
+### Theme Classification
+
+Each pattern should be classified by theme to enhance user experience:
+
+- **Light Theme** - Patterns with light backgrounds, suitable for light mode interfaces
+  - Light or white background colors
+  - Darker accent colors for contrast
+  - Minimal, clean aesthetics
+- **Dark Theme** - Patterns with dark backgrounds, perfect for dark mode interfaces
+  - Dark or black background colors
+  - Lighter accent colors for contrast
+  - Modern, sophisticated aesthetics
+
+### Theme Guidelines
+
+When adding patterns, consider the theme classification:
+
+```typescript
+// Light theme example
+{
+  id: "light-grid-pattern",
+  theme: "light",
+  style: {
+    background: "#ffffff",
+    backgroundImage: "linear-gradient(to right, #e5e7eb 1px, transparent 1px)"
+  }
+}
+
+// Dark theme example
+{
+  id: "dark-grid-pattern",
+  theme: "dark",
+  style: {
+    background: "#111827",
+    backgroundImage: "linear-gradient(to right, #374151 1px, transparent 1px)"
+  }
+}
+```
 
 ### Testing Your Patterns
 
