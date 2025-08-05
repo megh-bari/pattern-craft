@@ -121,6 +121,7 @@
     @apply bg-background text-foreground;
   }
 }
+
 html {
     overflow: -moz-scrollbars-none;
     scrollbar-width: none;
@@ -134,4 +135,60 @@ html::-webkit-scrollbar {
 
 body {
     overflow-x: hidden;
+}
+
+/* Custom scrollbar for pattern showcase */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 12px;
+  width: 100%;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 6px;
+  margin: 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.6);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: all 0.3s ease;
+  min-width: 40px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.9);
+  background-clip: content-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background: rgba(156, 163, 175, 1);
+  background-clip: content-box;
+}
+
+/* Dark mode scrollbar */
+.dark .custom-scrollbar {
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  background-clip: content-box;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7);
+  background-clip: content-box;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.9);
+  background-clip: content-box;
 }

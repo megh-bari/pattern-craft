@@ -1,12 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
-import { Check, Copy, Eye, Palette, Sparkles, Star } from "lucide-react";
-import { gridPatterns } from "../utils/patterns";
+import { Check, Copy, Eye, Palette, Search, Sparkles, Star, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
+import { gridPatterns } from "../utils/patterns";
 
 interface PatternShowcaseProps {
   activePattern: string | null;
@@ -23,8 +23,8 @@ export default function PatternShowcase({
   const [favourite, setFavourite] = useState<string[]>([]);
   const [activeMobileCard, setActiveMobileCard] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<string>("all");
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const isPatternDark = theme === "dark";
-
 
   // Load favourite on mount
   useEffect(() => {
@@ -33,11 +33,9 @@ export default function PatternShowcase({
   }, [])
 
   // save favourite to localstorage
-
   useEffect(() => {
     localStorage.setItem("favourite", JSON.stringify(favourite));
   }, [favourite])
-
 
   const toggleFavourite = (id: string) => {
     setFavourite((prev) =>
@@ -45,10 +43,7 @@ export default function PatternShowcase({
     );
   };
 
-
-
   // Patterns Categories
-
   const categories = [
     { id: "all", label: "All Patterns" },
     { id: "gradients", label: "Gradients" },
@@ -58,14 +53,22 @@ export default function PatternShowcase({
     { id: "favourites", label: "Favourites" }
   ];
 
-  // filter patterns based on categories
+  // filter patterns based on categories and search query
+  const filteredPatterns = gridPatterns.filter((pattern) => {
+    const matchesCategory = 
+      activeTab === "all"
+        ? true
+        : activeTab === "favourites"
+          ? favourite.includes(pattern.id)
+          : pattern.category === activeTab;
+    
+    const matchesSearch = searchQuery === "" || 
+      pattern.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      pattern.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (pattern.description && pattern.description.toLowerCase().includes(searchQuery.toLowerCase()));
 
-  const filteredPatterns =
-    activeTab === "all"
-      ? gridPatterns
-      : activeTab === "favourites"
-        ? gridPatterns.filter((pattern) => favourite.includes(pattern.id))
-        : gridPatterns.filter((pattern) => pattern.category === activeTab);
+    return matchesCategory && matchesSearch;
+  });
 
   const copyToClipboard = async (code: string, id: string) => {
     try {
@@ -89,6 +92,10 @@ export default function PatternShowcase({
     setActiveMobileCard(activeMobileCard === patternId ? null : patternId);
   };
 
+  const clearSearch = () => {
+    setSearchQuery("");
+  };
+
   return (
     <section
       id="pattern-showcase"
@@ -109,6 +116,34 @@ export default function PatternShowcase({
           >
             Tap on mobile or hover on desktop to see options
           </p>
+        </div>
+      </div>
+
+      {/* Search Bar */}
+      <div className="mb-6">
+        <div className="relative w-full">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Search patterns by name, category, or description..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className={`w-full pl-10 pr-10 py-3 rounded-lg border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+                isPatternDark
+                  ? "bg-black/20 border-white/20 text-white placeholder-gray-400 focus:border-white/40"
+                  : "bg-white/70 border-gray-200/50 text-gray-900 placeholder-gray-500 focus:border-gray-300"
+              }`}
+            />
+            {searchQuery && (
+              <button
+                onClick={clearSearch}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full hover:bg-gray-200/20 transition-colors"
+              >
+                <X className="h-4 w-4 text-gray-400" />
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
@@ -225,154 +260,157 @@ export default function PatternShowcase({
                 {filteredPatterns.length} pattern
                 {filteredPatterns.length !== 1 ? "s" : ""}
                 {category.id !== "all" && ` in ${category.label}`}
+                {searchQuery && ` matching "${searchQuery}"`}
               </p>
             </div>
 
-            {/* Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-              {filteredPatterns.map((pattern) => (
-                <div key={pattern.id} className="group relative">
-                  <div
-                    className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-background shadow-sm transition-all duration-300 ${activePattern === pattern.id
-                      ? "ring-2 ring-primary ring-offset-2"
-                      : ""
-                      } ${activeMobileCard === pattern.id
-                        ? "scale-[1.02] shadow-lg sm:scale-100"
-                        : "hover:shadow-lg hover:scale-[1.02]"
-                      }`}
-                    onClick={() => handleCardInteraction(pattern.id)}
-                  >
-                    {/* Favorite Button with Star Icon */}
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleFavourite(pattern.id);
-                      }}
-                      className={`absolute top-2 left-2 z-10 p-2 rounded-full backdrop-blur-md shadow-lg border transition-all cursor-pointer duration-200 hover:scale-110 group/star ${favourite.includes(pattern.id)
-                        ? isPatternDark
-                          ? "bg-yellow-500/20 border-yellow-400/30 text-yellow-400"
-                          : "bg-yellow-500/20 border-yellow-500/30 text-yellow-600"
-                        : isPatternDark
-                          ? "bg-black/20 border-white/20 text-white hover:bg-black/30 hover:border-white/30"
-                          : "bg-black/20 border-white/30 text-white hover:bg-black/30 hover:border-white/40"
+            {/* Scrollable Grid Container */}
+            <div className="overflow-x-auto custom-scrollbar">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 pb-4 min-w-max">
+                {filteredPatterns.map((pattern) => (
+                  <div key={pattern.id} className="group relative">
+                    <div
+                      className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-background shadow-sm transition-all duration-300 ${activePattern === pattern.id
+                        ? "ring-2 ring-primary ring-offset-2"
+                        : ""
+                        } ${activeMobileCard === pattern.id
+                          ? "scale-[1.02] shadow-lg sm:scale-100"
+                          : "hover:shadow-lg hover:scale-[1.02]"
                         }`}
-                      title={favourite.includes(pattern.id) ? "Remove from favorites" : "Add to favorites"}
+                      onClick={() => handleCardInteraction(pattern.id)}
                     >
-                      <Star
-                        className={`h-4 w-4 transition-all duration-200 ${favourite.includes(pattern.id)
-                          ? "fill-current scale-110"
-                          : "group-hover/star:scale-110"
-                          }`}
-                      />
-                    </button>
-
-                    {/* Pattern style */}
-                    <div className="absolute inset-0" style={pattern.style} />
-
-                    {/* Badge */}
-                    {pattern.badge && (
-                      <div className="absolute top-2 sm:top-3 right-2 sm:right-3 z-10">
-                        <Badge
-                          variant="secondary"
-                          className="gap-1 text-xs bg-background/80 backdrop-blur-sm border-border/50 px-2 py-1"
-                        >
-                          <Sparkles className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-violet-600" />
-                          <span>{pattern.badge}</span>
-                        </Badge>
-                      </div>
-                    )}
-
-                    {/* Mobile: Simple preview and copy buttons */}
-                    <div className="sm:hidden absolute bottom-2 left-2 right-2 z-10 flex justify-center gap-2 px-2">
-                      <Button
-                        size="sm"
-                        variant="secondary"
+                      {/* Favorite Button with Star Icon */}
+                      <button
                         onClick={(e) => {
                           e.stopPropagation();
-                          previewPattern(pattern.id);
-                          document.getElementById('trigger-preview-scroll')?.click()
+                          toggleFavourite(pattern.id);
                         }}
-                        className="flex-1 bg-white/95 hover:bg-white text-black border-0 text-xs h-8"
-                      >
-                        <Eye className="h-3 w-3 mr-1" />
-                        {activePattern === pattern.id ? "Hide" : "Preview"}
-                      </Button>
-                      <Button
-                        size="sm"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          copyToClipboard(pattern.code, pattern.id);
-                        }}
-                        className={`flex-1 border-0 text-xs h-8 ${copiedId === pattern.id
-                          ? "bg-gray-700 hover:bg-gray-800 text-white"
-                          : "bg-gray-900/90 hover:bg-gray-900 text-white"
+                        className={`absolute top-2 left-2 z-10 p-2 rounded-full backdrop-blur-md shadow-lg border transition-all cursor-pointer duration-200 hover:scale-110 group/star ${favourite.includes(pattern.id)
+                          ? isPatternDark
+                            ? "bg-yellow-500/20 border-yellow-400/30 text-yellow-400"
+                            : "bg-yellow-500/20 border-yellow-500/30 text-yellow-600"
+                          : isPatternDark
+                            ? "bg-black/20 border-white/20 text-white hover:bg-black/30 hover:border-white/30"
+                            : "bg-black/20 border-white/30 text-white hover:bg-black/30 hover:border-white/40"
                           }`}
-                        disabled={copiedId === pattern.id}
+                        title={favourite.includes(pattern.id) ? "Remove from favorites" : "Add to favorites"}
                       >
-                        {copiedId === pattern.id ? (
-                          <>
-                            <Check className="h-3 w-3 mr-1" />
-                            Copied
-                          </>
-                        ) : (
-                          <>
-                            <Copy className="h-3 w-3 mr-1" />
-                            Copy
-                          </>
-                        )}
-                      </Button>
-                    </div>
+                        <Star
+                          className={`h-4 w-4 transition-all duration-200 ${favourite.includes(pattern.id)
+                            ? "fill-current scale-110"
+                            : "group-hover/star:scale-110"
+                            }`}
+                        />
+                      </button>
 
-                    {/* Desktop: Hover overlay */}
-                    <div className="hidden sm:flex absolute inset-0 cursor-pointer bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 items-center justify-center p-4">
-                      <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                        <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-4 drop-shadow-lg">
-                          {pattern.name}
-                        </h3>
-                        <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 w-full xs:w-auto">
-                          <Button
-                            size="sm"
+                      {/* Pattern style */}
+                      <div className="absolute inset-0" style={pattern.style} />
+
+                      {/* Badge */}
+                      {pattern.badge && (
+                        <div className="absolute top-2 sm:top-3 right-2 sm:right-3 z-10">
+                          <Badge
                             variant="secondary"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              previewPattern(pattern.id);
-                              document.getElementById('trigger-preview-scroll')?.click()
-                            }}
-                            className="cursor-pointer shadow-xl backdrop-blur-md bg-white/95 hover:bg-white text-black border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto"
+                            className="gap-1 text-xs bg-background/80 backdrop-blur-sm border-border/50 px-2 py-1"
                           >
-                            <Eye className="h-3 w-3 mr-1" />
-                            {activePattern === pattern.id ? "Hide" : "Preview"}
-                          </Button>
-                          <Button
-                            size="sm"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              copyToClipboard(pattern.code, pattern.id);
-                            }}
-                            className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${copiedId === pattern.id
-                              ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"
-                              : "bg-gray-900/90 hover:bg-gray-900 text-white"
-                              }`}
-                            disabled={copiedId === pattern.id}
-                          >
-                            {copiedId === pattern.id ? (
-                              <>
-                                <Check className="h-3 w-3" />
-                                Copied
-                              </>
-                            ) : (
-                              <>
-                                <Copy className="h-3 w-3" />
-                                Copy
-                              </>
-                            )}
-                          </Button>
+                            <Sparkles className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-violet-600" />
+                            <span>{pattern.badge}</span>
+                          </Badge>
+                        </div>
+                      )}
+
+                      {/* Mobile: Simple preview and copy buttons */}
+                      <div className="sm:hidden absolute bottom-2 left-2 right-2 z-10 flex justify-center gap-2 px-2">
+                        <Button
+                          size="sm"
+                          variant="secondary"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            previewPattern(pattern.id);
+                            document.getElementById('trigger-preview-scroll')?.click()
+                          }}
+                          className="flex-1 bg-white/95 hover:bg-white text-black border-0 text-xs h-8"
+                        >
+                          <Eye className="h-3 w-3 mr-1" />
+                          {activePattern === pattern.id ? "Hide" : "Preview"}
+                        </Button>
+                        <Button
+                          size="sm"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            copyToClipboard(pattern.code, pattern.id);
+                          }}
+                          className={`flex-1 border-0 text-xs h-8 ${copiedId === pattern.id
+                            ? "bg-gray-700 hover:bg-gray-800 text-white"
+                            : "bg-gray-900/90 hover:bg-gray-900 text-white"
+                            }`}
+                          disabled={copiedId === pattern.id}
+                        >
+                          {copiedId === pattern.id ? (
+                            <>
+                              <Check className="h-3 w-3 mr-1" />
+                              Copied
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="h-3 w-3 mr-1" />
+                              Copy
+                            </>
+                          )}
+                        </Button>
+                      </div>
+
+                      {/* Desktop: Hover overlay */}
+                      <div className="hidden sm:flex absolute inset-0 cursor-pointer bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 items-center justify-center p-4">
+                        <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                          <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-4 drop-shadow-lg">
+                            {pattern.name}
+                          </h3>
+                          <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 w-full xs:w-auto">
+                            <Button
+                              size="sm"
+                              variant="secondary"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                previewPattern(pattern.id);
+                                document.getElementById('trigger-preview-scroll')?.click()
+                              }}
+                              className="cursor-pointer shadow-xl backdrop-blur-md bg-white/95 hover:bg-white text-black border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto"
+                            >
+                              <Eye className="h-3 w-3 mr-1" />
+                              {activePattern === pattern.id ? "Hide" : "Preview"}
+                            </Button>
+                            <Button
+                              size="sm"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                copyToClipboard(pattern.code, pattern.id);
+                              }}
+                              className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${copiedId === pattern.id
+                                ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"
+                                : "bg-gray-900/90 hover:bg-gray-900 text-white"
+                                }`}
+                              disabled={copiedId === pattern.id}
+                            >
+                              {copiedId === pattern.id ? (
+                                <>
+                                  <Check className="h-3 w-3" />
+                                  Copied
+                                </>
+                              ) : (
+                                <>
+                                  <Copy className="h-3 w-3" />
+                                  Copy
+                                </>
+                              )}
+                            </Button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
             {/* Empty state */}
@@ -388,6 +426,18 @@ export default function PatternShowcase({
                     </h3>
                     <p className={`${isPatternDark ? "text-gray-200" : "text-gray-600 dark:text-gray-200"}`}>
                       You haven&apos;t saved any favorites yet. Tap the <Star className="inline -mt-1 h-4 w-4 text-yellow-400" /> icon on a pattern to add it to your favorites!
+                    </p>
+                  </>
+                ) : searchQuery ? (
+                  <>
+                    <div className="text-6xl mb-4 text-blue-400 flex justify-center">
+                      <Search className="h-12 w-12" />
+                    </div>
+                    <h3 className={`text-lg font-semibold mb-2 ${isPatternDark ? "text-gray-200" : "text-black dark:text-gray-200"}`}>
+                      No patterns found
+                    </h3>
+                    <p className={`${isPatternDark ? "text-gray-200" : "text-gray-600 dark:text-gray-200"}`}>
+                      No patterns match your search for &quot;{searchQuery}&quot;. Try a different search term.
                     </p>
                   </>
                 ) : (
