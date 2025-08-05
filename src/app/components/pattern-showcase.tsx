@@ -14,8 +14,8 @@ import {
   Star,
 } from "lucide-react";
 import { gridPatterns } from "../utils/patterns";
-import { useEffect, useState } from "react";
-import { searchPatterns } from "@/lib/utils";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { debounce, searchPatterns } from "@/lib/utils";
 
 interface PatternShowcaseProps {
   activePattern: string | null;
@@ -33,6 +33,7 @@ export default function PatternShowcase({
   const [activeMobileCard, setActiveMobileCard] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<string>("all");
 
+  const inputRef = useRef<HTMLInputElement>(null);
   const [searchInput, setSearchInput] = useState<string>("");
 
   const isPatternDark = theme === "dark";
@@ -75,7 +76,7 @@ export default function PatternShowcase({
         : activeTab === "favourites"
         ? gridPatterns.filter((pattern) => favourite.includes(pattern.id))
         : gridPatterns.filter((pattern) => pattern.category === activeTab)
-      : searchPatterns(gridPatterns, searchInput);
+      : searchPatterns(gridPatterns, activeTab, searchInput);
 
   const copyToClipboard = async (code: string, id: string) => {
     try {
@@ -99,9 +100,14 @@ export default function PatternShowcase({
     setActiveMobileCard(activeMobileCard === patternId ? null : patternId);
   };
 
-  const handleSearch = (searchValue: string) => {
-    setSearchInput(searchValue);
-  };
+  const handleSearch = useCallback(
+    debounce(() => {
+      if (!inputRef.current) return;
+      const inputValue = inputRef.current.value;
+      setSearchInput(inputValue);
+    }, 200),
+    []
+  );
 
   return (
     <section
@@ -248,8 +254,8 @@ export default function PatternShowcase({
             className={`w-full h-auto py-2 px-2 text-sm text-gray-600 font-medium grow
   outline-none rounded-xl ${isPatternDark ? "bg-black/20 " : "bg-white/70"}`}
             placeholder="Search..."
-            value={searchInput}
-            onChange={(e) => handleSearch(e.target.value)}
+            ref={inputRef}
+            onChange={() => handleSearch()}
           />
         </div>
 
