@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Github, Copy, Eye, Code2, Zap } from "lucide-react";
+import { APP_CONFIG } from "@/lib/constants";
 
 interface HeroProps {
   activePattern?: string | null;
@@ -20,12 +21,12 @@ export default function Hero({ theme }: HeroProps) {
   const isPatternDark = theme === "dark";
 
   return (
-    <section className="container mx-auto py-8 sm:py-12 md:py-16 lg:py-18 text-center relative overflow-hidden px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+    <section className="container py-8 sm:py-12 md:py-16 lg:py-18 text-center relative overflow-hidden px-4 sm:px-6 lg:px-8 flex items-center justify-center">
       <div className="mx-auto max-w-6xl relative z-10">
         {/* Badge */}
         <div className="mb-6 sm:mb-8 md:mb-10 flex justify-center">
           <a
-            href="https://github.com/megh-bari/pattern-craft"
+            href={APP_CONFIG.GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex"
@@ -171,10 +172,7 @@ export default function Hero({ theme }: HeroProps) {
                 : "bg-slate-950 hover:bg-slate-900 dark:bg-white dark:text-black dark:hover:bg-gray-100"
             }`}
             onClick={() => {
-              window.open(
-                "https://github.com/megh-bari/pattern-craft#contributing",
-                "_blank"
-              );
+              window.open(APP_CONFIG.CONTRIBUTING_URL, "_blank");
             }}
           >
             <Github className="h-4 sm:h-5 w-4 sm:w-5" />

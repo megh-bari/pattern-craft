@@ -1,4 +1,4 @@
-import { Pattern } from "../types/pattern";
+import { Pattern } from "@/types/pattern";
 
 export const gridPatterns: Pattern[] = [
   {
@@ -187,7 +187,7 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
-  // dark one
+  // Dark Ones
   {
     id: "dark-horizon-glow",
     name: "Dark Horizon Glow",
@@ -772,7 +772,7 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
 
-  // NEW GRADIENT COLORSF
+  // New Gradient Colors
   {
     id: "dark-radial-glow",
     name: "Dark Radial Glow",
@@ -992,7 +992,7 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
 
-  // GLOW ONES
+  // Glow Ones
   {
     id: "soft-yellow-glow",
     name: "Soft Yellow Glow",
@@ -1095,7 +1095,7 @@ export const gridPatterns: Pattern[] = [
      {/* Your Content/Components */}
 </div>`,
   },
-  // glow right
+  // Glow Right
   {
     id: "purple-glow-bg",
     badge: "New",
@@ -1245,7 +1245,7 @@ export const gridPatterns: Pattern[] = [
      {/* Your Content/Components */}
 </div>`,
   },
-  // glow left
+  // Glow Left
   {
     id: "purple-glow-bg-left",
     name: "Purple Glow Left",
@@ -1395,7 +1395,7 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
 
-  // glow top
+  // Glow Top
   {
     id: "purple-glow-bg-top",
     name: "Purple Glow Top",
@@ -1545,7 +1545,7 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
 
-  // PATTERNS
+  // Line Patterns
 
   {
     id: "paper-texture",
@@ -3236,14 +3236,15 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   {
-  id: "pastel-wave",
-  name: "Pastel Wave",
-  category: "effects",
-  badge: "New",
-  style: {
-    background: "linear-gradient(120deg, #d5c5ff 0%, #a7f3d0 50%, #f0f0f0 100%)",
-  },
-  code: `<div className="min-h-screen w-full bg-white relative">
+    id: "pastel-wave",
+    name: "Pastel Wave",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(120deg, #d5c5ff 0%, #a7f3d0 50%, #f0f0f0 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
   {/* Pastel Wave */}
   <div
     className="absolute inset-0 z-0"
@@ -3253,5 +3254,5 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
+  },
 ];
