@@ -12,6 +12,7 @@ import {
   Search,
   Sparkles,
   Star,
+  X,
 } from "lucide-react";
 import { gridPatterns } from "../utils/patterns";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -108,6 +109,12 @@ export default function PatternShowcase({
     }, 200),
     []
   );
+
+  const clearSearch = () => {
+    if (!inputRef.current) return;
+    inputRef.current.value = "";
+    setSearchInput("");
+  };
 
   return (
     <section
@@ -248,15 +255,27 @@ export default function PatternShowcase({
         : "bg-white/70 border-gray-200/30 hover:bg-white/80"
     }`}
         >
-          <Search className="text-[4px] font-extralight text-gray-600"></Search>
+          <Search className="text-[4px] font-extralight text-gray-600 scale-75"></Search>
           <input
             type="text"
-            className={`w-full h-auto py-2 px-2 text-sm text-gray-600 font-medium grow
-  outline-none rounded-xl ${isPatternDark ? "bg-black/20 " : "bg-white/70"}`}
+            className={`w-full h-auto py-2 px-2 text-sm  font-medium grow bg-transparent 
+  outline-none rounded-xl ${
+    isPatternDark
+      ? "text-white placeholder-gray-400 focus:border-white/40"
+      : " text-gray-600 placeholder-gray-500 focus:border-gray-300"
+  }`}
             placeholder="Search..."
             ref={inputRef}
             onChange={() => handleSearch()}
           />
+          {searchInput && (
+            <button
+              onClick={clearSearch}
+              className="p-1 rounded-full hover:bg-gray-300/20 transition-colors cursor-pointer"
+            >
+              <X className="h-4 w-4 text-gray-400" />
+            </button>
+          )}
         </div>
 
         {categories.map((category) => (
