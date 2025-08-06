@@ -3255,4 +3255,154 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "warm-pattern",
+    name: "Warm Pattern",
+    badge: "New",
+    category: "gradients",
+    style: {
+      background: "#fef7cd",
+      backgroundImage: `
+        linear-gradient(135deg, #fef7cd 0%, #fef3c7 15%, #fde68a 25%, #fcd34d 40%, #f59e0b 55%, #ec4899 70%, #be185d 85%, #ffffff 100%),
+        radial-gradient(circle at 30% 70%, rgba(253, 224, 71, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(251, 191, 36, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(244, 114, 182, 0.2) 0%, transparent 60%)
+      `,
+      backgroundSize: "100% 100%, 100% 100%, 100% 100%, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Warm Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(135deg, #fef7cd 0%, #fef3c7 15%, #fde68a 25%, #fcd34d 40%, #f59e0b 55%, #ec4899 70%, #be185d 85%, #ffffff 100%)
+      \`,
+    }}
+  />
+  
+  {/* Animated Overlay */}
+  <div
+    className="absolute inset-0 z-10"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 30% 70%, rgba(253, 224, 71, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(251, 191, 36, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(244, 114, 182, 0.2) 0%, transparent 60%)
+      \`,
+    }}
+  />
+
+  {/* Your Content/Components */}
+  
+</div>`,
+  },
+  {
+    id: "lux-pattern",
+    name: "Lux Pattern",
+    badge: "New",
+    category: "gradients",
+    style: {
+      background: "#000000",
+      backgroundImage: `
+        linear-gradient(135deg, #000000 0%, #1a1a1a 15%, #2d2d2d 30%, #1a1a1a 45%, #0d0d0d 60%, #262626 75%, #000000 100%),
+        radial-gradient(circle at 25px 25px, rgba(255,255,255,0.02) 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, rgba(255,255,255,0.01) 1%, transparent 0%),
+        radial-gradient(ellipse 80% 50% at 50% 40%, rgba(255,255,255,0.03) 0%, transparent 60%)
+      `,
+      backgroundSize: "100% 100%, 100px 100px, 150px 150px, 100% 100%",
+      backgroundPosition: "0 0, 0 0, 50px 50px, 0 0",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Lux Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(135deg, #000000 0%, #1a1a1a 15%, #2d2d2d 30%, #1a1a1a 45%, #0d0d0d 60%, #262626 75%, #000000 100%)
+      \`,
+    }}
+  />
+  
+  {/* Grain Texture */}
+  <div
+    className="absolute inset-0 z-10 opacity-60"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 25px 25px, rgba(255,255,255,0.02) 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, rgba(255,255,255,0.01) 1%, transparent 0%)
+      \`,
+      backgroundSize: "100px 100px, 150px 150px",
+      backgroundPosition: "0 0, 50px 50px",
+    }}
+  />
+
+  {/* Spotlight Effect */}
+  <div
+    className="absolute inset-0 z-10"
+    style={{
+      backgroundImage: \`
+        radial-gradient(ellipse 80% 50% at 50% 40%, rgba(255,255,255,0.03) 0%, transparent 60%)
+      \`,
+    }}
+  />
+
+  {/* Your Content/Components */}
+  
+</div>`,
+  },
+  {
+    id: "copper-pattern",
+    name: "Copper Pattern",
+    badge: "New",
+    category: "gradients",
+    style: {
+      background: "#1a0f0a",
+      backgroundImage: `
+        linear-gradient(135deg, #1a0f0a 0%, #2d1b13 15%, #b87333 30%, #cd7f32 45%, #d2691e 60%, #8b4513 75%, #2d1b13 100%),
+        radial-gradient(circle at 25px 25px, rgba(210,105,30,0.08) 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, rgba(184,115,51,0.04) 1%, transparent 0%),
+        radial-gradient(ellipse 80% 50% at 50% 40%, rgba(210,105,30,0.12) 0%, transparent 60%)
+      `,
+      backgroundSize: "100% 100%, 100px 100px, 150px 150px, 100% 100%",
+      backgroundPosition: "0 0, 0 0, 50px 50px, 0 0",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Copper Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(135deg, #1a0f0a 0%, #2d1b13 15%, #b87333 30%, #cd7f32 45%, #d2691e 60%, #8b4513 75%, #2d1b13 100%)
+      \`,
+    }}
+  />
+  
+  {/* Grain Texture */}
+  <div
+    className="absolute inset-0 z-10 opacity-60"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 25px 25px, rgba(210,105,30,0.08) 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, rgba(184,115,51,0.04) 1%, transparent 0%)
+      \`,
+      backgroundSize: "100px 100px, 150px 150px",
+      backgroundPosition: "0 0, 50px 50px",
+    }}
+  />
+
+  {/* Spotlight Effect */}
+  <div
+    className="absolute inset-0 z-10"
+    style={{
+      backgroundImage: \`
+        radial-gradient(ellipse 80% 50% at 50% 40%, rgba(210,105,30,0.12) 0%, transparent 60%)
+      \`,
+    }}
+  />
+
+  {/* Your Content/Components */}
+  
+</div>`,
+  },
 ];
