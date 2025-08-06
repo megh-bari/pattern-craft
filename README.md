@@ -17,8 +17,8 @@
     <img src="https://img.shields.io/github/stars/megh-bari/pattern-craft?style=social" alt="GitHub stars" />
 <img src="https://img.shields.io/github/forks/megh-bari/pattern-craft?style=social" alt="GitHub forks" />
 <img src="https://img.shields.io/github/license/megh-bari/pattern-craft?style=social" alt="License" />
-<a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">
-    <img src="https://img.shields.io/badge/Sponsored%20by-Vercel-000000?style=social&logo=vercel&logoColor=white" alt="Sponsored by Vercel" />
+<a href="https://vercel.com/oss">
+    <img src="https://img.shields.io/badge/Sponsored%20by-Vercel-000000?style=social&logo=vercel&logoColor=black" alt="Sponsored by Vercel" />
 </a>
     
   </p>
@@ -26,15 +26,15 @@
 
 ---
 
->**This project is proudly sponsored by [Vercel](https://vercel.com?utm_source=patterncraft&utm_campaign=oss). Thank you for supporting open source!**
+> **This project is proudly sponsored by [Vercel](https://vercel.com/oss). Thank you for supporting open source!**
 
   <p align="center">
-<a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">
-  <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="32">
+<a href="https://vercel.com/oss">
+<img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="40">
 </a>
 </p>
 
-## Visit: **[Pattern Craft](https://patterncraft.megh.me)**
+## Visit: **[Pattern Craft](https://patterncraft.fun)**
 
 ![UI Image](./public/images/readme-img-one.png)
 ![UI Image](./public/images/readme-img-two.png)
@@ -46,9 +46,15 @@
 
 ## Pattern Craft in the Wild!!!
 
-Curious where Pattern Craft is getting featured, shared, talk about or appreciated?  
+<p align="left"> 
+Curious where Pattern Craft is getting featured, shared, talk about or appreciated? 
+</br>
 Check out this growing list of shoutouts, showcases, and love from the community:  
-🧩 [**Where Pattern Craft is Making Noise??**](https://patterncraft.notion.site/Where-Pattern-Craft-is-Making-Noise-23bf940b4137803ea79bf3606acdb317?pvs=74)
+</br>
+
+⚡[**Where Pattern Craft is Making Noise??**](https://patterncraft.notion.site/Where-Pattern-Craft-is-Making-Noise-23bf940b4137803ea79bf3606acdb317?pvs=74)
+</p>
+
 
 ## Features
 
@@ -69,18 +75,17 @@ Check out this growing list of shoutouts, showcases, and love from the community
 - **Tailwind CSS** - Utility-first CSS framework
 - **Vercel** - Deployment and hosting
 
+## Sponsored by <a href="https://vercel.com/oss">Vercel⚡</a>
 
-## Sponsored by <a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">Vercel⚡</a>
-
-**This project is proudly powered by <b>Vercel</b> — the platform behind PatternCraft’s blazing-fast deployment and seamless scalability.**<br>
+**This project is proudly powered by <b>Vercel</b>. The platform behind PatternCraft’s blazing-fast deployment and seamless scalability.**<br>
 
 <i>Big thanks to Vercel for supporting open source and keeping this project running smoothly!</i>
-  <br><br>
-  <a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">
-    <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="40">
-  </a>
-</p>
+<br><br>
+<a href="https://vercel.com/oss">
+<img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="40">
+</a>
 
+</p>
 
 ## Getting Started
 
@@ -217,7 +222,7 @@ Each pattern includes:
 
 ## Contributing
 
->**This project is sponsored by Vercel, which helps us maintain a stable development environment.**
+> **This project is sponsored by Vercel, which helps us maintain a stable development environment.**
 
 We welcome contributions to expand the pattern collection. To add new patterns:
 
@@ -309,23 +314,51 @@ git push origin feature/new-pattern-name
 
 ```
 pattern-craft/
-├── src/
-│   └── app/
-│       ├── components/
-│       │   ├── footer.tsx
-│       │   ├── hero.tsx
-│       │   ├── navbar.tsx
-│       │   ├── pattern-showcase.tsx
-│       │   └── theme-provider.tsx
-│       ├── types/
-│       │   └── pattern.ts
-│       ├── utils/
-│       │   ├── patterns.ts        # Pattern definitions (contribute here)
-│       ├── globals.css
-│       ├── layout.tsx
-│       └── page.tsx
-├── components/
-│   └── ui/                        # shadcn/ui components
+src/
+├── app/                   
+│   ├── globals.css       
+│   ├── layout.tsx        
+│   ├── page.tsx           
+│   └── not-found.tsx      
+│
+├── components/           
+│   ├── ui/                # shadcn/ui components
+│   │   ├── badge.tsx     
+│   │   ├── button.tsx     
+│   │   └── tabs.tsx       
+│   ├── layout/            
+│   │   ├── navbar.tsx     
+│   │   └── footer.tsx     
+│   ├── patterns/          
+│   │   ├── pattern-showcase.tsx     
+│   │   ├── pattern-card.tsx        
+│   │   ├── pattern-grid.tsx         
+│   │   └── pattern-empty-state.tsx 
+│   ├── home/             
+│   │   ├── hero.tsx               
+│   │   ├── support-dropdown.tsx   
+│   │   └── return-to-preview.tsx  
+│   └── providers/         
+│       └── theme-provider.tsx 
+│
+├── lib/                   
+│   ├── utils.ts           
+│   └── constants.ts      
+│
+├── hooks/                 
+│   ├── useTheme.tsx       
+│   └── useCopy.tsx        
+│
+├── types/                 
+│   ├── pattern.ts         
+│   └── index.ts           
+│
+├── context/               
+│   └── favourites-context.tsx 
+│
+└── data/                 
+    ├── patterns.ts        # Pattern used in UI (contribute here)
+    └── categories.ts      
 ```
 
 ### Code Standards
