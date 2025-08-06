@@ -1,12 +1,14 @@
 "use client";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { gridPatterns } from "@/data/patterns";
 import { categories } from "@/data/categories";
 import { useFavorites } from "@/context/favourites-context";
 import PatternGrid from "./pattern-grid";
 import PatternEmptyState from "./pattern-empty-state";
+import { SearchBar } from "../search/search-bar";
+import { searchPatterns } from "@/lib/utils";
 
 interface PatternShowcaseProps {
   activePattern: string | null;
@@ -24,15 +26,17 @@ export default function PatternShowcase({
   const { favourites } = useFavorites();
   const isPatternDark = theme === "dark";
 
-  useEffect(() => {}, [favourites]);
+  const [searchInput, setSearchInput] = useState<string>("");
 
   // Filter patterns based on categories
   const filteredPatterns =
-    activeTab === "all"
-      ? gridPatterns
-      : activeTab === "favourites"
-      ? gridPatterns.filter((pattern) => favourites.includes(pattern.id))
-      : gridPatterns.filter((pattern) => pattern.category === activeTab);
+    searchInput === ""
+      ? activeTab === "all"
+        ? gridPatterns
+        : activeTab === "favourites"
+        ? gridPatterns.filter((pattern) => favourites.includes(pattern.id))
+        : gridPatterns.filter((pattern) => pattern.category === activeTab)
+      : searchPatterns(gridPatterns, activeTab, searchInput);
 
   return (
     <section
@@ -165,8 +169,18 @@ export default function PatternShowcase({
           </div>
         </div>
 
+        <SearchBar
+          searchInput={searchInput}
+          setSearchInput={setSearchInput}
+          isPatternDark={isPatternDark}
+        ></SearchBar>
+
         {categories.map((category) => (
-          <TabsContent key={category.id} value={category.id} className="mt-0">
+          <TabsContent
+            key={category.id}
+            value={category.id}
+            className="mt-0"
+          >
             {/* Pattern count */}
             <div className="mb-6">
               <p
@@ -191,7 +205,10 @@ export default function PatternShowcase({
                 setActiveMobileCard={setActiveMobileCard}
               />
             ) : (
-              <PatternEmptyState activeTab={activeTab} theme={theme} />
+              <PatternEmptyState
+                activeTab={activeTab}
+                theme={theme}
+              />
             )}
           </TabsContent>
         ))}
