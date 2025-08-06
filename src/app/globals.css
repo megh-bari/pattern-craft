@@ -122,16 +122,16 @@
   }
 }
 html {
-    overflow: -moz-scrollbars-none;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 html::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+  width: 0px;
+  background: transparent;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
