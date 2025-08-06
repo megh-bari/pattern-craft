@@ -3255,4 +3255,62 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  {
+    "id": "intersecting-circles",
+    "name": "Intersecting Circles",
+    "category": "geometric",
+    "badge": "New",
+    "style": {
+      "backgroundColor": "#e0f2fe",
+      "backgroundImage": "radial-gradient(#0ea5e9 0.5px, transparent 0.5px), radial-gradient(#0ea5e9 0.5px, #e0f2fe 0.5px)",
+      "backgroundSize": "20px 20px",
+      "backgroundPosition": "0 0, 10px 10px"
+    },
+    "code": `<div className="min-h-screen w-full relative">
+    {/* Intersecting Circles Background */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        backgroundColor: "#e0f2fe",
+        backgroundImage: "radial-gradient(#0ea5e9 0.5px, transparent 0.5px), radial-gradient(#0ea5e9 0.5px, #e0f2fe 0.5px)",
+        backgroundSize: "40px 40px",
+        backgroundPosition: "0 0, 10px 10px",
+      }}
+    />
+      {/* Your Content/Components */}
+      <div className="relative z-10 flex items-center justify-center h-full">
+          <h1 className="text-5xl font-bold text-slate-800">Dot Pattern</h1>
+      </div>
+  </div>`
+  },
+  {
+    "id": "grid-spotlight",
+    "name": "Grid Spotlight",
+    "category": "geometric",
+    "badge": "New",
+    "style": {
+      "background": "#0a0a0a",
+      "backgroundImage": `
+        linear-gradient(to right, rgba(99, 102, 241, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.15) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.2), transparent 50%)
+      `,
+      "backgroundSize": "40px 40px, 40px 40px, 100% 100%"
+    },
+    "code": `<div className="min-h-screen w-full bg-[#0a0a0a] relative">
+    {/* Grid Spotlight Background */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        backgroundImage: \`
+          linear-gradient(to right, rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+          radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.2), transparent 50%)
+        \`,
+        backgroundSize: "40px 40px, 40px 40px, 100% 100%",
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`
+  }
 ];
