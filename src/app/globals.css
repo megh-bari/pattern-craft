@@ -121,17 +121,20 @@
     @apply bg-background text-foreground;
   }
 }
-html {
-  overflow: -moz-scrollbars-none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-html::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
 
 body {
   overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  border-radius: 0;
 }
