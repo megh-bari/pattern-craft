@@ -2,15 +2,15 @@
   "name": "Pattern Craft",
   "short_name": "PatternCraft",
   "description": "Modern CSS background patterns and gradients generator",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/pattern-craft/",
+  "scope": "/pattern-craft/",
   "display": "standalone",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/pattern-craft/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
