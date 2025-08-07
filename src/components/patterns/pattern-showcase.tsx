@@ -41,7 +41,7 @@ export default function PatternShowcase({
   return (
     <section
       id="pattern-showcase"
-      className="container pt-6 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20"
+      className="container mx-auto pt-6 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20"
     >
       {/* Header */}
       <div className="mb-8 sm:mb-10 lg:mb-12">
