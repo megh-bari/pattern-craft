@@ -1,16 +1,16 @@
 "use client";
 
-import Hero from "./components/hero";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import PatternShowcase from "./components/pattern-showcase";
 import { useState, useEffect } from "react";
-import { ThemeProvider } from "./components/theme-provider";
-import { initializePatterns } from "./utils/patterns/index";
-import { Pattern } from "./types/pattern";
 import { Toaster } from "sonner";
-import SupportDropdown from "./components/SupportDropdownProps ";
-import ReturnToPreview from "./components/ReturnToPreview";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { initializePatterns } from "@/utils/patterns";
+import { Pattern } from "@/types/pattern";
+import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
+import Hero from "@/components/home/hero";
+import PatternShowcase from "@/components/patterns/pattern-showcase";
+import SupportDropdown from "@/components/home/support-dropdown";
+import ReturnToPreview from "@/components/home/return-to-preview";
 
 export default function Home() {
   const [activePattern, setActivePattern] = useState<string | null>(null);
