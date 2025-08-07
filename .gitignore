@@ -13,11 +13,12 @@
 # testing
 /coverage
 
-# playwright test artifacts (keep snapshots for visual regression)
+# playwright test artifacts
 /test-results/
 /playwright-report/
 test-results.json
-# Note: tests/*-snapshots/ are kept for visual regression baselines
+# Visual regression snapshots (excluded for simplicity)
+tests/*-snapshots/
 
 # next.js
 /.next/
@@ -29,6 +30,7 @@ test-results.json
 # misc
 .DS_Store
 *.pem
+/tmp/
 
 # backups and temporary files
 /backups/
