@@ -72,7 +72,7 @@ export default function PatternShowcase({
         {/* Desktop & Tablet Tabs */}
         <TabsList
           className={`
-            hidden sm:grid
+            hidden md:grid
             grid-cols-2 sm:grid-cols-3 md:grid-cols-6
             w-full h-auto p-1.5
             backdrop-blur-md shadow-lg border
@@ -140,8 +140,8 @@ export default function PatternShowcase({
           ))}
         </TabsList>
 
-        {/* Mobile Tabs */}
-        <div className="block sm:hidden mb-6">
+        {/* Mobile /Tablets */}
+        <div className="block md:hidden mb-6">
           <div className="flex flex-wrap gap-2 px-1 pb-2 justify-center">
             {categories.map((category) => (
               <button
