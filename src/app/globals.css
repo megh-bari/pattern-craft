@@ -121,6 +121,7 @@
     @apply bg-background text-foreground;
   }
 }
+
 html {
   overflow: -moz-scrollbars-none;
   scrollbar-width: none;

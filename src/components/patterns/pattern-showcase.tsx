@@ -1,12 +1,14 @@
 "use client";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { gridPatterns } from "@/data/patterns";
 import { categories } from "@/data/categories";
 import { useFavorites } from "@/context/favourites-context";
 import PatternGrid from "./pattern-grid";
 import PatternEmptyState from "./pattern-empty-state";
+import { SearchBar } from "../search/search-bar";
+import { searchPatterns } from "@/lib/utils";
 
 interface PatternShowcaseProps {
   activePattern: string | null;
@@ -24,20 +26,22 @@ export default function PatternShowcase({
   const { favourites } = useFavorites();
   const isPatternDark = theme === "dark";
 
-  useEffect(() => {}, [favourites]);
+  const [searchInput, setSearchInput] = useState<string>("");
 
   // Filter patterns based on categories
   const filteredPatterns =
-    activeTab === "all"
-      ? gridPatterns
-      : activeTab === "favourites"
-      ? gridPatterns.filter((pattern) => favourites.includes(pattern.id))
-      : gridPatterns.filter((pattern) => pattern.category === activeTab);
+    searchInput === ""
+      ? activeTab === "all"
+        ? gridPatterns
+        : activeTab === "favourites"
+        ? gridPatterns.filter((pattern) => favourites.includes(pattern.id))
+        : gridPatterns.filter((pattern) => pattern.category === activeTab)
+      : searchPatterns(gridPatterns, activeTab, searchInput);
 
   return (
     <section
       id="pattern-showcase"
-      className="container pt-6 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20"
+      className="container mx-auto pt-6 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20"
     >
       {/* Header */}
       <div className="mb-8 sm:mb-10 lg:mb-12">
@@ -68,7 +72,7 @@ export default function PatternShowcase({
         {/* Desktop & Tablet Tabs */}
         <TabsList
           className={`
-            hidden sm:grid
+            hidden md:grid
             grid-cols-2 sm:grid-cols-3 md:grid-cols-6
             w-full h-auto p-1.5
             backdrop-blur-md shadow-lg border
@@ -136,8 +140,8 @@ export default function PatternShowcase({
           ))}
         </TabsList>
 
-        {/* Mobile Tabs */}
-        <div className="block sm:hidden mb-6">
+        {/* Mobile /Tablets */}
+        <div className="block md:hidden mb-6">
           <div className="flex flex-wrap gap-2 px-1 pb-2 justify-center">
             {categories.map((category) => (
               <button
@@ -165,8 +169,18 @@ export default function PatternShowcase({
           </div>
         </div>
 
+        <SearchBar
+          searchInput={searchInput}
+          setSearchInput={setSearchInput}
+          isPatternDark={isPatternDark}
+        ></SearchBar>
+
         {categories.map((category) => (
-          <TabsContent key={category.id} value={category.id} className="mt-0">
+          <TabsContent
+            key={category.id}
+            value={category.id}
+            className="mt-0"
+          >
             {/* Pattern count */}
             <div className="mb-6">
               <p
@@ -191,7 +205,10 @@ export default function PatternShowcase({
                 setActiveMobileCard={setActiveMobileCard}
               />
             ) : (
-              <PatternEmptyState activeTab={activeTab} theme={theme} />
+              <PatternEmptyState
+                activeTab={activeTab}
+                theme={theme}
+              />
             )}
           </TabsContent>
         ))}
