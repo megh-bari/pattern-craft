@@ -860,7 +860,7 @@ export const gridPatterns: Pattern[] = [
   },
 
   // Warm Backgrounds
-    {
+  {
     id: "aurora-dream-corner-whispers",
     name: "Aurora Dream Corner Whispers",
     category: "effects",
@@ -3386,5 +3386,43 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
+  },
+  {
+    id: "cosmic-vortex",
+    name: "Cosmic Vortex",
+    category: "gradients",
+    badge: "New",
+    style: {
+      background: "radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+    {/* Radial Gradient Wave */}
+    <div
+      className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24"
+      style={{
+        background: "radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%)"
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "lunar-haze",
+    name: "Lunar Haze",
+    category: "gradients",
+    badge: "New",
+    style: {
+      background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #63e 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+    {/* Radial Gradient White Wave */}
+    <div
+      className="absolute inset-0 -z-10 h-full w-full"
+      style={{
+        background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #63e 100%)"
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
   },
 ];
