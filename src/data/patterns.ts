@@ -3389,8 +3389,8 @@ export const gridPatterns: Pattern[] = [
   },
 
   {
-    id: "gpt5-blur-gradient",
-    name: "GPT-5 Blur Gradient",
+    id: "aurora-cosmos-glow",
+    name: "Aurora Cosmos Glow",
     badge: "New",
     category: "gradients",
     style: {
@@ -3423,8 +3423,8 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   {
-    id: "gpt5-home-gradient-2",
-    name: "GPT-5 Home Gradient",
+    id: "eclipse-aura",
+    name: "Eclipse Aura",
     badge: "New",
     category: "gradients",
     style: {
@@ -3461,8 +3461,8 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   {
-    id: "gpt5-gradient-pattern",
-    name: "GPT-5 Gradient Blur",
+    id: "celestial-bloom",
+    name: "Celestial Bloom",
     badge: "New",
     category: "gradients",
     style: {
