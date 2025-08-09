@@ -860,7 +860,7 @@ export const gridPatterns: Pattern[] = [
   },
 
   // Warm Backgrounds
-    {
+  {
     id: "aurora-dream-corner-whispers",
     name: "Aurora Dream Corner Whispers",
     category: "effects",
@@ -3385,6 +3385,115 @@ export const gridPatterns: Pattern[] = [
     }}
   />
   {/* Your Content/Components */}
+</div>`,
+  },
+
+  {
+    id: "gpt5-blur-gradient",
+    name: "GPT-5 Blur Gradient",
+    badge: "New",
+    category: "gradients",
+    style: {
+      background: "#000000",
+      backgroundImage: `
+      radial-gradient(circle at 30% 30%, rgba(255, 94, 0, 0.4), transparent 60%),
+      radial-gradient(circle at 70% 40%, rgba(255, 0, 128, 0.35), transparent 60%),
+      radial-gradient(circle at 50% 70%, rgba(0, 140, 255, 0.35), transparent 60%)
+    `,
+      backgroundSize: "100% 100%",
+      backdropFilter: "blur(40px)",
+      WebkitBackdropFilter: "blur(40px)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* GPT-5 Blur Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 30% 30%, rgba(255, 94, 0, 0.4), transparent 60%),
+        radial-gradient(circle at 70% 40%, rgba(255, 0, 128, 0.35), transparent 60%),
+        radial-gradient(circle at 50% 70%, rgba(0, 140, 255, 0.35), transparent 60%)
+      \`,
+      backgroundSize: "100% 100%",
+      backdropFilter: "blur(40px)",
+      WebkitBackdropFilter: "blur(40px)"
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "gpt5-home-gradient-2",
+    name: "GPT-5 Home Gradient",
+    badge: "New",
+    category: "gradients",
+    style: {
+      background: "#000000",
+      backgroundImage: `
+      radial-gradient(circle at 50% 0%, rgba(255, 132, 0, 0.35) 0%, transparent 50%),
+      radial-gradient(circle at 60% 20%, rgba(255, 0, 102, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, rgba(255, 214, 0, 0.25) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(0, 100, 255, 0.25) 0%, transparent 60%),
+      linear-gradient(to bottom, #0f172a, #000000)
+    `,
+      backgroundSize: "100% 100%",
+      backdropFilter: "blur(60px)",
+      WebkitBackdropFilter: "blur(60px)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* GPT-5 Home Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 50% 0%, rgba(255, 132, 0, 0.35) 0%, transparent 50%),
+        radial-gradient(circle at 60% 20%, rgba(255, 0, 102, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(255, 214, 0, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(0, 100, 255, 0.25) 0%, transparent 60%),
+        linear-gradient(to bottom, #0f172a, #000000)
+      \`,
+      backgroundSize: "100% 100%",
+      backdropFilter: "blur(60px)",
+      WebkitBackdropFilter: "blur(60px)"
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "gpt5-gradient-pattern",
+    name: "GPT-5 Gradient Blur",
+    badge: "New",
+    category: "gradients",
+    style: {
+      background: "#0d0f17",
+      backgroundImage: `
+      radial-gradient(at 20% 30%, rgba(255, 128, 0, 0.4) 0px, transparent 60%),
+      radial-gradient(at 80% 20%, rgba(255, 0, 128, 0.35) 0px, transparent 60%),
+      radial-gradient(at 50% 80%, rgba(0, 128, 255, 0.3) 0px, transparent 60%),
+      radial-gradient(at 90% 70%, rgba(255, 200, 0, 0.25) 0px, transparent 60%),
+      radial-gradient(at 10% 90%, rgba(128, 0, 255, 0.25) 0px, transparent 60%)
+    `,
+      backgroundSize: "100% 100%",
+      backgroundRepeat: "no-repeat",
+    },
+    code: `<div className="min-h-screen w-full bg-[#0d0f17] relative">
+  {/* GPT-5 Gradient Blur Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(at 20% 30%, rgba(255, 128, 0, 0.4) 0px, transparent 60%),
+        radial-gradient(at 80% 20%, rgba(255, 0, 128, 0.35) 0px, transparent 60%),
+        radial-gradient(at 50% 80%, rgba(0, 128, 255, 0.3) 0px, transparent 60%),
+        radial-gradient(at 90% 70%, rgba(255, 200, 0, 0.25) 0px, transparent 60%),
+        radial-gradient(at 10% 90%, rgba(128, 0, 255, 0.25) 0px, transparent 60%)
+      \`,
+      backgroundSize: "100% 100%",
+      backgroundRepeat: "no-repeat"
+    }}
+  />
+  {/* Your Content */}
 </div>`,
   },
 ];
