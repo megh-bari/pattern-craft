@@ -3387,4 +3387,205 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+{
+  id: "soft-glow",
+  name: "Soft Glow",
+  category: "effects",
+  badge: "New",
+  style: {
+    background: "#0f172a",
+    backgroundImage: `
+      radial-gradient(circle at 30% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 60%),
+      radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 60%),
+      radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.1) 0%, transparent 70%)
+    `,
+  },
+  code: `<div className="min-h-screen w-full bg-[#0f172a] relative">
+  {/* Soft Glow */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 30% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.1) 0%, transparent 70%)
+      \`
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+{
+  id: "sweet-dream-adventure",
+  name: "Sweet Dream Adventure",
+  category: "effects",
+  badge: "New",
+  style: {
+    background: "#fffaf5",
+    backgroundImage: `
+      radial-gradient(circle at 20% 30%, rgba(255, 183, 197, 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 223, 128, 0.35) 0%, transparent 55%),
+      radial-gradient(circle at 50% 80%, rgba(173, 216, 230, 0.35) 0%, transparent 60%),
+      radial-gradient(circle at 70% 70%, rgba(186, 255, 201, 0.3) 0%, transparent 65%),
+      linear-gradient(120deg, #fffaf5 0%, #fdf4ff 50%, #f0faff 100%)
+    `,
+  },
+  code: `<div className="min-h-screen w-full bg-[#fffaf5] relative">
+  {/* Sweet Dream Adventure */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 20% 30%, rgba(255, 183, 197, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 223, 128, 0.35) 0%, transparent 55%),
+        radial-gradient(circle at 50% 80%, rgba(173, 216, 230, 0.35) 0%, transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(186, 255, 201, 0.3) 0%, transparent 65%),
+        linear-gradient(120deg, #fffaf5 0%, #fdf4ff 50%, #f0faff 100%)
+      \`,
+      backgroundBlendMode: "screen"
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+
+  // Crystalline patterns
+  {
+    id: "crystal-prism",
+    name: "Crystal Prism",
+    category: "geometric",
+    badge: "New",
+    description: "Sharp angular gradients creating a crystalline effect",
+    style: {
+      background: "#fafafa",
+      backgroundImage: `
+        conic-gradient(from 0deg at 30% 30%, rgba(123, 31, 162, 0.05) 0deg, rgba(103, 58, 183, 0.08) 60deg, transparent 120deg),
+        conic-gradient(from 120deg at 70% 60%, rgba(33, 150, 243, 0.06) 0deg, rgba(0, 188, 212, 0.09) 60deg, transparent 120deg),
+        conic-gradient(from 240deg at 50% 80%, rgba(255, 193, 7, 0.07) 0deg, rgba(255, 152, 0, 0.05) 60deg, transparent 120deg),
+        linear-gradient(135deg, transparent 25%, rgba(255, 255, 255, 0.5) 25%, rgba(255, 255, 255, 0.5) 26%, transparent 26%)
+      `,
+      backgroundSize: "100% 100%, 100% 100%, 100% 100%, 30px 30px",
+    },
+    code: `<div className="min-h-screen w-full bg-[#fafafa] relative">
+  {/* Crystal Prism */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        conic-gradient(from 0deg at 30% 30%, rgba(123, 31, 162, 0.05) 0deg, rgba(103, 58, 183, 0.08) 60deg, transparent 120deg),
+        conic-gradient(from 120deg at 70% 60%, rgba(33, 150, 243, 0.06) 0deg, rgba(0, 188, 212, 0.09) 60deg, transparent 120deg),
+        conic-gradient(from 240deg at 50% 80%, rgba(255, 193, 7, 0.07) 0deg, rgba(255, 152, 0, 0.05) 60deg, transparent 120deg),
+        linear-gradient(135deg, transparent 25%, rgba(255, 255, 255, 0.5) 25%, rgba(255, 255, 255, 0.5) 26%, transparent 26%)
+      \`,
+      backgroundSize: "100% 100%, 100% 100%, 100% 100%, 30px 30px",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+
+  // Topographic patterns
+  {
+    id: "topographic-map",
+    name: "Topographic Map",
+    category: "geometric",
+    badge: "New",
+    description: "Elevation contour lines creating depth",
+    style: {
+      background: "#f7f7f7",
+      backgroundImage: `
+        radial-gradient(circle at 50% 50%, transparent 20%, rgba(0, 0, 0, 0.03) 20.5%, transparent 21%, transparent 30%, rgba(0, 0, 0, 0.03) 30.5%, transparent 31%, transparent 40%, rgba(0, 0, 0, 0.03) 40.5%, transparent 41%, transparent 50%, rgba(0, 0, 0, 0.03) 50.5%, transparent 51%, transparent 60%, rgba(0, 0, 0, 0.03) 60.5%, transparent 61%),
+        radial-gradient(circle at 20% 80%, transparent 20%, rgba(0, 0, 0, 0.02) 20.5%, transparent 21%, transparent 30%, rgba(0, 0, 0, 0.02) 30.5%, transparent 31%, transparent 40%, rgba(0, 0, 0, 0.02) 40.5%, transparent 41%),
+        radial-gradient(circle at 80% 30%, transparent 15%, rgba(0, 0, 0, 0.02) 15.5%, transparent 16%, transparent 25%, rgba(0, 0, 0, 0.02) 25.5%, transparent 26%, transparent 35%, rgba(0, 0, 0, 0.02) 35.5%, transparent 36%)
+      `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-[#f7f7f7] relative">
+  {/* Topographic Map */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 50% 50%, transparent 20%, rgba(0, 0, 0, 0.03) 20.5%, transparent 21%, transparent 30%, rgba(0, 0, 0, 0.03) 30.5%, transparent 31%, transparent 40%, rgba(0, 0, 0, 0.03) 40.5%, transparent 41%, transparent 50%, rgba(0, 0, 0, 0.03) 50.5%, transparent 51%, transparent 60%, rgba(0, 0, 0, 0.03) 60.5%, transparent 61%),
+        radial-gradient(circle at 20% 80%, transparent 20%, rgba(0, 0, 0, 0.02) 20.5%, transparent 21%, transparent 30%, rgba(0, 0, 0, 0.02) 30.5%, transparent 31%, transparent 40%, rgba(0, 0, 0, 0.02) 40.5%, transparent 41%),
+        radial-gradient(circle at 80% 30%, transparent 15%, rgba(0, 0, 0, 0.02) 15.5%, transparent 16%, transparent 25%, rgba(0, 0, 0, 0.02) 25.5%, transparent 26%, transparent 35%, rgba(0, 0, 0, 0.02) 35.5%, transparent 36%)
+      \`,
+      backgroundSize: "100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+
+  // Glassmorphism patterns
+  {
+    id: "frosted-glass-dots",
+    name: "Frosted Glass Dots",
+    category: "effects",
+    badge: "New",
+    description: "Frosted glass effect with floating dots",
+    style: {
+      background: "rgba(255, 255, 255, 0.95)",
+      backgroundImage: `
+        radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 25%),
+        radial-gradient(circle at 80% 80%, rgba(255, 119, 168, 0.3) 0%, transparent 25%),
+        radial-gradient(circle at 15% 90%, rgba(98, 255, 179, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 2px 2px, rgba(0, 0, 0, 0.05) 1px, transparent 1px)
+      `,
+      backgroundSize: "100% 100%, 100% 100%, 100% 100%, 15px 15px",
+      backdropFilter: "blur(10px)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Frosted Glass Dots */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "rgba(255, 255, 255, 0.95)",
+      backgroundImage: \`
+        radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 25%),
+        radial-gradient(circle at 80% 80%, rgba(255, 119, 168, 0.3) 0%, transparent 25%),
+        radial-gradient(circle at 15% 90%, rgba(98, 255, 179, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 2px 2px, rgba(0, 0, 0, 0.05) 1px, transparent 1px)
+      \`,
+      backgroundSize: "100% 100%, 100% 100%, 100% 100%, 15px 15px",
+      backdropFilter: "blur(10px)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+
+  // Minimalist luxury
+  {
+    id: "silk-wave",
+    name: "Silk Wave",
+    category: "decorative",
+    badge: "New",
+    description: "Luxurious silk-like wave pattern",
+    style: {
+      background: "linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%)",
+      backgroundImage: `
+        repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(0, 0, 0, 0.02) 100px, rgba(0, 0, 0, 0.02) 101px),
+        radial-gradient(ellipse 1200px 200px at 50% 0%, rgba(0, 0, 0, 0.03), transparent 70%),
+        radial-gradient(ellipse 1200px 200px at 50% 100%, rgba(0, 0, 0, 0.03), transparent 70%)
+      `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Silk Waves */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%)",
+      backgroundImage: \`
+        repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(0, 0, 0, 0.02) 100px, rgba(0, 0, 0, 0.02) 101px),
+        radial-gradient(ellipse 1200px 200px at 50% 0%, rgba(0, 0, 0, 0.03), transparent 70%),
+        radial-gradient(ellipse 1200px 200px at 50% 100%, rgba(0, 0, 0, 0.03), transparent 70%)
+      \`,
+      backgroundSize: "100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
 ];
