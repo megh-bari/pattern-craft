@@ -84,7 +84,10 @@ export default function PatternCard({
         </button>
 
         {/* Pattern style */}
-        <div className="absolute inset-0" style={pattern.style} />
+        <div
+          className="absolute inset-0"
+          style={pattern.style}
+        />
 
         {/* Badge */}
         {pattern.badge && (
@@ -143,7 +146,7 @@ export default function PatternCard({
 
         {/* Desktop View: Hover overlay */}
         <div className="hidden lg:flex absolute inset-0 cursor-pointer bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 items-center justify-center p-4">
-          <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+          <div className="grow text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
             <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-4 drop-shadow-lg">
               {pattern.name}
             </h3>
