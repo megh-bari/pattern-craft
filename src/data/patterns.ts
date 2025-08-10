@@ -3387,4 +3387,23 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "organic-blob",
+    name: "Organic Blob",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "linear-gradient(to top right, #fbcfe8, #dbeafe, #fef3c7)"
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+    {/* Organic Blob */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "linear-gradient(to top right, #fbcfe8, #dbeafe, #fef3c7)"
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+  },
 ];
