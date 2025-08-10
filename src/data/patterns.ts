@@ -3387,4 +3387,66 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  {
+  id: "sunset-horizon",
+  name: "Sunset Horizon",
+  category: "effects",
+  badge: "New",
+  style: {
+    background:
+      "radial-gradient(circle at 70% 30%, rgba(255, 214, 165, 0.9) 0%, rgba(255, 137, 137, 0.8) 40%, rgba(255, 80, 150, 0.7) 70%), linear-gradient(120deg, #ffafbd 0%, #ffc3a0 100%)",
+  },
+  code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Sunset Horizon */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background:
+        "radial-gradient(circle at 70% 30%, rgba(255, 214, 165, 0.9) 0%, rgba(255, 137, 137, 0.8) 40%, rgba(255, 80, 150, 0.7) 70%), linear-gradient(120deg, #ffafbd 0%, #ffc3a0 100%)"
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+{
+  id: "ocean-mist",
+  name: "Ocean Mist",
+  category: "effects",
+  badge: "New",
+  style: {
+    background:
+      "radial-gradient(circle at 50% 80%, rgba(173, 216, 230, 0.85) 0%, rgba(135, 206, 250, 0.7) 40%, rgba(70, 130, 180, 0.6) 70%), linear-gradient(160deg, #89f7fe 0%, #66a6ff 100%)",
+  },
+  code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Ocean Mist */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background:
+        "radial-gradient(circle at 50% 80%, rgba(173, 216, 230, 0.85) 0%, rgba(135, 206, 250, 0.7) 40%, rgba(70, 130, 180, 0.6) 70%), linear-gradient(160deg, #89f7fe 0%, #66a6ff 100%)"
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+{
+  id: "aurora-drift",
+  name: "Aurora Drift",
+  category: "effects",
+  badge: "New",
+  style: {
+    background:
+      "radial-gradient(circle at 20% 40%, rgba(186, 85, 211, 0.75) 0%, rgba(72, 61, 139, 0.65) 35%, rgba(0, 191, 255, 0.6) 70%), linear-gradient(140deg, #7f7fd5 0%, #86a8e7 50%, #91eae4 100%)",
+  },
+  code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Aurora Drift */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background:
+        "radial-gradient(circle at 20% 40%, rgba(186, 85, 211, 0.75) 0%, rgba(72, 61, 139, 0.65) 35%, rgba(0, 191, 255, 0.6) 70%), linear-gradient(140deg, #7f7fd5 0%, #86a8e7 50%, #91eae4 100%)"
+    }}
+  />
+</div>`,
+},
 ];
