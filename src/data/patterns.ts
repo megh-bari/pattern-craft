@@ -3387,4 +3387,24 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "midnight-ember",
+    name: "Midnight Ember",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(ellipse at center, #3d2914 0%, #2a1810 30%, #1a0f0a 60%, #0d0806 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+    {/* Midnight Ember */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse at center, #3d2914 0%, #2a1810 30%, #1a0f0a 60%, #0d0806 100%)"
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+  },
 ];
