@@ -3387,4 +3387,24 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "crimson-core-glow",
+    name: "Crimson Core Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+      "radial-gradient(68% 58% at 50% 50%, #d62a44 0%, #b7233a 14%, #8f1e34 28%, #6a1a2e 42%, #471928 56%, #311a2c 68%, #221b33 78%, #171e38 88%, #0f172a 95%, #0b1120 100%), radial-gradient(90% 75% at 50% 50%, rgba(228,42,66,0.08) 0%, rgba(228,42,66,0) 55%), radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #050815 82%, #030711 100%), radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #050815 82%, #030711 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-black relative">
+    {/* Crimson Core Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        b"radial-gradient(68% 58% at 50% 50%, #d62a44 0%, #b7233a 14%, #8f1e34 28%, #6a1a2e 42%, #471928 56%, #311a2c 68%, #221b33 78%, #171e38 88%, #0f172a 95%, #0b1120 100%), radial-gradient(90% 75% at 50% 50%, rgba(228,42,66,0.08) 0%, rgba(228,42,66,0) 55%), radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #050815 82%, #030711 100%), radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #050815 82%, #030711 100%)"
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+  }
 ];
