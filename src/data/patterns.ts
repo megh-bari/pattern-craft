@@ -3387,4 +3387,44 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "indigo-amber-halftone",
+    name: "Indigo Amber Halftone",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#0d0630",
+      backgroundImage: `
+        /* Base diagonal gradient: deep indigo to amber to soft yellow */
+        linear-gradient(135deg, #1a0f5f 0%, #2a146f 15%, #7c2d12 45%, #f59e0b 70%, #fde047 100%),
+        /* Halftone dot overlay */
+        radial-gradient(circle at center, rgba(0,0,0,0.6) 1.15px, transparent 1.7px),
+        /* Left/top vignette to deepen indigo */
+        radial-gradient(120% 90% at 0% 0%, rgba(14, 0, 56, 0.85) 0%, transparent 55%),
+        /* Right-side curve shadow to hint the wave */
+        radial-gradient(90% 70% at 85% 45%, rgba(22, 0, 66, 0.55) 0%, transparent 60%)
+      `,
+      backgroundSize: "cover, 6px 6px, cover, cover",
+      backgroundPosition: "center, 0 0, center, center",
+      backgroundBlendMode: "normal, multiply, normal, normal",
+    },
+    code: `<div className="min-h-screen w-full relative bg-[#0d0630]">
+  {/* Indigo Amber Halftone */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(135deg, #1a0f5f 0%, #2a146f 15%, #7c2d12 45%, #f59e0b 70%, #fde047 100%),
+        radial-gradient(circle at center, rgba(0,0,0,0.6) 1.15px, transparent 1.7px),
+        radial-gradient(120% 90% at 0% 0%, rgba(14, 0, 56, 0.85) 0%, transparent 55%),
+        radial-gradient(90% 70% at 85% 45%, rgba(22, 0, 66, 0.55) 0%, transparent 60%)
+      \`,
+      backgroundSize: "cover, 6px 6px, cover, cover",
+      backgroundPosition: "center, 0 0, center, center",
+      backgroundBlendMode: "normal, multiply, normal, normal",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
 ];
