@@ -3393,17 +3393,37 @@ export const gridPatterns: Pattern[] = [
     category: "effects",
     badge: "New",
     style: {
-      background: "linear-gradient(to top right, #fbcfe8, #dbeafe, #fef3c7)"
+      background: "linear-gradient(to top right, #ecfeff, #dbeafe, #ede9fe)"
+    },
+    code: `<div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-tr from-green-50 via-blue-50 to-purple-100">
+  {/* Organic Blob */}
+  <svg className="absolute left-1/4 top-1/4 opacity-30" width="300" height="300" viewBox="0 0 300 300">
+    <path d="M60,150 Q90,60 150,90 Q210,120 180,210 Q120,270 60,150 Z" fill="#a7f3d0" />
+  </svg>
+  <svg className="absolute right-1/4 bottom-1/4 opacity-20" width="200" height="200" viewBox="0 0 200 200">
+    <ellipse cx="100" cy="100" rx="80" ry="50" fill="#818cf8" />
+  </svg>
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "midnight-ember",
+    name: "Midnight Ember",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(ellipse at center, #3d2914 0%, #2a1810 30%, #1a0f0a 60%, #0d0806 100%)",
     },
     code: `<div className="min-h-screen w-full bg-white relative">
-    {/* Organic Blob */}
+    {/* Midnight Ember */}
     <div
       className="absolute inset-0 z-0"
       style={{
-        background: "linear-gradient(to top right, #fbcfe8, #dbeafe, #fef3c7)"
+        background: "radial-gradient(ellipse at center, #3d2914 0%, #2a1810 30%, #1a0f0a 60%, #0d0806 100%)"
       }}
     />
     {/* Your Content/Components */}
   </div>`,
-  },
+  }
 ];

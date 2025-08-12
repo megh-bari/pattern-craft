@@ -173,8 +173,8 @@ const SupportDropdown: React.FC<SupportDropdownProps> = ({
               <QRCode
                 value={upiUrl}
                 size={120}
-                bgColor={theme === "dark" ? "#222" : "#fff"}
-                fgColor={theme === "dark" ? "#fff" : "#222"}
+                bgColor="#fff"
+                fgColor="#222"
               />
               <div className="mt-2 text-xs text-center text-gray-500">
                 UPI ID:{" "}
