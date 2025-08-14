@@ -3407,4 +3407,23 @@ export const gridPatterns: Pattern[] = [
     {/* Your Content/Components */}
   </div>`,
   },
+  {
+    id: "deep-sea-light-arc",
+    name: "Deep Sea Light",
+    category: "gradients",
+    badge: "New",
+    style: {
+      background: "radial-gradient(ellipse 65% 70% at 50% 0%, rgba(45, 212, 191, 0.25) 0%, rgba(45, 212, 191, 0) 80%)"
+    },
+    code: `<div className="min-h-screen w-full bg-black relative">
+    {/* Pattern Background */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        backgroundImage: 'radial-gradient(ellipse 65% 70% at 50% 0%, rgba(45, 212, 191, 0.25) 0%, rgba(45, 212, 191, 0) 80%)'
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`
+  }
 ];
