@@ -3,7 +3,7 @@
 > _**For developers, by a developer. Design that slaps⚡**_
 
 <div align="center">
-  <img src="./public/images/readme-banner.png" alt="Pattern Craft Banner" />
+  <img src="./public/images/readme-banner.webp" alt="Pattern Craft Banner" />
   <br><br>
   <p align="left">
     <strong>Effortlessly enhance your websites and apps with 100+ modern CSS background patterns and gradient snippets.</strong>
@@ -36,10 +36,10 @@
 
 ## Visit: **[Pattern Craft](https://patterncraft.fun)**
 
-![UI Image](./public/images/readme-img-one.png)
-![UI Image](./public/images/readme-img-two.png)
-![UI Image](./public/images/readme-img-four.png)
-![UI Image](./public/images/readme-img-three.png)
+![UI Image](./public/images/readme-img-one.webp)
+![UI Image](./public/images/readme-img-two.webp)
+![UI Image](./public/images/readme-img-four.webp)
+![UI Image](./public/images/readme-img-three.webp)
 
 > _**Note: This project does not provide plain HTML or vanilla CSS snippets. All code is optimized for JSX (React/Next.js) and Tailwind CSS.**_  
 > [Learn more in this announcement.](https://github.com/megh-bari/pattern-craft/discussions/24)
