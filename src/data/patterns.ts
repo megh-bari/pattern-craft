@@ -3407,4 +3407,92 @@ export const gridPatterns: Pattern[] = [
     {/* Your Content/Components */}
   </div>`,
   },
+  {
+		id: "emerald-night-glow",
+		name: "Emerald Night Glow ",
+		category: "gradients",
+		badge: "New",
+		description:
+			"Radial gradient from deep emerald green to near-black starting from center",
+		style: {
+			background:
+				"radial-gradient(ellipse at center, #014d34 0%,#013224 30%,#011a14 60%,#000a07 100% )",
+		},
+		code: `<div className="min-h-screen w-full bg-white relative">
+    {/* Emerald Night Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse at center, #014d34 0%,#013224 30%,#011a14 60%,#000a07 100% )"
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+	},
+	{
+		id: "sapphire-night-glow",
+		name: "Sapphire Night Glow ",
+		category: "gradients",
+		badge: "New",
+		description:
+			"Radial gradient from deep sapphire blue to near-black starting from center",
+		style: {
+			background:
+				"radial-gradient(ellipse at center, #0b2f4f 0%, #081f38 30%, #051426 60%, #02080f 100%)",
+		},
+		code: `<div className="min-h-screen w-full bg-white relative">
+    {/* Sapphire Night Glow  */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse at center, #0b2f4f 0%, #081f38 30%, #051426 60%, #02080f 100%)"
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+	},
+	{
+		id: "amethyst-night-glow",
+		name: "Amethyst Night Glow ",
+		category: "gradients",
+		badge: "New",
+		description:
+			"Radial gradient from rich amethyst purple to near-black starting from center",
+		style: {
+			background:
+				"radial-gradient(ellipse at center, #3f0a5f 0%, #2a073f 30%, #1a0428 60%, #0a020f 100%)",
+		},
+		code: `<div className="min-h-screen w-full bg-white relative">
+    {/* Amethyst Night Glow  */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse at center, #3f0a5f 0%, #2a073f 30%, #1a0428 60%, #0a020f 100%)"
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+	},
+	{
+		id: "tri-color",
+		name: "Tri Color ",
+		category: "gradients",
+		badge: "New",
+		description:
+			"Linear gradient from saffron to white to deep green at 120 degrees",
+		style: {
+			background: "#ffffff",
+			backgroundImage: `linear-gradient(120deg, #ff9933 0%, #ffffff 50%, #138808 100%)`,
+		},
+		code: `<div className="min-h-screen w-full relative">
+    {/* Tri Color */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "linear-gradient(120deg, #ff9933 0%, #ffffff 50%, #138808 100%)"
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+	},
 ];
