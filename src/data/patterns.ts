@@ -860,7 +860,7 @@ export const gridPatterns: Pattern[] = [
   },
 
   // Warm Backgrounds
-    {
+  {
     id: "aurora-dream-corner-whispers",
     name: "Aurora Dream Corner Whispers",
     category: "effects",
@@ -1676,9 +1676,126 @@ export const gridPatterns: Pattern[] = [
      {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "bubble-cluster",
+    name: "Bubble Cluster",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#f0f9ff",
+      backgroundImage: `
+        radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 40% 60%, rgba(125, 211, 252, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 60% 40%, rgba(186, 230, 253, 0.2) 0%, transparent 25%)
+      `,
+    },
+    code: `<div className="min-h-screen w-full bg-[#f0f9ff] relative">
+  {/* Bubble Cluster Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 40% 60%, rgba(125, 211, 252, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 60% 40%, rgba(186, 230, 253, 0.2) 0%, transparent 25%)
+      \`
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "water-ripples",
+    name: "Water Ripples",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#e0f2fe",
+      backgroundImage: `
+        radial-gradient(circle, rgba(14, 165, 233, 0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(14, 165, 233, 0.1) 2px, transparent 2px),
+        radial-gradient(circle, rgba(14, 165, 233, 0.1) 3px, transparent 3px)
+      `,
+      backgroundSize: "50px 50px, 100px 100px, 150px 150px",
+    },
+    code: `<div className="min-h-screen w-full bg-[#e0f2fe] relative">
+  {/* Water Ripples Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle, rgba(14, 165, 233, 0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(14, 165, 233, 0.1) 2px, transparent 2px),
+        radial-gradient(circle, rgba(14, 165, 233, 0.1) 3px, transparent 3px)
+      \`,
+      backgroundSize: "50px 50px, 100px 100px, 150px 150px"
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
 
   // Line Patterns
-
+  {
+    id: "honeycomb-mesh",
+    name: "Honeycomb Mesh",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+        linear-gradient(120deg, #e5e7eb 1px, transparent 1px),
+        linear-gradient(60deg, #e5e7eb 1px, transparent 1px),
+        linear-gradient(0deg, #e5e7eb 1px, transparent 1px)
+      `,
+      backgroundSize: "34.64px 60px",
+      backgroundPosition: "0 0, 17.32px 30px, 17.32px 0",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Honeycomb Mesh Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(120deg, #e5e7eb 1px, transparent 1px),
+        linear-gradient(60deg, #e5e7eb 1px, transparent 1px),
+        linear-gradient(0deg, #e5e7eb 1px, transparent 1px)
+      \`,
+      backgroundSize: "34.64px 60px",
+      backgroundPosition: "0 0, 17.32px 30px, 17.32px 0"
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "light-dot-grid",
+    name: "Light Dot Grid",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+        radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)
+      `,
+      backgroundSize: "20px 20px",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Light Dot Grid Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px"
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
   {
     id: "paper-texture",
     name: "Paper Texture",
@@ -3414,7 +3531,7 @@ export const gridPatterns: Pattern[] = [
     badge: "New",
     style: {
       background:
-      "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%), radial-gradient(160% 130% at 10% 10%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%), radial-gradient(160% 130% at 90% 90%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%)",
+        "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%), radial-gradient(160% 130% at 10% 10%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%), radial-gradient(160% 130% at 90% 90%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%)",
     },
     code: `<div className="min-h-screen w-full bg-black relative">
     {/* Deep Ocean Glow */}
@@ -3447,17 +3564,17 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
-{
-  id: "crimson-core-glow",
-  name: "Crimson Core Glow",
-  category: "effects",
-  badge: "New",
-  style: {
-    background:
-      "linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), radial-gradient(68% 58% at 50% 50%, #c81e3a 0%, #a51d35 16%, #7d1a2f 32%, #591828 46%, #3c1722 60%, #2a151d 72%, #1f1317 84%, #141013 94%, #0a0a0a 100%), radial-gradient(90% 75% at 50% 50%, rgba(228,42,66,0.06) 0%, rgba(228,42,66,0) 55%), radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%), radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%), radial-gradient(60% 50% at 50% 60%, rgba(240,60,80,0.06), rgba(0,0,0,0) 60%), #050505",
   },
-  code: `<div className="min-h-screen w-full bg-black relative">
+  {
+    id: "crimson-core-glow",
+    name: "Crimson Core Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), radial-gradient(68% 58% at 50% 50%, #c81e3a 0%, #a51d35 16%, #7d1a2f 32%, #591828 46%, #3c1722 60%, #2a151d 72%, #1f1317 84%, #141013 94%, #0a0a0a 100%), radial-gradient(90% 75% at 50% 50%, rgba(228,42,66,0.06) 0%, rgba(228,42,66,0) 55%), radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%), radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%), radial-gradient(60% 50% at 50% 60%, rgba(240,60,80,0.06), rgba(0,0,0,0) 60%), #050505",
+    },
+    code: `<div className="min-h-screen w-full bg-black relative">
   {/* Crimson Core Glow */}
   <div
     className="absolute inset-0 z-0"
@@ -3477,5 +3594,5 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-}
+  },
 ];
