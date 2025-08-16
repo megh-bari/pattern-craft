@@ -3477,7 +3477,7 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-}
+},
   {
 		id: "emerald-night-glow",
 		name: "Emerald Night Glow ",
