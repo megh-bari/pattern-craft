@@ -262,6 +262,7 @@ export default function RootLayout({
           name="twitter:image"
           content="https://patterncraft.fun/og-banner.png"
         />
+        <meta name="google-site-verification" content="xeqxMvzZZQWV43nn06hJDnwUVVaRfYRaMrYHy-5qSCg" />
 
         {/* <meta property="og:image" content="https://patterncraft.fun/opengraph-image.png" />
         <meta property="og:image:type" content="image/png" />
