@@ -3477,5 +3477,298 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-}
+},
+
+{
+  id: "topographic-arcs",
+  name: "Topographic Arcs",
+  category: "geometric",
+  badge: "New",
+  style: {
+    background: "#f8fafc",
+    backgroundImage: `
+      repeating-radial-gradient(
+        circle at 0% 150%,
+        transparent,
+        transparent 20px,
+        rgba(107, 114, 128, 0.1) 20px,
+        rgba(107, 114, 128, 0.1) 21px
+      )
+    `,
+  },
+  code: `<div className="min-h-screen w-full bg-[#f8fafc] relative">
+  {/* Topographic Arcs */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        repeating-radial-gradient(
+          circle at 0% 150%,
+          transparent,
+          transparent 20px,
+          rgba(107, 114, 128, 0.1) 20px,
+          rgba(107, 114, 128, 0.1) 21px
+        )
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+
+{
+  id: "umbral-bloom",
+  name: "Umbral Bloom",
+  category: "gradients",
+  badge: "New",
+  style: {
+    background: "#0a0514",
+    backgroundImage: `
+      radial-gradient(
+        ellipse 80% 70% at 50% 100%, 
+        rgba(0, 255, 255, 0.4) 0%,
+        rgba(88, 28, 135, 0.3) 40%,
+        rgba(127, 29, 29, 0.2) 60%,
+        transparent 80%
+      )
+    `,
+  },
+  code: `<div className="min-h-screen w-full bg-[#0a0514] relative">
+  {/* Umbral Bloom */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(
+          ellipse 80% 70% at 50% 100%, 
+          rgba(0, 255, 255, 0.4) 0%,
+          rgba(88, 28, 135, 0.3) 40%,
+          rgba(127, 29, 29, 0.2) 60%,
+          transparent 80%
+        )
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+
+{
+  id: "solar-flare",
+  name: "Solar Flare",
+  category: "gradients",
+  badge: "New",
+  style: {
+    background: "#0f172a",
+    backgroundImage: `
+      radial-gradient(
+        ellipse 80% 70% at 50% 0%, 
+        rgba(254, 249, 195, 0.5) 0%,
+        rgba(251, 191, 36, 0.4) 30%,
+        rgba(220, 38, 38, 0.3) 60%,
+        transparent 80%
+      )
+    `,
+  },
+  code: `<div className="min-h-screen w-full bg-[#0f172a] relative">
+  {/* Solar Flare */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(
+          ellipse 80% 70% at 50% 0%, 
+          rgba(254, 249, 195, 0.5) 0%,
+          rgba(251, 191, 36, 0.4) 30%,
+          rgba(220, 38, 38, 0.3) 60%,
+          transparent 80%
+        )
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+
+{
+  id: "dune-serenity",
+  name: "Dune Serenity",
+  category: "gradients",
+  badge: "New",
+  style: {
+    background: "#1e1b4b",
+    backgroundImage: `
+      radial-gradient(
+        ellipse 100% 80% at 0% 50%, 
+        rgba(253, 230, 138, 0.3) 0%,
+        rgba(244, 114, 182, 0.2) 40%,
+        rgba(192, 132, 252, 0.1) 60%,
+        transparent 80%
+      )
+    `,
+  },
+  code: `<div className="min-h-screen w-full bg-[#1e1b4b] relative">
+  {/* Dune Serenity */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(
+          ellipse 100% 80% at 0% 50%, 
+          rgba(253, 230, 138, 0.3) 0%,
+          rgba(244, 114, 182, 0.2) 40%,
+          rgba(192, 132, 252, 0.1) 60%,
+          transparent 80%
+        )
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+
+{
+  id: "cyberpunk-sunset",
+  name: "Cyberpunk Sunset",
+  category: "gradients",
+  badge: "New",
+  style: {
+    background: "#1e1b4b",
+    backgroundImage: `
+      radial-gradient(
+        ellipse 100% 80% at 100% 50%, 
+        rgba(236, 72, 153, 0.4) 0%,  /* Neon pink sun */
+        rgba(139, 92, 246, 0.3) 40%,  /* Fading to violet */
+        rgba(59, 130, 246, 0.2) 60%,  /* Fading to electric blue */
+        transparent 80%
+      )
+    `,
+  },
+  code: `<div className="min-h-screen w-full bg-[#1e1b4b] relative">
+  {/* Cyberpunk Sunset */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(
+          ellipse 100% 80% at 100% 50%, 
+          rgba(236, 72, 153, 0.4) 0%,
+          rgba(139, 92, 246, 0.3) 40%,
+          rgba(59, 130, 246, 0.2) 60%,
+          transparent 80%
+        )
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+
+{
+  id: "ghostly-fire",
+  name: "Ghostly Fire",
+  category: "gradients",
+  badge: "New",
+  style: {
+    background: "#111827",
+    backgroundImage: `
+      radial-gradient(
+        circle at 50% 50%, 
+        rgba(191, 219, 254, 0.4) 0%, /* Pale blue core */
+        rgba(224, 231, 255, 0.2) 40%, /* Fading to ghostly white */
+        transparent 70%
+      )
+    `,
+  },
+  code: `<div className="min-h-screen w-full bg-[#111827] relative">
+  {/* Ghostly Fire */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(
+          circle at 50% 50%, 
+          rgba(191, 219, 254, 0.4) 0%,
+          rgba(224, 231, 255, 0.2) 40%,
+          transparent 70%
+        )
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+
+{
+  id: "phoenix-fire",
+  name: "Phoenix Fire",
+  category: "gradients",
+  badge: "New",
+  style: {
+    background: "#1c1917",
+    backgroundImage: `
+      radial-gradient(
+        ellipse 80% 70% at 50% 100%, 
+        rgba(255, 251, 235, 0.4) 0%,  /* White-hot core */
+        rgba(249, 115, 22, 0.4) 30%,  /* Fiery orange */
+        rgba(159, 18, 57, 0.3) 60%,   /* Smoky crimson */
+        transparent 80%
+      )
+    `,
+  },
+  code: `<div className="min-h-screen w-full bg-[#1c1917] relative">
+  {/* Phoenix Fire */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(
+          ellipse 80% 70% at 50% 100%, 
+          rgba(255, 251, 235, 0.4) 0%,
+          rgba(249, 115, 22, 0.4) 30%,
+          rgba(159, 18, 57, 0.3) 60%,
+          transparent 80%
+        )
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+
+
+{
+  id: "arctic-dawn",
+  name: "Arctic Dawn",
+  category: "gradients",
+  badge: "New",
+  style: {
+    background: "#1e293b",
+    backgroundImage: `
+      radial-gradient(
+        ellipse 100% 80% at 100% 0%, 
+        rgba(191, 219, 254, 0.3) 0%,  /* Pale, icy blue */
+        rgba(252, 165, 165, 0.1) 50%,  /* Fading to a hint of rose */
+        transparent 80%
+      )
+    `,
+  },
+  code: `<div className="min-h-screen w-full bg-[#1e293b] relative">
+  {/* Arctic Dawn */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(
+          ellipse 100% 80% at 100% 0%, 
+          rgba(191, 219, 254, 0.3) 0%,
+          rgba(252, 165, 165, 0.1) 50%,
+          transparent 80%
+        )
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
 ];
