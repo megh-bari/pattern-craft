@@ -25,6 +25,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-qr-code": "^2.0.16",
+    "react-virtuoso": "^4.13.0",
     "sonner": "^2.0.5",
     "tailwind-merge": "^3.3.0"
   },
