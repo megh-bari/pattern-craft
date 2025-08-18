@@ -3480,43 +3480,6 @@ export const gridPatterns: Pattern[] = [
 },
 
 {
-  id: "topographic-arcs",
-  name: "Topographic Arcs",
-  category: "geometric",
-  badge: "New",
-  style: {
-    background: "#f8fafc",
-    backgroundImage: `
-      repeating-radial-gradient(
-        circle at 0% 150%,
-        transparent,
-        transparent 20px,
-        rgba(107, 114, 128, 0.1) 20px,
-        rgba(107, 114, 128, 0.1) 21px
-      )
-    `,
-  },
-  code: `<div className="min-h-screen w-full bg-[#f8fafc] relative">
-  {/* Topographic Arcs */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        repeating-radial-gradient(
-          circle at 0% 150%,
-          transparent,
-          transparent 20px,
-          rgba(107, 114, 128, 0.1) 20px,
-          rgba(107, 114, 128, 0.1) 21px
-        )
-      \`,
-    }}
-  />
-  {/* Your Content/Components */}
-</div>`,
-},
-
-{
   id: "umbral-bloom",
   name: "Umbral Bloom",
   category: "gradients",
@@ -3628,43 +3591,6 @@ export const gridPatterns: Pattern[] = [
 },
 
 {
-  id: "cyberpunk-sunset",
-  name: "Cyberpunk Sunset",
-  category: "gradients",
-  badge: "New",
-  style: {
-    background: "#1e1b4b",
-    backgroundImage: `
-      radial-gradient(
-        ellipse 100% 80% at 100% 50%, 
-        rgba(236, 72, 153, 0.4) 0%,  /* Neon pink sun */
-        rgba(139, 92, 246, 0.3) 40%,  /* Fading to violet */
-        rgba(59, 130, 246, 0.2) 60%,  /* Fading to electric blue */
-        transparent 80%
-      )
-    `,
-  },
-  code: `<div className="min-h-screen w-full bg-[#1e1b4b] relative">
-  {/* Cyberpunk Sunset */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        radial-gradient(
-          ellipse 100% 80% at 100% 50%, 
-          rgba(236, 72, 153, 0.4) 0%,
-          rgba(139, 92, 246, 0.3) 40%,
-          rgba(59, 130, 246, 0.2) 60%,
-          transparent 80%
-        )
-      \`,
-    }}
-  />
-  {/* Your Content/Components */}
-</div>`,
-},
-
-{
   id: "ghostly-fire",
   name: "Ghostly Fire",
   category: "gradients",
@@ -3766,6 +3692,68 @@ export const gridPatterns: Pattern[] = [
           transparent 80%
         )
       \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+
+{
+  id: "soft-glow",
+  name: "Soft Glow",
+  category: "effects",
+  badge: "New",
+  style: {
+    background: "#0f172a",
+    backgroundImage: `
+      radial-gradient(circle at 30% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 60%),
+      radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 60%),
+      radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.1) 0%, transparent 70%)
+    `,
+  },
+  code: `<div className="min-h-screen w-full bg-[#0f172a] relative">
+  {/* Soft Glow */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 30% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.1) 0%, transparent 70%)
+      \`
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+{
+  id: "sweet-dream-adventure",
+  name: "Sweet Dream Adventure",
+  category: "effects",
+  badge: "New",
+  style: {
+    background: "#fffaf5",
+    backgroundImage: `
+      radial-gradient(circle at 20% 30%, rgba(255, 183, 197, 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 223, 128, 0.35) 0%, transparent 55%),
+      radial-gradient(circle at 50% 80%, rgba(173, 216, 230, 0.35) 0%, transparent 60%),
+      radial-gradient(circle at 70% 70%, rgba(186, 255, 201, 0.3) 0%, transparent 65%),
+      linear-gradient(120deg, #fffaf5 0%, #fdf4ff 50%, #f0faff 100%)
+    `,
+  },
+  code: `<div className="min-h-screen w-full bg-[#fffaf5] relative">
+  {/* Sweet Dream Adventure */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 20% 30%, rgba(255, 183, 197, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 223, 128, 0.35) 0%, transparent 55%),
+        radial-gradient(circle at 50% 80%, rgba(173, 216, 230, 0.35) 0%, transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(186, 255, 201, 0.3) 0%, transparent 65%),
+        linear-gradient(120deg, #fffaf5 0%, #fdf4ff 50%, #f0faff 100%)
+      \`,
+      backgroundBlendMode: "screen"
     }}
   />
   {/* Your Content/Components */}
