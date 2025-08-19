@@ -3477,5 +3477,81 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
+},
+{
+  id: "bg-indigo-teal-bl",
+  name: "bg-indigo-teal-bl",
+  badge: "New",
+  category: "decorative",
+  style: {
+    background: "radial-gradient(circle at bottom left, #5b21b6, #14b8a6)",
+  },
+  code: `<div className="min-h-screen w-full relative">
+    {/* Indigo Teal Void */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(circle at bottom left, #5b21b6, #14b8a6)",
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+},
+{
+  id: "bg-pink-orange-tr",
+  name: "bg-pink-orange-tr",
+  badge: "New",
+  category: "decorative",
+  style: {
+    background: "radial-gradient(circle at top right, #ec4899, #f97316)",
+  },
+  code: `<div className="min-h-screen w-full relative">
+    {/* Pink Orange Void */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(circle at top right, #ec4899, #f97316)",
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+},
+{
+  id: "bg-blue-yellow-center",
+  name: "bg-blue-yellow-center",
+  badge: "New",
+  category: "decorative",
+  style: {
+    background: "radial-gradient(circle at center, #3b82f6, #facc15)",
+  },
+  code: `<div className="min-h-screen w-full relative">
+    {/* Blue Yellow Void */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(circle at center, #3b82f6, #facc15)",
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+},
+{
+  id: "bg-purple-cyan-bc",
+  name: "bg-purple-cyan-bc",
+  badge: "New",
+  category: "decorative",
+  style: {
+    background: "radial-gradient(circle at bottom center, #6b21a8, #06b6d4)",
+  },
+  code: `<div className="min-h-screen w-full relative">
+    {/* Purple Cyan Void */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(circle at bottom center, #6b21a8, #06b6d4)",
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
 }
 ];
