@@ -860,7 +860,7 @@ export const gridPatterns: Pattern[] = [
   },
 
   // Warm Backgrounds
-    {
+  {
     id: "aurora-dream-corner-whispers",
     name: "Aurora Dream Corner Whispers",
     category: "effects",
@@ -3414,7 +3414,7 @@ export const gridPatterns: Pattern[] = [
     badge: "New",
     style: {
       background:
-      "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%), radial-gradient(160% 130% at 10% 10%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%), radial-gradient(160% 130% at 90% 90%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%)",
+        "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%), radial-gradient(160% 130% at 10% 10%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%), radial-gradient(160% 130% at 90% 90%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%)",
     },
     code: `<div className="min-h-screen w-full bg-black relative">
     {/* Deep Ocean Glow */}
@@ -3447,17 +3447,17 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
-{
-  id: "crimson-core-glow",
-  name: "Crimson Core Glow",
-  category: "effects",
-  badge: "New",
-  style: {
-    background:
-      "linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), radial-gradient(68% 58% at 50% 50%, #c81e3a 0%, #a51d35 16%, #7d1a2f 32%, #591828 46%, #3c1722 60%, #2a151d 72%, #1f1317 84%, #141013 94%, #0a0a0a 100%), radial-gradient(90% 75% at 50% 50%, rgba(228,42,66,0.06) 0%, rgba(228,42,66,0) 55%), radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%), radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%), radial-gradient(60% 50% at 50% 60%, rgba(240,60,80,0.06), rgba(0,0,0,0) 60%), #050505",
   },
-  code: `<div className="min-h-screen w-full bg-black relative">
+  {
+    id: "crimson-core-glow",
+    name: "Crimson Core Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), radial-gradient(68% 58% at 50% 50%, #c81e3a 0%, #a51d35 16%, #7d1a2f 32%, #591828 46%, #3c1722 60%, #2a151d 72%, #1f1317 84%, #141013 94%, #0a0a0a 100%), radial-gradient(90% 75% at 50% 50%, rgba(228,42,66,0.06) 0%, rgba(228,42,66,0) 55%), radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%), radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%), radial-gradient(60% 50% at 50% 60%, rgba(240,60,80,0.06), rgba(0,0,0,0) 60%), #050505",
+    },
+    code: `<div className="min-h-screen w-full bg-black relative">
   {/* Crimson Core Glow */}
   <div
     className="absolute inset-0 z-0"
@@ -3477,5 +3477,157 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-}
+  },
+
+  {
+    id: "tri-fade-mist",
+    name: "Tri Fade Mist",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#0b0e14",
+      backgroundImage: `
+      /* SOFT RADIAL FADES (on top, to "cut" lines softly) */
+      radial-gradient(260px 200px at 20% 30%, rgba(11,14,20,0.85) 0%, rgba(11,14,20,0.25) 60%, rgba(11,14,20,0) 80%),
+      radial-gradient(240px 180px at 82% 22%, rgba(11,14,20,0.75) 0%, rgba(11,14,20,0.25) 55%, rgba(11,14,20,0) 80%),
+      radial-gradient(320px 220px at 60% 85%, rgba(11,14,20,0.70) 0%, rgba(11,14,20,0.22) 60%, rgba(11,14,20,0) 82%),
+
+      /* TRIANGULAR LINE LATTICE (just lines) */
+      repeating-linear-gradient(60deg, rgba(255,255,255,0.055) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(-60deg, rgba(255,255,255,0.055) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 27.7px),
+
+      /* BASE */
+      linear-gradient(180deg, #0b0e14 0%, #121827 100%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-[#0b0e14] relative text-white">
+  {/* Tri Fade — Mist */}
+  <div className="absolute inset-0 z-0 pointer-events-none" style={{
+    backgroundImage: \`
+      radial-gradient(260px 200px at 20% 30%, rgba(11,14,20,0.85) 0%, rgba(11,14,20,0.25) 60%, rgba(11,14,20,0) 80%),
+      radial-gradient(240px 180px at 82% 22%, rgba(11,14,20,0.75) 0%, rgba(11,14,20,0.25) 55%, rgba(11,14,20,0) 80%),
+      radial-gradient(320px 220px at 60% 85%, rgba(11,14,20,0.70) 0%, rgba(11,14,20,0.22) 60%, rgba(11,14,20,0) 82%),
+      repeating-linear-gradient(60deg, rgba(255,255,255,0.055) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(-60deg, rgba(255,255,255,0.055) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 27.7px),
+      linear-gradient(180deg, #0b0e14 0%, #121827 100%)
+    \`
+  }} />
+</div>`,
+  },
+
+  {
+    id: "tri-fade-dawn",
+    name: "Tri Fade Dawn",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#0f0d12",
+      backgroundImage: `
+      /* WARM RADIAL FADES */
+      radial-gradient(280px 210px at 25% 25%, rgba(15,13,18,0.85) 0%, rgba(15,13,18,0.25) 60%, rgba(15,13,18,0) 82%),
+      radial-gradient(240px 180px at 80% 35%, rgba(15,13,18,0.78) 0%, rgba(15,13,18,0.25) 55%, rgba(15,13,18,0) 80%),
+      radial-gradient(320px 240px at 55% 90%, rgba(15,13,18,0.70) 0%, rgba(15,13,18,0.22) 60%, rgba(15,13,18,0) 84%),
+
+      /* TRI LINES with warm tint */
+      repeating-linear-gradient(60deg, rgba(246,197,107,0.10) 0 1px, transparent 1px 34px),
+      repeating-linear-gradient(-60deg, rgba(246,197,107,0.10) 0 1px, transparent 1px 34px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 29.4px),
+
+      /* BASE */
+      linear-gradient(180deg, #0f0d12 0%, #191622 100%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-[#0f0d12] relative text-white">
+  {/* Tri Fade — Dawn */}
+  <div className="absolute inset-0 z-0 pointer-events-none" style={{
+    backgroundImage: \`
+      radial-gradient(280px 210px at 25% 25%, rgba(15,13,18,0.85) 0%, rgba(15,13,18,0.25) 60%, rgba(15,13,18,0) 82%),
+      radial-gradient(240px 180px at 80% 35%, rgba(15,13,18,0.78) 0%, rgba(15,13,18,0.25) 55%, rgba(15,13,18,0) 80%),
+      radial-gradient(320px 240px at 55% 90%, rgba(15,13,18,0.70) 0%, rgba(15,13,18,0.22) 60%, rgba(15,13,18,0) 84%),
+      repeating-linear-gradient(60deg, rgba(246,197,107,0.10) 0 1px, transparent 1px 34px),
+      repeating-linear-gradient(-60deg, rgba(246,197,107,0.10) 0 1px, transparent 1px 34px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 29.4px),
+      linear-gradient(180deg, #0f0d12 0%, #191622 100%)
+    \`
+  }} />
+</div>`,
+  },
+
+  {
+    id: "tri-fade-ice",
+    name: "Tri Fade Ice",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#0a0e16",
+      backgroundImage: `
+      /* COOL RADIAL FADES */
+      radial-gradient(260px 200px at 18% 70%, rgba(10,14,22,0.85) 0%, rgba(10,14,22,0.25) 60%, rgba(10,14,22,0) 82%),
+      radial-gradient(280px 220px at 85% 20%, rgba(10,14,22,0.78) 0%, rgba(10,14,22,0.25) 55%, rgba(10,14,22,0) 80%),
+      radial-gradient(320px 240px at 55% 15%, rgba(10,14,22,0.70) 0%, rgba(10,14,22,0.22) 60%, rgba(10,14,22,0) 84%),
+
+      /* TRI LINES with icy tint */
+      repeating-linear-gradient(60deg, rgba(147,197,253,0.12) 0 1px, transparent 1px 30px),
+      repeating-linear-gradient(-60deg, rgba(147,197,253,0.12) 0 1px, transparent 1px 30px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 26px),
+
+      /* BASE */
+      linear-gradient(180deg, #0a0e16 0%, #132033 100%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-[#0a0e16] relative text-white">
+  {/* Tri Fade — Ice */}
+  <div className="absolute inset-0 z-0 pointer-events-none" style={{
+    backgroundImage: \`
+      radial-gradient(260px 200px at 18% 70%, rgba(10,14,22,0.85) 0%, rgba(10,14,22,0.25) 60%, rgba(10,14,22,0) 82%),
+      radial-gradient(280px 220px at 85% 20%, rgba(10,14,22,0.78) 0%, rgba(10,14,22,0.25) 55%, rgba(10,14,22,0) 80%),
+      radial-gradient(320px 240px at 55% 15%, rgba(10,14,22,0.70) 0%, rgba(10,14,22,0.22) 60%, rgba(10,14,22,0) 84%),
+      repeating-linear-gradient(60deg, rgba(147,197,253,0.12) 0 1px, transparent 1px 30px),
+      repeating-linear-gradient(-60deg, rgba(147,197,253,0.12) 0 1px, transparent 1px 30px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 26px),
+      linear-gradient(180deg, #0a0e16 0%, #132033 100%)
+    \`
+  }} />
+</div>`,
+  },
+
+  {
+    id: "tri-fade-forest",
+    name: "Tri Fade Forest",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#0b1210",
+      backgroundImage: `
+      /* MOSSY RADIAL FADES */
+      radial-gradient(300px 220px at 22% 35%, rgba(11,18,16,0.85) 0%, rgba(11,18,16,0.25) 60%, rgba(11,18,16,0) 84%),
+      radial-gradient(240px 180px at 78% 65%, rgba(11,18,16,0.78) 0%, rgba(11,18,16,0.25) 55%, rgba(11,18,16,0) 82%),
+      radial-gradient(320px 240px at 50% 90%, rgba(11,18,16,0.72) 0%, rgba(11,18,16,0.22) 60%, rgba(11,18,16,0) 86%),
+
+      /* TRI LINES with mint tint */
+      repeating-linear-gradient(60deg, rgba(16,185,129,0.10) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(-60deg, rgba(16,185,129,0.10) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 27.7px),
+
+      /* BASE */
+      linear-gradient(180deg, #0b1210 0%, #0f1c19 100%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-[#0b1210] relative text-white">
+  {/* Tri Fade — Forest */}
+  <div className="absolute inset-0 z-0 pointer-events-none" style={{
+    backgroundImage: \`
+      radial-gradient(300px 220px at 22% 35%, rgba(11,18,16,0.85) 0%, rgba(11,18,16,0.25) 60%, rgba(11,18,16,0) 84%),
+      radial-gradient(240px 180px at 78% 65%, rgba(11,18,16,0.78) 0%, rgba(11,18,16,0.25) 55%, rgba(11,18,16,0) 82%),
+      radial-gradient(320px 240px at 50% 90%, rgba(11,18,16,0.72) 0%, rgba(11,18,16,0.22) 60%, rgba(11,18,16,0) 86%),
+      repeating-linear-gradient(60deg, rgba(16,185,129,0.10) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(-60deg, rgba(16,185,129,0.10) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 27.7px),
+      linear-gradient(180deg, #0b1210 0%, #0f1c19 100%)
+    \`
+  }} />
+</div>`,
+  },
 ];
