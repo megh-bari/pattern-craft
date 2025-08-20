@@ -2,6 +2,57 @@ import { Pattern } from "@/types/pattern";
 
 export const gridPatterns: Pattern[] = [
   {
+    id: "metallic-white",
+    name: "Metallic White ",
+    category: "decorative",
+    badge: "New",
+    description: "Linear gradient for shiny metallic white",
+    style: {
+      background:
+        "linear-gradient(115.74deg, #FFFFFF 2.13%, #D6D6D6 20.53%, #FFF5F5 52.37%, #AFADAD 97.31%)",
+    },
+    code: `<div className="absolute w-[1423px] h-[1000px] left-1/2 top-1/2 transform -translate-x-[711.5px] -translate-y-[500px]">
+  {/* Gradient Background */}
+  <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(115.74deg, #FFFFFF 2.13%, #D6D6D6 20.53%, #FFF5F5 52.37%, #AFADAD 97.31%)" }} />
+  
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "metallic-blue",
+    name: "Metallic Blue ",
+    category: "decorative",
+    badge: "New",
+    description: "Linear gradient for shiny metallic blue",
+    style: {
+      background:
+        "linear-gradient(115.74deg, #2D3E71 2.13%, #8190D8 20.53%, #3D3E80 52.37%, #A2AEFF 97.31%)",
+    },
+    code: `<div className="absolute w-[1423px] h-[1000px] left-1/2 top-1/2 transform -translate-x-[711.5px] -translate-y-[500px]">
+  {/* Gradient Background */}
+  <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(115.74deg, #2D3E71 2.13%, #8190D8 20.53%, #3D3E80 52.37%, #A2AEFF 97.31%)" }} />
+  
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "metallic-black",
+    name: "Metallic Black ",
+    category: "decorative",
+    badge: "New",
+    description: "Linear gradient from black to silver starting from left",
+    style: {
+      background:
+        "linear-gradient(115.74deg, #000000 2.13%, #434345 20.53%, #14141A 52.37%, #4A4A4D 97.31%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Radial Gradient Background */}
+  <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(125% 125% at 50% 10%, #fff 40%, #6366f1 100%)" }} />
+  
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
     id: "top-gradient-radial",
     name: "Top Gradient Radial",
     category: "decorative",
@@ -860,7 +911,7 @@ export const gridPatterns: Pattern[] = [
   },
 
   // Warm Backgrounds
-    {
+  {
     id: "aurora-dream-corner-whispers",
     name: "Aurora Dream Corner Whispers",
     category: "effects",
@@ -3414,7 +3465,7 @@ export const gridPatterns: Pattern[] = [
     badge: "New",
     style: {
       background:
-      "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%), radial-gradient(160% 130% at 10% 10%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%), radial-gradient(160% 130% at 90% 90%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%)",
+        "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%), radial-gradient(160% 130% at 10% 10%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%), radial-gradient(160% 130% at 90% 90%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%)",
     },
     code: `<div className="min-h-screen w-full bg-black relative">
     {/* Deep Ocean Glow */}
@@ -3447,17 +3498,17 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
-{
-  id: "crimson-core-glow",
-  name: "Crimson Core Glow",
-  category: "effects",
-  badge: "New",
-  style: {
-    background:
-      "linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), radial-gradient(68% 58% at 50% 50%, #c81e3a 0%, #a51d35 16%, #7d1a2f 32%, #591828 46%, #3c1722 60%, #2a151d 72%, #1f1317 84%, #141013 94%, #0a0a0a 100%), radial-gradient(90% 75% at 50% 50%, rgba(228,42,66,0.06) 0%, rgba(228,42,66,0) 55%), radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%), radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%), radial-gradient(60% 50% at 50% 60%, rgba(240,60,80,0.06), rgba(0,0,0,0) 60%), #050505",
   },
-  code: `<div className="min-h-screen w-full bg-black relative">
+  {
+    id: "crimson-core-glow",
+    name: "Crimson Core Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), radial-gradient(68% 58% at 50% 50%, #c81e3a 0%, #a51d35 16%, #7d1a2f 32%, #591828 46%, #3c1722 60%, #2a151d 72%, #1f1317 84%, #141013 94%, #0a0a0a 100%), radial-gradient(90% 75% at 50% 50%, rgba(228,42,66,0.06) 0%, rgba(228,42,66,0) 55%), radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%), radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%), radial-gradient(60% 50% at 50% 60%, rgba(240,60,80,0.06), rgba(0,0,0,0) 60%), #050505",
+    },
+    code: `<div className="min-h-screen w-full bg-black relative">
   {/* Crimson Core Glow */}
   <div
     className="absolute inset-0 z-0"
@@ -3477,5 +3528,5 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-}
+  },
 ];
