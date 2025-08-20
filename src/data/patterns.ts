@@ -3595,4 +3595,64 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "azure-pulse-glow",
+    name: "Azure Pulse Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), radial-gradient(68% 58% at 50% 50%, #1e3ac8 0%, #1d35a5 16%, #1a2f7d 32%, #182859 46%, #17223c 60%, #151d2a 72%, #13171f 84%, #101314 94%, #0a0a0a 100%), radial-gradient(90% 75% at 50% 50%, rgba(42,66,228,0.06) 0%, rgba(42,66,228,0) 55%), radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #0a0b0b 82%, #070707 100%), radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #0a0b0b 82%, #070707 100%), radial-gradient(60% 50% at 50% 60%, rgba(60,80,240,0.06), rgba(0,0,0,0) 60%), #050505",
+    },
+    code: `<div className="min-h-screen w-full bg-black relative">
+  {/* Azure Pulse Glow */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background:
+        "linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), radial-gradient(68% 58% at 50% 50%, #1e3ac8 0%, #1d35a5 16%, #1a2f7d 32%, #182859 46%, #17223c 60%, #151d2a 72%, #13171f 84%, #101314 94%, #0a0a0a 100%), radial-gradient(90% 75% at 50% 50%, rgba(42,66,228,0.06) 0%, rgba(42,66,228,0) 55%), radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #0a0b0b 82%, #070707 100%), radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #0a0b0b 82%, #070707 100%), radial-gradient(60% 50% at 50% 60%, rgba(60,80,240,0.06), rgba(0,0,0,0) 60%), #050505",
+    }}
+  />
+  {/* Soft vignette to blend edges */}
+  <div
+    className="absolute inset-0 z-0 pointer-events-none"
+    style={{
+      backgroundImage:
+        "radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.5) 100%)",
+      opacity: 0.95,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "emerald-core-radiance",
+    name: "Emerald Core Radiance",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), radial-gradient(68% 58% at 50% 50%, #1ec846 0%, #1da53f 16%, #1a7d37 32%, #18592f 46%, #173c28 60%, #152a21 72%, #131f1b 84%, #101314 94%, #0a0a0a 100%), radial-gradient(90% 75% at 50% 50%, rgba(42,228,96,0.06) 0%, rgba(42,228,96,0) 55%), radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #0a0b0a 82%, #070707 100%), radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #0a0b0a 82%, #070707 100%), radial-gradient(60% 50% at 50% 60%, rgba(60,240,80,0.06), rgba(0,0,0,0) 60%), #050505",
+    },
+    code: `<div className="min-h-screen w-full bg-black relative">
+  {/* Emerald Core Radiance */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background:
+        "linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), radial-gradient(68% 58% at 50% 50%, #1ec846 0%, #1da53f 16%, #1a7d37 32%, #18592f 46%, #173c28 60%, #152a21 72%, #131f1b 84%, #101314 94%, #0a0a0a 100%), radial-gradient(90% 75% at 50% 50%, rgba(42,228,96,0.06) 0%, rgba(42,228,96,0) 55%), radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #0a0b0a 82%, #070707 100%), radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #0a0b0a 82%, #070707 100%), radial-gradient(60% 50% at 50% 60%, rgba(60,240,80,0.06), rgba(0,0,0,0) 60%), #050505",
+    }}
+  />
+  {/* Soft vignette to blend edges */}
+  <div
+    className="absolute inset-0 z-0 pointer-events-none"
+    style={{
+      backgroundImage:
+        "radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.5) 100%)",
+      opacity: 0.95,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
 ];
