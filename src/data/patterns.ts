@@ -3477,5 +3477,38 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
+},
+{
+  id: "striped-dark",
+  name: "Striped Dark",
+  category: "geometric",
+  badge: "New",
+  style: {
+    background:
+      "repeating-linear-gradient(45deg, #000 0px, #111 2px, #000 4px, #222 6px)",
+  },
+  code: `
+<div className="min-h-screen w-full bg-black relative">
+  {/* Striped Dark */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background:
+        "repeating-linear-gradient(45deg, #000 0px, #111 2px, #000 4px, #222 6px)",
+    }}
+  />
+  
+  <div
+    className="absolute inset-0 z-10 pointer-events-none"
+    style={{
+      background: "rgba(255, 255, 255, 0.02)",
+      backdropFilter: "blur(45px) grayscale(20%)",
+      WebkitBackdropFilter: "blur(45px) grayscale(20%)",
+    }}
+  />
+
+  {/* Your Content/Components */}
+</div>
+`,
 }
 ];
