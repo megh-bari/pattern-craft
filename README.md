@@ -235,7 +235,7 @@ We welcome contributions to expand the pattern collection. To add new patterns:
 git checkout -b feature/new-pattern-name
 ```
 
-3. Navigate to `src/app/utils/patterns.ts`
+3. Navigate to `src/data/patterns.ts`
 4. Add your pattern following the established format:
 
 ```typescript
