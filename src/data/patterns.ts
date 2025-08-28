@@ -4567,35 +4567,6 @@ export const gridPatterns: Pattern[] = [
  {/* Your Content Here */}
 </div>`,
   },
-  
-  
-  {
-    id: "night-dreamy-sky",
-    name: "Night Dreamy Sky",
-    category: "effects",
-    badge: "New",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-     radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%), 
-     radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.4), transparent 60%)
-   `,
-      backgroundSize: "100% 100%",
-    },
-    code: `<div className="min-h-screen w-full relative">
- {/* Night Dreamy Sky */}
- <div
-   className="absolute inset-0 z-0"
-   style={{
-     background: \`
-       radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%), 
-       radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.4), transparent 60%)
-     \`,
-   }}
- />
- {/* Your Content Here */}
-</div>`,
-  },
   {
     id: "prismatic-aurora-burst",
     name: "Prismatic Aurora Burst",
