@@ -242,7 +242,8 @@ git checkout -b feature/new-pattern-name
 {
   id: "unique-pattern-id",
   name: "Pattern Display Name",
-  badge: "New", // Optional: "New", "Popular"
+  category: "gradients" | "geometric" | "decorative" | "effects",
+  badge: "New", // Optional: "New"
   style: {
     background: "#ffffff",
     backgroundImage: `
