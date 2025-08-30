@@ -1352,6 +1352,225 @@ export const gridPatterns: Pattern[] = [
      {/* Your Content/Components */}
 </div>`,
   },
+  // soft & dark glow
+  {
+    id: "purple-center-glow",
+    name: "Purple Center Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+     radial-gradient(circle at center, #8249fc, transparent)        
+   `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
+ {/*Purple Center Glow */}
+ <div
+   className="absolute inset-0 z-0 pointer-events-none"
+   style={{
+     backgroundImage: \`
+       radial-gradient(circle at center, #8249fc, transparent)        
+     \`,
+   }}
+ />
+ {/* Your Content Here */}
+</div>`,
+  },
+  {
+    id: "green-center-glow",
+    name: "Green Center Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+     radial-gradient(circle at center, #10b981, transparent)
+   `,
+      backgroundSize: `100% 100%`,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
+ {/* Green Center Glow */}
+ <div 
+   className="absolute inset-0 z-0 pointer-events-none" 
+   style={{
+     backgroundImage: \`
+       radial-gradient(circle at center, #10b981, transparent)
+     \`,
+     backgroundSize: \`100% 100%\`
+   }} 
+ />
+ {/* Your Content Here */}
+</div>`,
+  },
+  {
+    id: "indigo-center-glow",
+    name: "Indigo Center Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+     radial-gradient(circle at center, #6366f1, transparent)
+   `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
+ {/* Indigo Center Glow */}
+ <div 
+   className="absolute inset-0 z-0 pointer-events-none" 
+   style={{
+     backgroundImage: \`
+       radial-gradient(circle at center, #6366f1, transparent)
+     \`,
+   }} 
+ />
+ {/* Your Content Here */}
+</div>`,
+  },
+  {
+    id: "lime-center-glow",
+    name: "Lime Center  Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+     radial-gradient(circle at center, #84cc16, transparent)
+   `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
+ {/* Lime Center Glow */}
+ <div 
+   className="absolute inset-0 z-0 pointer-events-none" 
+   style={{
+     backgroundImage: \`
+       radial-gradient(circle at center, #84cc16, transparent)
+     \`,
+   }} 
+ />
+ {/* Your Content Here */}
+</div>`,
+  },
+  {
+    id: "sunrise-glow",
+    name: "Sunrise Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+     radial-gradient(circle at center, #eab308, transparent)
+   `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
+ {/* Sunrise Glow */}
+ <div 
+   className="absolute inset-0 z-0 pointer-events-none" 
+   style={{
+     backgroundImage: \`
+       radial-gradient(circle at center, #eab308, transparent)
+     \`,
+   }} 
+ />
+ {/* Your Content Here */}
+</div>`,
+  },
+  {
+    id: "soft lavender-center-glow",
+    name: "Soft Lavender Center Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+     radial-gradient(circle at center, #c4b5fd, transparent)
+   `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
+ {/* Soft Lavender Center Glow */}
+ <div 
+   className="absolute inset-0 z-0 pointer-events-none" 
+   style={{
+     backgroundImage: \`
+       radial-gradient(circle at center, #c4b5fd, transparent)
+     \`,
+   }} 
+ />
+ {/* Your Content Here */}
+</div>`,
+  },
+  {
+    id: "soft-pink-glow",
+    name: "Soft Pink Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+     radial-gradient(circle at center, #fbb6ce, transparent)
+   `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
+ {/* Soft Pink Glow */}
+ <div 
+   className="absolute inset-0 z-0 pointer-events-none" 
+   style={{
+     backgroundImage: \`
+       radial-gradient(circle at center, #fbb6ce, transparent)
+     \`,
+   }} 
+ />
+ {/* Your Content Here */}
+</div>`,
+  },
+  {
+    id: "light-sky-blue-glow",
+    name: "Light Sky Blue Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+     radial-gradient(circle at center, #93c5fd, transparent)
+   `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
+ {/* Light Sky Blue Glow */}
+ <div 
+   className="absolute inset-0 z-0 pointer-events-none" 
+   style={{
+     backgroundImage: \`
+       radial-gradient(circle at center, #93c5fd, transparent)
+     \`,
+   }} 
+ />
+ {/* Your Content Here */}
+</div>`,
+  },
+  {
+    id: "sunny-glow",
+    name: "Sunny Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#fffbe8",
+      backgroundImage: `
+      radial-gradient(circle at center, #fde047, transparent)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
+    {/* Sunny Glow Background */}
+    <div
+      className="absolute inset-0 z-0 pointer-events-none"
+      style={{
+        backgroundImage: \`
+          radial-gradient(circle at center, #fde047, transparent)
+        \`,
+      }}
+    />
+    {/* Your Content Here */}
+  </div>`,
+  },
   // Glow Right
   {
     id: "purple-glow-bg",
@@ -2405,7 +2624,7 @@ export const gridPatterns: Pattern[] = [
     code: `<div className="min-h-screen w-full bg-black relative">
     {/* Vercel Grid */}
     <div
-      className="absolute inset-0 opacity-20"
+      className="absolute inset-0 opacity-30"
       style={{
         backgroundImage: \`
           linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
@@ -3796,7 +4015,7 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
-  
+
   {
     id: "midnight-ember",
     name: "Midnight Ember",
@@ -4114,8 +4333,6 @@ export const gridPatterns: Pattern[] = [
  {/* Your Content Here */}
 </div>`,
   },
-  
-  
 
   {
     id: "purple-corner-less",
@@ -4125,8 +4342,6 @@ export const gridPatterns: Pattern[] = [
     style: {
       background: "#ffffff",
       backgroundImage: `
-     linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-     linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
      radial-gradient(circle 600px at 0% 200px, #d5c5ff, transparent),
      radial-gradient(circle 600px at 100% 200px, #d5c5ff, transparent)
    `,
@@ -4137,8 +4352,6 @@ export const gridPatterns: Pattern[] = [
    className="absolute inset-0 z-0"
    style={{
      backgroundImage: \`
-       linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-       linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
        radial-gradient(circle 600px at 0% 200px, #d5c5ff, transparent),
        radial-gradient(circle 600px at 100% 200px, #d5c5ff, transparent)
      \`,
@@ -4155,8 +4368,6 @@ export const gridPatterns: Pattern[] = [
     style: {
       background: "#ffffff",
       backgroundImage: `
-      linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-      linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
       radial-gradient(circle 600px at 0% 200px, #a99bf7, transparent),
       radial-gradient(circle 600px at 100% 200px, #a99bf7, transparent)
     `,
@@ -4167,265 +4378,8 @@ export const gridPatterns: Pattern[] = [
       className="absolute inset-0 z-0"
       style={{
         backgroundImage: \`
-          linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-          linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
           radial-gradient(circle 600px at 0% 200px, #a99bf7, transparent),
           radial-gradient(circle 600px at 100% 200px, #a99bf7, transparent)
-        \`,
-      }}
-    />
-    {/* Your Content Here */}
-  </div>`,
-  },
-
-  {
-    id: "purple-center-glow",
-    name: "Purple Center Glow",
-    category: "effects",
-    badge: "New",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-     linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-     linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
-     radial-gradient(circle 800px at 50% 50%, #8249fc, transparent)        
-   `,
-    },
-    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
- {/*Purple Center Glow */}
- <div
-   className="absolute inset-0 z-0 pointer-events-none"
-   style={{
-     backgroundImage: \`
-       linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-       linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
-       radial-gradient(circle 800px at 50% 50%, #8249fc, transparent)        
-     \`,
-   }}
- />
- {/* Your Content Here */}
-</div>`,
-  },
-  {
-    id: "green-center-glow",
-    name: "Green Center Glow",
-    category: "effects",
-    badge: "New",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-     linear-gradient(to right, #f0fdf4 1px, transparent 1px),
-     linear-gradient(to bottom, #f0fdf4 1px, transparent 1px),
-     radial-gradient(circle 800px at 50% 50%, #10b981, transparent)
-   `,
-      backgroundSize: `100% 100%`,
-    },
-    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
- {/* Green Center Glow */}
- <div 
-   className="absolute inset-0 z-0 pointer-events-none" 
-   style={{
-     backgroundImage: \`
-       linear-gradient(to right, #f0fdf4 1px, transparent 1px),
-       linear-gradient(to bottom, #f0fdf4 1px, transparent 1px),
-       radial-gradient(circle 800px at 50% 50%, #10b981, transparent)
-     \`,
-     backgroundSize: \`100% 100%\`
-   }} 
- />
- {/* Your Content Here */}
-</div>`,
-  },
-  {
-    id: "indigo-center-glow",
-    name: "Indigo Center Glow",
-    category: "effects",
-    badge: "New",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-     linear-gradient(to right, #f0f0ff 1px, transparent 1px),
-     linear-gradient(to bottom, #f0f0ff 1px, transparent 1px),
-     radial-gradient(circle 900px at 50% 50%, #6366f1, transparent)
-   `,
-    },
-    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
- {/* Indigo Center Glow */}
- <div 
-   className="absolute inset-0 z-0 pointer-events-none" 
-   style={{
-     backgroundImage: \`
-       linear-gradient(to right, #f0f0ff 1px, transparent 1px),
-       linear-gradient(to bottom, #f0f0ff 1px, transparent 1px),
-       radial-gradient(circle 900px at 50% 50%, #6366f1, transparent)
-     \`,
-   }} 
- />
- {/* Your Content Here */}
-</div>`,
-  },
-  {
-    id: "lime-center-glow",
-    name: "Lime Center  Glow",
-    category: "effects",
-    badge: "New",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-     linear-gradient(to right, #f7fee7 1px, transparent 1px),
-     linear-gradient(to bottom, #f7fee7 1px, transparent 1px),
-     radial-gradient(circle 800px at 50% 50%, #84cc16, transparent)
-   `,
-    },
-    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
- {/* Lime Center Glow */}
- <div 
-   className="absolute inset-0 z-0 pointer-events-none" 
-   style={{
-     backgroundImage: \`
-       linear-gradient(to right, #f7fee7 1px, transparent 1px),
-       linear-gradient(to bottom, #f7fee7 1px, transparent 1px),
-       radial-gradient(circle 800px at 50% 50%, #84cc16, transparent)
-     \`,
-   }} 
- />
- {/* Your Content Here */}
-</div>`,
-  },
-  {
-    id: "sunrise-glow",
-    name: "Sunrise Glow",
-    category: "effects",
-    badge: "New",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-     linear-gradient(to right, #fffbeb 1px, transparent 1px),
-     linear-gradient(to bottom, #fffbeb 1px, transparent 1px),
-     radial-gradient(circle 750px at 50% 50%, #eab308, transparent)
-   `,
-    },
-    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
- {/* Sunrise Glow */}
- <div 
-   className="absolute inset-0 z-0 pointer-events-none" 
-   style={{
-     backgroundImage: \`
-       linear-gradient(to right, #fffbeb 1px, transparent 1px),
-       linear-gradient(to bottom, #fffbeb 1px, transparent 1px),
-       radial-gradient(circle 750px at 50% 50%, #eab308, transparent)
-     \`,
-   }} 
- />
- {/* Your Content Here */}
-</div>`,
-  },
-  {
-    id: "soft lavender-center-glow",
-    name: "Soft Lavender Center Glow",
-    category: "effects",
-    badge: "New",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-     linear-gradient(to right, #f8f8f8 1px, transparent 1px),
-     linear-gradient(to bottom, #f8f8f8 1px, transparent 1px),
-     radial-gradient(circle 800px at 50% 50%, #c4b5fd, transparent)
-   `,
-    },
-    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
- {/* Soft Lavender Center Glow */}
- <div 
-   className="absolute inset-0 z-0 pointer-events-none" 
-   style={{
-     backgroundImage: \`
-       linear-gradient(to right, #f8f8f8 1px, transparent 1px),
-       linear-gradient(to bottom, #f8f8f8 1px, transparent 1px),
-       radial-gradient(circle 800px at 50% 50%, #c4b5fd, transparent)
-     \`,
-   }} 
- />
- {/* Your Content Here */}
-</div>`,
-  },
-  {
-    id: "soft-pink-glow",
-    name: "Soft Pink Glow",
-    category: "effects",
-    badge: "New",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-     linear-gradient(to right, #fdf2f8 1px, transparent 1px),
-     linear-gradient(to bottom, #fdf2f8 1px, transparent 1px),
-     radial-gradient(circle 850px at 50% 50%, #fbb6ce, transparent)
-   `,
-    },
-    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
- {/* Soft Pink Glow */}
- <div 
-   className="absolute inset-0 z-0 pointer-events-none" 
-   style={{
-     backgroundImage: \`
-       linear-gradient(to right, #fdf2f8 1px, transparent 1px),
-       linear-gradient(to bottom, #fdf2f8 1px, transparent 1px),
-       radial-gradient(circle 850px at 50% 50%, #fbb6ce, transparent)
-     \`,
-   }} 
- />
- {/* Your Content Here */}
-</div>`,
-  },
-  {
-    id: "light-sky-blue-glow",
-    name: "Light Sky Blue Glow",
-    category: "effects",
-    badge: "New",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-     linear-gradient(to right, #f0f9ff 1px, transparent 1px),
-     linear-gradient(to bottom, #f0f9ff 1px, transparent 1px),
-     radial-gradient(circle 800px at 50% 50%, #93c5fd, transparent)
-   `,
-    },
-    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden"> 
- {/* Light Sky Blue Glow */}
- <div 
-   className="absolute inset-0 z-0 pointer-events-none" 
-   style={{
-     backgroundImage: \`
-       linear-gradient(to right, #f0f9ff 1px, transparent 1px),
-       linear-gradient(to bottom, #f0f9ff 1px, transparent 1px),
-       radial-gradient(circle 800px at 50% 50%, #93c5fd, transparent)
-     \`,
-   }} 
- />
- {/* Your Content Here */}
-</div>`,
-  },
-  {
-    id: "sunny-glow",
-    name: "Sunny Glow",
-    category: "effects",
-    badge: "New",
-    style: {
-      background: "#fffbe8",
-      backgroundImage: `
-      linear-gradient(to right, #fefce8 1px, transparent 1px),
-      linear-gradient(to bottom, #fefce8 1px, transparent 1px),
-      radial-gradient(circle 800px at 50% 50%, #fde047, transparent)
-    `,
-    },
-    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
-    {/* Sunny Glow Background */}
-    <div
-      className="absolute inset-0 z-0 pointer-events-none"
-      style={{
-        backgroundImage: \`
-          linear-gradient(to right, #fefce8 1px, transparent 1px),
-          linear-gradient(to bottom, #fefce8 1px, transparent 1px),
-          radial-gradient(circle 800px at 50% 50%, #fde047, transparent)
         \`,
       }}
     />
@@ -4440,8 +4394,6 @@ export const gridPatterns: Pattern[] = [
     style: {
       background: "#fff8fc",
       backgroundImage: `
-      linear-gradient(to right, #f5f3f4 1px, transparent 1px),
-      linear-gradient(to bottom, #f5f3f4 1px, transparent 1px),
       radial-gradient(circle 850px at 90% 90%, #f984e5, transparent)
     `,
     },
@@ -4451,8 +4403,6 @@ export const gridPatterns: Pattern[] = [
       className="absolute inset-0 z-0 pointer-events-none"
       style={{
         backgroundImage: \`
-          linear-gradient(to right, #f5f3f4 1px, transparent 1px),
-          linear-gradient(to bottom, #f5f3f4 1px, transparent 1px),
           radial-gradient(circle 850px at 90% 90%, #f984e5, transparent)
         \`,
   
@@ -4469,8 +4419,6 @@ export const gridPatterns: Pattern[] = [
     style: {
       background: "#fff8fc",
       backgroundImage: `
-      linear-gradient(to right, #f5f3f4 1px, transparent 1px),
-      linear-gradient(to bottom, #f5f3f4 1px, transparent 1px),
       radial-gradient(circle 850px at 10% 10%, #f984e5, transparent)
     `,
     },
@@ -4480,8 +4428,6 @@ export const gridPatterns: Pattern[] = [
       className="absolute inset-0 z-0 pointer-events-none"
       style={{
         backgroundImage: \`
-          linear-gradient(to right, #f5f3f4 1px, transparent 1px),
-          linear-gradient(to bottom, #f5f3f4 1px, transparent 1px),
           radial-gradient(circle 850px at 10% 10%, #f984e5, transparent)
         \`,
       }}
@@ -4497,8 +4443,6 @@ export const gridPatterns: Pattern[] = [
     style: {
       background: "#fff8fc",
       backgroundImage: `
-      linear-gradient(to right, #f5f3f4 1px, transparent 1px),
-      linear-gradient(to bottom, #f5f3f4 1px, transparent 1px),
       radial-gradient(circle 850px at 10% 10%, #f984e5, transparent),
       radial-gradient(circle 850px at 90% 90%, #f984e5, transparent)
     `,
@@ -4509,8 +4453,6 @@ export const gridPatterns: Pattern[] = [
       className="absolute inset-0 z-0 pointer-events-none"
       style={{
         backgroundImage: \`
-          linear-gradient(to right, #f5f3f4 1px, transparent 1px),
-          linear-gradient(to bottom, #f5f3f4 1px, transparent 1px),
           radial-gradient(circle 850px at 10% 10%, #f984e5, transparent),
           radial-gradient(circle 850px at 90% 90%, #f984e5, transparent)
         \`,
@@ -4519,53 +4461,6 @@ export const gridPatterns: Pattern[] = [
     />
     {/* Your Content Here */}
   </div>`,
-  },
-  {
-    id: "matrix-digital-rain",
-    name: "Matrix Digital Rain",
-    category: "geometric",
-    badge: "New",
-    style: {
-      backgroundColor: "#1a1a1a",
-      backgroundImage: `
-     radial-gradient(circle at 20% 80%, #00ff00 1px, transparent 1px),
-     radial-gradient(circle at 80% 20%, #00ff00 1px, transparent 1px),
-     radial-gradient(circle at 40% 40%, #00ff00 0.5px, transparent 0.5px),
-     repeating-linear-gradient(
-       45deg,
-       transparent 0px,
-       transparent 8px,
-       rgba(0, 255, 0, 0.01) 8px,
-       rgba(0, 255, 0, 0.01) 16px
-     )
-   `,
-      backgroundSize: "40px 40px, 60px 60px, 20px 20px, 16px 16px",
-      imageRendering: "pixelated",
-    },
-    code: `<div className="min-h-screen w-full relative">
- {/* Matrix Digital Rain */}
- <div
-   className="absolute inset-0 z-0"
-   style={{
-     backgroundColor: '#1a1a1a',
-     backgroundImage: \`
-       radial-gradient(circle at 20% 80%, #00ff00 1px, transparent 1px),
-       radial-gradient(circle at 80% 20%, #00ff00 1px, transparent 1px),
-       radial-gradient(circle at 40% 40%, #00ff00 0.5px, transparent 0.5px),
-       repeating-linear-gradient(
-         45deg,
-         transparent 0px,
-         transparent 8px,
-         rgba(0, 255, 0, 0.01) 8px,
-         rgba(0, 255, 0, 0.01) 16px
-       )
-     \`,
-     backgroundSize: '40px 40px, 60px 60px, 20px 20px, 16px 16px',
-     imageRendering: 'pixelated',
-   }}
- />
- {/* Your Content Here */}
-</div>`,
   },
   {
     id: "prismatic-aurora-burst",
@@ -4662,6 +4557,4 @@ export const gridPatterns: Pattern[] = [
  {/* Your Content/Components */}
 </div>`,
   },
-  
-
 ];
