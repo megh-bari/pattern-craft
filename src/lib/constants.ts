@@ -17,6 +17,7 @@ export const SUPPORT_CONFIG = {
   PAYEE_NAME: "Megh Bari",
   UPI_MSG: "Keep building cool stuff!",
   BUY_ME_COFFEE_URL: "https://coff.ee/meghdev",
+  PAYPAL_URL: "https://www.paypal.com/paypalme/meghbari01",
 } as const;
 
 export const APP_CONFIG = {
