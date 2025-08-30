@@ -9,6 +9,7 @@ import {
   Copy,
   Check,
   ChevronUp,
+  DollarSign,
 } from "lucide-react";
 
 interface SupportDropdownProps {
@@ -78,6 +79,13 @@ const SupportDropdown: React.FC<SupportDropdownProps> = ({
       "noopener,noreferrer"
     );
   };
+  const handlePayPal = () => {
+    window.open(
+      SUPPORT_CONFIG.PAYPAL_URL,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
 
   // UPI QR Code URL
   const upiUrl = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(
@@ -91,15 +99,13 @@ const SupportDropdown: React.FC<SupportDropdownProps> = ({
         className={`
           absolute bottom-16 right-0 mb-2 w-[calc(100vw-2rem)] max-w-xs sm:w-72 md:w-64 lg:w-[18rem] rounded-xl backdrop-blur-md border shadow-xl
           transform transition-all duration-300 ease-out origin-bottom-right
-          ${
-            isOpen
-              ? "opacity-100 scale-100 translate-y-0"
-              : "opacity-0 scale-95 translate-y-2 pointer-events-none"
+          ${isOpen
+            ? "opacity-100 scale-100 translate-y-0"
+            : "opacity-0 scale-95 translate-y-2 pointer-events-none"
           }
-          ${
-            theme === "dark"
-              ? "bg-black/40 border-white/10"
-              : "bg-white border-gray-300"
+          ${theme === "dark"
+            ? "bg-black/40 border-white/10"
+            : "bg-white border-gray-300"
           }
         `}
       >
@@ -109,10 +115,9 @@ const SupportDropdown: React.FC<SupportDropdownProps> = ({
             onClick={handleBuyMeCoffee}
             className={`
               w-full flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 rounded-lg transition-all duration-200 cursor-pointer
-              ${
-                theme === "dark"
-                  ? "hover:bg-white/10 text-white/90 hover:text-white"
-                  : "hover:bg-gray-300/50 text-gray-800 hover:text-gray-900"
+              ${theme === "dark"
+                ? "hover:bg-white/10 text-white/90 hover:text-white"
+                : "hover:bg-gray-300/50 text-gray-800 hover:text-gray-900"
               }
             `}
           >
@@ -124,15 +129,33 @@ const SupportDropdown: React.FC<SupportDropdownProps> = ({
             </span>
           </button>
 
+          {/* Paypal Button */}
+          <button
+            onClick={handlePayPal}
+            className={`
+              w-full flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 rounded-lg transition-all duration-200 cursor-pointer
+              ${theme === "dark"
+                ? "hover:bg-white/10 text-white/90 hover:text-white"
+                : "hover:bg-gray-300/50 text-gray-800 hover:text-gray-900"
+              }
+            `}
+          >
+            <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <DollarSign className="w-3 sm:w-4 h-3 sm:h-4 text-white" />
+            </div>
+            <span className="font-medium text-sm sm:text-base">
+              PayPal
+            </span>
+          </button>
+
           {/* UPI Payment Section */}
           <div
             onClick={copyUpiId}
             className={`
               w-full flex flex-col items-center gap-2 px-3 py-2 sm:px-4 sm:py-3 rounded-lg transition-all duration-200 cursor-pointer
-              ${
-                theme === "dark"
-                  ? "hover:bg-white/10 text-white/90 hover:text-white"
-                  : "hover:bg-gray-300/50 text-gray-800 hover:text-gray-900"
+              ${theme === "dark"
+                ? "hover:bg-white/10 text-white/90 hover:text-white"
+                : "hover:bg-gray-300/50 text-gray-800 hover:text-gray-900"
               }
             `}
           >
@@ -145,9 +168,8 @@ const SupportDropdown: React.FC<SupportDropdownProps> = ({
                   UPI Payment
                 </div>
                 <div
-                  className={`text-xs ${
-                    theme === "dark" ? "text-white/60" : "text-gray-600"
-                  }`}
+                  className={`text-xs ${theme === "dark" ? "text-white/60" : "text-gray-600"
+                    }`}
                 >
                   Scan QR or copy UPI ID
                 </div>
@@ -162,9 +184,8 @@ const SupportDropdown: React.FC<SupportDropdownProps> = ({
                   <Check className="w-5 h-5 text-green-500" />
                 ) : (
                   <Copy
-                    className={`w-4 h-4 ${
-                      theme === "dark" ? "text-white/60" : "text-gray-500"
-                    }`}
+                    className={`w-4 h-4 ${theme === "dark" ? "text-white/60" : "text-gray-500"
+                      }`}
                   />
                 )}
               </button>
@@ -190,11 +211,10 @@ const SupportDropdown: React.FC<SupportDropdownProps> = ({
               <div
                 className={`
                 px-2 py-1 sm:px-3 sm:py-2 rounded-lg text-xs sm:text-sm text-center
-                ${
-                  theme === "dark"
+                ${theme === "dark"
                     ? "bg-green-500/20 text-green-300"
                     : "bg-green-100 text-green-700"
-                }
+                  }
               `}
               >
                 UPI ID copied to clipboard!
@@ -210,10 +230,9 @@ const SupportDropdown: React.FC<SupportDropdownProps> = ({
         className={`
           w-10 h-10 sm:w-12 sm:h-12 rounded-full backdrop-blur-md border shadow-xl
           flex items-center justify-center transition-all duration-300
-          ${
-            theme === "dark"
-              ? "bg-black/50 border-white/10 hover:bg-black/40"
-              : "bg-white border-gray-300 hover:bg-gray-50"
+          ${theme === "dark"
+            ? "bg-black/50 border-white/10 hover:bg-black/40"
+            : "bg-white border-gray-300 hover:bg-gray-50"
           }
           ${isOpen ? "rotate-180" : "rotate-0"}
         `}
@@ -221,15 +240,13 @@ const SupportDropdown: React.FC<SupportDropdownProps> = ({
       >
         {isOpen ? (
           <ChevronUp
-            className={`w-5 sm:w-6 h-5 sm:h-6 ${
-              theme === "dark" ? "text-white/80" : "text-gray-600"
-            }`}
+            className={`w-5 sm:w-6 h-5 sm:h-6 ${theme === "dark" ? "text-white/80" : "text-gray-600"
+              }`}
           />
         ) : (
           <Heart
-            className={`w-5 sm:w-6 h-5 sm:h-6 ${
-              theme === "dark" ? "text-white/80" : "text-red-600"
-            }`}
+            className={`w-5 sm:w-6 h-5 sm:h-6 ${theme === "dark" ? "text-white/80" : "text-red-600"
+              }`}
           />
         )}
       </button>

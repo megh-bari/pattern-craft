@@ -235,14 +235,15 @@ We welcome contributions to expand the pattern collection. To add new patterns:
 git checkout -b feature/new-pattern-name
 ```
 
-3. Navigate to `src/app/utils/patterns.ts`
+3. Navigate to `src/data/patterns.ts`
 4. Add your pattern following the established format:
 
 ```typescript
 {
   id: "unique-pattern-id",
   name: "Pattern Display Name",
-  badge: "New", // Optional: "New", "Popular"
+  category: "gradients" | "geometric" | "decorative" | "effects",
+  badge: "New", // Optional: "New"
   style: {
     background: "#ffffff",
     backgroundImage: `
