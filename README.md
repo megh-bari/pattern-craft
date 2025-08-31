@@ -149,7 +149,7 @@ These snippets work great for:
 
 ## Demo
 
-[Watch the demo video](https://github.com/user-attachments/assets/c283ecbc-8732-412b-adab-5c17d1a390cc)
+[Watch the demo video](https://github.com/user-attachments/assets/d414c57b-128b-43f2-8534-352bc93eb801)
 
 ## Customization
 
