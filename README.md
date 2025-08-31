@@ -389,7 +389,8 @@ For questions, issues, or suggestions:
 
 ## Built By
 
-- Twitter: [@meghtrix](https://x.com/meghtrix)
+- Twitter(X): [@meghtrix](https://x.com/meghtrix)
+- Alternate Twitter(X): [@usepatterncraft](https://x.com/usepatterncraft)
 - GitHub: [@megh-bari](https://github.com/megh-bari)
 
 If you like this project, consider giving it a ⭐️ on GitHub and sharing it with others!
