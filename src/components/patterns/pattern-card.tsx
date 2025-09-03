@@ -176,7 +176,6 @@ export default function PatternCard({
               >
                 {isCopied(pattern.id) ? (
                   <>
-                    <Check className="h-3 w-3" />
                     Copied
                   </>
                 ) : (

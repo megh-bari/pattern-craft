@@ -2,57 +2,6 @@ import { Pattern } from "@/types/pattern";
 
 export const gridPatterns: Pattern[] = [
   {
-    id: "metallic-white",
-    name: "Metallic White ",
-    category: "decorative",
-    badge: "New",
-    description: "Linear gradient for shiny metallic white",
-    style: {
-      background:
-        "linear-gradient(115.74deg, #FFFFFF 2.13%, #D6D6D6 20.53%, #FFF5F5 52.37%, #AFADAD 97.31%)",
-    },
-    code: `<div className="absolute w-[1423px] h-[1000px] left-1/2 top-1/2 transform -translate-x-[711.5px] -translate-y-[500px]">
-  {/* Gradient Background */}
-  <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(115.74deg, #FFFFFF 2.13%, #D6D6D6 20.53%, #FFF5F5 52.37%, #AFADAD 97.31%)" }} />
-  
-  {/* Your Content/Components */}
-</div>`,
-  },
-  {
-    id: "metallic-blue",
-    name: "Metallic Blue ",
-    category: "decorative",
-    badge: "New",
-    description: "Linear gradient for shiny metallic blue",
-    style: {
-      background:
-        "linear-gradient(115.74deg, #2D3E71 2.13%, #8190D8 20.53%, #3D3E80 52.37%, #A2AEFF 97.31%)",
-    },
-    code: `<div className="absolute w-[1423px] h-[1000px] left-1/2 top-1/2 transform -translate-x-[711.5px] -translate-y-[500px]">
-  {/* Gradient Background */}
-  <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(115.74deg, #2D3E71 2.13%, #8190D8 20.53%, #3D3E80 52.37%, #A2AEFF 97.31%)" }} />
-  
-  {/* Your Content/Components */}
-</div>`,
-  },
-  {
-    id: "metallic-black",
-    name: "Metallic Black ",
-    category: "decorative",
-    badge: "New",
-    description: "Linear gradient from black to silver starting from left",
-    style: {
-      background:
-        "linear-gradient(115.74deg, #000000 2.13%, #434345 20.53%, #14141A 52.37%, #4A4A4D 97.31%)",
-    },
-    code: `<div className="min-h-screen w-full relative">
-  {/* Radial Gradient Background */}
-  <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(125% 125% at 50% 10%, #fff 40%, #6366f1 100%)" }} />
-  
-  {/* Your Content/Components */}
-</div>`,
-  },
-  {
     id: "top-gradient-radial",
     name: "Top Gradient Radial",
     category: "decorative",
@@ -1175,7 +1124,6 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
 
-  // Glow Ones
   {
     id: "soft-yellow-glow",
     name: "Soft Yellow Glow",
@@ -1800,6 +1748,7 @@ export const gridPatterns: Pattern[] = [
       style={{
         backgroundImage: \`
           repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 20px),
+        repeating-linear-gradient(-45deg, rgba(0, 0, 0,
         repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 20px)
         \`,
         backgroundSize: "40px 40px",
@@ -3526,6 +3475,57 @@ export const gridPatterns: Pattern[] = [
       opacity: 0.95,
     }}
   />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "metallic-white",
+    name: "Metallic White ",
+    category: "decorative",
+    badge: "New",
+    description: "Linear gradient for shiny metallic white",
+    style: {
+      background:
+        "linear-gradient(115.74deg, #FFFFFF 2.13%, #D6D6D6 20.53%, #FFF5F5 52.37%, #AFADAD 97.31%)",
+    },
+    code: `<div className="absolute w-[1423px] h-[1000px] left-1/2 top-1/2 transform -translate-x-[711.5px] -translate-y-[500px]">
+  {/* Gradient Background */}
+  <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(115.74deg, #FFFFFF 2.13%, #D6D6D6 20.53%, #FFF5F5 52.37%, #AFADAD 97.31%)" }} />
+    
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "metallic-blue",
+    name: "Metallic Blue ",
+    category: "decorative",
+    badge: "New",
+    description: "Linear gradient for shiny metallic blue",
+    style: {
+      background:
+        "linear-gradient(115.74deg, #2D3E71 2.13%, #8190D8 20.53%, #3D3E80 52.37%, #A2AEFF 97.31%)",
+    },
+    code: `<div className="absolute w-[1423px] h-[1000px] left-1/2 top-1/2 transform -translate-x-[711.5px] -translate-y-[500px]">
+  {/* Gradient Background */}
+  <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(115.74deg, #2D3E71 2.13%, #8190D8 20.53%, #3D3E80 52.37%, #A2AEFF 97.31%)" }} />
+  
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "metallic-black",
+    name: "Metallic Black ",
+    category: "decorative",
+    badge: "New",
+    description: "Linear gradient from black to silver starting from left",
+    style: {
+      background:
+        "linear-gradient(115.74deg, #000000 2.13%, #434345 20.53%, #14141A 52.37%, #4A4A4D 97.31%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Radial Gradient Background */}
+  <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(125% 125% at 50% 10%, #fff 40%, #6366f1 100%)" }} />
+  
   {/* Your Content/Components */}
 </div>`,
   },
