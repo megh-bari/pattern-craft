@@ -3722,6 +3722,38 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   {
+    id: "dark-circuit-board",
+    name: "Dark Circuit Board",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundColor: "#171717",
+      backgroundImage: `
+      linear-gradient(90deg, #171717 1px, transparent 1px),
+      linear-gradient(180deg, #171717 1px, transparent 1px),
+      linear-gradient(90deg, #262626 1px, transparent 1px),
+      linear-gradient(180deg, #262626 1px, transparent 1px)
+    `,
+      backgroundSize: "50px 50px, 50px 50px, 10px 10px, 10px 10px",
+    },
+    code: `<div className="min-h-screen w-full relative bg-[#171717]">
+  {/* Dark Circuit Board Background */}
+  <div
+    className="absolute inset-0 z-0 pointer-events-none"
+    style={{
+      backgroundImage: \`
+        linear-gradient(90deg, #171717 1px, transparent 1px),
+        linear-gradient(180deg, #171717 1px, transparent 1px),
+        linear-gradient(90deg, #262626 1px, transparent 1px),
+        linear-gradient(180deg, #262626 1px, transparent 1px)
+      \`,
+      backgroundSize: "50px 50px, 50px 50px, 10px 10px, 10px 10px",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
     id: "concentric-squares-dark",
     name: "Concentric Squares - Dark",
     category: "geometric",
@@ -4406,8 +4438,8 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
-{
+  },
+  {
     id: "northern-aurora",
     name: "Northern Aurora",
     category: "effects",
