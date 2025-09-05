@@ -1,6 +1,6 @@
 "use client";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
+import { Tabs, TabsContent } from "@radix-ui/react-tabs";
 import { useState } from "react";
 import { gridPatterns } from "@/data/patterns";
 import { categories } from "@/data/categories";
@@ -8,6 +8,8 @@ import { useFavorites } from "@/context/favourites-context";
 import PatternGrid from "./pattern-grid";
 import PatternEmptyState from "./pattern-empty-state";
 import { SearchBar } from "../search/search-bar";
+import CodeFormatSelector from "./code-format-selector";
+import { StyledTabsList } from "@/components/ui/styled-tabs";
 import { searchPatterns } from "@/lib/utils";
 
 interface PatternShowcaseProps {
@@ -70,75 +72,14 @@ export default function PatternShowcase({
         className="w-full mb-8"
       >
         {/* Desktop & Tablet Tabs */}
-        <TabsList
-          className={`
-            hidden md:grid
-            grid-cols-2 sm:grid-cols-3 md:grid-cols-6
-            w-full h-auto p-1.5
-            backdrop-blur-md shadow-lg border
-            rounded-xl mb-8 transition-all duration-300
-            ${
-              isPatternDark
-                ? "bg-black/20 border-white/10 hover:bg-black/30"
-                : "bg-white/70 border-gray-200/30 hover:bg-white/80"
-            }
-          `}
-        >
-          {categories.map((category) => (
-            <TabsTrigger
-              key={category.id}
-              value={category.id}
-              className={`
-                flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 
-                py-2.5 px-2 sm:px-3 lg:px-4
-                text-xs sm:text-sm font-medium
-                rounded-lg
-                transition-all duration-300 ease-in-out
-                min-h-[44px] sm:min-h-[40px]
-                relative overflow-hidden
-                group
-                ${
-                  isPatternDark
-                    ? `data-[state=active]:bg-white/10 data-[state=active]:text-white 
-                       data-[state=active]:shadow-lg data-[state=active]:border 
-                       data-[state=active]:border-white/20 data-[state=active]:backdrop-blur-sm
-                       data-[state=inactive]:text-gray-300 
-                       data-[state=inactive]:hover:text-white
-                       data-[state=inactive]:hover:bg-white/5`
-                    : `data-[state=active]:bg-white/90 data-[state=active]:text-gray-900 
-                       data-[state=active]:shadow-lg data-[state=active]:border 
-                       data-[state=active]:border-gray-200/40 data-[state=active]:backdrop-blur-sm
-                       data-[state=inactive]:text-gray-600 
-                       data-[state=inactive]:hover:text-gray-900
-                       data-[state=inactive]:hover:bg-white/40`
-                }
-              `}
-            >
-              <div
-                className={`
-                  absolute inset-0 rounded-lg opacity-0 
-                  data-[state=active]:opacity-100 transition-all duration-300
-                  ${
-                    isPatternDark
-                      ? "bg-gradient-to-br from-white/15 to-white/5"
-                      : "bg-gradient-to-br from-white/95 to-white/80"
-                  }
-                `}
-              />
-              <span className="font-medium z-10 text-center leading-tight">
-                {category.label}
-              </span>
-              <div
-                className={`
-                  absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 
-                  rounded-full transition-all duration-300 
-                  group-data-[state=active]:w-8
-                  ${isPatternDark ? "bg-white/60" : "bg-primary"}
-                `}
-              />
-            </TabsTrigger>
-          ))}
-        </TabsList>
+        <StyledTabsList
+          options={[...categories]}
+          value={activeTab}
+          onValueChange={setActiveTab}
+          isPatternDark={isPatternDark}
+          gridCols="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6"
+          className="mb-8"
+        />
 
         {/* Mobile /Tablets */}
         <div className="block md:hidden mb-6">
@@ -169,11 +110,18 @@ export default function PatternShowcase({
           </div>
         </div>
 
-        <SearchBar
-          searchInput={searchInput}
-          setSearchInput={setSearchInput}
-          isPatternDark={isPatternDark}
-        ></SearchBar>
+        <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-8">
+          <div className="flex-1 w-full">
+            <SearchBar
+              searchInput={searchInput}
+              setSearchInput={setSearchInput}
+              isPatternDark={isPatternDark}
+            />
+          </div>
+          <div className="flex-shrink-0 w-full sm:w-auto">
+            <CodeFormatSelector isPatternDark={isPatternDark} />
+          </div>
+        </div>
 
         {categories.map((category) => (
           <TabsContent

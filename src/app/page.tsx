@@ -12,6 +12,7 @@ import PatternShowcase from "@/components/patterns/pattern-showcase";
 import SupportDropdown from "@/components/home/support-dropdown";
 import ReturnToPreview from "@/components/home/return-to-preview";
 import { FavoritesProvider } from "@/context/favourites-context";
+import { CodeFormatProvider } from "@/context/code-format-context";
 
 export default function Home() {
   const [activePattern, setActivePattern] = useState<string | null>(null);
@@ -31,6 +32,7 @@ export default function Home() {
     <>
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <FavoritesProvider>
+          <CodeFormatProvider>
           <div className="min-h-screen relative">
             {/* Apply the active pattern as background */}
             {activePatternObj && (
@@ -56,6 +58,7 @@ export default function Home() {
             </div>
             <ReturnToPreview theme={theme} />
           </div>
+          </CodeFormatProvider>
         </FavoritesProvider>
         <Toaster />
       </ThemeProvider>
