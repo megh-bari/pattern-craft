@@ -24,7 +24,7 @@ export default function Hero({ theme }: HeroProps) {
     <section className="container mx-auto py-8 sm:py-12 md:py-16 lg:py-18 text-center relative overflow-hidden px-4 sm:px-6 lg:px-8 flex items-center justify-center">
       <div className="mx-auto max-w-6xl relative z-10">
         {/* Badge */}
-        <div className="mb-6 sm:mb-8 md:mb-10 flex justify-center">
+        <div className="mb-6 sm:mb-8 md:mb-10 flex justify-center glow-wrapper rounded-full">
           <a
             href={APP_CONFIG.GITHUB_URL}
             target="_blank"
@@ -33,16 +33,20 @@ export default function Hero({ theme }: HeroProps) {
           >
             <Badge
               variant="secondary"
-              className={`gap-2 py-2 px-3 sm:px-4 text-xs sm:text-sm rounded-full shadow-lg backdrop-blur-md transition-all duration-300 border ${
-                isPatternDark
-                  ? "bg-black/40 border-white/20 text-white hover:bg-black/50"
-                  : "bg-white/80 border-gray-200/50 text-gray-900 hover:bg-white/90"
-              }`}
+              className={`gap-2 py-2 px-3 sm:px-4 text-xs sm:text-sm rounded-full border relative z-10 transition-all duration-300
+      ${
+        isPatternDark
+          ? "bg-black/90  text-white "
+          : "bg-white/95  text-gray-900 "
+      }`}
             >
+              {/* Ping indicator */}
               <div className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </div>
+
+              {/* Content */}
               <span className="font-medium">5+ New Patterns</span>
               <Zap className="h-3 w-3 text-orange-500" />
               <span className="hidden sm:inline-flex items-center">
