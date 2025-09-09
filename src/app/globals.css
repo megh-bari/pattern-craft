@@ -77,6 +77,8 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  --gradient-shadow: linear-gradient(45deg, #fb00929c, #6f00ff80);
 }
 
 .dark {
@@ -135,4 +137,44 @@ html::-webkit-scrollbar {
 
 body {
   overflow-x: hidden;
+}
+
+/* Outer glow wrapper */
+.glow-wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+
+/* Before and after for glow border */
+.glow-wrapper::before,
+.glow-wrapper::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border-radius: 9999px;
+  background: var(--gradient-shadow);
+  background-size: 200%;
+  z-index: -1;
+  animation: glow-animate 10s linear infinite;
+}
+
+.glow-wrapper::after {
+  filter: blur(8px);
+  z-index: -2;
+}
+
+@keyframes glow-animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
