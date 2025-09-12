@@ -1,6 +1,6 @@
 import { debounce } from "@/lib/utils";
 import { Search, X } from "lucide-react";
-import { useCallback, useRef } from "react";
+import { useRef } from "react";
 
 interface SearchBarProps {
   searchInput: string;
@@ -15,14 +15,15 @@ export function SearchBar({
 }: SearchBarProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleSearch = useCallback(
-    debounce(() => {
-      if (!inputRef.current) return;
-      const inputValue = inputRef.current.value;
-      setSearchInput(inputValue);
-    }, 200),
-    []
-  );
+  const debouncedSearch = debounce((value: string) => {
+    setSearchInput(value);
+  }, 200);
+
+  const handleSearch = () => {
+    if (!inputRef.current) return;
+    const inputValue = inputRef.current.value;
+    debouncedSearch(inputValue);
+  };
 
   const clearSearch = () => {
     if (!inputRef.current) return;
@@ -32,7 +33,7 @@ export function SearchBar({
   return (
     <div
       className={`w-full
-    backdrop-blur-md shadow-sm border  rounded-xl mb-8 flex items-center px-2 ${
+    backdrop-blur-md shadow-sm border  rounded-xl flex items-center px-2 ${
       isPatternDark
         ? "bg-black/20 border-white/10 hover:bg-black/30"
         : "bg-white/70 border-gray-200/30 hover:bg-white/80"
