@@ -1414,6 +1414,395 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   {
+    id: "peachy-mint-dream",
+    name: "Peachy Mint Dream",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(135deg, #FFB5A7 0%, #F8D7DA 25%, #E8F5E8 75%, #B8F2D0 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Peachy Mint Dream Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`linear-gradient(135deg, #FFB5A7 0%, #F8D7DA 25%, #E8F5E8 75%, #B8F2D0 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "soft-pastel-dream",
+    name: "Soft Pastel Dream",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(135deg, #F8BBD9 0%, #FDD5B4 25%, #FFF2CC 50%, #E1F5FE 75%, #BBDEFB 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Soft Pastel Dream Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`linear-gradient(135deg, #F8BBD9 0%, #FDD5B4 25%, #FFF2CC 50%, #E1F5FE 75%, #BBDEFB 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "dreamy-sunset-gradient",
+    name: "Dreamy Sunset Gradient",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#f5f5dc",
+      backgroundImage: `
+      linear-gradient(180deg, 
+        rgba(245,245,220,1) 0%, 
+        rgba(255,223,186,0.8) 25%, 
+        rgba(255,182,193,0.6) 50%, 
+        rgba(147,112,219,0.7) 75%, 
+        rgba(72,61,139,0.9) 100%
+      ),
+      radial-gradient(circle at 30% 20%, rgba(255,255,224,0.4) 0%, transparent 50%),
+      radial-gradient(circle at 70% 80%, rgba(72,61,139,0.6) 0%, transparent 70%),
+      radial-gradient(circle at 50% 60%, rgba(147,112,219,0.3) 0%, transparent 60%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-[#f5f5dc] relative">
+  {/* Dreamy Sunset Gradient Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(180deg, 
+          rgba(245,245,220,1) 0%, 
+          rgba(255,223,186,0.8) 25%, 
+          rgba(255,182,193,0.6) 50%, 
+          rgba(147,112,219,0.7) 75%, 
+          rgba(72,61,139,0.9) 100%
+        ),
+        radial-gradient(circle at 30% 20%, rgba(255,255,224,0.4) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(72,61,139,0.6) 0%, transparent 70%),
+        radial-gradient(circle at 50% 60%, rgba(147,112,219,0.3) 0%, transparent 60%)
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  // new one
+  {
+    id: "soft-morning-mist",
+    name: "Soft Morning Mist",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#f8fafc",
+      backgroundImage: `
+      linear-gradient(135deg, 
+        rgba(248,250,252,1) 0%, 
+        rgba(219,234,254,0.7) 30%, 
+        rgba(165,180,252,0.5) 60%, 
+        rgba(129,140,248,0.6) 100%
+      ),
+      radial-gradient(circle at 20% 30%, rgba(255,255,255,0.6) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(199,210,254,0.4) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(224,231,255,0.3) 0%, transparent 60%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-[#f8fafc] relative">
+  {/* Soft Morning Mist Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(135deg, 
+          rgba(248,250,252,1) 0%, 
+          rgba(219,234,254,0.7) 30%, 
+          rgba(165,180,252,0.5) 60%, 
+          rgba(129,140,248,0.6) 100%
+        ),
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.6) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(199,210,254,0.4) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(224,231,255,0.3) 0%, transparent 60%)
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "peachy-sunrise-glow",
+    name: "Peachy Sunrise Glow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#fff7ed",
+      backgroundImage: `
+      linear-gradient(180deg, 
+        rgba(255,247,237,1) 0%, 
+        rgba(255,237,213,0.8) 25%, 
+        rgba(254,215,170,0.6) 50%, 
+        rgba(251,146,60,0.4) 75%, 
+        rgba(249,115,22,0.3) 100%
+      ),
+      radial-gradient(circle at 20% 80%, rgba(255,255,255,0.6) 0%, transparent 40%),
+      radial-gradient(circle at 80% 20%, rgba(254,215,170,0.5) 0%, transparent 50%),
+      radial-gradient(circle at 60% 60%, rgba(252,165,165,0.3) 0%, transparent 45%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-[#fff7ed] relative">
+  {/* Peachy Sunrise Glow Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(180deg, 
+          rgba(255,247,237,1) 0%, 
+          rgba(255,237,213,0.8) 25%, 
+          rgba(254,215,170,0.6) 50%, 
+          rgba(251,146,60,0.4) 75%, 
+          rgba(249,115,22,0.3) 100%
+        ),
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.6) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(254,215,170,0.5) 0%, transparent 50%),
+        radial-gradient(circle at 60% 60%, rgba(252,165,165,0.3) 0%, transparent 45%)
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "mint-fresh-breeze",
+    name: "Mint Fresh Breeze",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#f0fdfa",
+      backgroundImage: `
+      linear-gradient(45deg, 
+        rgba(240,253,250,1) 0%, 
+        rgba(204,251,241,0.7) 30%, 
+        rgba(153,246,228,0.5) 60%, 
+        rgba(94,234,212,0.4) 100%
+      ),
+      radial-gradient(circle at 40% 30%, rgba(255,255,255,0.8) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(167,243,208,0.5) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(209,250,229,0.6) 0%, transparent 45%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-[#f0fdfa] relative">
+  {/* Mint Fresh Breeze Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(45deg, 
+          rgba(240,253,250,1) 0%, 
+          rgba(204,251,241,0.7) 30%, 
+          rgba(153,246,228,0.5) 60%, 
+          rgba(94,234,212,0.4) 100%
+        ),
+        radial-gradient(circle at 40% 30%, rgba(255,255,255,0.8) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(167,243,208,0.5) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(209,250,229,0.6) 0%, transparent 45%)
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "cotton-candy-sky",
+    name: "Cotton Candy Sky",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(45deg, #FFB3D9 0%, #FFD1DC 20%, #FFF0F5 40%, #E6F3FF 60%, #D1E7FF 80%, #C7E9F1 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Cotton Candy Sky Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`linear-gradient(45deg, #FFB3D9 0%, #FFD1DC 20%, #FFF0F5 40%, #E6F3FF 60%, #D1E7FF 80%, #C7E9F1 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "cotton-candy-sky-reverse",
+    name: "Cotton Candy Sky Reverse",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(225deg, #FFB3D9 0%, #FFD1DC 20%, #FFF0F5 40%, #E6F3FF 60%, #D1E7FF 80%, #C7E9F1 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Cotton Candy Sky Gradient - Opposite Direction */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`linear-gradient(225deg, #FFB3D9 0%, #FFD1DC 20%, #FFF0F5 40%, #E6F3FF 60%, #D1E7FF 80%, #C7E9F1 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+  {
+    id: "spring-meadow-mist",
+    name: "Spring Meadow Mist",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(90deg, #D4F1C5 0%, #E8F5E8 20%, #F0F8E8 40%, #FFF9E6 60%, #FFE5B4 80%, #FFDAB9 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Spring Meadow Mist Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`linear-gradient(90deg, #D4F1C5 0%, #E8F5E8 20%, #F0F8E8 40%, #FFF9E6 60%, #FFE5B4 80%, #FFDAB9 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+
+  {
+    id: "ocean-breeze-fade",
+    name: "Ocean Breeze Fade",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(225deg, #B3E5FC 0%, #E0F2F1 25%, #F0F4C3 50%, #FFF8E1 75%, #FFECB3 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Ocean Breeze Fade Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`linear-gradient(225deg, #B3E5FC 0%, #E0F2F1 25%, #F0F4C3 50%, #FFF8E1 75%, #FFECB3 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+
+  {
+    id: "lavender-blush-left-flow",
+    name: "Lavender Blush Left Flow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(315deg, #E1BEE7 0%, #F3E5F5 20%, #FCE4EC 40%, #FFF0F5 60%, #F8BBD9 80%, #E1BEE7 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Lavender Blush Flow Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`linear-gradient(315deg, #E1BEE7 0%, #F3E5F5 20%, #FCE4EC 40%, #FFF0F5 60%, #F8BBD9 80%, #E1BEE7 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+{
+  id: "lavender-blush-right-flow",
+  name: "Lavender Blush Right Flow",
+  category: "effects",
+  badge: "New",
+  style: {
+    background:
+      "linear-gradient(135deg, #E1BEE7 0%, #F3E5F5 20%, #FCE4EC 40%, #FFF0F5 60%, #F8BBD9 80%, #E1BEE7 100%)",
+  },
+  code: `<div className="min-h-screen w-full relative">
+  {/* Lavender Blush Flow Gradient (Top Left to Bottom Right) */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`linear-gradient(135deg, #E1BEE7 0%, #F3E5F5 20%, #FCE4EC 40%, #FFF0F5 60%, #F8BBD9 80%, #E1BEE7 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+}
+,
+  {
+    id: "minty-cloud-drift",
+    name: "Minty Cloud Drift",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(120deg, #C8E6C9 0%, #DCEDC8 20%, #F1F8E9 40%, #FFFDE7 60%, #FFF9C4 80%, #F0F4C3 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Minty Cloud Drift Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`linear-gradient(120deg, #C8E6C9 0%, #DCEDC8 20%, #F1F8E9 40%, #FFFDE7 60%, #FFF9C4 80%, #F0F4C3 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "rose-gold-whisper",
+    name: "Rose Gold Whisper",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(270deg, #FFECB3 0%, #FFE0B2 20%, #FFCDD2 40%, #F8BBD9 60%, #E1BEE7 80%, #D1C4E9 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Rose Gold Whisper Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`linear-gradient(270deg, #FFECB3 0%, #FFE0B2 20%, #FFCDD2 40%, #F8BBD9 60%, #E1BEE7 80%, #D1C4E9 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+
+  {
+    id: "aurora-silk-fade",
+    name: "Aurora Silk Fade",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(150deg, #B39DDB 0%, #D1C4E9 20%, #F3E5F5 40%, #FCE4EC 60%, #FFCDD2 80%, #FFAB91 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Aurora Silk Fade Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`linear-gradient(150deg, #B39DDB 0%, #D1C4E9 20%, #F3E5F5 40%, #FCE4EC 60%, #FFCDD2 80%, #FFAB91 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
     id: "beige-texture",
     name: "Warm Beige",
     category: "effects",
