@@ -196,9 +196,37 @@ export default function Hero({ theme }: HeroProps) {
           </Button>
         </div>
 
+        {/* Vercel Attribution */}
+        <a
+          href="https://vercel.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex justify-center items-center gap-4 mt-10 sm:gap-6 mx-auto px-4 sm:px-0 group"
+        >
+          <p
+            className={`text-xs transition-colors duration-300 ${
+              isPatternDark
+                ? "text-gray-300 group-hover:text-white"
+                : "text-gray-600 group-hover:text-gray-900"
+            }`}
+          >
+            Backed by Vercel
+          </p>
+          <span
+            aria-label="Vercel Logo"
+            className={`text-sm -ml-3 transition-colors duration-300 ${
+              isPatternDark
+                ? "text-white group-hover:text-white"
+                : "text-black group-hover:text-black"
+            }`}
+          >
+            ▲
+          </span>
+        </a>
+
         {/* Stats */}
         <div
-          className={`flex items-center justify-center gap-6 sm:gap-8 md:gap-12 mt-12 sm:mt-16 md:mt-18 pt-6 sm:pt-8 border-t transition-all duration-300 ${
+          className={`flex items-center justify-center gap-6 sm:gap-8 md:gap-12 mt-6 pt-6 sm:pt-8 border-t transition-all duration-300 ${
             isPatternDark
               ? "border-white/20"
               : "border-gray-300 dark:border-gray-700"
@@ -210,7 +238,7 @@ export default function Hero({ theme }: HeroProps) {
                 isPatternDark ? "text-white" : ""
               }`}
             >
-              150+
+              200+
             </div>
             <div
               className={`text-xs sm:text-sm transition-colors duration-300 ${

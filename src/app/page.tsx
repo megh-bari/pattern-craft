@@ -11,6 +11,7 @@ import Hero from "@/components/home/hero";
 import PatternShowcase from "@/components/patterns/pattern-showcase";
 import SupportDropdown from "@/components/home/support-dropdown";
 import ReturnToPreview from "@/components/home/return-to-preview";
+import ScrollToTop from "@/components/ui/scroll-to-top";
 import { FavoritesProvider } from "@/context/favourites-context";
 
 export default function Home() {
@@ -55,6 +56,9 @@ export default function Home() {
               <Footer theme={theme} />
             </div>
             <ReturnToPreview theme={theme} />
+            <div className="fixed bottom-6 right-16 sm:right-20 z-50">
+              <ScrollToTop theme={theme} />
+            </div>
           </div>
         </FavoritesProvider>
         <Toaster />
