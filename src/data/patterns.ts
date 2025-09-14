@@ -1657,7 +1657,7 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
+  },
   {
     id: "spring-meadow-mist",
     name: "Spring Meadow Mist",
@@ -1720,16 +1720,16 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
-{
-  id: "lavender-blush-right-flow",
-  name: "Lavender Blush Right Flow",
-  category: "effects",
-  badge: "New",
-  style: {
-    background:
-      "linear-gradient(135deg, #E1BEE7 0%, #F3E5F5 20%, #FCE4EC 40%, #FFF0F5 60%, #F8BBD9 80%, #E1BEE7 100%)",
-  },
-  code: `<div className="min-h-screen w-full relative">
+  {
+    id: "lavender-blush-right-flow",
+    name: "Lavender Blush Right Flow",
+    category: "effects",
+    badge: "New",
+    style: {
+      background:
+        "linear-gradient(135deg, #E1BEE7 0%, #F3E5F5 20%, #FCE4EC 40%, #FFF0F5 60%, #F8BBD9 80%, #E1BEE7 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
   {/* Lavender Blush Flow Gradient (Top Left to Bottom Right) */}
   <div
     className="absolute inset-0 z-0"
@@ -1739,8 +1739,7 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-}
-,
+  },
   {
     id: "minty-cloud-drift",
     name: "Minty Cloud Drift",
@@ -5613,7 +5612,26 @@ export const gridPatterns: Pattern[] = [
  {/* Your Content Here */}
 </div>`,
   },
-
+  {
+    id: "purple-radial-bloom-light",
+    name: "Purple Radial Bloom Light",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(circle at center, #F3E8FF 0%, #DDD6FE 30%, #C4B5FD 60%, #A78BFA 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Purple Radial Bloom Light Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`radial-gradient(circle at center, #F3E8FF 0%, #DDD6FE 30%, #C4B5FD 60%, #A78BFA 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
   {
     id: "purple-corner-less",
     name: "Purple Corner Less",
@@ -5622,24 +5640,25 @@ export const gridPatterns: Pattern[] = [
     style: {
       background: "#ffffff",
       backgroundImage: `
-     radial-gradient(circle 600px at 0% 200px, #d5c5ff, transparent),
-     radial-gradient(circle 600px at 100% 200px, #d5c5ff, transparent)
-   `,
+      radial-gradient(circle 600px at 0% 200px, #d5c5ff, transparent),
+      radial-gradient(circle 600px at 100% 200px, #d5c5ff, transparent)
+    `,
     },
     code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
- {/* Purple Corner Background */}
- <div
-   className="absolute inset-0 z-0"
-   style={{
-     backgroundImage: \`
-       radial-gradient(circle 600px at 0% 200px, #d5c5ff, transparent),
-       radial-gradient(circle 600px at 100% 200px, #d5c5ff, transparent)
-     \`,
-   }}
- />
- {/* Your Content Here */}
+  {/* Purple Corner Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle 600px at 0% 200px, #d5c5ff, transparent),
+        radial-gradient(circle 600px at 100% 200px, #d5c5ff, transparent)
+      \`,
+    }}
+  />
+  {/* Your Content Here */}
 </div>`,
   },
+
   {
     id: "purple-corner-high",
     name: "Purple Corner High",
@@ -5653,18 +5672,316 @@ export const gridPatterns: Pattern[] = [
     `,
     },
     code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
-    {/* Purple Corner Background */}
-    <div
-      className="absolute inset-0 z-0"
-      style={{
-        backgroundImage: \`
-          radial-gradient(circle 600px at 0% 200px, #a99bf7, transparent),
-          radial-gradient(circle 600px at 100% 200px, #a99bf7, transparent)
-        \`,
-      }}
-    />
-    {/* Your Content Here */}
-  </div>`,
+  {/* Purple Corner Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle 600px at 0% 200px, #a99bf7, transparent),
+        radial-gradient(circle 600px at 100% 200px, #a99bf7, transparent)
+      \`,
+    }}
+  />
+  {/* Your Content Here */}
+</div>`,
+  },
+
+  {
+    id: "blue-corner-glow",
+    name: "Blue Corner Glow",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(circle 600px at 0% 200px, #bfdbfe, transparent),
+      radial-gradient(circle 600px at 100% 200px, #bfdbfe, transparent)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
+  {/* Blue Corner Glow Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle 600px at 0% 200px, #bfdbfe, transparent),
+        radial-gradient(circle 600px at 100% 200px, #bfdbfe, transparent)
+      \`,
+    }}
+  />
+  {/* Your Content Here */}
+</div>`,
+  },
+
+  {
+    id: "green-corner-soft",
+    name: "Green Corner Soft",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(circle 600px at 0% 200px, #bbf7d0, transparent),
+      radial-gradient(circle 600px at 100% 200px, #bbf7d0, transparent)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
+  {/* Green Corner Soft Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle 600px at 0% 200px, #bbf7d0, transparent),
+        radial-gradient(circle 600px at 100% 200px, #bbf7d0, transparent)
+      \`,
+    }}
+  />
+  {/* Your Content Here */}
+</div>`,
+  },
+
+  {
+    id: "pink-corner-dream",
+    name: "Pink Corner Dream",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(circle 600px at 0% 200px, #fce7f3, transparent),
+      radial-gradient(circle 600px at 100% 200px, #fce7f3, transparent)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
+  {/* Pink Corner Dream Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle 600px at 0% 200px, #fce7f3, transparent),
+        radial-gradient(circle 600px at 100% 200px, #fce7f3, transparent)
+      \`,
+    }}
+  />
+  {/* Your Content Here */}
+</div>`,
+  },
+
+  {
+    id: "orange-corner-warm",
+    name: "Orange Corner Warm",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(circle 600px at 0% 200px, #fed7aa, transparent),
+      radial-gradient(circle 600px at 100% 200px, #fed7aa, transparent)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
+  {/* Orange Corner Warm Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle 600px at 0% 200px, #fed7aa, transparent),
+        radial-gradient(circle 600px at 100% 200px, #fed7aa, transparent)
+      \`,
+    }}
+  />
+  {/* Your Content Here */}
+</div>`,
+  },
+
+  {
+    id: "teal-corner-cool",
+    name: "Teal Corner Cool",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(circle 600px at 0% 200px, #a7f3d0, transparent),
+      radial-gradient(circle 600px at 100% 200px, #a7f3d0, transparent)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
+  {/* Teal Corner Cool Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle 600px at 0% 200px, #a7f3d0, transparent),
+        radial-gradient(circle 600px at 100% 200px, #a7f3d0, transparent)
+      \`,
+    }}
+  />
+  {/* Your Content Here */}
+</div>`,
+  },
+
+  {
+    id: "yellow-corner-bright",
+    name: "Yellow Corner Bright",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(circle 600px at 0% 200px, #fef3c7, transparent),
+      radial-gradient(circle 600px at 100% 200px, #fef3c7, transparent)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
+  {/* Yellow Corner Bright Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle 600px at 0% 200px, #fef3c7, transparent),
+        radial-gradient(circle 600px at 100% 200px, #fef3c7, transparent)
+      \`,
+    }}
+  />
+  {/* Your Content Here */}
+</div>`,
+  },
+
+  {
+    id: "indigo-corner-deep",
+    name: "Indigo Corner Deep",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(circle 600px at 0% 200px, #c7d2fe, transparent),
+      radial-gradient(circle 600px at 100% 200px, #c7d2fe, transparent)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
+  {/* Indigo Corner Deep Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle 600px at 0% 200px, #c7d2fe, transparent),
+        radial-gradient(circle 600px at 100% 200px, #c7d2fe, transparent)
+      \`,
+    }}
+  />
+  {/* Your Content Here */}
+</div>`,
+  },
+
+  {
+    id: "rose-corner-elegant",
+    name: "Rose Corner Elegant",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(circle 600px at 0% 200px, #fda4af, transparent),
+      radial-gradient(circle 600px at 100% 200px, #fda4af, transparent)
+    `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative overflow-hidden">
+  {/* Rose Corner Elegant Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle 600px at 0% 200px, #fda4af, transparent),
+        radial-gradient(circle 600px at 100% 200px, #fda4af, transparent)
+      \`,
+    }}
+  />
+  {/* Your Content Here */}
+</div>`,
+  },
+  {
+    id: "violet-dream-sphere",
+    name: "Violet Dream Sphere",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(ellipse at center, #DDD6FE 0%, #C4B5FD 25%, #A78BFA 50%, #8B5CF6 75%, #7C3AED 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Violet Dream Sphere Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`radial-gradient(ellipse at center, #DDD6FE 0%, #C4B5FD 25%, #A78BFA 50%, #8B5CF6 75%, #7C3AED 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+
+  {
+    id: "lavender-cosmic-glow",
+    name: "Lavender Cosmic Glow",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(circle at 40% 40%, #E9D5FF 0%, #C4B5FD 20%, #A78BFA 40%, #8B5CF6 60%, #6D28D9 80%, #581C87 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Lavender Cosmic Glow Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`radial-gradient(circle at 40% 40%, #E9D5FF 0%, #C4B5FD 20%, #A78BFA 40%, #8B5CF6 60%, #6D28D9 80%, #581C87 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+
+  {
+    id: "purple-haze-burst",
+    name: "Purple Haze Burst",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(circle at 30% 60%, #F3E8FF 0%, #DDD6FE 15%, #C4B5FD 30%, #A78BFA 45%, #8B5CF6 60%, #7C3AED 75%, #5B21B6 90%, #4C1D95 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Purple Haze Burst Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`radial-gradient(circle at 30% 60%, #F3E8FF 0%, #DDD6FE 15%, #C4B5FD 30%, #A78BFA 45%, #8B5CF6 60%, #7C3AED 75%, #5B21B6 90%, #4C1D95 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "mystic-purple-orb",
+    name: "Mystic Purple Orb",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background:
+        "radial-gradient(circle at 50% 30%, #E9D5FF 0%, #C4B5FD 25%, #A78BFA 50%, #7C3AED 75%, #5B21B6 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Mystic Purple Orb Gradient */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`radial-gradient(circle at 50% 30%, #E9D5FF 0%, #C4B5FD 25%, #A78BFA 50%, #7C3AED 75%, #5B21B6 100%)\`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
   },
   {
     id: "soft-rose-glow-right-corner",
