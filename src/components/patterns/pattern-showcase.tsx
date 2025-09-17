@@ -9,6 +9,7 @@ import PatternGrid from "./pattern-grid";
 import PatternEmptyState from "./pattern-empty-state";
 import { SearchBar } from "../search/search-bar";
 import { searchPatterns } from "@/lib/utils";
+import PopularPatterns from "./popular-patterns";
 
 interface PatternShowcaseProps {
   activePattern: string | null;
@@ -43,6 +44,13 @@ export default function PatternShowcase({
       id="pattern-showcase"
       className="container mx-auto pt-6 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20"
     >
+      <PopularPatterns
+        theme={theme}
+        activePattern={activePattern}
+        setActivePattern={setActivePattern}
+        activeMobileCard={activeMobileCard}
+        setActiveMobileCard={setActiveMobileCard}
+      />
       {/* Header */}
       <div className="mb-8 sm:mb-10 lg:mb-12">
         <div className="text-center sm:text-left">
