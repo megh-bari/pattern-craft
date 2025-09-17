@@ -23,20 +23,28 @@ export default function PopularPatterns({
   const [popular, setPopular] = useState<Pattern[]>([]);
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem("patternMetrics");
-      if (!raw) return;
-      const data = JSON.parse(raw) as Record<string, { copied: number; favourited: number; lastUsed: number }>;
-      const scored = Object.entries(data)
-        .map(([id, v]) => ({ id, score: (v.copied || 0) * 2 + (v.favourited || 0), lastUsed: v.lastUsed || 0 }))
-        .filter((e) => e.score > 0)
-        .sort((a, b) => (b.score === a.score ? b.lastUsed - a.lastUsed : b.score - a.score))
-        .slice(0, 8);
-      const byId = new Set(scored.map((s) => s.id));
-      const items = gridPatterns.filter((p) => byId.has(p.id));
-      setPopular(items);
-    } catch {}
-  }, [activePattern]);
+    let cancelled = false;
+    const load = async () => {
+      try {
+        const res = await fetch("/popular.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("failed");
+        const data: { ranking: string[] } = await res.json();
+        const byId = new Map(gridPatterns.map((p) => [p.id, p] as const));
+        const ranked: Pattern[] = data.ranking
+          .map((id) => byId.get(id))
+          .filter(Boolean)
+          .slice(0, 8) as Pattern[];
+        if (!cancelled) setPopular(ranked);
+      } catch {
+        const fallback = gridPatterns.slice(0, 8);
+        if (!cancelled) setPopular(fallback);
+      }
+    };
+    load();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const isPatternDark = theme === "dark";
 
@@ -48,7 +56,7 @@ export default function PopularPatterns({
     <section className="mb-8">
       <div className="mb-4">
         <h3 className={`text-xl sm:text-2xl font-semibold ${isPatternDark ? "text-white" : "text-gray-900 dark:text-gray-50"}`}>Popular</h3>
-        <p className={`text-sm ${isPatternDark ? "text-gray-300" : "text-muted-foreground"}`}>Based on your copies and favorites</p>
+        <p className={`text-sm ${isPatternDark ? "text-gray-300" : "text-muted-foreground"}`}>Popular among all users</p>
       </div>
       <PatternGrid
         patterns={popular}
