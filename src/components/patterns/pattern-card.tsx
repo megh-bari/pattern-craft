@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Check, Eye, Sparkles, Star } from "lucide-react";
+import { Eye, Sparkles, Star } from "lucide-react";
 import { Pattern } from "@/types/pattern";
 import { useCopy } from "@/hooks/useCopy";
 import SplitCopy from "@/components/ui/split-copy";
@@ -100,7 +100,7 @@ export default function PatternCard({
           </div>
         )}
 
-        {/* Mobile View: Simple preview and copy buttons */
+        {/* Mobile View: Simple preview and copy buttons */}
         <div className="lg:hidden absolute bottom-2 left-2 right-2 z-10 flex justify-center gap-2 px-2">
           <Button
             size="sm"
