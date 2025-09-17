@@ -6251,4 +6251,33 @@ export const gridPatterns: Pattern[] = [
  {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "comic-whisper",
+    name: "Cosmic Whisper",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: `
+      radial-gradient( 120% 80% at 50% 100%, rgba(236, 72, 153, 0.35), transparent 60% ),
+      radial-gradient( 100% 70% at 50% 70%, rgba(139, 92, 246, 0.45), transparent 70% ),
+      radial-gradient( 80% 60% at 50% 40%, rgba(59, 130, 246, 0.4), transparent 80% ),
+      #000 `,
+    },
+    code: `<div className="min-h-screen w-full bg-[#000] relative">
+  {/* Cosmic Whisper */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`
+        radial-gradient( 120% 80% at 50% 100%, rgba(236, 72, 153, 0.35), transparent 60% ),
+        radial-gradient( 100% 70% at 50% 70%, rgba(139, 92, 246, 0.45), transparent 70% ),
+        radial-gradient( 80% 60% at 50% 40%, rgba(59, 130, 246, 0.4), transparent 80%
+        ),
+        #000
+      \`,
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
 ];
