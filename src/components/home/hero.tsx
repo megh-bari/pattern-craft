@@ -2,13 +2,16 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Github, Copy, Eye, Code2, Zap } from "lucide-react";
+import { ArrowRight, Github, Copy, Eye, Code2, Zap, Dice6 } from "lucide-react";
 import { APP_CONFIG } from "@/lib/constants";
+import { gridPatterns } from "@/data/patterns";
+import { toast } from "sonner";
 
 interface HeroProps {
   activePattern?: string | null;
   setActivePattern?: (pattern: string | null) => void;
   theme: "light" | "dark";
+  setTheme?: (newTheme: "light" | "dark") => void;
 }
 
 const handleBrowsePatternsClick = () => {
@@ -17,8 +20,14 @@ const handleBrowsePatternsClick = () => {
   });
 };
 
-export default function Hero({ theme }: HeroProps) {
+export default function Hero({ theme, setActivePattern }: HeroProps) {
   const isPatternDark = theme === "dark";
+  const handleRandom = () => {
+    const idx = Math.floor(Math.random() * gridPatterns.length);
+    const item = gridPatterns[idx];
+    if (item && setActivePattern) setActivePattern(item.id);
+    if (item) toast.success(`Now using ${item.name}`);
+  };
 
   return (
     <section className="container mx-auto py-8 sm:py-12 md:py-16 lg:py-18 text-center relative overflow-hidden px-4 sm:px-6 lg:px-8 flex items-center justify-center">
@@ -173,6 +182,17 @@ export default function Hero({ theme }: HeroProps) {
           >
             <Code2 className="h-4 sm:h-5 w-4 sm:w-5" />
             Browse Patterns
+          </Button>
+          <Button
+            size="lg"
+            className={`cursor-pointer gap-2 px-4 sm:px-8 py-3 text-sm sm:text-base font-medium shadow-lg transition-all duration-300 flex-1 sm:flex-none ${isPatternDark
+              ? "bg-white text-black hover:bg-gray-100"
+              : "bg-slate-950 hover:bg-slate-900 dark:bg-white dark:text-black dark:hover:bg-gray-100"
+              }`}
+            onClick={handleRandom}
+          >
+            <Dice6 className="h-4 sm:h-5 w-4 sm:w-5" />
+            Random
           </Button>
         </div>
 

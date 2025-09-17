@@ -101,7 +101,7 @@ export default function PatternCard({
         )}
 
         {/* Mobile View: Simple preview and copy buttons */}
-        <div className="lg:hidden absolute bottom-2 left-2 right-2 z-10 flex justify-center gap-2 px-2">
+        <div className="lg:hidden absolute bottom-2 left-2 right-2 z-10 flex justify-center items-center gap-2 px-2">
           <Button
             size="sm"
             variant="secondary"
@@ -115,7 +115,7 @@ export default function PatternCard({
             <Eye className="h-3 w-3 mr-1" />
             {activePattern === pattern.id ? "Hide" : "Preview"}
           </Button>
-          <div className="flex-1 h-8">
+          <div className="flex-1 flex justify-center">
             <SplitCopy
               label={isCopied(pattern.id) ? "Copied" : "Copy CSS"}
               onPrimary={() => copyCSS(pattern.style, pattern.id)}
@@ -125,6 +125,8 @@ export default function PatternCard({
               ]}
               disabled={isCopied(pattern.id)}
               dark={false}
+              extraButtonClasses="h-8 text-xs"
+              forceDropUp
             />
           </div>
         </div>
@@ -135,7 +137,7 @@ export default function PatternCard({
             <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-4 drop-shadow-lg">
               {pattern.name}
             </h3>
-            <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 w-full xs:w-auto">
+            <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 w-full xs:w-auto items-center justify-center">
               <Button
                 size="sm"
                 variant="secondary"
@@ -158,6 +160,8 @@ export default function PatternCard({
                 ]}
                 disabled={isCopied(pattern.id)}
                 dark={false}
+                extraButtonClasses="h-auto py-2 text-xs"
+                forceDropUp
               />
             </div>
           </div>

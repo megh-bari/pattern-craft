@@ -16,7 +16,7 @@ import { FavoritesProvider } from "@/context/favourites-context";
 
 export default function Home() {
   const [activePattern, setActivePattern] = useState<string | null>(null);
-  const { theme, updateThemeFromPattern } = useTheme();
+  const { theme, updateThemeFromPattern, setTheme } = useTheme();
 
   // Update theme based on pattern background color
   useEffect(() => {
@@ -43,6 +43,7 @@ export default function Home() {
                 activePattern={activePattern}
                 setActivePattern={setActivePattern}
                 theme={theme}
+                setTheme={setTheme}
               />
               <PatternShowcase
                 activePattern={activePattern}
