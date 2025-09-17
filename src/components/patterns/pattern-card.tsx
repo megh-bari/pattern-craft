@@ -24,7 +24,7 @@ export default function PatternCard({
   activeMobileCard,
   setActiveMobileCard,
 }: PatternCardProps) {
-  const { copyToClipboard, isCopied } = useCopy();
+  const { copyJSXFixed, copyCSS, isCopied } = useCopy();
   const { toggleFavourite, isFavourite } = useFavorites();
   const isPatternDark = theme === "dark";
 
@@ -118,7 +118,7 @@ export default function PatternCard({
             size="sm"
             onClick={(e) => {
               e.stopPropagation();
-              copyToClipboard(pattern.code, pattern.id);
+              copyJSXFixed(pattern.code, pattern.id);
             }}
             className={`flex-1 border-0 text-xs h-8 ${
               isCopied(pattern.id)
@@ -135,9 +135,20 @@ export default function PatternCard({
             ) : (
               <>
                 <Copy className="h-3 w-3 mr-1" />
-                Copy
+                Copy JSX
               </>
             )}
+          </Button>
+          <Button
+            size="sm"
+            variant="secondary"
+            onClick={(e) => {
+              e.stopPropagation();
+              copyCSS(pattern.style, `${pattern.id}-css`);
+            }}
+            className="flex-1 bg-white/95 hover:bg-white text-black border-0 text-xs h-8"
+          >
+            CSS
           </Button>
         </div>
 
@@ -165,7 +176,7 @@ export default function PatternCard({
                 size="sm"
                 onClick={(e) => {
                   e.stopPropagation();
-                  copyToClipboard(pattern.code, pattern.id);
+                  copyJSXFixed(pattern.code, pattern.id);
                 }}
                 className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${
                   isCopied(pattern.id)
@@ -182,9 +193,20 @@ export default function PatternCard({
                 ) : (
                   <>
                     <Copy className="h-3 w-3" />
-                    Copy
+                    Copy JSX
                   </>
                 )}
+              </Button>
+              <Button
+                size="sm"
+                variant="secondary"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  copyCSS(pattern.style, `${pattern.id}-css`);
+                }}
+                className="cursor-pointer shadow-xl backdrop-blur-md bg-white/95 hover:bg-white text-black border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto"
+              >
+                CSS
               </Button>
             </div>
           </div>

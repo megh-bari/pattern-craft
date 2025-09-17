@@ -123,14 +123,28 @@
 }
 
 html {
-  overflow: -moz-scrollbars-none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.85 0 0 / 0.6) transparent;
 }
 
 html::-webkit-scrollbar {
-  width: 0px;
+  width: 8px;
+  height: 8px;
+}
+
+html::-webkit-scrollbar-track {
   background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: oklch(0.85 0 0 / 0.6);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.dark html::-webkit-scrollbar-thumb {
+  background-color: oklch(0.35 0 0 / 0.6);
 }
 
 body {
