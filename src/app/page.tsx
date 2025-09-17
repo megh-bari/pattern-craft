@@ -33,12 +33,15 @@ export default function Home() {
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <FavoritesProvider>
           <div className="min-h-screen relative">
-            {/* Apply the active pattern as background */}
             {activePatternObj && (
-              <div
-                className="fixed inset-0 z-0"
-                style={activePatternObj.style}
-              />
+              <>
+                <div className="fixed inset-0 z-0" style={activePatternObj.style} />
+                <div
+                  className={`fixed inset-0 z-5 pointer-events-none transition-colors duration-200 ${
+                    theme === "dark" ? "bg-black/45" : "bg-white/65"
+                  }`}
+                />
+              </>
             )}
             <div className="relative z-10">
               <Navbar theme={theme} />

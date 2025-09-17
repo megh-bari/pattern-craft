@@ -84,7 +84,15 @@ export function useTheme() {
     if (source.includes("dark-")) darkScore += 2;
     if (source.includes("#000") || source.includes("black")) darkScore += 2;
 
-    const isDark = darkScore > lightScore;
+    const hasWhiteHint = source.includes("#fff") || source.includes("white") || source.includes("#ffffff");
+    const hasBlackHint = source.includes("#000") || source.includes("black");
+
+    if (hasWhiteHint && !hasBlackHint) {
+      setTheme(THEME_CONFIG.light);
+      return;
+    }
+
+    const isDark = darkScore > lightScore + 1;
     setTheme(isDark ? THEME_CONFIG.dark : THEME_CONFIG.light);
   };
 
