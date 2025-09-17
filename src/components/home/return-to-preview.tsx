@@ -67,25 +67,29 @@ export default function ReturnToPreview({
           <Button
             className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full backdrop-blur-md border shadow-xl flex items-center justify-center transition-all duration-300 cursor-pointer ${
               theme === "dark"
-                ? "bg-black/50 border-white/8 text-white hover:bg-black/40"
-                : "bg-white border-gray-300 text-black hover:bg-gray-50"
+                ? "bg-black/50 border-white/10 text-white hover:bg-black/40"
+                : "bg-white/90 border-gray-200 text-black hover:bg-white"
             }`}
             onClick={handleReturn}
             aria-label="Return back to preview"
           >
             <ArrowDown className="size-4" />
           </Button>
-          {/* Tooltip */}
           {tooltipVisible && (
             <span
-              className={`absolute top-1/2 right-full mr-2 -translate-y-1/2 
-                   whitespace-nowrap px-2 py-1.5 text-xs rounded-md shadow-lg  
-                   backdrop-blur-sm z-50 bg-white border `}
+              className={`absolute top-1/2 right-full mr-2 -translate-y-1/2 whitespace-nowrap px-2 py-1.5 text-xs rounded-md shadow-lg backdrop-blur-sm z-50 border ${
+                theme === "dark"
+                  ? "bg-black/80 text-white border-white/20"
+                  : "bg-white/95 text-black border-gray-200"
+              }`}
             >
               Return back to preview
-              {/*  Arrow */}
               <span
-                className={`absolute w-2 h-2  rotate-45 top-1/2 -translate-y-1/2 -right-1 bg-white border-t border-r}`}
+                className={`absolute w-2 h-2 rotate-45 top-1/2 -translate-y-1/2 -right-1 border-t border-r ${
+                  theme === "dark"
+                    ? "bg-black/80 border-white/20"
+                    : "bg-white/95 border-gray-200"
+                }`}
               />
             </span>
           )}

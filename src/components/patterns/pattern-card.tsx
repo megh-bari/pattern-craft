@@ -2,9 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Check, Copy, Eye, Sparkles, Star } from "lucide-react";
+import { Eye, Sparkles, Star } from "lucide-react";
 import { Pattern } from "@/types/pattern";
 import { useCopy } from "@/hooks/useCopy";
+import SplitCopy from "@/components/ui/split-copy";
 import { useFavorites } from "@/context/favourites-context";
 
 interface PatternCardProps {
@@ -24,7 +25,7 @@ export default function PatternCard({
   activeMobileCard,
   setActiveMobileCard,
 }: PatternCardProps) {
-  const { copyToClipboard, isCopied } = useCopy();
+  const { copyJSXFixed, copyJSXAbsolute, copyCSS, isCopied } = useCopy();
   const { toggleFavourite, isFavourite } = useFavorites();
   const isPatternDark = theme === "dark";
 
@@ -100,7 +101,7 @@ export default function PatternCard({
         )}
 
         {/* Mobile View: Simple preview and copy buttons */}
-        <div className="lg:hidden absolute bottom-2 left-2 right-2 z-10 flex justify-center gap-2 px-2">
+        <div className="lg:hidden absolute bottom-2 left-2 right-2 z-10 flex justify-center items-center gap-2 px-2">
           <Button
             size="sm"
             variant="secondary"
@@ -114,31 +115,20 @@ export default function PatternCard({
             <Eye className="h-3 w-3 mr-1" />
             {activePattern === pattern.id ? "Hide" : "Preview"}
           </Button>
-          <Button
-            size="sm"
-            onClick={(e) => {
-              e.stopPropagation();
-              copyToClipboard(pattern.code, pattern.id);
-            }}
-            className={`flex-1 border-0 text-xs h-8 ${
-              isCopied(pattern.id)
-                ? "bg-gray-700 hover:bg-gray-800 text-white"
-                : "bg-gray-900/90 hover:bg-gray-900 text-white"
-            }`}
-            disabled={isCopied(pattern.id)}
-          >
-            {isCopied(pattern.id) ? (
-              <>
-                <Check className="h-3 w-3 mr-1" />
-                Copied
-              </>
-            ) : (
-              <>
-                <Copy className="h-3 w-3 mr-1" />
-                Copy
-              </>
-            )}
-          </Button>
+          <div className="flex-1 flex justify-center">
+            <SplitCopy
+              label={isCopied(pattern.id) ? "Copied" : "Copy CSS"}
+              onPrimary={() => copyCSS(pattern.style, pattern.id)}
+              options={[
+                { label: "Copy JSX (fixed)", onClick: () => copyJSXFixed(pattern.code, pattern.id) },
+                { label: "Copy JSX (absolute)", onClick: () => copyJSXAbsolute(pattern.code, pattern.id) },
+              ]}
+              disabled={isCopied(pattern.id)}
+              dark={false}
+              extraButtonClasses="h-8 text-xs"
+              forceDropUp
+            />
+          </div>
         </div>
 
         {/* Desktop View: Hover overlay */}
@@ -147,7 +137,7 @@ export default function PatternCard({
             <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-4 drop-shadow-lg">
               {pattern.name}
             </h3>
-            <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 w-full xs:w-auto">
+            <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 w-full xs:w-auto items-center justify-center">
               <Button
                 size="sm"
                 variant="secondary"
@@ -161,31 +151,18 @@ export default function PatternCard({
                 <Eye className="h-3 w-3 mr-1" />
                 {activePattern === pattern.id ? "Hide" : "Preview"}
               </Button>
-              <Button
-                size="sm"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  copyToClipboard(pattern.code, pattern.id);
-                }}
-                className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${
-                  isCopied(pattern.id)
-                    ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"
-                    : "bg-gray-900/90 hover:bg-gray-900 text-white"
-                }`}
+              <SplitCopy
+                label={isCopied(pattern.id) ? "Copied" : "Copy CSS"}
+                onPrimary={() => copyCSS(pattern.style, pattern.id)}
+                options={[
+                  { label: "Copy JSX (fixed)", onClick: () => copyJSXFixed(pattern.code, pattern.id) },
+                  { label: "Copy JSX (absolute)", onClick: () => copyJSXAbsolute(pattern.code, pattern.id) },
+                ]}
                 disabled={isCopied(pattern.id)}
-              >
-                {isCopied(pattern.id) ? (
-                  <>
-                    <Check className="h-3 w-3" />
-                    Copied
-                  </>
-                ) : (
-                  <>
-                    <Copy className="h-3 w-3" />
-                    Copy
-                  </>
-                )}
-              </Button>
+                dark={false}
+                extraButtonClasses="h-auto py-2 text-xs"
+                forceDropUp
+              />
             </div>
           </div>
         </div>
