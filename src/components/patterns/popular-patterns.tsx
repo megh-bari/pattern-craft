@@ -26,7 +26,7 @@ export default function PopularPatterns({
     let cancelled = false;
     const load = async () => {
       try {
-        const res = await fetch("/popular.json", { cache: "no-store" });
+        const res = await fetch("/api/popular", { cache: "no-store" });
         if (!res.ok) throw new Error("failed");
         const data: { ranking: string[] } = await res.json();
         const byId = new Map(gridPatterns.map((p) => [p.id, p] as const));
@@ -35,10 +35,7 @@ export default function PopularPatterns({
           .filter(Boolean)
           .slice(0, 8) as Pattern[];
         if (!cancelled) setPopular(ranked);
-      } catch {
-        const fallback = gridPatterns.slice(0, 8);
-        if (!cancelled) setPopular(fallback);
-      }
+      } catch {}
     };
     load();
     return () => {
