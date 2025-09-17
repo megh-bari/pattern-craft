@@ -124,7 +124,7 @@ export default function PatternCard({
                 { label: "Copy JSX (absolute)", onClick: () => copyJSXAbsolute(pattern.code, pattern.id) },
               ]}
               disabled={isCopied(pattern.id)}
-              dark={isPatternDark}
+              dark={false}
             />
           </div>
         </div>
@@ -157,7 +157,7 @@ export default function PatternCard({
                   { label: "Copy JSX (absolute)", onClick: () => copyJSXAbsolute(pattern.code, pattern.id) },
                 ]}
                 disabled={isCopied(pattern.id)}
-                dark
+                dark={false}
               />
             </div>
           </div>
