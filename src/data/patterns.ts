@@ -444,7 +444,7 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   {
-    id: "orchid -depths",
+    id: "orchid-depths",
     name: "Orchid  Depths",
     badge: "New",
     category: "decorative",
