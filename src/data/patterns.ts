@@ -3154,6 +3154,38 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   {
+  id: "cubes-grid",
+  name: "Cubes Grid",
+  category: "geometric",
+  badge: "New",
+  style: {
+    background: "#ffffff",
+    backgroundImage: `
+      url("data:image/svg+xml;utf8,${encodeURIComponent(`
+      <svg xmlns="http://www.w3.org/2000/svg" width="67" height="100" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"><path fill="#d6d6d6" d="M31.5-.5h1a72.444 72.444 0 0 0 .5 12c1.011-.837 2.178-1.17 3.5-1 .667 0 1 .333 1 1h-1c-1.278.282-2.278.949-3 2-.995 11.822-1.328 23.822-1 36-.667 1.333-1.333 1.333-2 0 .995-11.488 1.328-23.155 1-35a30.943 30.943 0 0 0-2-2c.124-.607.457-.94 1-1 .983-3.798 1.317-7.798 1-12Z" style="opacity:.235"/><path fill="#d3d3d3" d="M63.5-.5h3v2a372 372 0 0 0-29 10c0-.667-.333-1-1-1a670.394 670.394 0 0 0 27-11Z" style="opacity:.2"/><path fill="#d1d1d1" d="M-.5 1.5v-1a283.696 283.696 0 0 1 31 11c-.543.06-.876.393-1 1 .743.682 1.41 1.348 2 2-10.649 3.33-21.316 6.663-32 10v-1a356.63 356.63 0 0 0 28-11 355.584 355.584 0 0 0-28-11Z" style="opacity:.187"/><path fill="#d2d2d2" d="M36.5 11.5c-.11.617-.444 1.117-1 1.5a565.079 565.079 0 0 0 31 10.5v3h-1c.04-1.724-.294-2.057-1-1a651.025 651.025 0 0 1-31-12c.722-1.051 1.722-1.718 3-2Z" style="opacity:.2"/><path fill="#d6d6d6" d="M65.5 26.5c-.328 11.18.005 22.18 1 33v4c-.995 11.822-1.328 23.822-1 36h-1c.328-12.178-.005-24.178-1-36-.992.172-1.658-.162-2-1 0-.667-.333-1-1-1 0-.667.333-1 1-1h3v-35c.706-1.057 1.04-.724 1 1Z" style="opacity:.236"/><path fill="#d1d1d1" d="M30.5 49.5c.667 1.333 1.333 1.333 2 0a566.63 566.63 0 0 1 29 11c-.667 0-1 .333-1 1a479.724 479.724 0 0 0-28.5-10A823.123 823.123 0 0 0 1.5 62c10.04 3.735 20.04 7.569 30 11.5 10.029-3.675 20.029-7.342 30-11 .342.838 1.008 1.172 2 1a1877.892 1877.892 0 0 0-30.5 12c-.5 7.993-.666 15.993-.5 24h-1c.166-8.007 0-16.007-.5-24a599.72 599.72 0 0 0-31.5-12v-3a606.813 606.813 0 0 0 31-11Z" style="opacity:.2"/></svg>
+      `)}")
+    `,
+    backgroundRepeat: "repeat",
+    backgroundSize: "auto auto",
+  },
+  code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Cubes Grid */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        url("data:image/svg+xml;utf8,${encodeURIComponent(`
+           <svg xmlns="http://www.w3.org/2000/svg" width="67" height="100" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"><path fill="#d6d6d6" d="M31.5-.5h1a72.444 72.444 0 0 0 .5 12c1.011-.837 2.178-1.17 3.5-1 .667 0 1 .333 1 1h-1c-1.278.282-2.278.949-3 2-.995 11.822-1.328 23.822-1 36-.667 1.333-1.333 1.333-2 0 .995-11.488 1.328-23.155 1-35a30.943 30.943 0 0 0-2-2c.124-.607.457-.94 1-1 .983-3.798 1.317-7.798 1-12Z" style="opacity:.235"/><path fill="#d3d3d3" d="M63.5-.5h3v2a372 372 0 0 0-29 10c0-.667-.333-1-1-1a670.394 670.394 0 0 0 27-11Z" style="opacity:.2"/><path fill="#d1d1d1" d="M-.5 1.5v-1a283.696 283.696 0 0 1 31 11c-.543.06-.876.393-1 1 .743.682 1.41 1.348 2 2-10.649 3.33-21.316 6.663-32 10v-1a356.63 356.63 0 0 0 28-11 355.584 355.584 0 0 0-28-11Z" style="opacity:.187"/><path fill="#d2d2d2" d="M36.5 11.5c-.11.617-.444 1.117-1 1.5a565.079 565.079 0 0 0 31 10.5v3h-1c.04-1.724-.294-2.057-1-1a651.025 651.025 0 0 1-31-12c.722-1.051 1.722-1.718 3-2Z" style="opacity:.2"/><path fill="#d6d6d6" d="M65.5 26.5c-.328 11.18.005 22.18 1 33v4c-.995 11.822-1.328 23.822-1 36h-1c.328-12.178-.005-24.178-1-36-.992.172-1.658-.162-2-1 0-.667-.333-1-1-1 0-.667.333-1 1-1h3v-35c.706-1.057 1.04-.724 1 1Z" style="opacity:.236"/><path fill="#d1d1d1" d="M30.5 49.5c.667 1.333 1.333 1.333 2 0a566.63 566.63 0 0 1 29 11c-.667 0-1 .333-1 1a479.724 479.724 0 0 0-28.5-10A823.123 823.123 0 0 0 1.5 62c10.04 3.735 20.04 7.569 30 11.5 10.029-3.675 20.029-7.342 30-11 .342.838 1.008 1.172 2 1a1877.892 1877.892 0 0 0-30.5 12c-.5 7.993-.666 15.993-.5 24h-1c.166-8.007 0-16.007-.5-24a599.72 599.72 0 0 0-31.5-12v-3a606.813 606.813 0 0 0 31-11Z" style="opacity:.2"/></svg>
+        `)}")
+      \`,
+      backgroundRepeat: "repeat",
+      backgroundSize: "auto auto",
+    }}
+  />
+    {/* Your Content/Components */}
+</div>`,
+  },
+  {
     id: "white-sphere-grid",
     name: "White Sphere Grid",
     category: "geometric",
