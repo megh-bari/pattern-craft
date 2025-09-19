@@ -6251,4 +6251,48 @@ export const gridPatterns: Pattern[] = [
  {/* Your Content/Components */}
 </div>`,
   },
+
+  {
+    id: "pattern-plus",
+    name: "Pattern Plus",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+        url("data:image/svg+xml;utf8,${encodeURIComponent(`
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+            <g stroke="#E8E7EC" stroke-width="1" opacity="0.8" stroke-linecap="round">
+              <path d="M32 27 L32 37"/>
+              <path d="M27 32 L37 32"/>
+            </g>
+          </svg>
+        `)}")
+      `,
+      backgroundRepeat: "repeat",
+      backgroundSize: "64px 64px",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+    {/* Pattern Plus */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        backgroundImage: \`
+          url("data:image/svg+xml;utf8,${encodeURIComponent(`
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+              <g stroke="#E8E7EC" stroke-width="1" opacity="0.8" stroke-linecap="round">
+                <path d="M32 27 L32 37"/>
+                <path d="M27 32 L37 32"/>
+              </g>
+            </svg>
+          `)}")
+        \`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "64px 64px",
+      }}
+    />
+     {/* Your Content/Components */}
+
+  </div>`,
+  },
 ];
