@@ -215,7 +215,6 @@ export default function Hero({ theme }: HeroProps) {
           <a
             href="https://shadcnblocks.com/"
             target="_blank"
-            rel="noopener noreferrer"
             className="group transition-all duration-300 hover:scale-105"
           >
             {/* Logo + ShadcnBlocks */}
