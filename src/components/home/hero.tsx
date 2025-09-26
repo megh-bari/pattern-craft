@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Github, Copy, Eye, Code2, Zap } from "lucide-react";
 import { APP_CONFIG } from "@/lib/constants";
+import { WritingText } from "../ui/texts/writing";
+import { HighlightText } from "../ui/texts/highlight";
+import { GradientText } from "../ui/texts/gradient";
 
 interface HeroProps {
   activePattern?: string | null;
@@ -59,18 +62,11 @@ export default function Hero({ theme }: HeroProps) {
               className={`font-medium transition-colors duration-300 ${isPatternDark ? "text-white" : "text-gray-900 dark:text-gray-50"
                 }`}
             >
-              Craft Beautiful
+              <WritingText text="Craft Beautiful" />
             </span>
           </h1>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold tracking-tight">
-            <span
-              className={`bg-gradient-to-r bg-[200%_auto] bg-clip-text leading-tight text-transparent transition-all duration-300 ${isPatternDark
-                ? "from-neutral-100 via-slate-400 to-neutral-400"
-                : "from-neutral-900 via-slate-500 to-neutral-500 dark:from-neutral-100 dark:via-slate-400 dark:to-neutral-400"
-                }`}
-            >
-              Patterns Backgrounds
-            </span>
+            <HighlightText text="Patterns Backgrounds" className={`bg-gradient-to-r ${isPatternDark ? "!from-blue-500/80 !to-purple-500/80 text-white" : "!from-blue-300 !to-purple-300 text-rose-500"}`} />
           </h2>
         </div>
 
@@ -81,7 +77,7 @@ export default function Hero({ theme }: HeroProps) {
         >
           Professional-grade background patterns and gradients. Easily copy the
           code and seamlessly integrate it into your projects.
-          <span className="block">Crafted with modern CSS and Tailwind</span>
+          <GradientText text="Crafted with modern CSS and Tailwind" className="text-xl font-bold" neon/>
         </p>
 
         {/* Feature highlights */}
