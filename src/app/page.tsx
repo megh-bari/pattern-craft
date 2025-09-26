@@ -16,7 +16,7 @@ import { FavoritesProvider } from "@/context/favourites-context";
 
 export default function Home() {
   const [activePattern, setActivePattern] = useState<string | null>(null);
-  const { theme, updateThemeFromPattern } = useTheme();
+  const { theme, updateThemeFromPattern, setTheme } = useTheme();
 
   // Update theme based on pattern background color
   useEffect(() => {
@@ -33,12 +33,8 @@ export default function Home() {
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <FavoritesProvider>
           <div className="min-h-screen relative">
-            {/* Apply the active pattern as background */}
             {activePatternObj && (
-              <div
-                className="fixed inset-0 z-0"
-                style={activePatternObj.style}
-              />
+              <div className="fixed inset-0 z-0" style={activePatternObj.style} />
             )}
             <div className="relative z-10">
               <Navbar theme={theme} />
@@ -47,6 +43,7 @@ export default function Home() {
                 activePattern={activePattern}
                 setActivePattern={setActivePattern}
                 theme={theme}
+                setTheme={setTheme}
               />
               <PatternShowcase
                 activePattern={activePattern}
