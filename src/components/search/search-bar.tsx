@@ -32,7 +32,7 @@ export function SearchBar({
   return (
     <div
       className={`w-full
-    backdrop-blur-md shadow-sm border  rounded-xl mb-8 flex items-center px-2 ${
+    backdrop-blur-md shadow-sm border  rounded-xl flex items-center px-2 ${
       isPatternDark
         ? "bg-black/20 border-white/10 hover:bg-black/30"
         : "bg-white/70 border-gray-200/30 hover:bg-white/80"
