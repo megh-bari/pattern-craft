@@ -2,6 +2,243 @@ import { Pattern } from "@/types/pattern";
 
 export const gridPatterns: Pattern[] = [
   {
+    id: "crystal-maze",
+    name: "Crystal Maze",
+    category: "geometric",
+    badge: "New",
+    description: "Elegant crystalline pattern with subtle prismatic reflections",
+    style: {
+      background: `
+        repeating-linear-gradient(
+          60deg,
+          transparent 0px,
+          transparent 1px,
+          rgba(255, 255, 255, 0.05) 1px,
+          rgba(255, 255, 255, 0.05) 2px
+        ),
+        repeating-linear-gradient(
+          -60deg,
+          transparent 0px,
+          transparent 1px,
+          rgba(255, 255, 255, 0.05) 1px,
+          rgba(255, 255, 255, 0.05) 2px
+        ),
+        linear-gradient(
+          60deg,
+          rgba(43, 108, 176, 0.4) 0%,
+          rgba(72, 126, 176, 0.4) 33%,
+          rgba(95, 142, 176, 0.4) 66%,
+          rgba(116, 157, 176, 0.4) 100%
+        ),
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(255, 255, 255, 0.2) 0%,
+          transparent 50%
+        )
+      `,
+      backgroundBlendMode: "overlay, overlay, normal, screen",
+      animation: "crystal-shimmer 15s ease-in-out infinite",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Crystal Maze Pattern */}
+  <style>{\`
+    @keyframes crystal-shimmer {
+      0%, 100% { 
+        background-position: 0% 0%, 0% 0%, 0% 0%, 50% 50%;
+        background-size: 10px 10px, 10px 10px, 200% 200%, 200% 200%;
+      }
+      50% { 
+        background-position: 1px 1px, -1px -1px, 100% 100%, 50% 50%;
+        background-size: 12px 12px, 12px 12px, 200% 200%, 180% 180%;
+      }
+    }
+  \`}</style>
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`
+        repeating-linear-gradient(
+          60deg,
+          transparent 0px,
+          transparent 1px,
+          rgba(255, 255, 255, 0.05) 1px,
+          rgba(255, 255, 255, 0.05) 2px
+        ),
+        repeating-linear-gradient(
+          -60deg,
+          transparent 0px,
+          transparent 1px,
+          rgba(255, 255, 255, 0.05) 1px,
+          rgba(255, 255, 255, 0.05) 2px
+        ),
+        linear-gradient(
+          60deg,
+          rgba(43, 108, 176, 0.4) 0%,
+          rgba(72, 126, 176, 0.4) 33%,
+          rgba(95, 142, 176, 0.4) 66%,
+          rgba(116, 157, 176, 0.4) 100%
+        ),
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(255, 255, 255, 0.2) 0%,
+          transparent 50%
+        )
+      \`,
+      backgroundBlendMode: "overlay, overlay, normal, screen",
+      animation: "crystal-shimmer 15s ease-in-out infinite",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "moonlit-fog",
+    name: "Moonlit Fog",
+    category: "gradients",
+    badge: "New",
+    description: "Soft, ethereal gradient inspired by moonlit foggy nights",
+    style: {
+      background: `
+        radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 30% 70%, rgba(176, 196, 222, 0.15) 0%, transparent 50%),
+        linear-gradient(135deg, 
+          #2c3e50 0%,
+          #3a506b 25%,
+          #435e79 50%,
+          #516b87 75%,
+          #5f7995 100%
+        )
+      `,
+      backgroundBlendMode: "soft-light, screen, normal",
+      filter: "brightness(1.05) contrast(1.05)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Moonlit Fog Pattern */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`
+        radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 30% 70%, rgba(176, 196, 222, 0.15) 0%, transparent 50%),
+        linear-gradient(135deg, 
+          #2c3e50 0%,
+          #3a506b 25%,
+          #435e79 50%,
+          #516b87 75%,
+          #5f7995 100%
+        )
+      \`,
+      backgroundBlendMode: "soft-light, screen, normal",
+      filter: "brightness(1.05) contrast(1.05)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "aurora-waves",
+    name: "Aurora Waves",
+    category: "effects",
+    badge: "New",
+    description: "Dynamic aurora borealis inspired wave pattern",
+    style: {
+      background: `linear-gradient(45deg, #1a1a1a 0%, #003366 100%),
+        repeating-linear-gradient(
+          45deg,
+          rgba(0, 255, 255, 0.1) 0px,
+          rgba(0, 255, 255, 0.1) 20px,
+          rgba(0, 255, 0, 0.1) 20px,
+          rgba(0, 255, 0, 0.1) 40px
+        ),
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(32, 196, 232, 0.3) 0%,
+          rgba(76, 201, 240, 0.1) 100%
+        )`,
+      backgroundBlendMode: "normal, overlay, overlay",
+      animation: "aurora 8s linear infinite",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Aurora Waves Pattern */}
+  <style>{\`
+    @keyframes aurora {
+      0% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+      50% { transform: scale(1.2) rotate(180deg); opacity: 0.8; }
+      100% { transform: scale(1) rotate(360deg); opacity: 0.5; }
+    }
+  \`}</style>
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`linear-gradient(45deg, #1a1a1a 0%, #003366 100%),
+        repeating-linear-gradient(
+          45deg,
+          rgba(0, 255, 255, 0.1) 0px,
+          rgba(0, 255, 255, 0.1) 20px,
+          rgba(0, 255, 0, 0.1) 20px,
+          rgba(0, 255, 0, 0.1) 40px
+        ),
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(32, 196, 232, 0.3) 0%,
+          rgba(76, 201, 240, 0.1) 100%
+        )\`,
+      backgroundBlendMode: "normal, overlay, overlay",
+      animation: "aurora 8s linear infinite",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "cosmic-sparkle",
+    name: "Cosmic Sparkle",
+    category: "effects",
+    badge: "New",
+    description: "Starry night sky effect with twinkling dots",
+    style: {
+      background: `
+        radial-gradient(circle at 50% 50%, rgba(255, 0, 255, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.08) 10%, transparent 55%),
+        radial-gradient(circle at 50% 50%, #111 0%, #1a1a1a 100%)
+      `,
+      backgroundBlendMode: "soft-light",
+      boxShadow: `inset 0 0 60px rgba(255, 255, 255, 0.3),
+        inset 20px 0 80px rgba(255, 0, 255, 0.2),
+        inset -20px 0 80px rgba(0, 255, 255, 0.2),
+        inset 20px 0 300px rgba(255, 0, 255, 0.1),
+        inset -20px 0 300px rgba(0, 255, 255, 0.1),
+        0 0 50px rgba(255, 255, 255, 0.1),
+        -10px 0 80px rgba(255, 0, 255, 0.1),
+        10px 0 80px rgba(0, 255, 255, 0.1)`,
+      filter: "contrast(1.05) brightness(1.05) blur(0.5px)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Cosmic Sparkle Pattern */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`
+        radial-gradient(circle at 50% 50%, rgba(255, 0, 255, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.08) 10%, transparent 55%),
+        radial-gradient(circle at 50% 50%, #111 0%, #1a1a1a 100%)
+      \`,
+      backgroundBlendMode: "soft-light",
+      boxShadow: \`inset 0 0 60px rgba(255, 255, 255, 0.3),
+        inset 20px 0 80px rgba(255, 0, 255, 0.2),
+        inset -20px 0 80px rgba(0, 255, 255, 0.2),
+        inset 20px 0 300px rgba(255, 0, 255, 0.1),
+        inset -20px 0 300px rgba(0, 255, 255, 0.1),
+        0 0 50px rgba(255, 255, 255, 0.1),
+        -10px 0 80px rgba(255, 0, 255, 0.1),
+        10px 0 80px rgba(0, 255, 255, 0.1)\`,
+      filter: "contrast(1.05) brightness(1.05) blur(0.5px)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
     id: "top-gradient-radial",
     name: "Top Gradient Radial",
     category: "decorative",
