@@ -1,7 +1,7 @@
 "use client";
 
 import { Pattern } from "@/types/pattern";
-import PatternCard from "./pattern-card";
+import PatternCard from "@/components/patterns/pattern-card";
 import { useFavorites } from "@/context/favourites-context";
 
 interface PatternGridProps {
