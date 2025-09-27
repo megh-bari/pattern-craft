@@ -1043,7 +1043,1193 @@ export const gridPatterns: Pattern[] = [
      {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "diagonal-fade-bottom-grid-Left",
+    name: "Diagonal Fade Bottom Grid Left",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#f9fafb",
+      backgroundImage: `
+      linear-gradient(to right, #d1d5db 1px, transparent 1px),
+      linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+    `,
+      backgroundSize: "32px 32px",
+      WebkitMaskImage:
+        "radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)",
+      maskImage:
+        "radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)",
+    },
+    code: `<div className="min-h-screen w-full bg-[#f9fafb] relative">
+  {/* Diagonal Fade Bottom Grid Left Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #d1d5db 1px, transparent 1px),
+        linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+      \`,
+      backgroundSize: "32px 32px",
+      WebkitMaskImage:
+        "radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)",
+      maskImage:
+        "radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "diagonal-fade-bottom-grid-right",
+    name: "Diagonal Fade Bottom Grid Right",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#f9fafb",
+      backgroundImage: `
+      linear-gradient(to right, #d1d5db 1px, transparent 1px),
+      linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+    `,
+      backgroundSize: "32px 32px",
+      WebkitMaskImage:
+        "radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)",
+      maskImage:
+        "radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)",
+    },
+    code: `<div className="min-h-screen w-full bg-[#f9fafb] relative">
+  {/* Diagonal Fade Bottom Grid Right Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #d1d5db 1px, transparent 1px),
+        linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+      \`,
+      backgroundSize: "32px 32px",
+      WebkitMaskImage:
+         "radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)",
+      maskImage:
+         "radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "diagonal-fade-center-grid",
+    name: "Diagonal Fade Center Grid",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#f9fafb",
+      backgroundImage: `
+      linear-gradient(to right, #d1d5db 1px, transparent 1px),
+      linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+    `,
+      backgroundSize: "32px 32px",
+      WebkitMaskImage:
+        "radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)",
+      maskImage:
+        "radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)",
+    },
+    code: `<div className="min-h-screen w-full bg-[#f9fafb] relative">
+  {/* Diagonal Fade Center Grid Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #d1d5db 1px, transparent 1px),
+        linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+      \`,
+      backgroundSize: "32px 32px",
+      WebkitMaskImage:
+         "radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)",
+      maskImage:
+         "radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  // diagona; cross diagonal
+  {
+    id: "diagonal-cross-grid",
+    name: "Diagonal Cross Grid",
+    category: "geometric",
+    style: {
+      background: "white",
+      backgroundImage: `
+      linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+      linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+    `,
+      backgroundSize: "40px 40px",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/*  Diagonal Cross Grid Background */}
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+      \`,
+      backgroundSize: "40px 40px",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "diagonal-cross-grid-top",
+    name: "Diagonal Cross Grid Top",
+    category: "geometric",
+    style: {
+      background: "white",
+      backgroundImage: `
+      linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+      linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+    `,
+      backgroundSize: "40px 40px",
+      WebkitMaskImage:
+        "radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)",
+      maskImage:
+        "radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/*  Diagonal Cross Grid Top Background */}
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+      \`,
+      backgroundSize: "40px 40px",
+       WebkitMaskImage:
+            "radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)",
+          maskImage:
+            "radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "diagonal-cross-grid-bottom",
+    name: "Diagonal Cross Grid Bottom",
+    category: "geometric",
+    style: {
+      background: "white",
+      backgroundImage: `
+      linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+      linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+    `,
+      backgroundSize: "40px 40px",
+      WebkitMaskImage:
+        "radial-gradient(ellipse 100% 80% at 50% 100%, #000 50%, transparent 90%)",
+      maskImage:
+        "radial-gradient(ellipse 100% 80% at 50% 100%, #000 50%, transparent 90%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/*  Diagonal Cross Grid Bottom Background */}
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+      \`,
+      backgroundSize: "40px 40px",
+       WebkitMaskImage:
+            "radial-gradient(ellipse 100% 80% at 50% 100%, #000 50%, transparent 90%)",
+          maskImage:
+            "radial-gradient(ellipse 100% 80% at 50% 100%, #000 50%, transparent 90%)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "diagonal-cross-top-right-fade-grid",
+    name: "Diagonal Cross Top Right Fade Grid",
+    category: "geometric",
+    style: {
+      background: "white",
+      backgroundImage: `
+      linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+      linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+    `,
+      backgroundSize: "40px 40px",
+      WebkitMaskImage:
+        "radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)",
+      maskImage:
+        "radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/*  Diagonal Cross Top Right Fade Grid Background */}
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+      \`,
+      backgroundSize: "40px 40px",
+         WebkitMaskImage:
+            "radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)",
+          maskImage:
+            "radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)"
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "diagonal-cross-top-left-fade-grid",
+    name: "Diagonal Cross Top Left Fade Grid",
+    category: "geometric",
+    style: {
+      background: "white",
+      backgroundImage: `
+      linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+      linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+    `,
+      backgroundSize: "40px 40px",
+      WebkitMaskImage:
+        "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+      maskImage:
+        "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/*  Diagonal Cross Top Left Fade Grid Background */}
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+      \`,
+      backgroundSize: "40px 40px",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+          maskImage:
+            "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "diagonal-cross-Bottom-right-fade-grid",
+    name: "Diagonal Cross Bottom Right Fade Grid",
+    category: "geometric",
+    style: {
+      background: "white",
+      backgroundImage: `
+      linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+      linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+    `,
+      backgroundSize: "40px 40px",
+      WebkitMaskImage:
+        "radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)",
+      maskImage:
+        "radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/*  Diagonal Cross Bottom Right Fade Grid Background */}
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+      \`,
+      backgroundSize: "40px 40px",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)",
+          maskImage:
+            "radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "diagonal-cross-Bottom-left-fade-grid",
+    name: "Diagonal Cross Bottom Left Fade Grid",
+    category: "geometric",
+    style: {
+      background: "white",
+      backgroundImage: `
+      linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+      linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+    `,
+      backgroundSize: "40px 40px",
+      WebkitMaskImage:
+        "radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)",
+      maskImage:
+        "radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/*  Diagonal Cross Bottom Left Fade Grid Background */}
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+      \`,
+      backgroundSize: "40px 40px",
+         WebkitMaskImage:
+            "radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)",
+          maskImage:
+            "radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "diagonal-cross-center-fade-grid",
+    name: "Diagonal Cross Center Fade Grid",
+    category: "geometric",
+    style: {
+      background: "white",
+      backgroundImage: `
+      linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+      linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+    `,
+      backgroundSize: "40px 40px",
+      WebkitMaskImage:
+        "radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)",
+      maskImage:
+        "radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/*  Diagonal Cross Center Fade Grid Background */}
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+      \`,
+      backgroundSize: "40px 40px",
+         WebkitMaskImage:
+            "radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)",
+          maskImage:
+            "radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
 
+  // dashed grid
+  {
+    id: "dashed-grid-light",
+    name: "Dashed Grid Light",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundImage: `
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      `,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: `
+        repeating-linear-gradient(
+          to right,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        )
+      `,
+      WebkitMaskImage: `
+        repeating-linear-gradient(
+          to right,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        )
+      `,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Dashed Grid */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: \`
+        repeating-linear-gradient(
+          to right,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        )
+      \`,
+      WebkitMaskImage: \`
+        repeating-linear-gradient(
+          to right,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        )
+      \`,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "dashed-top-fade-grid",
+    name: "Dashed Top Fade Grid",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundImage: `
+             linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+          `,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
+          `,
+      WebkitMaskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
+          `,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Dashed Top Fade Grid */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: \`
+        repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
+      \`,
+      WebkitMaskImage: \`
+ repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
+      \`,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "dashed-bottom-fade-grid",
+    name: "Dashed Bottom Fade Grid",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundImage: `
+             linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+          `,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 100% 80% at 50% 100%, #000 50%, transparent 90%)
+          `,
+          WebkitMaskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 100% 80% at 50% 100%, #000 50%, transparent 90%)
+          `,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Dashed Bottom Fade Grid */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: \`
+         repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 100% 80% at 50% 100%, #000 50%, transparent 90%)
+      \`,
+      WebkitMaskImage: \`
+  repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 100% 80% at 50% 100%, #000 50%, transparent 90%)
+      \`,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "dashed-top-left-fade-grid",
+    name: "Dashed Top Left Fade Grid",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundImage: `
+             linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+          `,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+     maskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)
+          `,
+          WebkitMaskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)
+          `,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Dashed Top Left Fade Grid */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: \`
+        repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)
+      \`,
+      WebkitMaskImage: \`
+  repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)
+      \`,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+    {
+    id: "dashed-top-right-fade-grid",
+    name: "Dashed Top Right Fade Grid",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundImage: `
+             linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+          `,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+    maskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)
+          `,
+          WebkitMaskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)
+          `,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Dashed Top Right Fade Grid */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: \`
+          repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)
+      \`,
+      WebkitMaskImage: \`
+    repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)
+      \`,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+    {
+    id: "dashed-bottom-right-fade-grid",
+    name: "Dashed Bottom Right Fade Grid",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundImage: `
+             linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+          `,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+    maskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)
+          `,
+          WebkitMaskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)
+          `,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Dashed Bottom Right Fade Grid */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: \`
+             repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)
+      \`,
+      WebkitMaskImage: \`
+       repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)
+      \`,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+    {
+    id: "dashed-bottom-left-fade-grid",
+    name: "Dashed Bottom Left Fade Grid",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundImage: `
+             linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+          `,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+   maskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+           radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)
+          `,
+          WebkitMaskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+           radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)
+          `,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Dashed Bottom Left Fade Grid */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: \`
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+           radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)
+      \`,
+      WebkitMaskImage: \`
+                   repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+           radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)
+      \`,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+    {
+    id: "dashed-center-fade-grid",
+    name: "Dashed Center Fid Grid",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundImage: `
+             linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+          `,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+     maskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+          radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)
+          `,
+          WebkitMaskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+          radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)
+          `,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Dashed Center Fade Grid */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: \`
+       repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+          radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)
+      \`,
+      WebkitMaskImage: \`
+ repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+          radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)
+      \`,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
   // New Gradient Colors
   {
     id: "dark-radial-glow",
@@ -3112,103 +4298,6 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   {
-    id: "dashed-grid",
-    name: "Dashed Grid-Light",
-    category: "geometric",
-    badge: "New",
-    style: {
-      backgroundImage: `
-        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
-        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
-      `,
-      backgroundSize: "20px 20px",
-      backgroundPosition: "0 0, 0 0",
-      maskImage: `
-        repeating-linear-gradient(
-          to right,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        )
-      `,
-      WebkitMaskImage: `
-        repeating-linear-gradient(
-          to right,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        )
-      `,
-      maskComposite: "intersect",
-      WebkitMaskComposite: "source-in",
-    },
-    code: `<div className="min-h-screen w-full relative">
-  {/* Dashed Gradient */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
-        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
-      \`,
-      backgroundSize: "20px 20px",
-      backgroundPosition: "0 0, 0 0",
-      maskImage: \`
-        repeating-linear-gradient(
-          to right,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        )
-      \`,
-      WebkitMaskImage: \`
-        repeating-linear-gradient(
-          to right,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        )
-      \`,
-      maskComposite: "intersect",
-      WebkitMaskComposite: "source-in",
-    }}
-  />
-  {/* Your Content/Components */}
-</div>`,
-  },
-  {
     id: "white-sphere-grid",
     name: "White Sphere Grid",
     category: "geometric",
@@ -4647,7 +5736,8 @@ export const gridPatterns: Pattern[] = [
     name: "Crystal Maze",
     category: "effects",
     badge: "New",
-    description: "Elegant crystalline pattern with subtle prismatic reflections",
+    description:
+      "Elegant crystalline pattern with subtle prismatic reflections",
     style: {
       background: `
         repeating-linear-gradient(
@@ -5144,7 +6234,7 @@ export const gridPatterns: Pattern[] = [
     {/* Your Content/Components */}
   </div>`,
   },
-    {
+  {
     id: "cosmic-sparkle",
     name: "Cosmic Sparkle",
     category: "effects",
@@ -6488,9 +7578,9 @@ export const gridPatterns: Pattern[] = [
  {/* Your Content/Components */}
 </div>`,
   },
- {
+  {
     id: "diagonal-striped-grid",
-   name: "Diagonal Striped Grid",
+    name: "Diagonal Striped Grid",
     category: "geometric",
     badge: "New",
     style: {
