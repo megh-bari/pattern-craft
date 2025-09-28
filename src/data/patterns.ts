@@ -444,7 +444,7 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   {
-    id: "orchid -depths",
+    id: "orchid-depths",
     name: "Orchid  Depths",
     badge: "New",
     category: "decorative",
@@ -3920,9 +3920,126 @@ export const gridPatterns: Pattern[] = [
      {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "bubble-cluster",
+    name: "Bubble Cluster",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#f0f9ff",
+      backgroundImage: `
+        radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 40% 60%, rgba(125, 211, 252, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 60% 40%, rgba(186, 230, 253, 0.2) 0%, transparent 25%)
+      `,
+    },
+    code: `<div className="min-h-screen w-full bg-[#f0f9ff] relative">
+  {/* Bubble Cluster Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 40% 60%, rgba(125, 211, 252, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 60% 40%, rgba(186, 230, 253, 0.2) 0%, transparent 25%)
+      \`
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "water-ripples",
+    name: "Water Ripples",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#e0f2fe",
+      backgroundImage: `
+        radial-gradient(circle, rgba(14, 165, 233, 0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(14, 165, 233, 0.1) 2px, transparent 2px),
+        radial-gradient(circle, rgba(14, 165, 233, 0.1) 3px, transparent 3px)
+      `,
+      backgroundSize: "50px 50px, 100px 100px, 150px 150px",
+    },
+    code: `<div className="min-h-screen w-full bg-[#e0f2fe] relative">
+  {/* Water Ripples Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle, rgba(14, 165, 233, 0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(14, 165, 233, 0.1) 2px, transparent 2px),
+        radial-gradient(circle, rgba(14, 165, 233, 0.1) 3px, transparent 3px)
+      \`,
+      backgroundSize: "50px 50px, 100px 100px, 150px 150px"
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
 
   // Line Patterns
-
+  {
+    id: "honeycomb-mesh",
+    name: "Honeycomb Mesh",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+        linear-gradient(120deg, #e5e7eb 1px, transparent 1px),
+        linear-gradient(60deg, #e5e7eb 1px, transparent 1px),
+        linear-gradient(0deg, #e5e7eb 1px, transparent 1px)
+      `,
+      backgroundSize: "34.64px 60px",
+      backgroundPosition: "0 0, 17.32px 30px, 17.32px 0",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Honeycomb Mesh Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(120deg, #e5e7eb 1px, transparent 1px),
+        linear-gradient(60deg, #e5e7eb 1px, transparent 1px),
+        linear-gradient(0deg, #e5e7eb 1px, transparent 1px)
+      \`,
+      backgroundSize: "34.64px 60px",
+      backgroundPosition: "0 0, 17.32px 30px, 17.32px 0"
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "light-dot-grid",
+    name: "Light Dot Grid",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+        radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)
+      `,
+      backgroundSize: "20px 20px",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Light Dot Grid Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px"
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
   {
     id: "paper-texture",
     name: "Paper Texture",
@@ -6139,35 +6256,6 @@ export const gridPatterns: Pattern[] = [
     className="absolute inset-0 z-0"
     style={{
       background: "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08) 0%, transparent 40%), radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05) 0%, transparent 40%), linear-gradient(120deg, #0f0e17 0%, #1a1b26 100%)"
-    }}
-  />
-  {/* Your Content/Components */}
-</div>`,
-  },
-  {
-    id: "volcanic-ember",
-    name: "Volcanic Ember",
-    category: "effects",
-    badge: "New",
-    style: {
-      background: `
-      radial-gradient(ellipse 120% 70% at 70% 80%, rgba(87, 24, 69, 0.20), transparent 52%),
-      radial-gradient(ellipse 160% 45% at 30% 30%, rgba(153, 27, 27, 0.16), transparent 58%),
-      radial-gradient(ellipse 85% 100% at 10% 60%, rgba(69, 26, 3, 0.22), transparent 46%),
-      #1c1917
-    `,
-    },
-    code: `<div className="min-h-screen w-full bg-black relative">
-  {/* Volcanic Ember */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background: \`
-        radial-gradient(ellipse 120% 70% at 70% 80%, rgba(87, 24, 69, 0.20), transparent 52%),
-        radial-gradient(ellipse 160% 45% at 30% 30%, rgba(153, 27, 27, 0.16), transparent 58%),
-        radial-gradient(ellipse 85% 100% at 10% 60%, rgba(69, 26, 3, 0.22), transparent 46%),
-        #1c1917
-      \`,
     }}
   />
   {/* Your Content/Components */}
