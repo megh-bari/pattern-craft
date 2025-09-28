@@ -44,9 +44,22 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
   }, [favourites]);
 
   const toggleFavourite = (id: string) => {
-    setFavourites((prev) =>
-      prev.includes(id) ? prev.filter((fav) => fav !== id) : [...prev, id]
-    );
+    setFavourites((prev) => {
+      if (prev.includes(id)) {
+        return prev.filter((fav) => fav !== id);
+      } else {
+        try {
+          const raw = localStorage.getItem("patternMetrics");
+          const data = raw ? JSON.parse(raw) : {};
+          const entry = data[id] || { copied: 0, favourited: 0, lastUsed: 0 };
+          entry.favourited = (entry.favourited || 0) + 1;
+          entry.lastUsed = Date.now();
+          data[id] = entry;
+          localStorage.setItem("patternMetrics", JSON.stringify(data));
+        } catch {}
+        return [...prev, id];
+      }
+    });
   };
 
   const isFavourite = (id: string) => favourites.includes(id);
