@@ -7633,6 +7633,27 @@ export const gridPatterns: Pattern[] = [
     <h1 className="text-4xl font-bold">Your Content</h1>
   </div>
 </div>`,
-}
-
+},
+{
+    id: "ocean-waves",
+    name: "Ocean Waves",
+    category: "geometric",
+    description: "Diagonal stripe pattern with ocean-inspired colors",
+    badge: "New",
+    style: {
+      background: "#f0fdff",
+      backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(14, 165, 233, 0.08) 35px, rgba(14, 165, 233, 0.08) 70px), repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(6, 182, 212, 0.06) 35px, rgba(6, 182, 212, 0.06) 70px), radial-gradient(ellipse 800px 400px at 100% 0%, rgba(56, 189, 248, 0.2), transparent)",
+      backgroundSize: "100% 100%, 100% 100%, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full relative" style={{ background: "#f0fdff" }}>
+  <div className="absolute inset-0 z-0" style={{
+      backgroundImage: \`repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(14, 165, 233, 0.08) 35px, rgba(14, 165, 233, 0.08) 70px), repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(6, 182, 212, 0.06) 35px, rgba(6, 182, 212, 0.06) 70px), radial-gradient(ellipse 800px 400px at 100% 0%, rgba(56, 189, 248, 0.2), transparent)\`,
+      backgroundSize: "100% 100%, 100% 100%, 100% 100%",
+    }}
+  />
+  <div className="relative z-10 p-8">
+    <h1 className="text-4xl font-bold">Your Content</h1>
+  </div>
+</div>`,
+  },
 ];
