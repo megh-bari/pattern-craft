@@ -28,11 +28,16 @@
 
 > **This project is proudly sponsored by [Vercel](https://vercel.com/oss). Thank you for supporting open source!**
 
-  <p align="center">
+  <!-- <p align="center">
 <a href="https://vercel.com/oss">
 <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="40">
 </a>
-</p>
+</p> -->
+
+<br />
+<a href="https://vercel.com/oss">
+  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
+</a>
 
 ## Visit: **[Pattern Craft](https://patterncraft.fun)**
 
@@ -53,8 +58,8 @@ Check out this growing list of shoutouts, showcases, and love from the community
 </br>
 
 ⚡[**Where Pattern Craft is Making Noise??**](https://patterncraft.notion.site/Where-Pattern-Craft-is-Making-Noise-23bf940b4137803ea79bf3606acdb317?pvs=74)
-</p>
 
+</p>
 
 ## Features
 
@@ -316,50 +321,50 @@ git push origin feature/new-pattern-name
 ```
 pattern-craft/
 src/
-├── app/                   
-│   ├── globals.css       
-│   ├── layout.tsx        
-│   ├── page.tsx           
-│   └── not-found.tsx      
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── not-found.tsx
 │
-├── components/           
+├── components/
 │   ├── ui/                # shadcn/ui components
-│   │   ├── badge.tsx     
-│   │   ├── button.tsx     
-│   │   └── tabs.tsx       
-│   ├── layout/            
-│   │   ├── navbar.tsx     
-│   │   └── footer.tsx     
-│   ├── patterns/          
-│   │   ├── pattern-showcase.tsx     
-│   │   ├── pattern-card.tsx        
-│   │   ├── pattern-grid.tsx         
-│   │   └── pattern-empty-state.tsx 
-│   ├── home/             
-│   │   ├── hero.tsx               
-│   │   ├── support-dropdown.tsx   
-│   │   └── return-to-preview.tsx  
-│   └── providers/         
-│       └── theme-provider.tsx 
+│   │   ├── badge.tsx
+│   │   ├── button.tsx
+│   │   └── tabs.tsx
+│   ├── layout/
+│   │   ├── navbar.tsx
+│   │   └── footer.tsx
+│   ├── patterns/
+│   │   ├── pattern-showcase.tsx
+│   │   ├── pattern-card.tsx
+│   │   ├── pattern-grid.tsx
+│   │   └── pattern-empty-state.tsx
+│   ├── home/
+│   │   ├── hero.tsx
+│   │   ├── support-dropdown.tsx
+│   │   └── return-to-preview.tsx
+│   └── providers/
+│       └── theme-provider.tsx
 │
-├── lib/                   
-│   ├── utils.ts           
-│   └── constants.ts      
+├── lib/
+│   ├── utils.ts
+│   └── constants.ts
 │
-├── hooks/                 
-│   ├── useTheme.tsx       
-│   └── useCopy.tsx        
+├── hooks/
+│   ├── useTheme.tsx
+│   └── useCopy.tsx
 │
-├── types/                 
-│   ├── pattern.ts         
-│   └── index.ts           
+├── types/
+│   ├── pattern.ts
+│   └── index.ts
 │
-├── context/               
-│   └── favourites-context.tsx 
+├── context/
+│   └── favourites-context.tsx
 │
-└── data/                 
+└── data/
     ├── patterns.ts        # Pattern used in UI (contribute here)
-    └── categories.ts      
+    └── categories.ts
 ```
 
 ### Code Standards
@@ -394,6 +399,12 @@ For questions, issues, or suggestions:
 - GitHub: [@megh-bari](https://github.com/megh-bari)
 
 If you like this project, consider giving it a ⭐️ on GitHub and sharing it with others!
+
+>This project is proudly supported by:
+
+<a href="https://vercel.com/oss">
+  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
+</a>
 
 ## Star History
 
