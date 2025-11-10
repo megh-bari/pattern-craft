@@ -7611,4 +7611,28 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+{
+  id: "cyberpunk-grid",
+  name: "Cyberpunk Grid",
+  category: "geometric",
+  badge: "New",
+  style: {
+    background: "#0a0e27",
+    backgroundImage: `linear-gradient(#00ff9520 2px, transparent 2px), linear-gradient(90deg, #00ff9520 2px, transparent 2px), linear-gradient(#ff00ff15 1px, transparent 1px), linear-gradient(90deg, #ff00ff15 1px, transparent 1px), radial-gradient(circle at 20% 30%, #00ff9530, transparent 40%), radial-gradient(circle at 80% 70%, #ff00ff30, transparent 40%)`,
+    backgroundSize: "100px 100px, 100px 100px, 20px 20px, 20px 20px, 100% 100%, 100% 100%",
+    
+  },
+  code: `<div className="min-h-screen w-full relative" style={{ background: "#0a0e27" }}>
+  <div className="absolute inset-0 z-0" style={{
+      backgroundImage: \`linear-gradient(#00ff9520 2px, transparent 2px), linear-gradient(90deg, #00ff9520 2px, transparent 2px), linear-gradient(#ff00ff15 1px, transparent 1px), linear-gradient(90deg, #ff00ff15 1px, transparent 1px), radial-gradient(circle at 20% 30%, #00ff9530, transparent 40%), radial-gradient(circle at 80% 70%, #ff00ff30, transparent 40%)\`,
+      backgroundSize: "100px 100px, 100px 100px, 20px 20px, 20px 20px, 100% 100%, 100% 100%",
+      
+    }}
+  />
+  <div className="relative z-10 p-8">
+    <h1 className="text-4xl font-bold">Your Content</h1>
+  </div>
+</div>`,
+}
+
 ];
