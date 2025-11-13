@@ -6,6 +6,8 @@ import { Check, Copy, Eye, Sparkles, Star } from "lucide-react";
 import { Pattern } from "@/types/pattern";
 import { useCopy } from "@/hooks/useCopy";
 import { useFavorites } from "@/context/favourites-context";
+import { useCodeFormat } from "@/context/code-format-context";
+import { getCodeForFormat } from "@/utils/code-converter";
 
 interface PatternCardProps {
   pattern: Pattern;
@@ -26,7 +28,14 @@ export default function PatternCard({
 }: PatternCardProps) {
   const { copyToClipboard, isCopied } = useCopy();
   const { toggleFavourite, isFavourite } = useFavorites();
+  const { selectedFormat } = useCodeFormat();
   const isPatternDark = theme === "dark";
+
+  const handleCopyCode = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const codeToShare = getCodeForFormat(pattern.code, selectedFormat);
+    copyToClipboard(codeToShare, pattern.id);
+  };
 
   const previewPattern = (patternId: string) => {
     setActivePattern(patternId === activePattern ? null : patternId);
@@ -116,10 +125,7 @@ export default function PatternCard({
           </Button>
           <Button
             size="sm"
-            onClick={(e) => {
-              e.stopPropagation();
-              copyToClipboard(pattern.code, pattern.id);
-            }}
+            onClick={handleCopyCode}
             className={`flex-1 border-0 text-xs h-8 ${
               isCopied(pattern.id)
                 ? "bg-gray-700 hover:bg-gray-800 text-white"
@@ -135,7 +141,7 @@ export default function PatternCard({
             ) : (
               <>
                 <Copy className="h-3 w-3 mr-1" />
-                Copy
+                Copy {selectedFormat === 'vue' ? 'Vue' : 'React'}
               </>
             )}
           </Button>
@@ -163,10 +169,7 @@ export default function PatternCard({
               </Button>
               <Button
                 size="sm"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  copyToClipboard(pattern.code, pattern.id);
-                }}
+                onClick={handleCopyCode}
                 className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${
                   isCopied(pattern.id)
                     ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"
@@ -182,7 +185,7 @@ export default function PatternCard({
                 ) : (
                   <>
                     <Copy className="h-3 w-3" />
-                    Copy
+                    Copy {selectedFormat === 'vue' ? 'Vue' : 'React'}
                   </>
                 )}
               </Button>
