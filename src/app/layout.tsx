@@ -324,147 +324,147 @@ export default function RootLayout({
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-1.png",
+                    "https://patterncraft.fun/snapshots/screenshot-1.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-2.png",
+                    "https://patterncraft.fun/snapshots/screenshot-2.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-3.png",
+                    "https://patterncraft.fun/snapshots/screenshot-3.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-4.png",
+                    "https://patterncraft.fun/snapshots/screenshot-4.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-5.png",
+                    "https://patterncraft.fun/snapshots/screenshot-5.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-6.png",
+                    "https://patterncraft.fun/snapshots/screenshot-6.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-7.png",
+                    "https://patterncraft.fun/snapshots/screenshot-7.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-8.png",
+                    "https://patterncraft.fun/snapshots/screenshot-8.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-9.png",
+                    "https://patterncraft.fun/snapshots/screenshot-9.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-10.png",
+                    "https://patterncraft.fun/snapshots/screenshot-10.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-11.png",
+                    "https://patterncraft.fun/snapshots/screenshot-11.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-12.png",
+                    "https://patterncraft.fun/snapshots/screenshot-12.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-13.png",
+                    "https://patterncraft.fun/snapshots/screenshot-13.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-14.png",
+                    "https://patterncraft.fun/snapshots/screenshot-14.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-15.png",
+                    "https://patterncraft.fun/snapshots/screenshot-15.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-16.png",
+                    "https://patterncraft.fun/snapshots/screenshot-16.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-17.png",
+                    "https://patterncraft.fun/snapshots/screenshot-17.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-18.png",
+                    "https://patterncraft.fun/snapshots/screenshot-18.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-19.png",
+                    "https://patterncraft.fun/snapshots/screenshot-19.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-20.png",
+                    "https://patterncraft.fun/snapshots/screenshot-20.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
                 {
                   "@type": "ImageObject",
                   contentUrl:
-                    "https://patterncraft.fun/snapshots/screenshot-21.png",
+                    "https://patterncraft.fun/snapshots/screenshot-21.webp",
                   description:
                     "Pattern Craft - Modern Background Patterns & Gradients Snippets",
                 },
