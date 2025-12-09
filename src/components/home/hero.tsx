@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Github, Copy, Eye, Code2, Zap } from "lucide-react";
 import { APP_CONFIG } from "@/lib/constants";
+import CarbonAd from "../ads/CarbonAds";
 
 interface HeroProps {
   activePattern?: string | null;
@@ -251,7 +252,10 @@ export default function Hero({ theme }: HeroProps) {
             </p>
           </a>
         </div>
-
+        <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 mt-8 sm:mt-10 mx-auto px-4 sm:px-0">
+          <CarbonAd />
+        </div>
+        
         {/* Stats */}
         <div
           className={`flex items-center justify-center gap-6 sm:gap-8 md:gap-12 mt-6 pt-6 sm:pt-8 border-t transition-all duration-300 ${isPatternDark
