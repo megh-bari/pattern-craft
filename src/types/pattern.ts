@@ -5,7 +5,7 @@ export interface Pattern {
   name: string;
   category: "gradients" | "geometric" | "decorative" | "effects";
   description?: string;
-  badge?: "New" | " ";
+  addedDate?: string; // Format: DD-MM-YYYY - "New" badge shows if within 45 days
   style: CSSProperties;
   code: string;
 }

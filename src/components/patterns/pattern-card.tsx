@@ -7,6 +7,15 @@ import { Pattern } from "@/types/pattern";
 import { useCopy } from "@/hooks/useCopy";
 import { useFavorites } from "@/context/favourites-context";
 
+// Check if pattern was added within the last 45 days
+function isNew(addedDate?: string): boolean {
+  if (!addedDate) return false;
+  const [day, month, year] = addedDate.split('-').map(Number);
+  const patternDate = new Date(year, month - 1, day);
+  const diffDays = (Date.now() - patternDate.getTime()) / (1000 * 60 * 60 * 24);
+  return diffDays <= 45;
+}
+
 interface PatternCardProps {
   pattern: Pattern;
   activePattern: string | null;
@@ -86,15 +95,15 @@ export default function PatternCard({
         {/* Pattern style */}
         <div className="absolute inset-0" style={pattern.style} />
 
-        {/* Badge */}
-        {pattern.badge && (
+        {/* Badge - shows "New" if pattern added within 45 days */}
+        {isNew(pattern.addedDate) && (
           <div className="absolute top-2 sm:top-3 right-2 sm:right-3 z-10">
             <Badge
               variant="secondary"
               className="gap-1 text-xs bg-background/80 backdrop-blur-sm border-border/50 px-2 py-1"
             >
               <Sparkles className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-violet-600" />
-              <span>{pattern.badge}</span>
+              <span>New</span>
             </Badge>
           </div>
         )}
