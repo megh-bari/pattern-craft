@@ -710,7 +710,63 @@ export const gridPatterns: Pattern[] = [
   />
      {/* Your Content/Components */}
 </div>`,
-  },
+  },{
+    id: "moroccan-trellis-bubbles",
+    name: "Moroccan-trellis-bubbles",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundColor: "#f8efee", 
+      backgroundImage: `
+        /* soft veil to keep contrast gentle */
+        linear-gradient(rgba(255,255,255,0.56), rgba(255,255,255,0.56)),
+  
+        /* -- bubble 1: small highlight then body -- */
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.95) 0% 18%, rgba(255,255,255,0) 20%),
+        radial-gradient(circle at 10% 20%, rgba(246,225,224,1) 0% 22%, rgba(246,225,224,0.85) 24%, rgba(246,225,224,0.12) 40%, transparent 41%),
+  
+        /* -- bubble 2: small highlight then body -- */
+        radial-gradient(circle at 60% 15%, rgba(255,255,255,0.92) 0% 16%, rgba(255,255,255,0) 18%),
+        radial-gradient(circle at 60% 15%, rgba(246,225,224,0.98) 0% 20%, rgba(246,225,224,0.78) 22%, rgba(246,225,224,0.14) 36%, transparent 37%),
+  
+        /* -- bubble 3: small highlight then body -- */
+        radial-gradient(circle at 85% 70%, rgba(255,255,255,0.9) 0% 15%, rgba(255,255,255,0) 17%),
+        radial-gradient(circle at 85% 70%, rgba(246,225,224,0.96) 0% 18%, rgba(246,225,224,0.7) 20%, rgba(246,225,224,0.12) 33%, transparent 34%),
+  
+        /* subtle gold hairlines (thinner grid) */
+        linear-gradient(90deg, rgba(199,147,73,0.85) 0.8px, transparent 0.8px),
+        linear-gradient(0deg, rgba(199,147,73,0.85) 0.8px, transparent 0.8px)
+      `,
+      backgroundSize: "120px 120px",
+      backgroundPosition: "0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0",
+      backgroundRepeat: "repeat"
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+    {/* Refined Moroccan trellis — smaller, fewer, randomly positioned bubbles */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        backgroundColor: "#f8efee",
+        backgroundImage: \`
+          linear-gradient(rgba(255,255,255,0.56), rgba(255,255,255,0.56)),
+          radial-gradient(circle at 10% 20%, rgba(255,255,255,0.95) 0% 18%, rgba(255,255,255,0) 20%),
+          radial-gradient(circle at 10% 20%, rgba(246,225,224,1) 0% 22%, rgba(246,225,224,0.85) 24%, rgba(246,225,224,0.12) 40%, transparent 41%),
+          radial-gradient(circle at 60% 15%, rgba(255,255,255,0.92) 0% 16%, rgba(255,255,255,0) 18%),
+          radial-gradient(circle at 60% 15%, rgba(246,225,224,0.98) 0% 20%, rgba(246,225,224,0.78) 22%, rgba(246,225,224,0.14) 36%, transparent 37%),
+          radial-gradient(circle at 85% 70%, rgba(255,255,255,0.9) 0% 15%, rgba(255,255,255,0) 17%),
+          radial-gradient(circle at 85% 70%, rgba(246,225,224,0.96) 0% 18%, rgba(246,225,224,0.7) 20%, rgba(246,225,224,0.12) 33%, transparent 34%),
+          linear-gradient(90deg, rgba(199,147,73,0.85) 0.8px, transparent 0.8px),
+          linear-gradient(0deg, rgba(199,147,73,0.85) 0.8px, transparent 0.8px)
+        \`,
+        backgroundSize: "120px 120px",
+        backgroundPosition: "0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0",
+        backgroundRepeat: "repeat"
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+  }
+,  
   {
     id: "dual-gradient-overlay-top",
     name: "Dual Gradient Overlay (Top)",
