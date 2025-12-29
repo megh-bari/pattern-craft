@@ -8,7 +8,10 @@
     "build": "next build",
     "start": "next start",
     "postbuild": "next-sitemap",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build-react": "tsx scripts/generateScript.ts && tsc package/react/index.ts --jsx react-jsx --esModuleInterop --outDir build --moduleResolution bundler --module ESNext --declaration",
+    "prepublishOnly": "node scripts/prepare-pkg.js",
+    "publish-pkg": "npm run prepublishOnly && npm publish ./build --access public"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -31,7 +34,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^20.19.17",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
