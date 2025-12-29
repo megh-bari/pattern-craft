@@ -1653,7 +1653,7 @@ export const gridPatterns: Pattern[] = [
             ),
             radial-gradient(ellipse 100% 80% at 50% 100%, #000 50%, transparent 90%)
           `,
-          WebkitMaskImage: `
+      WebkitMaskImage: `
             repeating-linear-gradient(
               to right,
               black 0px,
@@ -1737,7 +1737,7 @@ export const gridPatterns: Pattern[] = [
           `,
       backgroundSize: "20px 20px",
       backgroundPosition: "0 0, 0 0",
-     maskImage: `
+      maskImage: `
             repeating-linear-gradient(
               to right,
               black 0px,
@@ -1754,7 +1754,7 @@ export const gridPatterns: Pattern[] = [
             ),
             radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)
           `,
-          WebkitMaskImage: `
+      WebkitMaskImage: `
             repeating-linear-gradient(
               to right,
               black 0px,
@@ -1826,7 +1826,7 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
-    {
+  {
     id: "dashed-top-right-fade-grid",
     name: "Dashed Top Right Fade Grid",
     category: "geometric",
@@ -1838,7 +1838,7 @@ export const gridPatterns: Pattern[] = [
           `,
       backgroundSize: "20px 20px",
       backgroundPosition: "0 0, 0 0",
-    maskImage: `
+      maskImage: `
             repeating-linear-gradient(
               to right,
               black 0px,
@@ -1855,7 +1855,7 @@ export const gridPatterns: Pattern[] = [
             ),
             radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)
           `,
-          WebkitMaskImage: `
+      WebkitMaskImage: `
             repeating-linear-gradient(
               to right,
               black 0px,
@@ -1927,7 +1927,7 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
-    {
+  {
     id: "dashed-bottom-right-fade-grid",
     name: "Dashed Bottom Right Fade Grid",
     category: "geometric",
@@ -1939,7 +1939,7 @@ export const gridPatterns: Pattern[] = [
           `,
       backgroundSize: "20px 20px",
       backgroundPosition: "0 0, 0 0",
-    maskImage: `
+      maskImage: `
             repeating-linear-gradient(
               to right,
               black 0px,
@@ -1956,7 +1956,7 @@ export const gridPatterns: Pattern[] = [
             ),
             radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)
           `,
-          WebkitMaskImage: `
+      WebkitMaskImage: `
             repeating-linear-gradient(
               to right,
               black 0px,
@@ -2028,7 +2028,7 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
-    {
+  {
     id: "dashed-bottom-left-fade-grid",
     name: "Dashed Bottom Left Fade Grid",
     category: "geometric",
@@ -2040,7 +2040,7 @@ export const gridPatterns: Pattern[] = [
           `,
       backgroundSize: "20px 20px",
       backgroundPosition: "0 0, 0 0",
-   maskImage: `
+      maskImage: `
             repeating-linear-gradient(
               to right,
               black 0px,
@@ -2057,7 +2057,7 @@ export const gridPatterns: Pattern[] = [
             ),
            radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)
           `,
-          WebkitMaskImage: `
+      WebkitMaskImage: `
             repeating-linear-gradient(
               to right,
               black 0px,
@@ -2129,7 +2129,7 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
-    {
+  {
     id: "dashed-center-fade-grid",
     name: "Dashed Center Fid Grid",
     category: "geometric",
@@ -2141,7 +2141,7 @@ export const gridPatterns: Pattern[] = [
           `,
       backgroundSize: "20px 20px",
       backgroundPosition: "0 0, 0 0",
-     maskImage: `
+      maskImage: `
             repeating-linear-gradient(
               to right,
               black 0px,
@@ -2158,7 +2158,7 @@ export const gridPatterns: Pattern[] = [
             ),
           radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)
           `,
-          WebkitMaskImage: `
+      WebkitMaskImage: `
             repeating-linear-gradient(
               to right,
               black 0px,
@@ -7608,6 +7608,96 @@ export const gridPatterns: Pattern[] = [
       animation: "spotlight 8s ease-in-out infinite",
     }}
   />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "soft-purple-blue",
+    name: "Soft Purple Blue",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "linear-gradient(to bottom, #ffffff,#e0d5ff, #b8c5ff)",
+      backgroundImage: "linear-gradient(to bottom,#ffffff, #e0d5ff, #b8c5ff)",
+    },
+    code: `<div className="min-h-screen w-full" style={{
+  background: "linear-gradient(to bottom, #e0d5ff, #b8c5ff)"
+}}>
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "steel-gray",
+    name: "Steel Gray",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "linear-gradient(135deg, #e8eaed 0%, #a0a8b0 100%)",
+      backgroundImage: "linear-gradient(135deg, #e8eaed 0%, #a0a8b0 100%)",
+    },
+    code: `<div className="min-h-screen w-full" style={{
+  background: "linear-gradient(135deg, #e8eaed 0%, #a0a8b0 100%)"
+}}>
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "turquoise-dream",
+    name: "Turquoise Dream",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "linear-gradient(to bottom, #ffffff, #4fd1c5)",
+      backgroundImage: "linear-gradient(to bottom, #ffffff, #4fd1c5)",
+    },
+    code: `<div className="min-h-screen w-full" style={{
+  background: "linear-gradient(to bottom, #ffffff, #4fd1c5)"
+}}>
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "peach-blush",
+    name: "Peach Blush",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "linear-gradient(to bottom, #ffffff,#ffd6e8, #ffa5c0)",
+      backgroundImage: "linear-gradient(to bottom, #ffffff, #ffd6e8, #ffa5c0)",
+    },
+    code: `<div className="min-h-screen w-full" style={{
+  background: "linear-gradient(to bottom, #ffd6e8, #ffa5c0)"
+}}>
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "sunset-orange",
+    name: "Sunset Orange",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "linear-gradient(to bottom, #ffffff, #ffb347)",
+      backgroundImage: "linear-gradient(to bottom, #ffffff, #ffb347)",
+    },
+    code: `<div className="min-h-screen w-full" style={{
+  background: "linear-gradient(to bottom, #ffffff, #ffb347)"
+}}>
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "lavender-pink",
+    name: "Lavender Pink",
+    category: "decorative",
+    badge: "New",
+    style: {
+      background: "linear-gradient(to bottom, #f0e5ff, #ffc6d9)",
+      backgroundImage: "linear-gradient(to bottom, #f0e5ff, #ffc6d9)",
+    },
+    code: `<div className="min-h-screen w-full" style={{
+  background: "linear-gradient(to bottom, #f0e5ff, #ffc6d9)"
+}}>
   {/* Your Content/Components */}
 </div>`,
   },
