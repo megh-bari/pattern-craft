@@ -2230,6 +2230,7 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  // left-right masked bgs
   {
     id: "left-masked-basic-grid",
     name: "Left Masked Basic Grid",
@@ -2246,7 +2247,7 @@ export const gridPatterns: Pattern[] = [
         "linear-gradient(to left, #000 0%, #000 50%, transparent 50%, transparent 100%)",
     },
     code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Grid Background */}
+  {/* Left Masked Grid Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -2280,7 +2281,7 @@ export const gridPatterns: Pattern[] = [
         "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
     },
     code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Grid Background */}
+  {/* Right Masked Grid Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -2309,13 +2310,13 @@ export const gridPatterns: Pattern[] = [
       linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
     `,
       backgroundSize: "40px 40px",
-        WebkitMaskImage:
-            "linear-gradient(to left, #000 0%, #000 50%, transparent 50%, transparent 100%)",
-          maskImage:
-            "linear-gradient(to left, #000 0%, #000 50%, transparent 50%, transparent 100%)",
+      WebkitMaskImage:
+        "linear-gradient(to left, #000 0%, #000 50%, transparent 50%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to left, #000 0%, #000 50%, transparent 50%, transparent 100%)",
     },
     code: `<div className="min-h-screen w-full bg-white relative">
-  {/*  Diagonal Cross Grid Background */}
+  {/* Left Masked Diagonal Cross Grid Background */}
   <div
     className="absolute inset-0"
     style={{
@@ -2344,13 +2345,13 @@ export const gridPatterns: Pattern[] = [
       linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
     `,
       backgroundSize: "40px 40px",
-        WebkitMaskImage:
-            "linear-gradient(to right, #000 0%, #000 50%, transparent 50%, transparent 100%)",
-          maskImage:
-            "linear-gradient(to right, #000 0%, #000 50%, transparent 50%, transparent 100%)",
+      WebkitMaskImage:
+        "linear-gradient(to right, #000 0%, #000 50%, transparent 50%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to right, #000 0%, #000 50%, transparent 50%, transparent 100%)",
     },
     code: `<div className="min-h-screen w-full bg-white relative">
-  {/*  Diagonal Cross Grid Background */}
+  {/* Right Masked Diagonal Cross Grid Background */}
   <div
     className="absolute inset-0"
     style={{
@@ -2366,6 +2367,590 @@ export const gridPatterns: Pattern[] = [
     }}
   />
   {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "left-masked-dashed-grid-light",
+    name: "Left Masked Dashed Grid Light",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundImage: `
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      `,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: `
+       linear-gradient(to left, black 0%, black 50%, transparent 50%, transparent 100%),
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            )
+      `,
+      WebkitMaskImage: `
+    linear-gradient(to left, black 0%, black 50%, transparent 50%, transparent 100%),
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            )
+      `,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Left Masked Dashed Grid */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: \`
+        linear-gradient(to left, black 0%, black 50%, transparent 50%, transparent 100%),
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            )
+      \`,
+      WebkitMaskImage: \`
+       linear-gradient(to left, black 0%, black 50%, transparent 50%, transparent 100%),
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            )
+      \`,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "right-masked-dashed-grid-light",
+    name: "Right Masked Dashed Grid Light",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundImage: `
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      `,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: `
+      linear-gradient(to right, black 0%, black 50%, transparent 50%, transparent 100%),
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            )
+      `,
+      WebkitMaskImage: `
+   linear-gradient(to right, black 0%, black 50%, transparent 50%, transparent 100%),
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            )
+      `,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Right Masked Dashed Grid */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: \`
+        linear-gradient(to right, black 0%, black 50%, transparent 50%, transparent 100%),
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            )
+      \`,
+      WebkitMaskImage: \`
+      linear-gradient(to right, black 0%, black 50%, transparent 50%, transparent 100%),
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            )
+      \`,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "left-masked-concentric-squares-light",
+    name: "Left Masked Concentric Squares - Light",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),
+      repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),
+      repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),
+      repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)
+    `,
+      WebkitMaskImage:
+        "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
+  {/* Left Masked Concentric Squares - Light Pattern */}
+  <div
+    className="absolute inset-0 z-0 pointer-events-none"
+    style={{
+      backgroundImage: \`
+        repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),
+        repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),
+        repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),
+        repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)
+      \`,
+         WebkitMaskImage:
+            "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "right-masked-concentric-squares-light",
+    name: "Right Masked Concentric Squares - Light",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),
+      repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),
+      repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),
+      repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)
+    `,
+      WebkitMaskImage:
+        "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
+  {/* Right Masked Concentric Squares - Light Pattern */}
+  <div
+    className="absolute inset-0 z-0 pointer-events-none"
+    style={{
+      backgroundImage: \`
+        repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),
+        repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),
+        repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),
+        repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)
+      \`,
+       WebkitMaskImage:
+            "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "left-masked-circuit-board-light",
+    name: "Left Masked Circuit Board - Light",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+      repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+      radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
+      radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
+    `,
+      backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
+      WebkitMaskImage:
+        "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
+  {/* Left Masked Circuit Board - Light Pattern */}
+  <div
+    className="absolute inset-0 z-0 pointer-events-none"
+    style={{
+      backgroundImage: \`
+        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
+        radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
+      \`,
+      backgroundSize: '40px 40px, 40px 40px, 40px 40px, 40px 40px',
+         WebkitMaskImage:
+            "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "right-masked-circuit-board-light",
+    name: "Right Masked Circuit Board - Light",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+      repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+      radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
+      radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
+    `,
+      backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
+      WebkitMaskImage:
+        "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
+  {/* Right Masked Circuit Board - Light Pattern */}
+  <div
+    className="absolute inset-0 z-0 pointer-events-none"
+    style={{
+      backgroundImage: \`
+        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
+        radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
+      \`,
+      backgroundSize: '40px 40px, 40px 40px, 40px 40px, 40px 40px',
+          WebkitMaskImage:
+            "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "left-masked-circuit-board",
+    name: "Left Masked Circuit Board",
+    category: "geometric",
+    style: {
+      background: "#f8fafc",
+      backgroundImage: `
+        linear-gradient(90deg, #e2e8f0 1px, transparent 1px),
+        linear-gradient(180deg, #e2e8f0 1px, transparent 1px),
+        linear-gradient(90deg, #cbd5e1 1px, transparent 1px),
+        linear-gradient(180deg, #cbd5e1 1px, transparent 1px)
+      `,
+      backgroundSize: "50px 50px, 50px 50px, 10px 10px, 10px 10px",
+      WebkitMaskImage:
+        "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-[#f8fafc] relative">
+  {/* Left Masked Circuit Board Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#f8fafc",
+      backgroundImage: \`
+        linear-gradient(90deg, #e2e8f0 1px, transparent 1px),
+        linear-gradient(180deg, #e2e8f0 1px, transparent 1px),
+        linear-gradient(90deg, #cbd5e1 1px, transparent 1px),
+        linear-gradient(180deg, #cbd5e1 1px, transparent 1px)
+      \`,
+      backgroundSize: "50px 50px, 50px 50px, 10px 10px, 10px 10px",
+       WebkitMaskImage:
+            "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "right-masked-circuit-board",
+    name: "Right Masked Circuit Board",
+    category: "geometric",
+    style: {
+      background: "#f8fafc",
+      backgroundImage: `
+        linear-gradient(90deg, #e2e8f0 1px, transparent 1px),
+        linear-gradient(180deg, #e2e8f0 1px, transparent 1px),
+        linear-gradient(90deg, #cbd5e1 1px, transparent 1px),
+        linear-gradient(180deg, #cbd5e1 1px, transparent 1px)
+      `,
+      backgroundSize: "50px 50px, 50px 50px, 10px 10px, 10px 10px",
+      WebkitMaskImage:
+        "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-[#f8fafc] relative">
+  {/* Right Masked Circuit Board Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#f8fafc",
+      backgroundImage: \`
+        linear-gradient(90deg, #e2e8f0 1px, transparent 1px),
+        linear-gradient(180deg, #e2e8f0 1px, transparent 1px),
+        linear-gradient(90deg, #cbd5e1 1px, transparent 1px),
+        linear-gradient(180deg, #cbd5e1 1px, transparent 1px)
+      \`,
+      backgroundSize: "50px 50px, 50px 50px, 10px 10px, 10px 10px",
+     WebkitMaskImage:
+            "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "left-masked-white-grid-with-dots",
+    name: "Left Masked White Grid with Dots",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px),
+      radial-gradient(circle, rgba(51,65,85,0.4) 1px, transparent 1px)
+    `,
+      backgroundSize: "20px 20px, 20px 20px, 20px 20px",
+      backgroundPosition: "0 0, 0 0, 0 0",
+      WebkitMaskImage:
+        "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Left Masked White Grid with Dots Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px),
+        radial-gradient(circle, rgba(51,65,85,0.4) 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px, 20px 20px, 20px 20px",
+      backgroundPosition: "0 0, 0 0, 0 0",
+         WebkitMaskImage:
+            "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "right-masked-white-grid-with-dots",
+    name: "Right Masked White Grid with Dots",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px),
+      radial-gradient(circle, rgba(51,65,85,0.4) 1px, transparent 1px)
+    `,
+      backgroundSize: "20px 20px, 20px 20px, 20px 20px",
+      backgroundPosition: "0 0, 0 0, 0 0",
+      WebkitMaskImage:
+        "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Right Masked White Grid with Dots Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px),
+        radial-gradient(circle, rgba(51,65,85,0.4) 1px, transparent 1px)
+      \`,
+      backgroundSize: "20px 20px, 20px 20px, 20px 20px",
+      backgroundPosition: "0 0, 0 0, 0 0",
+         WebkitMaskImage:
+            "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "left-masked-noise-texture-darker-dots",
+    name: "Left Masked Noise Texture (Darker Dots)",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.35) 1px, transparent 0)
+    `,
+      backgroundSize: "20px 20px",
+      WebkitMaskImage:
+        "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Left Masked Noise Texture (Darker Dots) Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#ffffff",
+      backgroundImage: "radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.35) 1px, transparent 0)",
+      backgroundSize: "20px 20px",
+       WebkitMaskImage:
+            "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to left, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "right-masked-noise-texture-darker-dots",
+    name: "Right Masked Noise Texture (Darker Dots)",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.35) 1px, transparent 0)
+    `,
+      backgroundSize: "20px 20px",
+      WebkitMaskImage:
+        "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Right Masked Noise Texture (Darker Dots) Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#ffffff",
+      backgroundImage: "radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.35) 1px, transparent 0)",
+      backgroundSize: "20px 20px",
+         WebkitMaskImage:
+            "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to right, #000 0%, #000 50%, transparent 20%, transparent 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
 </div>`,
   },
   // New Gradient Colors
