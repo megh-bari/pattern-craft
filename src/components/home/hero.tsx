@@ -268,7 +268,7 @@ export default function Hero({ theme }: HeroProps) {
               className={`text-xl sm:text-2xl font-bold transition-colors duration-300 ${isPatternDark ? "text-white" : ""
                 }`}
             >
-              200+
+              250+
             </div>
             <div
               className={`text-xs sm:text-sm transition-colors duration-300 ${isPatternDark ? "text-gray-300" : ""
