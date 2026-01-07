@@ -151,10 +151,10 @@ export default function Hero({ theme }: HeroProps) {
         </div>
 
         {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 sm:px-0">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
           <Button
             size="lg"
-            className={`cursor-pointer gap-2 px-4 sm:px-8 py-3 text-sm sm:text-base font-medium shadow-lg transition-all duration-300 flex-1 sm:flex-none ${isPatternDark
+            className={`cursor-pointer gap-2 px-4 sm:px-8 py-3 text-sm sm:text-base font-medium shadow-lg transition-all duration-300 flex-1 sm:flex-none w-full sm:w-auto ${isPatternDark
               ? "bg-white text-black hover:bg-gray-100"
               : "bg-slate-950 hover:bg-slate-900 dark:bg-white dark:text-black dark:hover:bg-gray-100"
               }`}
@@ -167,7 +167,7 @@ export default function Hero({ theme }: HeroProps) {
           </Button>
           <Button
             size="lg"
-            className={`cursor-pointer gap-2 px-4 sm:px-8 py-3 text-sm sm:text-base font-medium shadow-lg transition-all duration-300 flex-1 sm:flex-none ${isPatternDark
+            className={`cursor-pointer gap-2 px-4 sm:px-8 py-3 text-sm sm:text-base font-medium shadow-lg transition-all duration-300 flex-1 sm:flex-none w-full sm:w-auto ${isPatternDark
               ? "bg-slate-950 text-white hover:bg-slate-900"
               : "bg-white text-black hover:bg-gray-100"
               }`}
@@ -181,8 +181,8 @@ export default function Hero({ theme }: HeroProps) {
 
         {/* Sponsors Attribution */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-8 sm:mt-10 mx-auto px-4 sm:px-0 text-center sm:text-left">
-  <Sponsors theme={theme} />
-</div>
+          <Sponsors theme={theme} />
+        </div>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 mt-8 sm:mt-10 mx-auto px-4 sm:px-0">
           <CarbonAd />
@@ -223,7 +223,7 @@ export default function Hero({ theme }: HeroProps) {
               Free
             </div>
           </div>
-          <div className="text-center">
+          <div className="text-center">``
             <div
               className={`text-xl sm:text-2xl font-bold transition-colors duration-300 ${isPatternDark ? "text-white" : ""
                 }`}
