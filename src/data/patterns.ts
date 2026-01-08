@@ -8334,4 +8334,43 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+
+{
+  id: "2d-cube-grid",
+  name: "2D Cube Grid",
+  category: "geometric",
+  badge: "New",
+  style: {
+    background: "#0f172a",
+    backgroundImage: `
+      linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.05) 75%)
+    `,
+    backgroundSize: "40px 40px",
+    backgroundPosition: "0 0, 0 20px, 20px -20px, -20px 0px",
+  },
+  code: `<div className="min-h-screen w-full bg-slate-900 relative grid-animated-container">
+  {/* 3D Cube Grid Spotlight Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.05) 75%)
+      \`,
+      backgroundSize: "40px 40px",
+      backgroundPosition: "0 0, 0 20px, 20px -20px, -20px 0px",
+      WebkitMask: "radial-gradient(circle at var(--x, 50%) var(--y, 50%), black 0, transparent 40%)",
+      mask: "radial-gradient(circle at var(--x, 50%) var(--y, 50%), black 0, transparent 40%)",
+      animation: "spotlight 8s ease-in-out infinite",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+
 ];
