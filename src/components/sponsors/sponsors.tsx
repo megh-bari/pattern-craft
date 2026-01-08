@@ -129,7 +129,7 @@ function Sponsors({ theme }: SponsorsProps) {
  ${isPatternDark ? "text-gray-300 group-hover:text-white" : "text-gray-600 group-hover:text-gray-900"
                     }`}>
                     <span className=" leading-none font-semibold  flex justify-items-start">
-                        shadcncraft
+                        shadcraft
                     </span>
                     <span className={`text-xs sm:text-sm leading-none transition-colors duration-300 ${isPatternDark ? "text-gray-400 group-hover:text-gray-300" : "text-gray-500 group-hover:text-gray-700"
                         }`}>
