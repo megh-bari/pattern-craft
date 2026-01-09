@@ -8334,4 +8334,97 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "soft-horizon",
+    name: "Soft Horizon",
+    category: "gradients",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      linear-gradient(120deg, rgba(255, 239, 213, 0.6), rgba(173, 216, 230, 0.6)),
+      radial-gradient(circle at 40% 60%, rgba(240, 248, 255, 0.4), transparent 60%)
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative grid-animated-container">
+  {/* Soft Horizon Spotlight Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(120deg, rgba(255, 239, 213, 0.6), rgba(173, 216, 230, 0.6)),
+        radial-gradient(circle at 40% 60%, rgba(240, 248, 255, 0.4), transparent 60%)
+      \`,
+      backgroundSize: "100% 100%",
+      WebkitMask: "radial-gradient(circle at var(--x, 50%) var(--y, 50%), black 0, transparent 30%)",
+      mask: "radial-gradient(circle at var(--x, 50%) var(--y, 50%), black 0, transparent 30%)",
+      animation: "spotlight 8s ease-in-out infinite",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "peach-fade",
+    name: "Peach Fade",
+    category: "gradients",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      linear-gradient(135deg, rgba(255, 218, 185, 0.6), rgba(255, 240, 245, 0.7)),
+      radial-gradient(ellipse at bottom left, rgba(255, 182, 193, 0.3), transparent 70%)
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative grid-animated-container">
+  {/* Peach Fade Spotlight Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(135deg, rgba(255, 218, 185, 0.6), rgba(255, 240, 245, 0.7)),
+        radial-gradient(ellipse at bottom left, rgba(255, 182, 193, 0.3), transparent 70%)
+      \`,
+      backgroundSize: "100% 100%",
+      WebkitMask: "radial-gradient(circle at var(--x, 50%) var(--y, 50%), black 0, transparent 30%)",
+      mask: "radial-gradient(circle at var(--x, 50%) var(--y, 50%), black 0, transparent 30%)",
+      animation: "spotlight 8s ease-in-out infinite",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "hazy-dawn",
+    name: "Hazy Dawn",
+    category: "gradients",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(circle at 50% 10%, rgba(255, 239, 213, 0.5), transparent 70%),
+      linear-gradient(to bottom, rgba(255, 250, 240, 0.6), rgba(230, 245, 255, 0.6))
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative grid-animated-container">
+  {/* Hazy Dawn Spotlight Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 50% 10%, rgba(255, 239, 213, 0.5), transparent 70%),
+        linear-gradient(to bottom, rgba(255, 250, 240, 0.6), rgba(230, 245, 255, 0.6))
+      \`,
+      backgroundSize: "100% 100%",
+      WebkitMask: "radial-gradient(circle at var(--x, 50%) var(--y, 50%), black 0, transparent 30%)",
+      mask: "radial-gradient(circle at var(--x, 50%) var(--y, 50%), black 0, transparent 30%)",
+      animation: "spotlight 8s ease-in-out infinite",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
 ];
