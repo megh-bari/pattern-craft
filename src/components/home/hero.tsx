@@ -223,7 +223,7 @@ export default function Hero({ theme }: HeroProps) {
               Free
             </div>
           </div>
-          <div className="text-center">``
+          <div className="text-center">
             <div
               className={`text-xl sm:text-2xl font-bold transition-colors duration-300 ${isPatternDark ? "text-white" : ""
                 }`}
