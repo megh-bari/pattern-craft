@@ -1,0 +1,20 @@
+{
+  "name": "pattern-craft",
+  "author": "iamvkr",
+  "version": "0.1.5",
+  "main": "index.js",
+  "module": "index.esm.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  },
+  "peerDependencies": {
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "license": "MIT",
+  "repository": "pkg.repository"
+}
