@@ -42,13 +42,15 @@ export default function PatternCard({
   return (
     <div className="group relative">
       <div
-        className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-background shadow-sm transition-all duration-300 ${activePattern === pattern.id
+        className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-background shadow-sm transition-all duration-300 ${
+          activePattern === pattern.id
             ? "ring-2 ring-primary ring-offset-2"
             : ""
-          } ${activeMobileCard === pattern.id
+        } ${
+          activeMobileCard === pattern.id
             ? "scale-[1.02] shadow-lg sm:scale-100"
             : "hover:shadow-lg hover:scale-[1.02]"
-          }`}
+        }`}
         onClick={() => handleCardInteraction(pattern.id)}
       >
         {/* Favorite Button with Star Icon */}
@@ -57,14 +59,15 @@ export default function PatternCard({
             e.stopPropagation();
             toggleFavourite(pattern.id);
           }}
-          className={`absolute top-2 left-2 z-10 p-2 rounded-full backdrop-blur-md shadow-lg border transition-all cursor-pointer duration-200 hover:scale-110 group/star ${isFavourite(pattern.id)
+          className={`absolute top-2 left-2 z-10 p-2 rounded-full backdrop-blur-md shadow-lg border transition-all cursor-pointer duration-200 hover:scale-110 group/star ${
+            isFavourite(pattern.id)
               ? isPatternDark
                 ? "bg-yellow-500/20 border-yellow-400/30 text-yellow-400"
                 : "bg-yellow-500/20 border-yellow-500/30 text-yellow-600"
               : isPatternDark
                 ? "bg-black/20 border-white/20 text-white hover:bg-black/30 hover:border-white/30"
                 : "bg-black/20 border-white/30 text-white hover:bg-black/30 hover:border-white/40"
-            }`}
+          }`}
           title={
             isFavourite(pattern.id)
               ? "Remove from favorites"
@@ -72,10 +75,11 @@ export default function PatternCard({
           }
         >
           <Star
-            className={`h-4 w-4 transition-all duration-200 ${isFavourite(pattern.id)
+            className={`h-4 w-4 transition-all duration-200 ${
+              isFavourite(pattern.id)
                 ? "fill-current scale-110"
                 : "group-hover/star:scale-110"
-              }`}
+            }`}
           />
         </button>
 
@@ -116,15 +120,16 @@ export default function PatternCard({
             size="sm"
             onClick={(e) => {
               e.stopPropagation();
-              copyToClipboard(pattern.code, pattern.id);
+              copyToClipboard(pattern);
             }}
-            className={`flex-1 border-0 text-xs h-8 ${isCopied(pattern.id)
+            className={`flex-1 border-0 text-xs h-8 ${
+              isCopied(pattern.id, "react")
                 ? "bg-gray-700 hover:bg-gray-800 text-white"
                 : "bg-gray-900/90 hover:bg-gray-900 text-white"
-              }`}
-            disabled={isCopied(pattern.id)}
+            }`}
+            disabled={isCopied(pattern.id, "react")}
           >
-            {isCopied(pattern.id) ? (
+            {isCopied(pattern.id, "react") ? (
               <>
                 <Check className="h-3 w-3 mr-1" />
                 Copied
@@ -132,7 +137,32 @@ export default function PatternCard({
             ) : (
               <>
                 <Copy className="h-3 w-3 mr-1" />
-                Copy
+                React
+              </>
+            )}
+          </Button>
+          <Button
+            size="sm"
+            onClick={(e) => {
+              e.stopPropagation();
+              copyToClipboard(pattern, true);
+            }}
+            className={`flex-1 border-0 text-xs h-8 ${
+              isCopied(pattern.id, "vanilla")
+                ? "bg-gray-700 hover:bg-gray-800 text-white"
+                : "bg-gray-900/90 hover:bg-gray-900 text-white"
+            }`}
+            disabled={isCopied(pattern.id, "vanilla")}
+          >
+            {isCopied(pattern.id, "vanilla") ? (
+              <>
+                <Check className="h-3 w-3 mr-1" />
+                Copied
+              </>
+            ) : (
+              <>
+                <Copy className="h-3 w-3 mr-1" />
+                Vanilla
               </>
             )}
           </Button>
@@ -164,15 +194,16 @@ export default function PatternCard({
                 size="sm"
                 onClick={(e) => {
                   e.stopPropagation();
-                  copyToClipboard(pattern.code, pattern.id);
+                  copyToClipboard(pattern);
                 }}
-                className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${isCopied(pattern.id)
+                className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${
+                  isCopied(pattern.id, "react")
                     ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"
                     : "bg-gray-900/90 hover:bg-gray-900 text-white"
-                  }`}
-                disabled={isCopied(pattern.id)}
+                }`}
+                disabled={isCopied(pattern.id, "react")}
               >
-                {isCopied(pattern.id) ? (
+                {isCopied(pattern.id, "react") ? (
                   <>
                     <Check className="h-3 w-3" />
                     Copied
@@ -180,7 +211,32 @@ export default function PatternCard({
                 ) : (
                   <>
                     <Copy className="h-3 w-3" />
-                    Copy
+                    React
+                  </>
+                )}
+              </Button>
+              <Button
+                size="sm"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  copyToClipboard(pattern, true);
+                }}
+                className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${
+                  isCopied(pattern.id, "vanilla")
+                    ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"
+                    : "bg-gray-900/90 hover:bg-gray-900 text-white"
+                }`}
+                disabled={isCopied(pattern.id, "vanilla")}
+              >
+                {isCopied(pattern.id, "vanilla") ? (
+                  <>
+                    <Check className="h-3 w-3" />
+                    Copied
+                  </>
+                ) : (
+                  <>
+                    <Copy className="h-3 w-3" />
+                    Vanilla
                   </>
                 )}
               </Button>
