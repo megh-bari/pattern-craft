@@ -8334,4 +8334,29 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "pattern-plus",
+    name: "Pattern Plus",
+    category: "geometric",
+    badge: "New",
+    style: {
+      backgroundColor: "#ffffff",
+      background:
+        "radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#e5e7eb 1px, transparent 1px) 0 0, linear-gradient(90deg, #e5e7eb 1px, transparent 1px) 0 0",
+      backgroundSize: "50px 50px, 50px 50px, 25px 25px, 25px 25px",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Pattern Plus */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundColor: "#ffffff",
+      background:
+        "radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#e5e7eb 1px, transparent 1px) 0 0, linear-gradient(90deg, #e5e7eb 1px, transparent 1px) 0 0",
+      backgroundSize: "50px 50px, 50px 50px, 25px 25px, 25px 25px",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
 ];
