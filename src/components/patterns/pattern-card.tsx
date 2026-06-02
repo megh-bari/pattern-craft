@@ -6,6 +6,9 @@ import { Check, Copy, Eye, Sparkles, Star } from "lucide-react";
 import { Pattern } from "@/types/pattern";
 import { useCopy } from "@/hooks/useCopy";
 import { useFavorites } from "@/context/favourites-context";
+import { ButtonGroup, ButtonGroupSeparator } from "@/components/ui/button-group";
+import { ArrowUp } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 interface PatternCardProps {
   pattern: Pattern;
@@ -29,22 +32,29 @@ export default function PatternCard({
   const isPatternDark = theme === "dark";
 
   const previewPattern = (patternId: string) => {
-    setActivePattern(patternId === activePattern ? null : patternId);
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 200);
+    setActivePattern(
+      patternId === activePattern ? null : patternId
+    );
   };
 
   const handleCardInteraction = (patternId: string) => {
     setActiveMobileCard(activeMobileCard === patternId ? null : patternId);
   };
 
+  const GoToTop = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <div className="group relative">
       <div
         className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-background shadow-sm transition-all duration-300 ${activePattern === pattern.id
-            ? "ring-2 ring-primary ring-offset-2"
-            : ""
+          ? "ring-2 ring-primary ring-offset-2"
+          : ""
           } ${activeMobileCard === pattern.id
             ? "scale-[1.02] shadow-lg sm:scale-100"
             : "hover:shadow-lg hover:scale-[1.02]"
@@ -58,12 +68,12 @@ export default function PatternCard({
             toggleFavourite(pattern.id);
           }}
           className={`absolute top-2 left-2 z-10 p-2 rounded-full backdrop-blur-md shadow-lg border transition-all cursor-pointer duration-200 hover:scale-110 group/star ${isFavourite(pattern.id)
-              ? isPatternDark
-                ? "bg-yellow-500/20 border-yellow-400/30 text-yellow-400"
-                : "bg-yellow-500/20 border-yellow-500/30 text-yellow-600"
-              : isPatternDark
-                ? "bg-black/20 border-white/20 text-white hover:bg-black/30 hover:border-white/30"
-                : "bg-black/20 border-white/30 text-white hover:bg-black/30 hover:border-white/40"
+            ? isPatternDark
+              ? "bg-yellow-500/20 border-yellow-400/30 text-yellow-400"
+              : "bg-yellow-500/20 border-yellow-500/30 text-yellow-600"
+            : isPatternDark
+              ? "bg-black/20 border-white/20 text-white hover:bg-black/30 hover:border-white/30"
+              : "bg-black/20 border-white/30 text-white hover:bg-black/30 hover:border-white/40"
             }`}
           title={
             isFavourite(pattern.id)
@@ -73,8 +83,8 @@ export default function PatternCard({
         >
           <Star
             className={`h-4 w-4 transition-all duration-200 ${isFavourite(pattern.id)
-                ? "fill-current scale-110"
-                : "group-hover/star:scale-110"
+              ? "fill-current scale-110"
+              : "group-hover/star:scale-110"
               }`}
           />
         </button>
@@ -97,21 +107,47 @@ export default function PatternCard({
 
         {/* Mobile View: Simple preview and copy buttons */}
         <div className="lg:hidden absolute bottom-2 left-2 right-2 z-10 flex justify-center gap-2 px-2">
-          <Button
-            size="sm"
-            variant="secondary"
-            onClick={(e) => {
-              e.stopPropagation();
-              previewPattern(pattern.id);
-              // refresh the Carbon ad
-              window.refreshCarbon?.();
-              document.getElementById("trigger-preview-scroll")?.click();
-            }}
-            className="flex-1 bg-white/95 hover:bg-white text-black border-0 text-xs h-8"
-          >
-            <Eye className="h-3 w-3 mr-1" />
-            {activePattern === pattern.id ? "Hide" : "Preview"}
-          </Button>
+          <ButtonGroup className="w-full">
+            <Button
+              size="sm"
+              variant="secondary"
+              onClick={(e) => {
+                e.stopPropagation();
+
+                previewPattern(pattern.id);
+                // refresh the carbon ad
+                window.refreshCarbon?.();
+                document.getElementById("trigger-preview-scroll")?.click();
+              }}
+              className="flex-3 bg-white/95 hover:bg-white text-black border-0 text-xs h-8"
+            >
+              <Eye className="h-3 w-3 mr-1" />
+              {activePattern === pattern.id ? "Hide" : "Preview"}
+            </Button>
+
+            {activePattern === pattern.id && (
+              <>
+                <ButtonGroupSeparator />
+
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      size="sm"
+                      variant="secondary"
+                      onClick={(e) => { GoToTop(e) }}
+                      className="flex-1"
+                      aria-label="Scroll to top"
+                    >
+                      <ArrowUp className="h-3 w-3" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Scroll to top</p>
+                  </TooltipContent>
+                </Tooltip>
+              </>
+            )}
+          </ButtonGroup>
           <Button
             size="sm"
             onClick={(e) => {
@@ -119,8 +155,8 @@ export default function PatternCard({
               copyToClipboard(pattern.code, pattern.id);
             }}
             className={`flex-1 border-0 text-xs h-8 ${isCopied(pattern.id)
-                ? "bg-gray-700 hover:bg-gray-800 text-white"
-                : "bg-gray-900/90 hover:bg-gray-900 text-white"
+              ? "bg-gray-700 hover:bg-gray-800 text-white"
+              : "bg-gray-900/90 hover:bg-gray-900 text-white"
               }`}
             disabled={isCopied(pattern.id)}
           >
@@ -144,22 +180,45 @@ export default function PatternCard({
             <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-4 drop-shadow-lg">
               {pattern.name}
             </h3>
-            <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 w-full xs:w-auto">
-              <Button
-                size="sm"
-                variant="secondary"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  previewPattern(pattern.id);
-                  // refresh the Carbon ad
-                  window.refreshCarbon?.();
-                  document.getElementById("trigger-preview-scroll")?.click();
-                }}
-                className="cursor-pointer shadow-xl backdrop-blur-md bg-white/95 hover:bg-white text-black border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto"
-              >
-                <Eye className="h-3 w-3 mr-1" />
-                {activePattern === pattern.id ? "Hide" : "Preview"}
-              </Button>
+            <div className="flex flex-col items-center justify-center  xs:flex-row gap-2 sm:gap-3 w-full xs:w-auto">
+              <ButtonGroup className="w-full">
+                <Button
+                  size="sm"
+                  variant="secondary"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    previewPattern(pattern.id);
+                    window.refreshCarbon?.();
+                    document.getElementById("trigger-preview-scroll")?.click();
+                  }}
+                  className="flex-3 bg-white/95 hover:bg-white text-black border-0 h-8"
+                >
+                  <Eye className="h-3 w-3 mr-1" />
+                  {activePattern === pattern.id ? "Hide" : "Preview"}
+                </Button>
+
+                {activePattern === pattern.id && (
+                  <>
+                    <ButtonGroupSeparator />
+
+                     <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      size="sm"
+                      variant="secondary"
+                      onClick={(e) => { GoToTop(e) }}
+                      className="flex-1"
+                    >
+                      <ArrowUp className="h-3 w-3" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p >Scroll to top</p>
+                  </TooltipContent>
+                </Tooltip>
+                  </>
+                )}
+              </ButtonGroup>
               <Button
                 size="sm"
                 onClick={(e) => {
@@ -167,8 +226,8 @@ export default function PatternCard({
                   copyToClipboard(pattern.code, pattern.id);
                 }}
                 className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${isCopied(pattern.id)
-                    ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"
-                    : "bg-gray-900/90 hover:bg-gray-900 text-white"
+                  ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"
+                  : "bg-gray-900/90 hover:bg-gray-900 text-white"
                   }`}
                 disabled={isCopied(pattern.id)}
               >

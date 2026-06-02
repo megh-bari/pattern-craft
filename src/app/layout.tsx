@@ -6,6 +6,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://patterncraft.fun"),
@@ -507,7 +508,9 @@ export default function RootLayout({
           enableSystem={false}
         >
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <TooltipProvider>
             {children}
+        </TooltipProvider>
             <Analytics />
             <SpeedInsights />
           </div>
