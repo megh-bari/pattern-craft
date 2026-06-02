@@ -136,6 +136,7 @@ export default function PatternCard({
                       variant="secondary"
                       onClick={(e) => { GoToTop(e) }}
                       className="flex-1"
+                      aria-label="Scroll to top"
                     >
                       <ArrowUp className="h-3 w-3" />
                     </Button>
