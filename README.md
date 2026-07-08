@@ -39,7 +39,7 @@
   <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
 </a>
 
-## Visit: **[Pattern Craft](https://patterncraft.fun)**
+## Visit: **[Pattern Craft](https://patterncraft.store)**
 
 ![UI Image](./public/images/readme-img-one.png)
 ![UI Image](./public/images/readme-img-two.png)
@@ -139,7 +139,7 @@ npm start
 
 ## How to Use This
 
-1. Visit the live site: **[https://patterncraft.fun](https://pattern-craft.vercel.app/)**
+1. Visit the live site: **[https://patterncraft.store](https://patterncraft.store)**
 2. Browse through the collection of background patterns and gradients.
 3. Click on any pattern to open its preview modal.
 4. Copy the CSS/Tailwind-compatible code snippet.

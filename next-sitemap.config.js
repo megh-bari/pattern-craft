@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://patterncraft.fun',
+  siteUrl: 'https://patterncraft.store',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: [

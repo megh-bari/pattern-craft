@@ -1,6 +1,5 @@
 import React from 'react'
 import DotSeparator from './dot-separator';
-import Image from 'next/image';
 interface SponsorsProps {
     theme: "light" | "dark";
 }
@@ -10,7 +9,7 @@ function Sponsors({ theme }: SponsorsProps) {
     return (
         <>
             {/* Vercel Sponsor */}
-            {/* Thanks to Vercel for sponsoring PatternCraft.fun! Check them out at: https://vercel.com/ */}
+            {/* Thanks to Vercel for sponsoring patterncraft.store! Check them out at: https://vercel.com/ */}
 
             <a
                 href="https://vercel.com/blog/vercel-open-source-program-fall-2025-cohort#pattern-craft"
@@ -53,7 +52,7 @@ function Sponsors({ theme }: SponsorsProps) {
             <DotSeparator theme={theme} />
 
             {/* ShadcnBlocks Sponsor */}
-            {/* Huge thanks to ShadcnBlocks for supporting PatternCraft.fun! Explore their blocks at: https://shadcnblocks.com/ */}
+            {/* Huge thanks to ShadcnBlocks for supporting patterncraft.store! Explore their blocks at: https://shadcnblocks.com/ */}
             <a
                 href="https://shadcnblocks.com/"
                 target="_blank"
@@ -102,7 +101,7 @@ function Sponsors({ theme }: SponsorsProps) {
             {/* Dot Separator */}
             <DotSeparator theme={theme} />
             {/* ShadcnCraft Sponsor */}
-            {/* Huge thanks to ShadcnCraft for supporting PatternCraft.fun! Explore their blocks at: https://shadcncraft.com/ */}
+            {/* Huge thanks to ShadcnCraft for supporting patterncraft.store! Explore their blocks at: https://shadcncraft.com/ */}
             <a
                 href="https://shadcncraft.com"
                 target="_blank"
@@ -152,11 +151,12 @@ function Sponsors({ theme }: SponsorsProps) {
             </a>
 
             <DotSeparator theme={theme} />
-            {/* Tal by Grapevine Sponsor */}
-            {/* Huge thanks to Tal by Grapevine for supporting PatternCraft.fun! Explore their blocks at: https://tal.af/ */}
+            {/* Shadcn Studio Sponsor */}
+            {/* Sponsored Ambassador placement — https://shadcnstudio.com/become-ambassador */}
             <a
-                href="https://link.tal.af/?c=XkMUQr"
+                href="https://shadcnstudio.com/?utm_source=patterncraft&utm_medium=banner&utm_campaign=pattern-craft"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="
   flex flex-col items-center text-center
   sm:flex-row sm:items-center sm:text-left
@@ -164,12 +164,21 @@ function Sponsors({ theme }: SponsorsProps) {
   transition-colors duration-300
 "
             >
-                <Image
-                    src="/logos/tal-by-grapevine.svg"
-                    alt="Tal by Grapevine Logo"
-                    width={35}
-                    height={35}
-                    className="w-[35px] h-[35px] object-contain transition-all duration-300 opacity-90 group-hover:opacity-100"
+                {/* Brand assets: use approved light/dark symbol files — do not recolor */}
+                <img
+                    src="/sponsors-logos/shadcn-studio-symbol.svg"
+                    alt="Shadcn Studio Logo"
+                    width={24}
+                    height={24}
+                    className={`size-6 shrink-0 object-contain ${isPatternDark ? "hidden" : "block"}`}
+                    draggable={false}
+                />
+                <img
+                    src="/sponsors-logos/shadcn-studio-dark-symbol-logo.png"
+                    alt="Shadcn Studio Logo"
+                    width={24}
+                    height={24}
+                    className={`size-6 shrink-0 object-contain ${isPatternDark ? "block" : "hidden"}`}
                     draggable={false}
                 />
 
@@ -179,14 +188,15 @@ function Sponsors({ theme }: SponsorsProps) {
   gap-1
   text-sm sm:text-base font-medium
   transition-colors duration-300
+
  ${isPatternDark ? "text-gray-300 group-hover:text-white" : "text-gray-600 group-hover:text-gray-900"
                     }`}>
                     <span className="leading-none font-semibold flex justify-items-start">
-                        Tal by Grapevine
+                        shadcnstudio.com
                     </span>
                     <span className={`text-xs sm:text-sm leading-none transition-colors duration-300 ${isPatternDark ? "text-gray-400 group-hover:text-gray-300" : "text-gray-500 group-hover:text-gray-700"
                         }`}>
-                        Finds you the best jobs
+                        shadcn blocks & templates
                     </span>
                 </div>
             </a>
