@@ -408,11 +408,11 @@ If you like this project, consider giving it a ⭐️ on GitHub and sharing it w
 
 ## Star History
 
-<a href="https://www.star-history.com/#megh-bari/pattern-craft&Date">
+<a href="https://star-history.dera.page/#megh-bari/pattern-craft&type=Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=megh-bari/pattern-craft&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=megh-bari/pattern-craft&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=megh-bari/pattern-craft&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=megh-bari/pattern-craft&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://star-history.dera.page/svg?repos=megh-bari/pattern-craft&type=Date" />
+   <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=megh-bari/pattern-craft&type=Date" />
  </picture>
 </a>
 
