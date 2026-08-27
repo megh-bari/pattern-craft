@@ -70,13 +70,15 @@ export default function PatternShowcase({
         className="w-full mb-8"
       >
         {/* Desktop & Tablet Tabs */}
+        <div className={`sticky top-3 py-4 mb-2 rounded-2xl px-3 z-50 backdrop-blur-lg backdrop-saturate-150
+          ${isPatternDark ? "bg-black/[.80]" : "bg-white/[.85]"}`}>
         <TabsList
           className={`
             hidden md:grid
             grid-cols-2 sm:grid-cols-3 md:grid-cols-6
             w-full h-auto p-1.5
             backdrop-blur-md shadow-lg border
-            rounded-xl mb-8 transition-all duration-300
+            rounded-xl mb-0 md:mb-5 transition-all duration-300
             ${
               isPatternDark
                 ? "bg-black/20 border-white/10 hover:bg-black/30"
@@ -96,7 +98,7 @@ export default function PatternShowcase({
                 transition-all duration-300 ease-in-out
                 min-h-[44px] sm:min-h-[40px]
                 relative overflow-hidden
-                group
+                group cursor-pointer
                 ${
                   isPatternDark
                     ? `data-[state=active]:bg-white/10 data-[state=active]:text-white 
@@ -174,6 +176,7 @@ export default function PatternShowcase({
           setSearchInput={setSearchInput}
           isPatternDark={isPatternDark}
         ></SearchBar>
+        </div>
 
         {categories.map((category) => (
           <TabsContent
