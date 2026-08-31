@@ -46,8 +46,14 @@
 ![UI Image](./public/images/readme-img-four.png)
 ![UI Image](./public/images/readme-img-three.png)
 
-> _**Note: This project does not provide plain HTML or vanilla CSS snippets. All code is optimized for JSX (React/Next.js) and Tailwind CSS.**_  
+> _**Note: This project does not provide plain HTML or vanilla CSS snippets. All code is optimized for JSX (React/Next.js) and Tailwind CSS.**_
 > [Learn more in this announcement.](https://github.com/megh-bari/pattern-craft/discussions/24)
+
+> **Using these patterns server-side or in OG images?**
+> PatternCraft patterns rely on Tailwind classes and CSS variables that [Satori](https://github.com/vercel/satori) cannot process.
+> If you need these patterns inside `@vercel/og`, `ImageResponse`, or any Satori-based pipeline, see
+> [satori-patterns](https://github.com/Babatunde-Fatai/satori-patterns) —
+> a translated, inline-CSS version of this library with 161 patterns verified against Satori 0.19.x.
 
 ## Pattern Craft in the Wild!!!
 
