@@ -1,14 +1,14 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://patterncraft.store";
+import { siteConfig } from "@/lib/metadata";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: `${siteUrl}/`,
+      url: `${siteConfig.url}/`,
       changeFrequency: "weekly",
       priority: 1,
-      images: [`${siteUrl}/og-banner.png`],
+      images: [`${siteConfig.url}${siteConfig.ogImage}`],
     },
   ];
 }
