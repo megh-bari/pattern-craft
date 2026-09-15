@@ -42,6 +42,7 @@ export const gridPatterns: Pattern[] = [
     {/* Your Content/Components */}
   </div>`,
 
+  {
   id: "heart-grid",
   name: " Heart Grid",
   category: "geometric",
@@ -65,7 +66,7 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
->>>>>>> 2e5015f (feat: add subtle white heart grid texture)
+
 },
   {
     id: "top-gradient-radial",
