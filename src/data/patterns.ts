@@ -8341,37 +8341,68 @@ export const gridPatterns: Pattern[] = [
  {/* Your Content/Components */}
 </div>`,
   },
+  
   {
-    id: "diagonal-striped-grid",
-    name: "Diagonal Striped Grid",
+    id: "burgundy-glow-dots",
+    name: "Burgundy Glow & Dots",
     category: "geometric",
     badge: "New",
     style: {
-      background: "#ffffff",
+      background: "#1f0d13",
       backgroundImage: `
-        linear-gradient(90deg, rgba(16,185,129,0.25) 1px, transparent 0),
-        linear-gradient(180deg, rgba(16,185,129,0.25) 1px, transparent 0),
-        repeating-linear-gradient(45deg, rgba(16,185,129,0.2) 0 2px, transparent 2px 6px)
+        radial-gradient(
+          ellipse at 85% 0%,
+          rgba(190, 100, 120, 0.12),
+          transparent 50%
+        ),
+        radial-gradient(
+          ellipse at 0% 100%,
+          #4d102673,
+          transparent 55%
+        ),
+        radial-gradient(
+          rgba(244, 230, 232, 0.06) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          160deg,
+          #281018 0%,
+          #10070b 100%
+        )
       `,
-      backgroundSize: "24px 24px, 24px 24px, 24px 24px",
+      backgroundSize: "auto, auto, 28px 28px, auto",
     },
-    code: `<div className="min-h-screen w-full bg-white relative grid-animated-container">
-  {/* Diagonal Striped Grid Spotlight Background */}
+    code: `<div className="min-h-screen w-full relative">
+  {/* Burgundy Glow & Dots Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
+      backgroundColor: "#1f0d13",
       backgroundImage: \`
-        linear-gradient(90deg, rgba(16,185,129,0.25) 1px, transparent 0),
-        linear-gradient(180deg, rgba(16,185,129,0.25) 1px, transparent 0),
-        repeating-linear-gradient(45deg, rgba(16,185,129,0.2) 0 2px, transparent 2px 6px)
+        radial-gradient(
+          ellipse at 85% 0%,
+          rgba(190, 100, 120, 0.12),
+          transparent 50%
+        ),
+        radial-gradient(
+          ellipse at 0% 100%,
+          #4d102673,
+          transparent 55%
+        ),
+        radial-gradient(
+          rgba(244, 230, 232, 0.06) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          160deg,
+          #281018 0%,
+          #10070b 100%
+        )
       \`,
-      backgroundSize: "24px 24px, 24px 24px, 24px 24px",
-      WebkitMask: "radial-gradient(circle at var(--x, 50%) var(--y, 50%), black 0, transparent 30%)",
-      mask: "radial-gradient(circle at var(--x, 50%) var(--y, 50%), black 0, transparent 30%)",
-      animation: "spotlight 8s ease-in-out infinite",
+      backgroundSize: "auto, auto, 28px 28px, auto",
     }}
   />
   {/* Your Content/Components */}
 </div>`,
-  },
-];
+  }
+]
