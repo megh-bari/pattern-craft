@@ -13,6 +13,9 @@ declare global {
 
 export default function CarbonAd() {
   useEffect(() => {
+    // Skip ads in local development so dev reloads do not count as impressions
+    if (process.env.NODE_ENV === "development") return;
+
     const script = document.createElement("script");
     script.src =
       "https://cdn.carbonads.com/carbon.js?serve=CWBD62QJ&placement=patterncraftfun&format=cover";
