@@ -2,6 +2,64 @@ import { Pattern } from "@/types/pattern";
 
 export const gridPatterns: Pattern[] = [
 {
+  id: "sunlit-blinds",
+  name: "Sunlit Blinds",
+  category: "effects",
+  badge: "New",
+  description: "Window light through blinds on warm paper, slowly shifting",
+  style: {
+    backgroundColor: "#f2ede4",
+    backgroundImage: `
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .45 0 0 0 0 .4 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+      radial-gradient(75% 85% at 64% 46%, transparent 35%, #f2ede4 90%),
+      linear-gradient(14deg, transparent 0 44%, rgba(92, 72, 48, 0.17) 48% 53%, transparent 57%),
+      repeating-linear-gradient(104deg, transparent 0 24px, rgba(92, 72, 48, 0.17) 37px 51px, transparent 64px),
+      radial-gradient(60% 70% at 64% 46%, #fff6e6, transparent 70%)
+    `,
+    backgroundSize: "auto, auto, 140% 140%, auto, auto",
+    backgroundPosition: "0 0, 0 0, 0 50%, 0 0, 0 0",
+    animation: "sunlit-blinds 20s ease-in-out infinite alternate",
+  },
+  code: `<div className="min-h-screen w-full relative overflow-hidden">
+  {/* Sunlit Blinds Background */}
+  <style>{\`
+    .sunlit-blinds {
+      /* Customize */
+      --sun-paper: #f2ede4;
+      --sun-light: #fff6e6;
+      --sun-shadow: rgba(92, 72, 48, 0.17);
+      --sun-angle: 104deg;
+      --sun-slat: 64px; /* slat spacing */
+      --sun-speed: 20s;
+
+      background-color: var(--sun-paper);
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .45 0 0 0 0 .4 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+        radial-gradient(75% 85% at 64% 46%, transparent 35%, var(--sun-paper) 90%),
+        linear-gradient(calc(var(--sun-angle) - 90deg), transparent 0 44%, var(--sun-shadow) 48% 53%, transparent 57%),
+        repeating-linear-gradient(var(--sun-angle),
+          transparent 0 calc(var(--sun-slat) * 0.38),
+          var(--sun-shadow) calc(var(--sun-slat) * 0.58) calc(var(--sun-slat) * 0.8),
+          transparent var(--sun-slat)),
+        radial-gradient(60% 70% at 64% 46%, var(--sun-light), transparent 70%);
+      background-size: auto, auto, 140% 140%, auto, auto;
+      background-position: 0 0, 0 0, 0 50%, 0 0, 0 0;
+      animation: sunlit-blinds var(--sun-speed) ease-in-out infinite alternate;
+    }
+    @keyframes sunlit-blinds {
+      to { background-position: 0 0, 0 0, 30% 50%, 40px 14px, 24px 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sunlit-blinds { animation: none; }
+    }
+    /* Optional pause control: add data-paused to any parent element.
+       [data-paused] .sunlit-blinds { animation-play-state: paused; } */
+  \`}</style>
+  <div className="sunlit-blinds absolute inset-0 z-0" />
+  {/* Your Content/Components */}
+</div>`,
+},
+{
   id: "beach",
   name: "Beach",
   category: "effects",

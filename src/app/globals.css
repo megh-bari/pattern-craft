@@ -136,3 +136,8 @@ html::-webkit-scrollbar {
 body {
   overflow-x: hidden;
 }
+
+/* sunlit-blinds pattern preview (the copied code ships its own keyframes) */
+@keyframes sunlit-blinds {
+  to { background-position: 0 0, 0 0, 30% 50%, 40px 14px, 24px 10px; }
+}
