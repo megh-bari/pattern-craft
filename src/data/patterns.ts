@@ -2,6 +2,61 @@ import { Pattern } from "@/types/pattern";
 
 export const gridPatterns: Pattern[] = [
 {
+  id: "sea-glass",
+  name: "Sea Glass",
+  category: "decorative",
+  badge: "New",
+  description: "Soft mint, sky and peach glows that blend where they meet and drift slowly",
+  style: {
+    backgroundColor: "#f5f8f7",
+    backgroundImage: `
+      radial-gradient(22% 30% at 57% 70%, #ffe2c8 40%, transparent),
+      radial-gradient(26% 34% at 22% 82%, #cfe6f7 40%, transparent),
+      radial-gradient(32% 42% at 76% 24%, #c6efe3 40%, transparent)
+    `,
+    backgroundSize: "140% 140%",
+    backgroundPosition: "50% 50%",
+    backgroundRepeat: "no-repeat",
+    backgroundBlendMode: "multiply",
+    animation: "sea-glass 26s ease-in-out infinite alternate",
+  },
+  code: `<div className="min-h-screen w-full relative overflow-hidden">
+  {/* Sea Glass Background */}
+  <style>{\`
+    .sea-glass {
+      /* Customize */
+      --sea-bg: #f5f8f7;
+      --sea-1: #c6efe3; /* top right */
+      --sea-2: #cfe6f7; /* bottom left */
+      --sea-3: #ffe2c8; /* center */
+      --sea-edge: 40%; /* lower = softer */
+      --sea-speed: 26s;
+
+      background-color: var(--sea-bg);
+      background-image:
+        radial-gradient(22% 30% at 57% 70%, var(--sea-3) var(--sea-edge), transparent),
+        radial-gradient(26% 34% at 22% 82%, var(--sea-2) var(--sea-edge), transparent),
+        radial-gradient(32% 42% at 76% 24%, var(--sea-1) var(--sea-edge), transparent);
+      background-size: 140% 140%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
+      animation: sea-glass var(--sea-speed) ease-in-out infinite alternate;
+    }
+    @keyframes sea-glass {
+      to { background-position: 30% 35%, 75% 30%, 60% 70%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sea-glass { animation: none; }
+    }
+    /* Optional pause control: add data-paused to any parent element.
+       [data-paused] .sea-glass { animation-play-state: paused; } */
+  \`}</style>
+  <div className="sea-glass absolute inset-0 z-0" />
+  {/* Your Content/Components */}
+</div>`,
+},
+{
   id: "beach",
   name: "Beach",
   category: "effects",

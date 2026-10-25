@@ -136,3 +136,8 @@ html::-webkit-scrollbar {
 body {
   overflow-x: hidden;
 }
+
+/* sea-glass pattern preview (the copied code ships its own keyframes) */
+@keyframes sea-glass {
+  to { background-position: 30% 35%, 75% 30%, 60% 70%; }
+}
