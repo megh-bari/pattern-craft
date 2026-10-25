@@ -136,3 +136,17 @@ html::-webkit-scrollbar {
 body {
   overflow-x: hidden;
 }
+
+/* ribbon-flow pattern preview (the copied code ships its own keyframes) */
+@property --ribbon-tilt {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 168deg;
+}
+@keyframes ribbon-flow {
+  to { background-position: 0 0, 100% 0; }
+}
+@keyframes ribbon-sway {
+  from { --ribbon-tilt: 164deg; }
+  to { --ribbon-tilt: 173deg; }
+}

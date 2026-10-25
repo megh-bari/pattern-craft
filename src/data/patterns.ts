@@ -2,6 +2,65 @@ import { Pattern } from "@/types/pattern";
 
 export const gridPatterns: Pattern[] = [
 {
+  id: "ribbon-flow",
+  name: "Ribbon Flow",
+  category: "gradients",
+  badge: "New",
+  description: "Soft swaying color ribbon across the top with colors flowing inside",
+  style: {
+    backgroundColor: "#ffffff",
+    backgroundImage: `
+      linear-gradient(var(--ribbon-tilt), transparent 0 32%, #ffffff 48%),
+      linear-gradient(90deg, #ff7a59, #ffc24b, #7ad9b5, #4cb3ff, #ff7a59, #ffc24b, #7ad9b5, #4cb3ff, #ff7a59)
+    `,
+    backgroundSize: "100% 100%, 200% 100%",
+    animation: "ribbon-flow 24s linear infinite, ribbon-sway 12s ease-in-out infinite alternate",
+  },
+  code: `<div className="min-h-screen w-full relative overflow-hidden">
+  {/* Ribbon Flow Background */}
+  <style>{\`
+    @property --ribbon-tilt {
+      syntax: "<angle>";
+      inherits: false;
+      initial-value: 168deg;
+    }
+    .ribbon-flow {
+      /* Customize */
+      --ribbon-bg: #ffffff;
+      --ribbon-1: #ff7a59;
+      --ribbon-2: #ffc24b;
+      --ribbon-3: #7ad9b5;
+      --ribbon-4: #4cb3ff;
+      --ribbon-soft: 16%; /* edge blur */
+      --ribbon-speed: 24s;
+
+      background-color: var(--ribbon-bg);
+      background-image:
+        linear-gradient(var(--ribbon-tilt), transparent 0 32%, var(--ribbon-bg) calc(32% + var(--ribbon-soft))),
+        linear-gradient(90deg, var(--ribbon-1), var(--ribbon-2), var(--ribbon-3), var(--ribbon-4), var(--ribbon-1), var(--ribbon-2), var(--ribbon-3), var(--ribbon-4), var(--ribbon-1));
+      background-size: 100% 100%, 200% 100%;
+      animation:
+        ribbon-flow var(--ribbon-speed) linear infinite,
+        ribbon-sway calc(var(--ribbon-speed) / 2) ease-in-out infinite alternate;
+    }
+    @keyframes ribbon-flow {
+      to { background-position: 0 0, 100% 0; }
+    }
+    @keyframes ribbon-sway {
+      from { --ribbon-tilt: 164deg; }
+      to { --ribbon-tilt: 173deg; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ribbon-flow { animation: none; }
+    }
+    /* Optional pause control: add data-paused to any parent element.
+       [data-paused] .ribbon-flow { animation-play-state: paused; } */
+  \`}</style>
+  <div className="ribbon-flow absolute inset-0 z-0" />
+  {/* Your Content/Components */}
+</div>`,
+},
+{
   id: "beach",
   name: "Beach",
   category: "effects",
