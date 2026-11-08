@@ -13,7 +13,6 @@ import { gridPatterns } from "@/data/patterns";
 import { useTheme } from "@/hooks/useTheme";
 
 import Hero from "./hero";
-import ReturnToPreview from "./return-to-preview";
 import SupportDropdown from "./support-dropdown";
 
 export default function HomePage() {
@@ -53,13 +52,11 @@ export default function HomePage() {
             />
             <Footer theme={theme} />
           </div>
-          <ReturnToPreview theme={theme} />
           <div className="fixed bottom-6 right-16 sm:right-20 z-50">
             <ScrollToTop theme={theme} />
           </div>
         </div>
       </FavoritesProvider>
-      <Toaster />
     </ThemeProvider>
   );
 }

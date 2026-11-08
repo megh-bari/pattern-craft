@@ -6,11 +6,13 @@ import { toast } from "sonner";
 export function useCopy() {
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
-  const copyToClipboard = async (code: string, id: string) => {
+  const copyToClipboard = async (code: string, id: string, name?: string) => {
     try {
       await navigator.clipboard.writeText(code);
       setCopiedId(id);
-      toast.success("Code copied to clipboard!");
+      toast.success( name ? `Copied "${name}"!` : "Copied code to clipboard!",{
+        description: "JSX + Tailwind CSS code copied to clipboard.",
+      });
       setTimeout(() => setCopiedId(null), 1000);
     } catch (error) {
       console.error("Failed to copy to clipboard:", error);
