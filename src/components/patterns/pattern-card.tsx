@@ -29,10 +29,8 @@ export default function PatternCard({
   const isPatternDark = theme === "dark";
 
   const previewPattern = (patternId: string) => {
+    document.getElementById("trigger-preview-scroll")?.click();
     setActivePattern(patternId === activePattern ? null : patternId);
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 200);
   };
 
   const handleCardInteraction = (patternId: string) => {
@@ -105,7 +103,7 @@ export default function PatternCard({
               previewPattern(pattern.id);
               // refresh the Carbon ad
               window.refreshCarbon?.();
-              document.getElementById("trigger-preview-scroll")?.click();
+
             }}
             className="flex-1 bg-white/95 hover:bg-white text-black border-0 text-xs h-8"
           >
@@ -114,9 +112,11 @@ export default function PatternCard({
           </Button>
           <Button
             size="sm"
+            title={`Copy ${pattern.name} code - JSX + Tailwind CSS classes`}
+            aria-label={`Copy ${pattern.name} code - JSX + Tailwind CSS classes`}
             onClick={(e) => {
               e.stopPropagation();
-              copyToClipboard(pattern.code, pattern.id);
+              copyToClipboard(pattern.code, pattern.id, pattern.name);
             }}
             className={`flex-1 border-0 text-xs h-8 ${isCopied(pattern.id)
                 ? "bg-gray-700 hover:bg-gray-800 text-white"
@@ -153,7 +153,6 @@ export default function PatternCard({
                   previewPattern(pattern.id);
                   // refresh the Carbon ad
                   window.refreshCarbon?.();
-                  document.getElementById("trigger-preview-scroll")?.click();
                 }}
                 className="cursor-pointer shadow-xl backdrop-blur-md bg-white/95 hover:bg-white text-black border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto"
               >
@@ -162,9 +161,11 @@ export default function PatternCard({
               </Button>
               <Button
                 size="sm"
+                title={`Copy ${pattern.name} code - JSX + Tailwind CSS classes`}
+                aria-label={`Copy ${pattern.name} code - JSX + Tailwind CSS classes`}
                 onClick={(e) => {
                   e.stopPropagation();
-                  copyToClipboard(pattern.code, pattern.id);
+                  copyToClipboard(pattern.code, pattern.id, pattern.name);
                 }}
                 className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${isCopied(pattern.id)
                     ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"

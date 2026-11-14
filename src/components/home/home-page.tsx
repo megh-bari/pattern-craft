@@ -59,7 +59,6 @@ export default function HomePage() {
           </div>
         </div>
       </FavoritesProvider>
-      <Toaster />
     </ThemeProvider>
   );
 }
