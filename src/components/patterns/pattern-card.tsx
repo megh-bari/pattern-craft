@@ -29,6 +29,7 @@ export default function PatternCard({
   const isPatternDark = theme === "dark";
 
   const previewPattern = (patternId: string) => {
+    document.getElementById("trigger-preview-scroll")?.click();
     setActivePattern(patternId === activePattern ? null : patternId);
   };
 
